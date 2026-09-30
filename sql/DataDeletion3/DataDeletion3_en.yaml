@@ -1,0 +1,74 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataDeletion3
+source: query.sql
+title: Deleting with Condition (2)
+description: Deleting with Condition (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AggregateOperation
+  - expert:SimpleSubQuery
+  - expert:SubstringExtraction
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:Timestamp
+  - expert:AttributeName
+  - expert:AvgFunction
+  - expert:SelectStatement
+  - expert:BracketCharacter
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:KeyConstraint
+  - expert:LessThanComparison
+  - expert:SingleAttributeSelection
+  - expert:DeleteFromClause
+  - expert:DeleteStatement
+  - expert:SingleTableSelection
+  - sql_ontology:DeleteFromClause
+  - sql_ontology:DateTimeType
+  - sql_ontology:AttributeName
+  - sql_ontology:SelectStatement
+  - sql_ontology:SetOperation
+  - sql_ontology:LessThanComparison
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:BracketCharacter
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:DeleteStatement
+  - sql_ontology:AvgFunction
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_concept:SubstringExtraction
+  - sql_concept:KeyConstraint
+  - sql_concept:AggregateOperation
+runtime:
+  language: sql
+  version: '2016'
+statement: Deleting with Condition (2)
+elements:
+- type: explanation
+  location:
+    snippet: DELETE FROM account
+  explanations:
+  - body: The target table is 'acount.'
+- type: explanation
+  location:
+    snippet: WHERE balance <
+  explanations:
+  - body: The order of this query execution is firstly, the subquery to calculate the average amount of all account is executed
+      and then the balance of each account is compared with the average. Lastly, the corresponding account is deleted. <br>To
+      limit the data, balance data is compared with the average balance in subquery result.
+- type: explanation
+  location:
+    snippet: (SELECT AVG(balance)
+  explanations:
+  - body: This subquery is to calculate average balance of each account.

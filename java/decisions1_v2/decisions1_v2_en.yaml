@@ -1,0 +1,105 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_decisions1_v2
+source: Main.java
+title: if-else-if
+description: if-else-if
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:CharDataType
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:GreaterEqualExpression
+  - expert:IfElseIfStatement
+  - expert:IfElseStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:SimpleVariable
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: if-else-if
+elements:
+- type: explanation
+  location:
+    snippet: if (score >= 90) {
+  explanations:
+  - body: "beginning of a long compound if-else-if statement. This line evaluate whether the value of 'score' is \r\ngreater\
+      \ or equal to 90 and open a block of statement \r\nthat will be executed in this case."
+- type: explanation
+  location:
+    snippet: grade = 'A';
+  explanations:
+  - body: Consequently  'A' will be assigned to 'grade' only if (score >= 90)
+- type: explanation
+  location:
+    snippet: '} else if (score >= 80) {'
+  explanations:
+  - body: "if the first test failed (if score < 90), the previous statement will not be execute, instead the program \r\n\
+      jumps here - to the else part, where we test the \r\n'score' variable again. Now we ask if its value is \r\n>=80."
+- type: explanation
+  location:
+    snippet: grade = 'B';
+  explanations:
+  - body: "Hence, the value of 'grade' will be 'B' only if the first 'if' is 'false' and the second 'if' is true. For example,\
+      \ if \r\nthe value of 'score' is 85, first 'if' will generate 'false' \r\nand this 'if' will generate 'true'."
+- type: explanation
+  location:
+    snippet: '} else if (score >= 70) {'
+  explanations:
+  - body: If 'score' is not '>= 80' we come here and start testing it for 70.
+- type: explanation
+  location:
+    snippet: grade = 'C';
+  explanations:
+  - body: '''grade'' becomes ''C'' if (score >= 70) and it is less then 80'
+- type: explanation
+  location:
+    snippet: '} else if (score >= 60) {'
+  explanations:
+  - body: If (score < 70) we jump here and test if score is greater or equal to 60
+- type: explanation
+  location:
+    snippet: grade = 'D';
+  explanations:
+  - body: if 'score' is between 60 and 70 'grade' becomes 'D'
+- type: explanation
+  location:
+    snippet: '} else {'
+  explanations:
+  - body: However, if none of these if's resulted in true, which means 'score' is less then 60...
+- type: explanation
+  location:
+    snippet: grade = 'F';
+  explanations:
+  - body: "...'grade' becomes 'F'.We never get here if any of the previous if's evaluates to true. Only if all them are \r\
+      \nfalse, we'll end up in this else-branch."
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of the last else branch
+- type: explanation
+  location:
+    snippet: System.out.println("Grade = " + grade);
+  explanations:
+  - body: printing the resulting value of 'grade'. Since score was initialized to 76 in the beginning, this line will print
+      'C'.

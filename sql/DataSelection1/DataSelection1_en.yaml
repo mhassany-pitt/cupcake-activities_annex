@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection1
+source: query.sql
+title: Selecting One Attribute
+description: Selecting One Attribute
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:RightWhitespaceTrim
+  - expert:AttributeName
+  - expert:LeftWhitespaceTrim
+  - expert:SingleAttributeSelection
+  - expert:SingleTableSelection
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:SingleAttributeSelection
+  - sql_concept:LeftWhitespaceTrim
+runtime:
+  language: sql
+  version: '2016'
+statement: Selecting One Attribute
+elements:
+- type: explanation
+  location:
+    snippet: SELECT sid
+  explanations:
+  - body: In SELECT statement, SELECT and FROM clauses are required. The SELECT clause can specify the column(s) in the table
+      to be retrieved. The items are usually specified by a list of columns, separated by commas. In this example, only one
+      column - sid - is selected, hence there is no need to be separated by comma.
+- type: explanation
+  location:
+    snippet: FROM Student;
+  explanations:
+  - body: The FROM clause lists the tables that contain the tuple to be retrieved by the query. Data can be drawn from one
+      table or multiple tables.

@@ -1,0 +1,70 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Decrement
+source: Increment.java
+title: Decrement
+description: 'Worked example: Decrement'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:PostDecrementExpression
+  - expert:PreDecrementExpression
+  - expert:SimpleAssignmentExpression
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Decrement'
+elements:
+- type: explanation
+  location:
+    snippet: int c = 4;
+  explanations:
+  - body: The initial value of variable 'c' is equal to 4.
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+  explanations:
+  - body: Prints 4.
+- type: explanation
+  location:
+    snippet: System.out.println( c-- );
+  explanations:
+  - body: Prints 4, and then decrements the value of variable 'c' by 1.
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+    nth: 2
+  explanations:
+  - body: Prints 3.
+- type: explanation
+  location:
+    snippet: c = 4;
+  explanations:
+  - body: The value of variable 'c' is equal to 4 again.
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+    nth: 3
+  explanations:
+  - body: Prints 4.
+- type: explanation
+  location:
+    snippet: System.out.println( --c );
+  explanations:
+  - body: This line first decrements the value of variable 'c' and then prints it. Hence, it'll print 3.
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+    nth: 4
+  explanations:
+  - body: Prints 3.

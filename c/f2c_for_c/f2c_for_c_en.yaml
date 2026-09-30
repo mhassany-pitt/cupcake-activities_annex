@@ -1,0 +1,49 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_f2c_for_c_en
+source: main.c
+title: 'IS12:: f2c_for.c (118.3)'
+description: 'Worked example: IS12:: f2c_for.c (118.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:void
+  - unspecified:div
+  - unspecified:variable_declaration
+  - unspecified:sub
+  - unspecified:include
+  - unspecified:add
+  - unspecified:mul
+  - unspecified:main_function
+  - unspecified:for
+  - unspecified:float
+  - unspecified:less_equal
+  - unspecified:printf
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: f2c_for.c (118.3)'
+elements:
+- type: explanation
+  location:
+    snippet: int lower, upper, step;
+  explanations:
+  - body: 'These three variables are, actually constants. A better way to define them is using #define. However, this example
+      follows the original source.'
+- type: explanation
+  location:
+    snippet: for (fahr = lower; fahr <= upper; fahr = fahr + step) {
+  explanations:
+  - body: Initialization part of this for loop is expression "fahr = lower". It will be evaluated once before the loop will
+      start.  The loop condition is "fahr <= upper". This expression will be evaluated before every iteration of the loop.
+      If the value is false (i

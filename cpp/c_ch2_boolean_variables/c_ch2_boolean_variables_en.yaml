@@ -1,0 +1,78 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_c_ch2_boolean_variables
+source: main.cpp
+title: Boolean Variables
+description: 'Worked example: Boolean Variables'
+authors:
+- first: Natalya
+  last: Goreva
+  email: natalya.goreva@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Boolean Variables'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <iostream>'
+  explanations:
+  - body: Include the library for working with streaming data to and from the user
+- type: explanation
+  location:
+    snippet: using namespace std;
+  explanations:
+  - body: Add a reference to standard namespace that includes variables, types, constants, and functions
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: Declare the main function
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Open the body of the function
+- type: explanation
+  location:
+    snippet: bool boolValue;
+  explanations:
+  - body: Declare a Boolean variable (can take values true or false)
+- type: explanation
+  location:
+    snippet: boolValue = true;
+  explanations:
+  - body: Assign the Boolean variable the initial value of "true"
+- type: explanation
+  location:
+    snippet: cout << boolValue << endl;
+  explanations:
+  - body: Display the value of the variable on the screen and end with a line break
+- type: explanation
+  location:
+    snippet: boolValue = false;
+  explanations:
+  - body: Change the value of the Boolean variable to false
+- type: explanation
+  location:
+    snippet: cout << boolValue << endl;
+    nth: 2
+  explanations:
+  - body: display the new value of the variable and end with the line break (switch to the next line)
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: main() is a function, so it should return a value. We make it 0, or in this case a dummy value
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Close the function body

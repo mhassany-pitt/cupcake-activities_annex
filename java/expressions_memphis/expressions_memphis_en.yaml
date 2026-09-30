@@ -1,0 +1,97 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_expressions_memphis
+source: PetStore.java
+title: Expressions (Memphis)
+description: |-
+  Expressions with constants from Memphis.
+  (1-29) Casting values, using Scanner (change making program, pet store checkout) PetStore.java
+
+  Program that demonstrates using Scanner to read user input -- simulates checkout from an online pet store.
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:Constant
+  - java_ontology:ConstantInitializationStatement
+  - java_ontology:ConstructorCall
+  - java_ontology:DoubleDataType
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ImportStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiplyExpression
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: |-
+  Expressions with constants from Memphis.
+  (1-29) Casting values, using Scanner (change making program, pet store checkout) PetStore.java
+
+  Program that demonstrates using Scanner to read user input -- simulates checkout from an online pet store.
+elements:
+- type: explanation
+  location:
+    snippet: "final double \tDOG_PRICE = 50,"
+  explanations:
+  - body: |-
+      Variables that are declared with final are constants -- they can be given an initial value, but that value can't be changed later in the program.
+
+      The Java convention for naming constants is CONSTANT_NAME (unlike the convention for variableName)
+- type: explanation
+  location:
+    snippet: SLOTH_PRICE = 900018293028L,
+  explanations:
+  - body: The L indicates this is a long value -- needed since it's too large to fit into the int data type
+- type: explanation
+  location:
+    snippet: System.out.println("Welcome to the finest pet store in the land!");
+  explanations:
+  - body: Show a menu of pets to buy
+- type: explanation
+  location:
+    snippet: System.out.println("How many dogs would you like to buy?");
+  explanations:
+  - body: Get user input for quantity of each pet to buy
+- type: explanation
+  location:
+    snippet: double subtotal = dogs*DOG_PRICE + dragons*DRAGON_PRICE + sloths*SLOTH_PRICE + babyMonkeys*BABY_MONKEY_PRICE
+      + amoebas*AMOEBA_PRICE;
+  explanations:
+  - body: Compute the subtotal (without tax)
+- type: explanation
+  location:
+    snippet: double tax = subtotal*.0925;
+  explanations:
+  - body: The tax is 9.25 percent of the subtotal
+- type: explanation
+  location:
+    snippet: double total = subtotal + tax;
+  explanations:
+  - body: The total is the sum of the subtotal and tax
+- type: explanation
+  location:
+    snippet: System.out.println("Subtotal:\t\t$" + subtotal);
+  explanations:
+  - body: Print the subtotal, tax, and total

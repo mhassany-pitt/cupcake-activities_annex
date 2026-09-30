@@ -1,0 +1,96 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableCreation1
+source: query.sql
+title: Table Creation
+description: Table Creation
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:EquiJoin
+  - expert:NumericType
+  - expert:StringType
+  - expert:SubQuery
+  - expert:Rule
+  - expert:FixedLengthCharacterString
+  - expert:Float
+  - expert:AttributeName
+  - expert:AttributeSpecification
+  - expert:BracketCharacter
+  - expert:Integer
+  - expert:IntegrityConstraint
+  - expert:CommaCharacter
+  - expert:CreateTableClause
+  - expert:CreateTableStatement
+  - expert:NotNullClause
+  - expert:NotNullConstraint
+  - expert:DefaultValueClause
+  - expert:Double
+  - sql_ontology:NotNullConstraint
+  - sql_ontology:CreateTableStatement
+  - sql_ontology:SubQuery
+  - sql_ontology:AttributeName
+  - sql_ontology:Integer
+  - sql_ontology:Double
+  - sql_ontology:CommaCharacter
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:BracketCharacter
+  - sql_ontology:Float
+  - sql_ontology:AttributeSpecification
+  - sql_ontology:DefaultValueClause
+  - sql_ontology:IntegrityConstraint
+  - sql_ontology:CreateTableClause
+  - sql_ontology:NotNullClause
+  - sql_concept:EquiJoin
+  - sql_concept:Rule
+runtime:
+  language: sql
+  version: '2016'
+statement: Table Creation
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE Students
+  explanations:
+  - body: The query to create a new table should start with 'CREATE TABLE' clause followed by the table name. The table name
+      must not conflict with the name of one of the existing tables.
+- type: explanation
+  location:
+    snippet: (sid VARCHAR(20) NOT NULL,
+  explanations:
+  - body: Column named sid, which is character domain type, has 20 digit space and does not allow NULL value. <br>In the body
+      of the CREATE TABLE clause, the columns of the newly created table are defined. Firstly, every column in the table must
+      have a unique name and domain name is to identify the kind of data that the column stores. Lastly, required data is
+      to determine whether the column contains required data and prevents NULL values from appearing in the column; otherwise,
+      NULL values are allowed.
+- type: explanation
+  location:
+    snippet: name VARCHAR(20),
+  explanations:
+  - body: Each column definition is separated by comma.
+- type: explanation
+  location:
+    snippet: login VARCHAR(10),
+  explanations:
+  - body: VARCHAR data type allows a column to store character strings varying in length from row to row. CHAR, another data
+      type involving charater strings, is for columns holding fixed-length character string.
+- type: explanation
+  location:
+    snippet: age INTEGER DEFAULT NULL,
+  explanations:
+  - body: '''age'' column is integer domain type and if user does not enter any value, the DBMS system automatically fill
+      the tuple with NULL value by defining DEFAULT value as ''NULL''.'
+- type: explanation
+  location:
+    snippet: gpa REAL DEFAULT 0.00);
+  explanations:
+  - body: '''gpa'' column defaults to 0.00 value. The ''CREATE TABLE'' clause ends with closing parenthesis.<br><br>All SQL
+      statements end with semicolon (;).'

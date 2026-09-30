@@ -1,0 +1,103 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface1_2
+source: TryOut.java
+title: IS17_interface1_2
+description: 'Worked example: IS17_interface1_2'
+authors:
+- first: Patric
+  last: Campbell
+  email: patric.campbell@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface1_2'
+elements:
+- type: explanation
+  location:
+    snippet: interface Act {
+  explanations:
+  - body: This declares an interface with the name of Act.
+- type: explanation
+  location:
+    snippet: void act();
+  explanations:
+  - body: This declares the sole method of Act, act which returns nothing.
+- type: explanation
+  location:
+    snippet: class Actor1 implements Act {
+  explanations:
+  - body: This declares a class named Actor1 that implements the Act interface.
+- type: explanation
+  location:
+    snippet: public void act() {
+  explanations:
+  - body: This declares a public method act that returns nothing.
+- type: explanation
+  location:
+    snippet: System.out.println("To be, or not to be");
+  explanations:
+  - body: 'This sends the following to the console: To be, or not to be'
+- type: explanation
+  location:
+    snippet: class Actor2 implements Act {
+  explanations:
+  - body: This declares a class named Actor2 which implements the Act interface.
+- type: explanation
+  location:
+    snippet: public void act() {
+    nth: 2
+  explanations:
+  - body: This declares a public method act that returns nothing.
+- type: explanation
+  location:
+    snippet: System.out.println("Wherefore art thou Romeo?");
+  explanations:
+  - body: 'This sends the following to the console: Wherefore art thou Romeo?'
+- type: explanation
+  location:
+    snippet: public class TryOut {
+  explanations:
+  - body: This declares a public class named TryOut.
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: This is the main method of the class, it shows it is probably a driver or tester.
+- type: explanation
+  location:
+    snippet: Actor1 hamlet = new Actor1();
+  explanations:
+  - body: This creates a new object of type Actor1 named hamlet.
+- type: explanation
+  location:
+    snippet: Actor2 juliet = new Actor2();
+  explanations:
+  - body: This creates a new object of type Actor2 named juliet.
+- type: explanation
+  location:
+    snippet: tryout(hamlet);
+  explanations:
+  - body: This calls the tryout method on the hamlet object and will send "To be, or not" to be to the console.
+- type: explanation
+  location:
+    snippet: tryout(juliet);
+  explanations:
+  - body: This calls the tryout method on the juliet object and will send "Wherefore art thou Romeo?" to the console.
+- type: explanation
+  location:
+    snippet: private static void tryout(Act actor) {
+  explanations:
+  - body: This declares a public and static method that returns void and is called tryout.  It has one paremeter, an actor.
+- type: explanation
+  location:
+    snippet: actor.act();
+  explanations:
+  - body: This method uses the interface to make each actor object say what is defined in its class definition.

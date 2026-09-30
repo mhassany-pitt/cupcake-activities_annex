@@ -1,0 +1,212 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_betterbattle_c_en
+source: main.c
+title: 'IS12:: betterbattle.c (15.4)'
+description: 'Worked example: IS12:: betterbattle.c (15.4)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:multi_dimensional_array
+  - unspecified:variable_initialization
+  - unspecified:pre_increment
+  - unspecified:return
+  - unspecified:do
+  - unspecified:for
+  - unspecified:if_else
+  - unspecified:static
+  - unspecified:array_declaration
+  - unspecified:reference
+  - unspecified:char
+  - unspecified:equal
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:if
+  - unspecified:or
+  - unspecified:add
+  - unspecified:pointer_declaration
+  - unspecified:main_function
+  - unspecified:less
+  - unspecified:greater
+  - unspecified:define
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:sub
+  - unspecified:function_declaration
+  - unspecified:include
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: betterbattle.c (15.4)'
+elements:
+- type: explanation
+  location:
+    snippet: '/* Example 15_4: Better Naval Battle'
+  explanations:
+  - body: Game shows markers and hits this time.
+- type: explanation
+  location:
+    snippet: static char battlefield[FSIZE][FSIZE] = {
+  explanations:
+  - body: Initialize 2-dimensional Battlefield array.   The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: '{1, 0, 1, 0, 0}, /* row A */'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: '{0, 0, 0, 0, 1}, /* row B */'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: '{0, 0, 1, 0, 0}, /* row C */'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: '{0, 0, 0, 0, 0}, /* row D */'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: '{1, 0, 0, 0, 1}, /* row E */'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: static char *picture[3] = {"  ", "[ ]", "[X]"};
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: void printfield(char *c);
+  explanations:
+  - body: This function prints the appropriate symbols.
+- type: explanation
+  location:
+    snippet: int col;
+  explanations:
+  - body: Integer, shows column number.
+- type: explanation
+  location:
+    snippet: char ch_row;
+  explanations:
+  - body: Char, shows row letter/digital equivalent.
+- type: explanation
+  location:
+    snippet: printfield("Starting position");
+  explanations:
+  - body: Print current display.
+- type: explanation
+  location:
+    snippet: do{
+  explanations:
+  - body: Do-while executes one time, at least, despite condition.
+- type: explanation
+  location:
+    snippet: scanf("%d %c", &col, &ch_row);
+  explanations:
+  - body: Once again, read in int and char for react function.
+- type: explanation
+  location:
+    snippet: '} while(react(ch_row, col) > 0);'
+  explanations:
+  - body: While loops back if react returns with a value greater than 0.
+- type: explanation
+  location:
+    snippet: printfield("Ending position");
+  explanations:
+  - body: Print last display.
+- type: explanation
+  location:
+    snippet: int react(char r, int col)
+  explanations:
+  - body: React takes in row then column (opposite of scanned in order).
+- type: explanation
+  location:
+    snippet: int row;
+  explanations:
+  - body: Row is the digitalized char r.
+- type: explanation
+  location:
+    snippet: if (col == 0){
+  explanations:
+  - body: Entering 0 for the clumn number is a signal of the end of game.
+- type: explanation
+  location:
+    snippet: row = r - 'A';
+  explanations:
+  - body: Subtract the digital value of 'A' to put the values between 0 and 4.
+- type: explanation
+  location:
+    snippet: if(row < 0 || row > 4)
+  explanations:
+  - body: If the row values are in this range, continue.
+- type: explanation
+  location:
+    snippet: else if (col <1 || col >5)
+  explanations:
+  - body: If columns are within range, continue.
+- type: explanation
+  location:
+    snippet: else if (battlefield[row][col-1] == SHIP)
+  explanations:
+  - body: If that location has a SHIP
+- type: explanation
+  location:
+    snippet: |-
+      printf("Hit!
+      ");
+  explanations:
+  - body: …then print "Hit" and…
+- type: explanation
+  location:
+    snippet: battlefield[row][col-1] = DESTROYED;
+  explanations:
+  - body: …change the value to DESTROYED.
+- type: explanation
+  location:
+    snippet: else if (battlefield[row][col-1] == DESTROYED)
+  explanations:
+  - body: If it's already been hit, tell them.
+- type: explanation
+  location:
+    snippet: |-
+      printf("Misss...
+      ");
+  explanations:
+  - body: Missed target prints out by default.
+- type: explanation
+  location:
+    snippet: return 1;
+  explanations:
+  - body: React function returns with a 1.
+- type: explanation
+  location:
+    snippet: for(i = 0; i < FSIZE; ++i)
+  explanations:
+  - body: Print out battlefield, row by row.
+- type: explanation
+  location:
+    snippet: printf("%s ", picture[ battlefield[i][j] ]);
+  explanations:
+  - body: Print the appropriate graphic symbol, checking picture array.
+- type: explanation
+  location:
+    snippet: |-
+      printf("
+      ");
+  explanations:
+  - body: New line.

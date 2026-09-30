@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_string_length
+source: StringLength.java
+title: DEPRECATED_String Length
+description: 'Worked example: DEPRECATED_String Length'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_String Length'
+elements:
+- type: explanation
+  location:
+    snippet: import java.lang.*;
+  explanations:
+  - body: The lang package of java provides the facility for getting the length of string.
+- type: explanation
+  location:
+    snippet: int len = s.length();
+  explanations:
+  - body: method length() returns the number of characters in the string. Here, the variable len is initialized with 20.

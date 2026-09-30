@@ -1,0 +1,119 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList2_2
+source: ArrayList2.java
+title: IS17_ArrayList2_2
+description: 'Worked example: IS17_ArrayList2_2'
+authors:
+- first: Michael
+  last: Logoyda
+  email: michael.logoyda@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList2_2'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: Imports the Java utility ArrayList package
+- type: explanation
+  location:
+    snippet: public class ArrayList2 {
+  explanations:
+  - body: Creates a public class ArrayList2
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: Defines main method for the class as static and of type void (with a String output)
+- type: explanation
+  location:
+    snippet: ArrayList<Integer> values = new ArrayList<Integer>();
+  explanations:
+  - body: Creates a new ArrayList named values
+- type: explanation
+  location:
+    snippet: values.add(1);
+  explanations:
+  - body: Adds the number 1 to values
+- type: explanation
+  location:
+    snippet: values.add(2);
+  explanations:
+  - body: Adds the number 2 to values
+- type: explanation
+  location:
+    snippet: values.add(3);
+  explanations:
+  - body: Adds the number 3 to values
+- type: explanation
+  location:
+    snippet: values.add(4);
+  explanations:
+  - body: Adds the number 4 to values
+- type: explanation
+  location:
+    snippet: values.add(5);
+  explanations:
+  - body: Adds the number 5 to values
+- type: explanation
+  location:
+    snippet: values.remove(1);
+  explanations:
+  - body: Removes the number in location 1 (which is the number 2)
+- type: explanation
+  location:
+    snippet: 'System.out.print("Contents of values: ");'
+  explanations:
+  - body: 'Prints: Contents of values:'
+- type: explanation
+  location:
+    snippet: 'for (int v : values)'
+  explanations:
+  - body: Starts a for each loop for the arraylist values
+- type: explanation
+  location:
+    snippet: System.out.print(v + " ");
+  explanations:
+  - body: 'Prints out the number in location v in values and adds a blank space after it. Repeats for all locations in values.
+      The final string output is Contents of values: 1 3 4 5'
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: Starts a new line
+- type: explanation
+  location:
+    snippet: int sum = 0;
+  explanations:
+  - body: Initializes variable sum of type int to 0.
+- type: explanation
+  location:
+    snippet: 'for (int v : values)'
+    nth: 2
+  explanations:
+  - body: Starts a for each loop for the arraylist values
+- type: explanation
+  location:
+    snippet: sum += v;
+  explanations:
+  - body: Each number in each location is added together and this summation is stored in int sum.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Sum of values: " + sum);'
+  explanations:
+  - body: 'On a new line, the string output: Sum of values: 13'
+- type: explanation
+  location:
+    snippet: 'System.out.println("size of values: " + values.size());'
+  explanations:
+  - body: 'On a new line, the string output: size of values: 4'

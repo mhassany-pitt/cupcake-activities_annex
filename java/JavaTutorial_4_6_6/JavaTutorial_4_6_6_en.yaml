@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_6_6
+source: MainClass.java
+title: For with Multiple Variables 2
+description: For with Multiple Variables 2
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:AddAssignmentExpression
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:ForStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LessEqualExpression
+  - expert:MethodDefinition
+  - expert:MultiplyExpression
+  - expert:PostIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: For with Multiple Variables 2
+elements:
+- type: explanation
+  location:
+    snippet: for (int i = 1, j = 0; i <= limit; i++, j++) {
+  explanations:
+  - body: "This for defines two integer variables and increments both by in each \r\nround."
+- type: explanation
+  location:
+    snippet: sum += i * j;
+  explanations:
+  - body: "The compound assignment += adds the value of 'i*j' to the value of 'sum' \r\nand stores the result in the variable\
+      \ 'sum'."

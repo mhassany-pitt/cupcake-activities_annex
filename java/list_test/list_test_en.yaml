@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_list_test
+source: ListTest.java
+title: ISD::ListTest.java
+description: 'Worked example: ISD::ListTest.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::ListTest.java'
+elements:
+- type: explanation
+  location:
+    snippet: colorList = new JList( colorNames );
+  explanations:
+  - body: Initialize JList with array of Strings, and show 5 items at a time.
+- type: explanation
+  location:
+    snippet: colorList.setVisibleRowCount( 5 );
+  explanations:
+  - body: setVisibleRowCount( n ), displays n items at a time, and it does not provide automatic scrolling.
+- type: explanation
+  location:
+    snippet: ListSelectionModel.SINGLE_SELECTION );
+  explanations:
+  - body: Make the JList a single-selection list.
+- type: explanation
+  location:
+    snippet: c.add( new JScrollPane( colorList ) );
+  explanations:
+  - body: Create a new JScrollPane object, initialize it with a JList, and attach it to the content pane.
+- type: explanation
+  location:
+    snippet: colorList.addListSelectionListener(
+  explanations:
+  - body: Register handler with addListSelectionListener
+- type: explanation
+  location:
+    snippet: public void valueChanged( ListSelectionEvent e )
+  explanations:
+  - body: Define method valueChanged
+- type: explanation
+  location:
+    snippet: colors[ colorList.getSelectedIndex() ] );
+  explanations:
+  - body: Change the color according to the item selected by using getSelectedIndex.

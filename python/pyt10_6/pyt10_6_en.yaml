@@ -1,0 +1,55 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_6_en
+source: main.py
+title: Functions with Arguments
+description: 'Worked example: Functions with Arguments'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Call
+  - parser:FunctionDef
+  - parser:Str
+  - parser:arg
+  - parser:Mult
+  - unspecified:arg
+  - unspecified:Call
+  - unspecified:Int
+  - unspecified:FunctionDef
+  - unspecified:Mult
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Functions with Arguments'
+elements:
+- type: explanation
+  location:
+    snippet: '#Functions with Arguments'
+  explanations:
+  - body: This example showcases the use of arguments
+- type: explanation
+  location:
+    snippet: 'def square(number):'
+  explanations:
+  - body: A function named 'square' is defined which takes in the argument 'number'. Later in this example when '4' is passed
+      as the argument, the value '4' is assigned to the variable 'number'
+- type: explanation
+  location:
+    snippet: print('Square of ', number , 'is', number*number)
+  explanations:
+  - body: This statement prints the square of the number
+- type: explanation
+  location:
+    snippet: square(4)
+  explanations:
+  - body: Here, the function 'square' is called and the integer '4' is passed as the argument

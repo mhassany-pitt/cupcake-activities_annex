@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_flow_layout
+source: FlowLayoutDemo.java
+title: ISD::FlowLayoutDemo.java
+description: 'Worked example: ISD::FlowLayoutDemo.java'
+authors:
+- first: Derek
+  last: Detar
+  email: derek.detar@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::FlowLayoutDemo.java'
+elements:
+- type: explanation
+  location:
+    snippet: layout.setAlignment( FlowLayout.LEFT );
+  explanations:
+  - body: setAlignment changes the alignment of the layout.
+- type: explanation
+  location:
+    snippet: layout.layoutContainer( c );
+  explanations:
+  - body: Use method layoutContainer to update changes

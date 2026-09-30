@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection7_version_1_pt
+source: query.sql
+title: ComparisonCondition(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT *
+  explanations:
+  - body: Essa consulta retorna todas as colunas da tabela 'Students'.
+- type: explanation
+  location:
+    snippet: WHERE gpa > 3.2;
+  explanations:
+  - body: A clausula WHERE filtra os resultados. Neste caso, retorna apenas os alunos cujo gpa e' maior que 3.2

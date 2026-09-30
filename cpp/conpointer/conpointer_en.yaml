@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_conpointer
+source: main.cpp
+title: ConstPointer
+description: 'Worked example: ConstPointer'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: ConstPointer'
+elements:
+- type: explanation
+  location:
+    snippet: int * const ptr = &x;
+  explanations:
+  - body: Pointer ptr is not modifiable, but the data to which it points, *ptr, can be changed.
+- type: explanation
+  location:
+    snippet: '*ptr = 7;'
+  explanations:
+  - body: 'allowed: *ptr is not const.'

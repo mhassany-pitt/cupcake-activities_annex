@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt1_5_en
+source: main.py
+title: 'Variable type: Numbers'
+description: 'Worked example: Variable type: Numbers'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Float
+  - parser:Call
+  - parser:Assign
+  - parser:USub
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Float
+  - unspecified:Int
+  - unspecified:USub
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Variable type: Numbers'
+elements:
+- type: explanation
+  location:
+    snippet: num1 = 1
+  explanations:
+  - body: A positive integer '1' is assigned to the variable num1. After this statement, num1 variable is updated with the
+      value '1'.
+- type: explanation
+  location:
+    snippet: num2 = -100
+  explanations:
+  - body: A negative integer '-100' is assigned to the variable num2. After this statement, num2 variable is updated with
+      the value '-100'.
+- type: explanation
+  location:
+    snippet: num3 = 20.30
+  explanations:
+  - body: A positive float '20.30' is assigned to the variable num3. After this statement, num3 variable is updated with the
+      value '20.30'.
+- type: explanation
+  location:
+    snippet: num4 = -0.002
+  explanations:
+  - body: A negative float '-0.002' is assigned to the variable num4. After this statement, num4 variable is updated with
+      the value '-0.002'.
+- type: explanation
+  location:
+    snippet: print (num1)
+  explanations:
+  - body: Printing out the variable 'num1'. The resultant output as seen by you will be '1'.

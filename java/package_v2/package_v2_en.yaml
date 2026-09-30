@@ -1,0 +1,27 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_package_v2
+source: Main.java
+title: Package declaration
+description: 'Worked example: Package declaration'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Package declaration'
+elements:
+- type: explanation
+  location:
+    snippet: package edu.pitt.sis.is17.MyFirstPackage;
+  explanations:
+  - body: a package name consists of one or more identifiers separated by periods. Here, we declare a package named edu.pitt.sis.is17.MyFirstPackage.

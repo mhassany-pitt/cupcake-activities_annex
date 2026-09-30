@@ -1,0 +1,46 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection24
+source: query.sql
+title: Aggregate Functions (4)
+description: Aggregate Functions (4)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:TableAlteration
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:SelectStatement
+  - expert:IntegrityOnUpdate
+  - expert:CountFunction
+  - expert:SingleAttributeSelection
+  - expert:DistinctClause
+  - expert:SingleTableSelection
+  - sql_ontology:DistinctClause
+  - sql_ontology:SelectStatement
+  - sql_ontology:AlterTableStatement
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:IntegrityOnUpdate
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:SelectClause
+  - sql_ontology:CountFunction
+runtime:
+  language: sql
+  version: '2016'
+statement: Aggregate Functions (4)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT COUNT(DISTINCT customer_name)
+  explanations:
+  - body: DISTINCT keyword is to eliminate duplicate in result, so unique customer names are just retrieved. After handling
+      duplicate, the COUNT() aggregate function calculates the total number of values in customer_name column.

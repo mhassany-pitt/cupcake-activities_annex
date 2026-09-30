@@ -1,0 +1,79 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_BankAccountTester
+source: BankAccountTester.java
+title: Bank Account Tester
+description: 'Worked example: Bank Account Tester'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:StringLiteral
+  - expert:ObjectMethodInvocation
+  - expert:SubtractExpression
+  - expert:AddExpression
+  - expert:PrivateFieldSpecifier
+  - expert:ConstructorCall
+  - expert:PublicConstructorSpecifier
+  - expert:ConstructorDefinition
+  - expert:DoubleDataType
+  - expert:ReturnStatement
+  - expert:SimpleAssignmentExpression
+  - expert:InstanceField
+  - expert:SimpleVariable
+  - expert:java.lang.System.out.println
+  - expert:StringDataType
+  - expert:ObjectCreationStatement
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Bank Account Tester'
+elements:
+- type: explanation
+  location:
+    snippet: public class BankAccountTester
+  explanations:
+  - body: A class to test the BankAccount class.
+- type: explanation
+  location:
+    snippet: public static void main(String[] args)
+  explanations:
+  - body: "/**\r\n      Tests the methods of the BankAccount class.\r\n      @param args not used\r\n   */"
+- type: explanation
+  location:
+    snippet: public class BankAccount
+  explanations:
+  - body: "/**\r\n   A bank account has a balance that can be changed by \r\n   deposits and withdrawals.\r\n*/"
+- type: explanation
+  location:
+    snippet: public BankAccount()
+  explanations:
+  - body: "/**\r\n      Constructs a bank account with a zero balance.\r\n   */"
+- type: explanation
+  location:
+    snippet: public BankAccount(double initialBalance)
+  explanations:
+  - body: "/**\r\n      Constructs a bank account with a given balance.\r\n      @param initialBalance the initial balance\r\
+      \n   */"
+- type: explanation
+  location:
+    snippet: public void deposit(double amount)
+  explanations:
+  - body: "/**\r\n      Deposits money into the bank account.\r\n      @param amount the amount to deposit\r\n   */"
+- type: explanation
+  location:
+    snippet: public void withdraw(double amount)
+  explanations:
+  - body: "/**\r\n      Withdraws money from the bank account.\r\n      @param amount the amount to withdraw\r\n   */"
+- type: explanation
+  location:
+    snippet: public double getBalance()
+  explanations:
+  - body: "/**\r\n      Gets the current balance of the bank account.\r\n      @return the current balance\r\n   */"

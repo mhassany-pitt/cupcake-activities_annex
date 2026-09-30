@@ -1,0 +1,99 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_2-19_PrimeChecker
+source: PrimeChecker.java
+title: 2-19_PrimeChecker
+description: 'Worked example: 2-19_PrimeChecker'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ImportStatement
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:SimpleAssignmentExpression
+  - parser:ObjectCreationStatement
+  - parser:ConstructorCall
+  - parser:ActualMethodParameter
+  - parser:java.lang.System.out.println
+  - parser:StringLiteral
+  - parser:StringDataType
+  - parser:IntDataType
+  - parser:ObjectMethodInvocation
+  - parser:BooleanDataType
+  - parser:FALSE
+  - parser:ForStatement
+  - parser:LessExpression
+  - parser:PostIncrementExpression
+  - parser:IfStatement
+  - parser:ModulusExpression
+  - parser:EqualExpression
+  - parser:TRUE
+  - parser:IfElseStatement
+  - parser:StringAddition
+  - java_ontology:ActualMethodParameter
+  - java_ontology:BooleanDataType
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:EqualExpression
+  - java_ontology:False
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:IfElseStatement
+  - java_ontology:IfStatement
+  - java_ontology:ImportStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:ModulusExpression
+  - java_ontology:NotExpression
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:True
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: 2-19_PrimeChecker'
+elements:
+- type: explanation
+  location:
+    snippet: boolean divisorFound = false;
+  explanations:
+  - body: This variable keeps track of whether we've found a working divisor
+- type: explanation
+  location:
+    snippet: for (int d = 2; d < num; d++) {
+  explanations:
+  - body: Check all the potential divisors d, from 2 up to num - 1
+- type: explanation
+  location:
+    snippet: if (num % d == 0) {
+  explanations:
+  - body: If we find a working divisor, set divisorFound to true and stop the loop
+- type: explanation
+  location:
+    snippet: if (!divisorFound) {
+  explanations:
+  - body: divisorFound is a boolean value, so you can use it directly in an if statement like this

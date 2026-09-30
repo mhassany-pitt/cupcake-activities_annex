@@ -1,0 +1,56 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection6
+source: query.sql
+title: Selection Condition
+description: Selection Condition
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:MultipleAttributeSelection
+  - expert:CountingNoInColumn
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - expert:EqualComparison
+  - expert:ReferentialAction
+  - sql_ontology:EqualComparison
+  - sql_ontology:NumericType
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:WhereClause
+  - sql_ontology:CountFunction
+  - sql_concept:ReferentialAction
+runtime:
+  language: sql
+  version: '2016'
+statement: Selection Condition
+elements:
+- type: explanation
+  location:
+    snippet: SELECT Name, Quota, Sales
+  explanations:
+  - body: This query retrieve three columns in 'Salesperson' table - Name, Quota, and Sales.
+- type: explanation
+  location:
+    snippet: WHERE emp_no = 107;
+  explanations:
+  - body: Especially this SQL is to retrieve rows of data which are related to the person whose employee number is 107.<br>
+      The WHERE clause is used to limit the rows you want to retrieve. The WHERE clause consists of the WHERE keyword followed
+      by a search condition. The search condition can produce one of the three results. If the search condition is TRUE, the
+      row is included in the query results. If the search condition is FALSE, the row is excluded from the query results.
+      If the search condition has a NULL (unknown) value, the row is excluded from the query results. Basically, the search
+      condition acts as a filter for rows of the table. Rows satisfying the condition pass through the filter and become part
+      of the query results.

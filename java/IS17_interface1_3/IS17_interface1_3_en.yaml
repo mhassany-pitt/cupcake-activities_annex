@@ -1,0 +1,98 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface1_3
+source: TryOut.java
+title: IS17_interface1_3
+description: 'Worked example: IS17_interface1_3'
+authors:
+- first: Stephen
+  last: Plumby
+  email: stephen.plumby@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface1_3'
+elements:
+- type: explanation
+  location:
+    snippet: interface Act {
+  explanations:
+  - body: creates an interface
+- type: explanation
+  location:
+    snippet: class Actor1 implements Act {
+  explanations:
+  - body: creates a new class which implements the interface
+- type: explanation
+  location:
+    snippet: public void act() {
+  explanations:
+  - body: creates a new method
+- type: explanation
+  location:
+    snippet: System.out.println("To be, or not to be");
+  explanations:
+  - body: prints to the console
+- type: explanation
+  location:
+    snippet: class Actor2 implements Act {
+  explanations:
+  - body: creates a new class which implements the interface
+- type: explanation
+  location:
+    snippet: public void act() {
+    nth: 2
+  explanations:
+  - body: creates a new method
+- type: explanation
+  location:
+    snippet: System.out.println("Wherefore art thou Romeo?");
+  explanations:
+  - body: prints to the console
+- type: explanation
+  location:
+    snippet: public class TryOut {
+  explanations:
+  - body: creates a new tester class
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: creates the main method of the tester class
+- type: explanation
+  location:
+    snippet: Actor1 hamlet = new Actor1();
+  explanations:
+  - body: creates a new object of type Actor1 with name hamlet
+- type: explanation
+  location:
+    snippet: Actor2 juliet = new Actor2();
+  explanations:
+  - body: creates a new object of type Actor2 with name juliet
+- type: explanation
+  location:
+    snippet: tryout(hamlet);
+  explanations:
+  - body: passes the hamlet object to the tryout method
+- type: explanation
+  location:
+    snippet: tryout(juliet);
+  explanations:
+  - body: passes the juilet objeect to the tryout method
+- type: explanation
+  location:
+    snippet: private static void tryout(Act actor) {
+  explanations:
+  - body: creates a new method to pass an actor to its act method
+- type: explanation
+  location:
+    snippet: actor.act();
+  explanations:
+  - body: runs the act method of the specified actor

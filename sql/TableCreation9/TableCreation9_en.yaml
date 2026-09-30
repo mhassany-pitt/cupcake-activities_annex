@@ -1,0 +1,65 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableCreation9
+source: query.sql
+title: Primary Key (2)
+description: Primary Key (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:EquiJoin
+  - expert:StringType
+  - expert:NotNullConstraint
+  - expert:AttributeName
+  - expert:SubQuery
+  - expert:Rule
+  - expert:FixedLengthCharacterString
+  - expert:AttributeSpecification
+  - expert:TupleSelectionCondition
+  - expert:UniqueKeyConstraint
+  - expert:BracketCharacter
+  - expert:CommaCharacter
+  - expert:CreateTableClause
+  - expert:CreateTableStatement
+  - expert:NotNullClause
+  - expert:PrimaryKeyClause
+  - expert:PrimaryKeyConstraint
+  - sql_ontology:SubQuery
+  - sql_ontology:CreateTableStatement
+  - sql_ontology:UniqueKeyConstraint
+  - sql_ontology:CommaCharacter
+  - sql_ontology:PrimaryKeyConstraint
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:PrimaryKeyClause
+  - sql_ontology:BracketCharacter
+  - sql_ontology:AttributeSpecification
+  - sql_ontology:CreateTableClause
+  - sql_ontology:NotNullClause
+  - sql_concept:EquiJoin
+  - sql_concept:TupleSelectionCondition
+  - sql_concept:Rule
+runtime:
+  language: sql
+  version: '2016'
+statement: Primary Key (2)
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE course
+  explanations:
+  - body: This example is to create table for course and course ID and course name are the information to be stored.
+- type: explanation
+  location:
+    snippet: (cid CHAR(20) NOT NULL PRIMARY KEY,
+  explanations:
+  - body: Course ID is defined as 'cid'. This column is not allowed to have null value. <BR><BR>Primary key specifies an unique
+      identifier for each row of the table. That is to say, there is not more than one course IDs that are the same. In addition,
+      the column defined as primary key is not allowed to be null.

@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataUpdate3_version_1_pt
+source: query.sql
+title: UpdatingData(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: UPDATE Salesrep
+  explanations:
+  - body: A clausula WHERE pode ser omitida caso queira atualizar o valor de uma coluna em TODAS as tuplas. Nesse exemplo,
+      a cota de todos os representantes de vendas e' aumentada em 5%.
+- type: explanation
+  location:
+    snippet: SET quota = 1.05 * quota;
+  explanations:
+  - body: Soma 5% no valor da coluna 'quota' de todos os representantes de vendas.

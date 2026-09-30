@@ -1,0 +1,90 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_dowhile_findhighandlowscores
+source: FindHighAndLowScores.java
+title: (Do while)  Find high & low scores - CSEdPad
+description: Given an collection of test scores with values between 0 and 100, find and display the low and high scores on
+  the test.
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:IfStatement
+  - webex:GreaterExpression
+  - webex:ArrayInitializer
+  - webex:PostIncrementExpression
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:DoStatement
+  - webex:ArrayVariable
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:Constant
+  - webex:VoidDataType
+  - webex:ConstantInitializationStatement
+  - webex:WhileStatement
+  - webex:LessExpression
+  - webex:IntDataType
+  - webex:StringLiteral
+  - webex:ArrayLength
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:ArrayInitializationStatement
+  - webex:ArrayElement
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ArrayElement
+  - java_ontology:ArrayInitializationStatement
+  - java_ontology:ArrayInitializer
+  - java_ontology:ArrayLength
+  - java_ontology:ArrayVariable
+  - java_ontology:ClassDefinition
+  - java_ontology:Constant
+  - java_ontology:ConstantInitializationStatement
+  - java_ontology:DoStatement
+  - java_ontology:FormalMethodParameter
+  - java_ontology:GreaterExpression
+  - java_ontology:IfStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+  - java_ontology:WhileStatement
+runtime:
+  language: java
+  version: '17'
+statement: Given an collection of test scores with values between 0 and 100, find and display the low and high scores on the
+  test.
+elements:
+- type: explanation
+  location:
+    snippet: do {
+  explanations:
+  - body: Unlike while and for loops, the body of a do-while loop executes first, before a conditional is checked.
+- type: explanation
+  location:
+    snippet: '} while (i < SCORES.length);'
+  explanations:
+  - body: Check the conditional (i < SCORES.length), and if it evaluates to true, repeat the loop body; otherwise, if it evaluates
+      to false, drop out of the loop. Note that a semicolon (;) must be placed on the end of a do-while loop -- it is easy
+      to forget!

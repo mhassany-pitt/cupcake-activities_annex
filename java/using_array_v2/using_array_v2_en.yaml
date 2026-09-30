@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_using_array_v2
+source: using_array.java
+title: Using an Array1
+description: Using an Array1
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ArrayCreationStatement
+  - expert:ArrayDataType
+  - expert:ArrayElement
+  - expert:ArrayVariable
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:ForStatement
+  - expert:IntDataType
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:PostIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Using an Array1
+elements:
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < 5; i++)
+  explanations:
+  - body: use a loop to set all the values of an array to 0.

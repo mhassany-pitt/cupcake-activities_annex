@@ -1,0 +1,131 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableCreation4
+source: query.sql
+title: Foriegn Key
+description: Foriegn Key
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AggregateOperation
+  - expert:StringType
+  - expert:SubQuery
+  - expert:Rule
+  - expert:FixedLengthCharacterString
+  - expert:ForeignKeyClause
+  - expert:ForeignKeyConstraint
+  - expert:AttributeName
+  - expert:AttributeSpecification
+  - expert:TupleSelectionCondition
+  - expert:ReferentialAction
+  - expert:BracketCharacter
+  - expert:CascadeOnReferentialAction
+  - expert:CaseChanging
+  - expert:SetNullOnReferentialAction
+  - expert:IntegrityConstraint
+  - expert:IntegrityOnDelete
+  - expert:CommaCharacter
+  - expert:IntegrityOnUpdate
+  - expert:CreateTableClause
+  - expert:CreateTableStatement
+  - expert:NotNullClause
+  - expert:NotNullConstraint
+  - expert:NullValue
+  - expert:DefaultValueClause
+  - expert:OnDeleteClause
+  - expert:OnUpdateClause
+  - expert:OrLogicOperation
+  - expert:PrimaryKeyClause
+  - expert:PrimaryKeyConstraint
+  - expert:ReferencesClause
+  - sql_ontology:SubQuery
+  - sql_ontology:AttributeName
+  - sql_ontology:CommaCharacter
+  - sql_ontology:PrimaryKeyConstraint
+  - sql_ontology:PrimaryKeyClause
+  - sql_ontology:CreateTableStatement
+  - sql_ontology:OrLogicalOperator
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:SetNullOnReferentialAction
+  - sql_ontology:CascadeOnReferentialAction
+  - sql_ontology:CreateTableClause
+  - sql_ontology:NotNullClause
+  - sql_ontology:ForeignKeyClause
+  - sql_ontology:ReferencesClause
+  - sql_ontology:ForeignKeyConstraint
+  - sql_ontology:AttributeSpecification
+  - sql_ontology:IntegrityOnDelete
+  - sql_ontology:IntegrityOnUpdate
+  - sql_ontology:BracketCharacter
+  - sql_ontology:DefaultValueClause
+  - sql_ontology:IntegrityConstraint
+  - sql_ontology:OnDeleteClause
+  - sql_ontology:OnUpdateClause
+  - sql_concept:TupleSelectionCondition
+  - sql_concept:Rule
+  - sql_concept:NotNullConstraint
+  - sql_concept:CaseChanging
+  - sql_concept:NullValue
+  - sql_concept:AggregateOperation
+runtime:
+  language: sql
+  version: '2016'
+statement: Foriegn Key
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE Enrolled
+  explanations:
+  - body: This table is to store student's enrollment information. There is separate table for 'Students' per se and it's
+      primary key is 'sid.'
+- type: explanation
+  location:
+    snippet: (sid CHAR(20) NOT NULL,
+  explanations:
+  - body: '''sid'' is student ID. Before being defined as a part of ''Enrolled'' table, it is defined in ''Students'' table.'
+- type: explanation
+  location:
+    snippet: PRIMARY KEY (sid,  cid),
+  explanations:
+  - body: For a given student and course,  there is a single grade.
+- type: explanation
+  location:
+    snippet: FOREIGN KEY (sid)
+  explanations:
+  - body: '''Sid'' in Enrolled table is a foreign key that references ''Students'' table. Foreign key clause identify the
+      table''s relationships to other tables in the database. Columns forming the relationship is called as foreign key.'
+- type: explanation
+  location:
+    snippet: REFERENCES Students
+  explanations:
+  - body: This clause specifies that the foreign key 'sid' is referenced from 'student' table. Keyword 'REFERENCES' is followed
+      by the table name where foreign key is actually defined. Specially, 'REFERENCES' is important part to specify the related
+      table, and the 'FOREIGN KEY' and 'REFERENCES' keyword should not be separated by comma. If there is only table name
+      after it, the DBMS will take the primary key of that table as the foreign key.
+- type: explanation
+  location:
+    snippet: ON DELETE CASCADE
+  explanations:
+  - body: If a row of one or more foreign keys is deleted, the tuple in the foreign key will lose the value to point to. In
+      this example, if the sid, 'ktl123' is deleted in the 'Students' table, the 'ktl123' tuple in this 'Enrolled' is unable
+      to know the student's information any more, because it lose the reference point. Note that deleting a row from referring
+      'Enrolled' table never poses a problem. The DBMS enforces the default NO ACTION if no rule is explicitly specified.
+      <Br>The CASCADE delete rule tells the DBMS that when a referred row is deleted, all of its pointed rows should automatically
+      be delete from the foreign key.
+- type: explanation
+  location:
+    snippet: ON UPDATE SET DEFAULT);
+  explanations:
+  - body: If foreign key is modified by UPDATE statement, the new value should match the value in reference table 'Students'.
+      The SET DEFAULT update rule tells the DBMS that when a value in a referred table is update, the the foreign key values
+      in all of its corresponding rows should also be set to the default value. This rule can be different according the kind
+      of database that you are using. In some DBMS, the restrict rule is defined as SET NULL. In this case, it is impossible
+      to define this restrict rule into primary key of reference table.

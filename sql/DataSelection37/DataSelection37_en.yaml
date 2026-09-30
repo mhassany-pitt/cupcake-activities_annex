@@ -1,0 +1,96 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection37
+source: query.sql
+title: Grouping and aggregating (2)
+description: Grouping and aggregating (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:Insertion
+  - expert:DotCharacter
+  - expert:TableAlias
+  - expert:SingleTableSelection
+  - expert:GreaterThanComparison
+  - expert:SelectClause
+  - expert:Assertion
+  - expert:LessThanComparison
+  - expert:AggregateOperation
+  - expert:SimpleSubquery
+  - expert:TargetTableDeclaration
+  - expert:CountRowFunction
+  - expert:MultipleAttributeSelection
+  - expert:SingleAttributeGrouping
+  - expert:CountFunction
+  - expert:SetOperation
+  - expert:FromClause
+  - expert:MinFunction
+  - expert:SelectStatement
+  - expert:ColumnAddition
+  - expert:HavingClause
+  - expert:BracketCharacter
+  - expert:ComparisonOperation
+  - expert:WhereClause
+  - sql_ontology:DotCharacter
+  - sql_ontology:TableAlias
+  - sql_ontology:GroupByClause
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:GreaterThanComparison
+  - sql_ontology:SelectClause
+  - sql_ontology:Assertion
+  - sql_ontology:LessThanComparison
+  - sql_ontology:SimpleSubquery
+  - sql_ontology:CountRowFunction
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:CountFunction
+  - sql_ontology:SetOperation
+  - sql_ontology:FromClause
+  - sql_ontology:MinFunction
+  - sql_ontology:EqualComparison
+  - sql_ontology:SelectStatement
+  - sql_ontology:HavingClause
+  - sql_ontology:BracketCharacter
+  - sql_ontology:WhereClause
+  - sql_concept:AggregateOperation
+  - sql_concept:Insertion
+  - sql_concept:ColumnAddition
+  - sql_concept:TargetTableDeclaration
+runtime:
+  language: sql
+  version: '2016'
+statement: Grouping and aggregating (2)
+elements:
+- type: explanation
+  location:
+    snippet: WHERE S.age > 18
+  explanations:
+  - body: Not all sailors are taken into consideration. Sailors older than 18 years are selected.
+- type: explanation
+  location:
+    snippet: GROUP BY S.rating
+  explanations:
+  - body: The sailors' ratings are grouped.
+- type: explanation
+  location:
+    snippet: HAVING 1 <
+  explanations:
+  - body: This query firstly limit ratings having at least two sailors in the rating. The total number of each ratings that
+      sailors are beloning to is compared with 1.
+- type: explanation
+  location:
+    snippet: (SELECT COUNT(*)
+  explanations:
+  - body: This subquery is to count the number of sailors belonging to each ratings.
+- type: explanation
+  location:
+    snippet: WHERE S.rating = S2.rating);
+  explanations:
+  - body: The ratings in Sailors table is matched with grouped ratings.

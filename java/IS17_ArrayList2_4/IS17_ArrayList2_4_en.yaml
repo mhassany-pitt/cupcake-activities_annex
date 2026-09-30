@@ -1,0 +1,118 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList2_4
+source: ArrayList2.java
+title: IS17_ArrayList2_4
+description: 'Worked example: IS17_ArrayList2_4'
+authors:
+- first: Andres
+  last: Pacheco
+  email: andres.pacheco@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList2_4'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: imports the array list class from the java library
+- type: explanation
+  location:
+    snippet: public class ArrayList2 {
+  explanations:
+  - body: creates a class called ArrayList2
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: calls for main method
+- type: explanation
+  location:
+    snippet: ArrayList<Integer> values = new ArrayList<Integer>();
+  explanations:
+  - body: creates a new ArrayList called values
+- type: explanation
+  location:
+    snippet: values.add(1);
+  explanations:
+  - body: adds 1 to the arraylist
+- type: explanation
+  location:
+    snippet: values.add(2);
+  explanations:
+  - body: adds 2 to the arraylist
+- type: explanation
+  location:
+    snippet: values.add(3);
+  explanations:
+  - body: adds 3 to the arraylist
+- type: explanation
+  location:
+    snippet: values.add(4);
+  explanations:
+  - body: adds 4 to the arraylist
+- type: explanation
+  location:
+    snippet: values.add(5);
+  explanations:
+  - body: and adds 5 to the arraylist
+- type: explanation
+  location:
+    snippet: values.remove(1);
+  explanations:
+  - body: removes 1 from the arraylist
+- type: explanation
+  location:
+    snippet: 'System.out.print("Contents of values: ");'
+  explanations:
+  - body: prints a string saying "contents of values:"
+- type: explanation
+  location:
+    snippet: 'for (int v : values)'
+  explanations:
+  - body: creates a for each loop v and passes it through arraylist values
+- type: explanation
+  location:
+    snippet: System.out.print(v + " ");
+  explanations:
+  - body: prints the values in v plus a space
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: prints a blank line
+- type: explanation
+  location:
+    snippet: int sum = 0;
+  explanations:
+  - body: calls for local variable sum and assigns it zero
+- type: explanation
+  location:
+    snippet: 'for (int v : values)'
+    nth: 2
+  explanations:
+  - body: creates a for each loop v and passes it through variables
+- type: explanation
+  location:
+    snippet: sum += v;
+  explanations:
+  - body: sums all the elements in v
+- type: explanation
+  location:
+    snippet: 'System.out.println("Sum of values: " + sum);'
+  explanations:
+  - body: prints the line "sum of values" and the values
+- type: explanation
+  location:
+    snippet: 'System.out.println("size of values: " + values.size());'
+  explanations:
+  - body: prints the line "size of values" and prints the size of the array

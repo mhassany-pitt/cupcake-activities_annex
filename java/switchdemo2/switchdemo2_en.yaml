@@ -1,0 +1,38 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_switchdemo2
+source: Main.java
+title: DEPRECATED_SwitchDemo2
+description: 'Worked example: DEPRECATED_SwitchDemo2'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_SwitchDemo2'
+elements:
+- type: explanation
+  location:
+    snippet: break;
+  explanations:
+  - body: break statement terminates the enclosing switch statement.
+- type: explanation
+  location:
+    snippet: break;
+    nth: 2
+  explanations:
+  - body: break statement terminates the enclosing switch statement.
+- type: explanation
+  location:
+    snippet: 'default:'
+  explanations:
+  - body: handles all values that aren't explicitly handled by one of the case sections.

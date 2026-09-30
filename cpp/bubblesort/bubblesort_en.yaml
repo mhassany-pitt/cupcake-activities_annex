@@ -1,0 +1,63 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_bubblesort
+source: main.cpp
+title: BubbleSort
+description: 'Worked example: BubbleSort'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: BubbleSort'
+elements:
+- type: explanation
+  location:
+    snippet: int i, pass, hold;
+  explanations:
+  - body: temporary location used to swap array elements.
+- type: explanation
+  location:
+    snippet: for ( i = 0; i <= SIZE - 1; i++ )
+  explanations:
+  - body: loop to control number of comparisons per pass.
+- type: explanation
+  location:
+    snippet: for ( pass = 1; pass <= SIZE - 1; pass++ )
+  explanations:
+  - body: loop to control number of passes.
+- type: explanation
+  location:
+    snippet: for ( i = 0; i <= SIZE - 2; i++ )
+  explanations:
+  - body: loop to control number of comparisons per pass.
+- type: explanation
+  location:
+    snippet: if ( a[ i ] > a[ i + 1 ] )
+  explanations:
+  - body: compare adjacent elements and swap them if first element is greater than second element.
+- type: explanation
+  location:
+    snippet: a[ i ] = a[ i + 1 ];
+  explanations:
+  - body: If any two array elements are out of order, the function swaps them.
+- type: explanation
+  location:
+    snippet: a[ i + 1 ] = hold;
+  explanations:
+  - body: temporary location used to swap array elements.
+- type: explanation
+  location:
+    snippet: for ( i = 0; i <= SIZE - 1; i++ )
+    nth: 2
+  explanations:
+  - body: loop to control number of comparisons per pass.

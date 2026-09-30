@@ -1,0 +1,65 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_HelloWorld2_v2
+source: Main.java
+title: HelloWorld
+description: HelloWorld_v2
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringInitializationStatement
+  - expert:StringLiteral
+  - expert:StringVariable
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: HelloWorld_v2
+elements:
+- type: explanation
+  location:
+    snippet: class HelloWorld {
+  explanations:
+  - body: Java programs consist of classes. This line starts the class 'HelloWorld'.
+- type: explanation
+  location:
+    snippet: public static void main (String[] args) {
+  explanations:
+  - body: The method 'main' starts the execution of Java applications.
+- type: explanation
+  location:
+    snippet: String s = "Hello, world!";
+  explanations:
+  - body: Initialization of the String variable 's';
+- type: explanation
+  location:
+    snippet: System.out.println(s);
+  explanations:
+  - body: This statement prints out the value of variable 's' (Hello, World!) to the console window
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of the method 'main'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of the class 'HelloWorld'

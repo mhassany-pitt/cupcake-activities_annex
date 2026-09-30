@@ -1,0 +1,67 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_checkbox_test
+source: CheckBoxTest.java
+title: ISD::CheckBoxTest.java
+description: 'Worked example: ISD::CheckBoxTest.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::CheckBoxTest.java'
+elements:
+- type: explanation
+  location:
+    snippet: Container c = getContentPane();
+  explanations:
+  - body: Create a Container object.
+- type: explanation
+  location:
+    snippet: c.add( t );
+  explanations:
+  - body: attach component to Container c.
+- type: explanation
+  location:
+    snippet: bold = new JCheckBox( "Bold" );
+  explanations:
+  - body: Create JCheckBoxes
+- type: explanation
+  location:
+    snippet: c.add( bold );
+  explanations:
+  - body: attach component to Container c.
+- type: explanation
+  location:
+    snippet: italic = new JCheckBox( "Italic" );
+  explanations:
+  - body: Create JCheckBoxes
+- type: explanation
+  location:
+    snippet: private class CheckBoxHandler implements ItemListener {
+  explanations:
+  - body: Because CheckBoxHandler implements ItemListener, it must define method itemStateChanged
+- type: explanation
+  location:
+    snippet: if ( e.getStateChange() == ItemEvent.SELECTED )
+  explanations:
+  - body: getStateChange returns ItemEvent.SELECTED or ItemEvent.DESELECTED
+- type: explanation
+  location:
+    snippet: t.setFont(
+  explanations:
+  - body: Use setFont to update the JTextField.
+- type: explanation
+  location:
+    snippet: t.repaint();
+  explanations:
+  - body: Call repaint to update the screen.

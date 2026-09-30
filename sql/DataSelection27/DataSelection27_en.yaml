@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection27
+source: query.sql
+title: Checking Null Values
+description: Checking Null Values
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AllAttributeSelection
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:IsNullPredicate
+  - expert:SetOperation
+  - expert:SingleAttributeSelection
+  - expert:SingleTableSelection
+  - sql_ontology:SelectStatement
+  - sql_ontology:SetOperation
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:AllAttributeSelection
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:IsNullPredicate
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+runtime:
+  language: sql
+  version: '2016'
+statement: Checking Null Values
+elements:
+- type: explanation
+  location:
+    snippet: WHERE amount IS NULL;
+  explanations:
+  - body: IS NULL predicate is to handle null value directly as a comparison. If the compared value is null, it results TRUE
+      and vice versa. NULL is just a keyword that the value is unknown. Even if the comparison test 'amount = null' were legal,
+      the rules can be different from what you might expect. It is because this comparison is like this, 'Known Value = Unknown
+      Value'. Hence, it is impossible to judge whether it is TRUE or FALSE.

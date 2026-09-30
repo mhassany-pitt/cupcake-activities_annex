@@ -1,0 +1,112 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_16_en
+source: main.py
+title: Class Definition - Calculator
+description: 'Worked example: Class Definition - Calculator'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Return
+  - parser:Sub
+  - parser:Int
+  - parser:Attribute
+  - parser:AugAssign
+  - parser:ClassDef
+  - parser:Add
+  - parser:Call
+  - parser:arg
+  - parser:Assign
+  - parser:FunctionDef
+  - unspecified:arg
+  - unspecified:Sub
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Return
+  - unspecified:ClassDef
+  - unspecified:FunctionDef
+  - unspecified:Int
+  - unspecified:Attribute
+  - unspecified:Add
+  - unspecified:AugAssign
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Class Definition - Calculator'
+elements:
+- type: explanation
+  location:
+    snippet: 'class calculator(object):'
+  explanations:
+  - body: This statement defines a class called 'calculator'. The object is a default argument passed to it to tell that the
+      class can be instantiated
+- type: explanation
+  location:
+    snippet: 'def __init__ (self):'
+  explanations:
+  - body: this is the class constructor. A constructor always has a default argument 'self'. In fact, every function definition
+      always has 'self' as the its default argument/parameter. The constructor contains all the basic statements that needs
+      to be initiated when the class is called
+- type: explanation
+  location:
+    snippet: self.current = 0
+  explanations:
+  - body: Here the variable 'current' is the local variable and is initiated with the value '0'
+- type: explanation
+  location:
+    snippet: 'def add(self, amount):'
+  explanations:
+  - body: We now define a class called 'add'. This class takes in an additional argument called 'amount' and we will pass
+      an integer as amount while instantiating the class.
+- type: explanation
+  location:
+    snippet: self.current += amount
+  explanations:
+  - body: Adding the value of amount to the current value
+- type: explanation
+  location:
+    snippet: return self.current
+  explanations:
+  - body: returning the current value
+- type: explanation
+  location:
+    snippet: 'def subtract(self, amount):'
+  explanations:
+  - body: Another function definition called 'subtract' which is meant to subtract the amount from the current value
+- type: explanation
+  location:
+    snippet: return self.current
+    nth: 2
+  explanations:
+  - body: returning the value of 'current' variable
+- type: explanation
+  location:
+    snippet: 'def getCurrent(self):'
+  explanations:
+  - body: defining a function called 'getCurrent'. The purpose of this function is to get the current value at any time in
+      the program
+- type: explanation
+  location:
+    snippet: a = calculator()
+  explanations:
+  - body: The calculator class instance is passed on to the variable 'a'
+- type: explanation
+  location:
+    snippet: print(a.add(5))
+  explanations:
+  - body: Addiing the number '5' to the current value. Initially the value of current is '0' and hence this will return the
+      value '5' (0+5 = 5)
+- type: explanation
+  location:
+    snippet: print(a.subtract(2))
+  explanations:
+  - body: Now the value of current is 5. Here we subtract 2 from the current value by calling the subtract function in the
+      class 'calculator'. This will return the value 3 (5-2 = 3)

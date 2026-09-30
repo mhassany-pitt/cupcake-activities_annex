@@ -1,0 +1,34 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_import_pkg_v2
+source: Main.java
+title: Importing Package
+description: 'Worked example: Importing Package'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Importing Package'
+elements:
+- type: explanation
+  location:
+    snippet: import edu.pitt.sis.is17.*;
+  explanations:
+  - body: the keyword import is used to import classes from packages. It allows you to refer to a class of a package by its
+      class name, without the package prefix. This line, we imported all the classes from edu.pitt.sis.is17 package.
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: if you want to use a class from a package, you can refer to it by using the full name(package name plus class name).
+      This line imports the ArrayList class from java.util package.

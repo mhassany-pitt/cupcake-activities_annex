@@ -1,0 +1,75 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_8_en
+source: main.py
+title: 5.2. The while statement
+description: 'Worked example: 5.2. The while statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:AugAssign
+  - parser:Lt
+  - parser:While
+  - parser:Call
+  - parser:Str
+  - parser:Add
+  - parser:Assign
+  - parser:If
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:While
+  - unspecified:Lt
+  - unspecified:Add
+  - unspecified:AugAssign
+  - unspecified:If
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: 5.2. The while statement'
+elements:
+- type: explanation
+  location:
+    snippet: temperature = 0
+  explanations:
+  - body: Temperature is set to 0 (Integer 0 is assigned to the variabe temperature)
+- type: explanation
+  location:
+    snippet: 'while (temperature < 60):'
+  explanations:
+  - body: This While Loop condition will iterate from temperature = 0 to temperature < 60
+- type: explanation
+  location:
+    snippet: 'if temperature < 30:'
+  explanations:
+  - body: Inside the while loop, there is an If condition. This If condition checks if the temperature is less than 30
+- type: explanation
+  location:
+    snippet: print("It is Cold!")
+  explanations:
+  - body: If the temperature is less than 30, it will print the following statement
+- type: explanation
+  location:
+    snippet: 'else:'
+  explanations:
+  - body: If the temperature is more than 30,then...
+- type: explanation
+  location:
+    snippet: print("It is Hot!")
+  explanations:
+  - body: If the temperature is more than 30,then it will print the following
+- type: explanation
+  location:
+    snippet: temperature += 10
+  explanations:
+  - body: Here the temperature is incremented by 10

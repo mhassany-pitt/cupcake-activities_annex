@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_variables2
+source: Main.java
+title: DEPRECATED_variable initialization
+description: 'Worked example: DEPRECATED_variable initialization'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_variable initialization'
+elements:
+- type: explanation
+  location:
+    snippet: int i = 2, j = 3;
+  explanations:
+  - body: int variable i is initially given the value 2. int variable j is initially given the value 3.
+- type: explanation
+  location:
+    snippet: String sentence = "I am a camera.";
+  explanations:
+  - body: The String variable sentence is initialized with a string literal.
+- type: explanation
+  location:
+    snippet: double a = 2.0, b = 3.0;
+  explanations:
+  - body: double variable a is initially given the value 2.0. double variable b is initially given the value 3.0.
+- type: explanation
+  location:
+    snippet: i = i * 3 + 2;
+  explanations:
+  - body: It's an assignment expression. The variable i is a integer variable initialized to 2.  Next i is multiplied by 3.
+      This result is added to 2. the final value is assigned to i. The result is 8, which is then assign to i.

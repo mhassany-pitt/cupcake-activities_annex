@@ -1,0 +1,89 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList3_2
+source: ArrayList3.java
+title: IS17_ArrayList3_2
+description: 'Worked example: IS17_ArrayList3_2'
+authors:
+- first: Annette
+  last: Rico
+  email: annette.rico@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList3_2'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: Statement to import package needed to use ArrayLists.
+- type: explanation
+  location:
+    snippet: public class ArrayList3 {
+  explanations:
+  - body: Class declaration for class ArrayList3.
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: The method were class ArrayList3 begins execution of the program.
+- type: explanation
+  location:
+    snippet: ArrayList<String> names = new ArrayList<String>();
+  explanations:
+  - body: Declaration of a new empty ArrayList object called names.
+- type: explanation
+  location:
+    snippet: names.add( new String( "Bob" ) );
+  explanations:
+  - body: Places the String "Bob" into the names ArrayList using the add method call.
+- type: explanation
+  location:
+    snippet: names.add( new String( "Carol" ) );
+  explanations:
+  - body: Places the String "Carol" into the names ArrayList using the add method call.
+- type: explanation
+  location:
+    snippet: names.add( 1, new String( "Ted" ) );
+  explanations:
+  - body: Places the String "Ted" into the names ArrayList using the add method call.
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+  explanations:
+  - body: Sends an integer that represents the size of the names ArrayList to the output.  The size of the integer is obtained
+      by the size method call.
+- type: explanation
+  location:
+    snippet: String theName = (String) names.get( 2 );
+  explanations:
+  - body: Declares a String variable theName and fills the variable with the second element of the names ArrayList. The get
+      method is used to return the second element. This element must be cast as a String in order is needed to store the ArrayList
+      element object as a String.
+- type: explanation
+  location:
+    snippet: 'System.out.println("the name of this element is: " + theName);'
+  explanations:
+  - body: Sends the phrase "the name of element is Carol" to the output.  The phrase is developed from the concatenation of
+      "the name of this element is" along with the contents of the String theName. which is Carol.
+- type: explanation
+  location:
+    snippet: names.clear( );
+  explanations:
+  - body: The clear method call empties all objects that were stored in the ArrayList names.
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+    nth: 2
+  explanations:
+  - body: Sends an integer representing the size of the ArrayList names to the output.  The size method call is used to return
+      the size of the ArrayList. The ArrayList should now reflect a zero size since it the clear method call has emtpied the
+      ArrayList.

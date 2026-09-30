@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_one_dim_arrays
+source: main.cpp
+title: One Dim Arrays
+description: 'Worked example: One Dim Arrays'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: One Dim Arrays'
+elements:
+- type: explanation
+  location:
+    snippet: '#define SIZE 10'
+  explanations:
+  - body: '#define directive tells compiler to replace all instances of the word SIZE with 10.'
+- type: explanation
+  location:
+    snippet: int s[ SIZE ], j;
+  explanations:
+  - body: symbolic constant SIZE can be used to specify array size. SIZE is replaced with 10 by the compiler, so array s has
+      10 elements
+- type: explanation
+  location:
+    snippet: for ( j = 0; j <= SIZE - 1; j++ )
+  explanations:
+  - body: set the values.
+- type: explanation
+  location:
+    snippet: s[ j ] = 2 + 2 * j;
+  explanations:
+  - body: for loop initializes each array element separately.
+- type: explanation
+  location:
+    snippet: for ( j = 0; j < SIZE; j++ )
+  explanations:
+  - body: print the values.

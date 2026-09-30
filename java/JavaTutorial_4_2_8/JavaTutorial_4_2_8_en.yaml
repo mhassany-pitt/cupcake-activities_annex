@@ -1,0 +1,49 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_2_8
+source: MainClass.java
+title: Using &&
+description: Using &&
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:AndExpression
+  - expert:ClassDefinition
+  - expert:EqualExpression
+  - expert:FormalMethodParameter
+  - expert:IfStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:ModulusExpression
+  - expert:PreIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Using &&
+elements:
+- type: explanation
+  location:
+    snippet: if (++value % 2 == 0 && ++count < limit) {
+  explanations:
+  - body: "The && (AND) operator is used to indicate that both conditions (at the right and left sides of the &&) must be\
+      \ met. \r\nIncremental operator \"++\" put before the variable makes the increment before the rest of \r\noperations\
+      \ is computed. The modulus operator (\"%\") computes the rest of the integer quotient \r\nbetween \"value\" and 2. Here\
+      \ it is testing if value is an even number. Since \"++\" is put before, \r\nthe value is incremented to 9 and then the\
+      \ modulus 2 gives the value 1, and the condition is \r\nnot met."

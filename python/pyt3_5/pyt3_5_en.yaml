@@ -1,0 +1,50 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt3_5_en
+source: main.py
+title: IF Statement
+description: 'Worked example: IF Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Gt
+  - parser:Call
+  - parser:Assign
+  - parser:If
+  - unspecified:Gt
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:If
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: IF Statement'
+elements:
+- type: explanation
+  location:
+    snippet: number = 10
+  explanations:
+  - body: In this statement integer '10' is assigned to the variable 'number'
+- type: explanation
+  location:
+    snippet: 'if number > 5:'
+  explanations:
+  - body: This statement checks if the variable 'number' has a value greater than '5'. If this condition is true, it will
+      go inside the loop to execute the statement. If the condition is not true it will skip the IF statement.
+- type: explanation
+  location:
+    snippet: print(True)
+  explanations:
+  - body: |-
+      If the above condition is true, it will print out the boolean 'True'. In this case it will print out True.
+      Note: A boolean value is not a string and hence it should not be inside quotation marks.

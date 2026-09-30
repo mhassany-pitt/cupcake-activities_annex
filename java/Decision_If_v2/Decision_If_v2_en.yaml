@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Decision_If_v2
+source: Decision_If.java
+title: Decision If
+description: Decision If
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:EqualExpression
+  - expert:FormalMethodParameter
+  - expert:IfStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ModulusExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Decision If
+elements:
+- type: explanation
+  location:
+    snippet: if (n % 2 == 0)
+  explanations:
+  - body: if n is an even integer (the remainder of n divide by 2 is equal to 0), the statement is true. the following code
+      block will be executed.

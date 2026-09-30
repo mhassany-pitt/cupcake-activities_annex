@@ -1,0 +1,120 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_3-19_MoreMethods
+source: MoreMethods.java
+title: 3-19_MoreMethods
+description: 'Worked example: 3-19_MoreMethods'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:StaticMethodSpecifier
+  - parser:StringDataType
+  - parser:ReturnStatement
+  - parser:java.lang.String.substring
+  - parser:ObjectMethodInvocation
+  - parser:ActualMethodParameter
+  - parser:StringAddition
+  - parser:StringLiteral
+  - parser:java.lang.String.charAt
+  - parser:DoubleDataType
+  - parser:IfElseIfStatement
+  - parser:GreaterEqualExpression
+  - parser:AndExpression
+  - parser:IfElseStatement
+  - parser:VoidDataType
+  - parser:java.lang.System.out.println
+  - parser:IntDataType
+  - parser:CharDataType
+  - parser:EqualExpression
+  - parser:MultiplyExpression
+  - parser:SubtractExpression
+  - parser:AddExpression
+  - parser:SimpleAssignmentExpression
+  - parser:ForStatement
+  - parser:LessExpression
+  - parser:PostIncrementExpression
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddExpression
+  - java_ontology:AndExpression
+  - java_ontology:CharDataType
+  - java_ontology:ClassDefinition
+  - java_ontology:DoubleDataType
+  - java_ontology:EqualExpression
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:GreaterEqualExpression
+  - java_ontology:IfElseIfStatement
+  - java_ontology:IfElseStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.String.charAt
+  - java_ontology:java.lang.String.substring
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiplyExpression
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:ReturnStatement
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:SubtractExpression
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: 3-19_MoreMethods'
+elements:
+- type: explanation
+  location:
+    snippet: public static double max(double a, double b, double c) {
+  explanations:
+  - body: This method returns the maximum of its three parameters.
+- type: explanation
+  location:
+    snippet: if (a >= b && a >= c)
+  explanations:
+  - body: We use >= instead of > to account for situations where two or more parameters are the same
+- type: explanation
+  location:
+    snippet: public static int factorial(int n) {
+  explanations:
+  - body: Recursively returns the factorial of n.
+- type: explanation
+  location:
+    snippet: if (n == 0)
+  explanations:
+  - body: Base case - every recursive method must have at least one of these!
+- type: explanation
+  location:
+    snippet: return n*factorial(n-1);
+  explanations:
+  - body: For example, 5! = 5*4!, 4! = 4*3!, and so on
+- type: explanation
+  location:
+    snippet: if (n == 0)
+    nth: 2
+  explanations:
+  - body: 'Two base cases: n = 0 and n = 1'
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: n must be >= 2 for this to work, since it requires adding the two previous values

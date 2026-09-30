@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_nested_minsub_annoexp
+source: simple_nested_loop.java
+title: SimpleNestedLoop
+description: Simple Nested Loop for NestedStatement
+authors:
+- first: Yun
+  last: Huang
+  email: yun.huang@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:IntDataType
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:NestedForLoops
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Simple Nested Loop for NestedStatement
+elements:
+- type: explanation
+  location:
+    snippet: for(int i = 0; i < 5; i++)
+  explanations:
+  - body: The outer for loop starts with i equals to 0. It increases 1 for each iteration and terminates when it reaches 4.
+- type: explanation
+  location:
+    snippet: for(int j = 0; j < 4; j++)
+  explanations:
+  - body: For each value of i, the inner for loop starts with j equals to 0, and increases j by 1 for each iteration and terminates
+      when it reaches 3.
+- type: explanation
+  location:
+    snippet: result = j;
+  explanations:
+  - body: Here the value of result only depends on the value of j. When i reaches the maximum value 4 and j reaches the maximum
+      value 3, result is set to 3, and both loops end. The final value of result is 3.

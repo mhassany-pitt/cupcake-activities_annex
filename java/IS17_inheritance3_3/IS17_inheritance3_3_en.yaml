@@ -1,0 +1,124 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance3_3
+source: Example1.java
+title: IS17_inheritance3_3
+description: 'Worked example: IS17_inheritance3_3'
+authors:
+- first: Andrzej
+  last: Dubiel
+  email: andrzej.dubiel@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance3_3'
+elements:
+- type: explanation
+  location:
+    snippet: class Liquid {
+  explanations:
+  - body: Declares class Liquid
+- type: explanation
+  location:
+    snippet: void swirl(boolean clockwise) {
+  explanations:
+  - body: Checks if object swirls clockwise or not and displays text information
+- type: explanation
+  location:
+    snippet: System.out.println("Swirling Liquid");
+  explanations:
+  - body: 'Prints out the output - text information which says: "Swirling Liquid"'
+- type: explanation
+  location:
+    snippet: class Coffee extends Liquid {
+  explanations:
+  - body: Declares class Coffee which inherits the attributes and methods of class Liquid
+- type: explanation
+  location:
+    snippet: void swirl(boolean clockwise) {
+    nth: 2
+  explanations:
+  - body: Checks if object swirls clockwise or not and displays text information
+- type: explanation
+  location:
+    snippet: System.out.println("Swirling Coffee");
+  explanations:
+  - body: 'Prints out the output - text information which says: "Swirling Coffee"'
+- type: explanation
+  location:
+    snippet: class Milk extends Liquid {
+  explanations:
+  - body: Declares class Milk which inherits the attributes and methods of class Liquid
+- type: explanation
+  location:
+    snippet: void swirl(boolean clockwise) {
+    nth: 3
+  explanations:
+  - body: Checks if object swirls clockwise or not and displays text information
+- type: explanation
+  location:
+    snippet: System.out.println("Swirling Milk");
+  explanations:
+  - body: 'Prints out the output - text information which says: "Swirling Milk"'
+- type: explanation
+  location:
+    snippet: class Cup {
+  explanations:
+  - body: Declares class Cup
+- type: explanation
+  location:
+    snippet: private Liquid innerLiquid;
+  explanations:
+  - body: Constructs instance field of class Liquid
+- type: explanation
+  location:
+    snippet: Cup(Liquid liq) {
+  explanations:
+  - body: "Creates object of class Cup with object of class Liquid\r\n@param liq liquid"
+- type: explanation
+  location:
+    snippet: innerLiquid = liq;
+  explanations:
+  - body: Assigns liq to innerLiqui
+- type: explanation
+  location:
+    snippet: innerLiquid.swirl(false);
+  explanations:
+  - body: Applies boolean method swirl
+- type: explanation
+  location:
+    snippet: Liquid liquid = new Liquid();
+  explanations:
+  - body: Creates new object of class Liquid
+- type: explanation
+  location:
+    snippet: Liquid coffee = new Coffee();
+  explanations:
+  - body: Creates new object of class Coffee
+- type: explanation
+  location:
+    snippet: Liquid milk = new Milk();
+  explanations:
+  - body: Creates new object of class Milk
+- type: explanation
+  location:
+    snippet: Cup cup1 = new Cup(liquid);
+  explanations:
+  - body: Creates new object of class Cup with sample liquid inside
+- type: explanation
+  location:
+    snippet: Cup cup2 = new Cup(coffee);
+  explanations:
+  - body: Creates new object of class Cup with coffee as a inner liquid
+- type: explanation
+  location:
+    snippet: Cup cup3 = new Cup(milk);
+  explanations:
+  - body: Creates new object of class Cup with mil as a inner liquid

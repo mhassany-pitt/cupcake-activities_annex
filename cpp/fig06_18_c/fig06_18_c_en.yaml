@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig06_18_c_en
+source: main.cpp
+title: fig06_18.c
+description: 'Worked example: fig06_18.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig06_18.c'
+elements:
+- type: explanation
+  location:
+    snippet: element = linearSearch( a, searchKey, SIZE );
+  explanations:
+  - body: attempt to locate searchKey in array a.
+- type: explanation
+  location:
+    snippet: int linearSearch( const int array[], int key, int size )
+  explanations:
+  - body: compare key to every element of array until the location is found or until the end of array is reached; return subscript
+      of element if key or -1 if key is not found.
+- type: explanation
+  location:
+    snippet: for ( n = 0; n < size; ++n ) {
+  explanations:
+  - body: Linear search algorithm searches through every element in the array until a match is found.
+- type: explanation
+  location:
+    snippet: return n;
+  explanations:
+  - body: return location of key.
+- type: explanation
+  location:
+    snippet: return -1;
+  explanations:
+  - body: key not found.

@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt5_1_en
+source: main.py
+title: Number Basics
+description: 'Worked example: Number Basics'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Number Basics'
+elements:
+- type: explanation
+  location:
+    snippet: var1 = 20
+  explanations:
+  - body: positive integer
+- type: explanation
+  location:
+    snippet: var2 = -1000
+  explanations:
+  - body: negative integer

@@ -1,0 +1,75 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_variable_print_annoexp
+source: VariablePrint.java
+title: VariablePrint
+description: 'Worked example: VariablePrint'
+authors:
+- first: Yun
+  last: Huang
+  email: yun.huang@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: VariablePrint'
+elements:
+- type: explanation
+  location:
+    snippet: int width = 10;
+  explanations:
+  - body: Declares a variable named 'width' and initializes(assigns) it with integer 10.
+- type: explanation
+  location:
+    snippet: System.out.print(width);
+  explanations:
+  - body: 'The console output is: 10'
+- type: explanation
+  location:
+    snippet: width = 20;
+  explanations:
+  - body: Changes width to 20 (assigns 20 to width).
+- type: explanation
+  location:
+    snippet: System.out.println(width);
+  explanations:
+  - body: So far, the console output has two lines. The first line is 1020. After printing 20, the cursor moves to the new
+      line (with empty string).
+- type: explanation
+  location:
+    snippet: width = height + 10;
+  explanations:
+  - body: The right hand side of an assignment can be an expression. Now width is assigned 30.
+- type: explanation
+  location:
+    snippet: System.out.println(width);
+    nth: 2
+  explanations:
+  - body: The console output has three lines now. The first line is 1020, the second line is 30, and the third line is just
+      empty string.
+- type: explanation
+  location:
+    snippet: width = width + 10;
+  explanations:
+  - body: The same variable can occur on both sides of an assignment. In this case, the right side width represents the older
+      value of width (30). We first conduct operations on the right side, and then assigns the result of 30+10 to the width
+      on the left side. So the left side width represents the final value of width, which is 40.

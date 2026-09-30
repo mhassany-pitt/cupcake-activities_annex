@@ -1,0 +1,64 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_4-11_Animal
+source: Animal.java
+title: 4-11_Animal
+description: 'Worked example: 4-11_Animal'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:StringVariable
+  - parser:StringDataType
+  - parser:PrivateFieldSpecifier
+  - parser:InstanceField
+  - parser:SimpleVariable
+  - parser:BooleanDataType
+  - parser:IntDataType
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:VoidDataType
+  - parser:SimpleAssignmentExpression
+  - parser:ReturnStatement
+  - parser:ConstructorDefinition
+  - parser:PublicConstructorSpecifier
+  - parser:ActualMethodParameter
+  - parser:java.lang.System.out.println
+  - parser:StringLiteral
+  - parser:StringAddition
+  - java_ontology:ActualMethodParameter
+  - java_ontology:BooleanDataType
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:InstanceField
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PrivateFieldSpecifier
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicConstructorSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:ReturnStatement
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:SimpleVariable
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: 4-11_Animal'
+elements: []

@@ -1,0 +1,50 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_TableCreation2_version_1_pt
+source: query.sql
+title: PrimaryKey(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE Enrolled
+  explanations:
+  - body: Essa tabela armazena as informacoes de matricula de cada aluno. Sendo assim, o identificador do aluno e da disciplina
+      sao definidos no schema da tabela 'Enrolled'.
+- type: explanation
+  location:
+    snippet: (sid CHAR(20),
+  explanations:
+  - body: '''sid'' e'' o ID do aluno e possui um tamanho fixo de 20 caracteres.'
+- type: explanation
+  location:
+    snippet: cid CHAR(20),
+  explanations:
+  - body: '''cid'' e'' o ID da disciplina e possui um tamanho fixo de 20 caracteres.'
+- type: explanation
+  location:
+    snippet: grade CHAR(2),
+  explanations:
+  - body: '''grade'' e'' a nota de cada aluno e possui tamanho fixo de 2 caracteres.'
+- type: explanation
+  location:
+    snippet: PRIMARY KEY (sid, cid));
+  explanations:
+  - body: Um aluno pode estar matriculado na mesma disciplina apenas uma vez. Os alunos possuem uma unica nota para cada disciplina,
+      visto que a chave primaria foi definida com ambas as colunas, sid e cid. A chave primaria de uma tabela deve possuir
+      valores unicos para cada linha da tabela.

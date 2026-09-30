@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection19_version_1_pt
+source: query.sql
+title: CombiningQueryResults(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+  explanations:
+  - body: Este primeiro SELECT seleciona os clientes que possuem conta.
+- type: explanation
+  location:
+    snippet: UNION
+  explanations:
+  - body: A operacao UNION combina os resultados de duas ou mais consultas em uma unica tabela de resultado. A principal restricao
+      da operacao UNION e' que as subconsultas devem possuir o mesmo numero de colunas retornadas e tambem os tipos de dados
+      das colunas devem coincidir. Como a operacao UNION combina dois ou mais conjuntos de resultados, o resultado final pode
+      conter linhas repetidas. Entretanto, <u>por padrao</u>, a operacao UNION elimina as linhas duplicadas como parte de
+      seu processamento. Caso queira manter as linhas duplicadas, a palavra-chave ALL pode ser utilizada depois da palavra
+      UNION, como 'UNION ALL'.
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+    nth: 2
+  explanations:
+  - body: Este segundo SELECT retorna os clientes que possuem algum emprestimo.

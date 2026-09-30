@@ -1,0 +1,39 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt7_3_en
+source: main.py
+title: Replacing list elements
+description: 'Worked example: Replacing list elements'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Index
+  - parser:Int
+  - parser:List
+  - parser:Call
+  - parser:Str
+  - parser:Assign
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:List
+  - unspecified:Int
+  - unspecified:Index
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Replacing list elements'
+elements:
+- type: explanation
+  location:
+    snippet: a[1] = 'z'
+  explanations:
+  - body: Index 1 (element 2) currently contains the string 'b'. But after this command, it is replaced by the string 'z'

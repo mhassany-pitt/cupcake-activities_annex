@@ -1,0 +1,82 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection35
+source: query.sql
+title: View Creation (2)
+description: View Creation (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ReferentialAction
+  - expert:EquiWhereJoin
+  - expert:AsClause
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:UnionOfTwoTupleSetsWithDuplicate
+  - expert:UnionOperation
+  - expert:BracketCharacter
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:CommaCharacter
+  - expert:ComparisonOperation
+  - expert:CountingRows
+  - expert:MultipleAttributeSelection
+  - expert:MultipleTableSelection
+  - expert:CreateViewClause
+  - expert:CreateViewStatement
+  - expert:DotCharacter
+  - sql_ontology:MultipleTableSelection
+  - sql_ontology:EqualComparison
+  - sql_ontology:DotCharacter
+  - sql_ontology:CreateViewClause
+  - sql_ontology:CreateViewStatement
+  - sql_ontology:SelectStatement
+  - sql_ontology:UnionOperation
+  - sql_ontology:CommaCharacter
+  - sql_ontology:AsClause
+  - sql_ontology:BracketCharacter
+  - sql_ontology:FromClause
+  - sql_ontology:EquiWhereJoin
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_concept:UnionOfTwoTupleSetsWithDuplicate
+  - sql_concept:CountingRows
+  - sql_concept:ReferentialAction
+runtime:
+  language: sql
+  version: '2016'
+statement: View Creation (2)
+elements:
+- type: explanation
+  location:
+    snippet: CREATE VIEW all_customer AS
+  explanations:
+  - body: A VIEW is a virtual table in the database whose contents are defined by a query. To users, the VIEW appears like
+      a real table, but the rows and columns of data visible through the VIEW are the query results produced by the query
+      defining the VIEW.
+- type: explanation
+  location:
+    snippet: (SELECT branch_name, customer_name
+  explanations:
+  - body: This is the first query is to find the customers having account and the branch.
+- type: explanation
+  location:
+    snippet: UNION
+  explanations:
+  - body: VIEW is for multi-table combination as a one table. Hence, by using UNION it is possible to add up two different
+      SQL query results. UNION is to combine two results from separate queries into one results without duplicate.
+- type: explanation
+  location:
+    snippet: (SELECT branch_name, customer_name
+    nth: 2
+  explanations:
+  - body: This is the second query to find the customers having loan and the branch.

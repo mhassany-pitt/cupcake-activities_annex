@@ -1,0 +1,85 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt3_7_en
+source: main.py
+title: IF...ELSE Statement (Multiple Conditions)
+description: 'Worked example: IF...ELSE Statement (Multiple Conditions)'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:And
+  - parser:GtE
+  - parser:Int
+  - parser:Lt
+  - parser:Call
+  - parser:Str
+  - parser:Assign
+  - parser:If
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:GtE
+  - unspecified:Int
+  - unspecified:Lt
+  - unspecified:If
+  - unspecified:And
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: IF...ELSE Statement (Multiple Conditions)'
+elements:
+- type: explanation
+  location:
+    snippet: temperature = 20
+  explanations:
+  - body: Assigning the value 20 to the variable 'temperature'
+- type: explanation
+  location:
+    snippet: 'if temperature < 0:'
+  explanations:
+  - body: This statement checks if the condition (temperature is less than 0) is true. The value of temperature is 20 so this
+      statement is not true.
+- type: explanation
+  location:
+    snippet: print("It is extremely cold")
+  explanations:
+  - body: In case if the above if statement was true, it would execute this statement and print out the following string.
+- type: explanation
+  location:
+    snippet: 'elif temperature >= 0 and temperature < 20:'
+  explanations:
+  - body: '''elif'' is a short for ''Else If''. This code jumps to this condition if the above ''if'' condition was not true.
+      This statement checks if the condition (temperature is more than or equal to 0 but less than 20) is true or not. The
+      value of temperature is 20 so this statement is not true.'
+- type: explanation
+  location:
+    snippet: print("It is very cold")
+  explanations:
+  - body: Since the above 'elif' condition was false, this print statement will not be executed
+- type: explanation
+  location:
+    snippet: 'elif temperature >= 20 and temperature < 30:'
+  explanations:
+  - body: Since the above 'elif' statement was not true, the code jumps to this condition. This statement checks if the condition
+      (temperature is more than or equal to 20 and less than 30) is true or not. The value of temperature is 20 so this statement
+      is true.
+- type: explanation
+  location:
+    snippet: print("It is just about fine")
+  explanations:
+  - body: Since the above 'elif' statement is true, this print statement will be executed and it will print out the string
+      'It is just about fine'
+- type: explanation
+  location:
+    snippet: 'else:'
+  explanations:
+  - body: The above statement was true so it will not jump to 'else' statement. But just imagine if all the above conditions
+      were not true then this 'else' statement would be executed

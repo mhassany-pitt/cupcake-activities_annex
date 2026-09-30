@@ -1,0 +1,213 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface3_3
+source: Main.java
+title: IS17_interface3_3
+description: 'Worked example: IS17_interface3_3'
+authors:
+- first: Andrzej
+  last: Dubiel
+  email: andrzej.dubiel@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface3_3'
+elements:
+- type: explanation
+  location:
+    snippet: interface Fruit {
+  explanations:
+  - body: Declares interface Fruit
+- type: explanation
+  location:
+    snippet: public boolean hasAPeel();
+  explanations:
+  - body: Creates a boolean variable which checks if object has a peel or not
+- type: explanation
+  location:
+    snippet: interface Vegetable {
+  explanations:
+  - body: Declares interface Vegetable
+- type: explanation
+  location:
+    snippet: public boolean isARoot();
+  explanations:
+  - body: Creates a boolean variable which checks if object is a root or not
+- type: explanation
+  location:
+    snippet: class FandVUtility {
+  explanations:
+  - body: Declares class FandVUtility. Class tests if object is a Fruit and has peel or not. Also, checks if object is a Vegetable
+      and is a root or not.
+- type: explanation
+  location:
+    snippet: static String doesThisHaveAPeel(Fruit fruitIn){
+  explanations:
+  - body: "Creates a static string method which returns string. Checks if object has a peel.\r\n@param fruitIn object to check\r\
+      \n@return string, which contains text result of analysis"
+- type: explanation
+  location:
+    snippet: if (fruitIn.hasAPeel())
+  explanations:
+  - body: States an if statement
+- type: explanation
+  location:
+    snippet: return "This has a peel";
+  explanations:
+  - body: Returns "This has a peel" if the If statement is true
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: else
+- type: explanation
+  location:
+    snippet: return "This does not have a peel";
+  explanations:
+  - body: Returns "This does not have  a peel" if the If statement is false
+- type: explanation
+  location:
+    snippet: static String isThisARoot(Vegetable vegetableIn){
+  explanations:
+  - body: "Creates a static string method which returns string\r\n@param vegetableIn object to check\r\n@return string, which\
+      \ contains text result of analysis"
+- type: explanation
+  location:
+    snippet: if (vegetableIn.isARoot())
+  explanations:
+  - body: States an if statement
+- type: explanation
+  location:
+    snippet: return "This is a root";
+  explanations:
+  - body: Returns "This has a root" if the If statement is true
+- type: explanation
+  location:
+    snippet: else
+    nth: 2
+  explanations:
+  - body: else
+- type: explanation
+  location:
+    snippet: return "This is not a root";
+  explanations:
+  - body: Returns "This is not a root" if the If statement is false
+- type: explanation
+  location:
+    snippet: static String doesThisHaveAPeelOrIsThisRoot(Tomato tomatoIn){
+  explanations:
+  - body: "Static method which returns a string. Checks if object has a peel and/or is a root.\r\n@param tomatoIn object to\
+      \ check\r\n@return string, which contains text result of analysis"
+- type: explanation
+  location:
+    snippet: if (tomatoIn.hasAPeel() && tomatoIn.isARoot())
+  explanations:
+  - body: States an if statement with two conditions
+- type: explanation
+  location:
+    snippet: return "This both has a peel and is a root";
+  explanations:
+  - body: Returns a string if the If statement is true
+- type: explanation
+  location:
+    snippet: else if (tomatoIn.hasAPeel() || tomatoIn.isARoot())
+  explanations:
+  - body: States an else-if statement with two conditions
+- type: explanation
+  location:
+    snippet: return "This either has a peel or is a root";
+  explanations:
+  - body: Returns a string if the else-if statement is true
+- type: explanation
+  location:
+    snippet: else
+    nth: 3
+  explanations:
+  - body: States an else statement
+- type: explanation
+  location:
+    snippet: return "This neither has a peel or is a root";
+  explanations:
+  - body: Returns a string if both the other If statements are false
+- type: explanation
+  location:
+    snippet: class Tomato implements Fruit, Vegetable {
+  explanations:
+  - body: Class implements interfaces of Fruit and Vegetable
+- type: explanation
+  location:
+    snippet: boolean peel = false;
+  explanations:
+  - body: Creates boolean peel which states that object doesn't have peel
+- type: explanation
+  location:
+    snippet: boolean root = false;
+  explanations:
+  - body: Creates boolean root which states that object doesn't have a root
+- type: explanation
+  location:
+    snippet: public Tomato() {}
+  explanations:
+  - body: Class Tomato which is declared as public
+- type: explanation
+  location:
+    snippet: public boolean hasAPeel(){
+  explanations:
+  - body: Creates a boolean method
+- type: explanation
+  location:
+    snippet: return peel;
+  explanations:
+  - body: Returns the variable peel
+- type: explanation
+  location:
+    snippet: public boolean isARoot() {
+  explanations:
+  - body: Creates a boolean method isARoot
+- type: explanation
+  location:
+    snippet: return root;
+  explanations:
+  - body: Returns the variable root
+- type: explanation
+  location:
+    snippet: public static void main(String[] args) {
+  explanations:
+  - body: Creates a main method
+- type: explanation
+  location:
+    snippet: Tomato tomato = new Tomato();
+  explanations:
+  - body: Creates new object of class Tomato
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.isThisARoot(tomato));
+  explanations:
+  - body: Checks if object is a root and display text information
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.doesThisHaveAPeel(tomato));
+  explanations:
+  - body: Checks if object has a peel and display text information
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.doesThisHaveAPeelOrIsThisRoot(tomato));
+  explanations:
+  - body: Checks if object has a peel and/or is a root and display text information
+- type: explanation
+  location:
+    snippet: Fruit tomatoFruit = new Tomato();
+  explanations:
+  - body: Creates object of class Fruit
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.doesThisHaveAPeel(tomatoFruit));
+  explanations:
+  - body: Checks if object has a peel and display text information

@@ -1,0 +1,75 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_inheritance_casting_1
+source: SuperClass.java
+title: Casting sub and super class
+description: 'Worked example: Casting sub and super class'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:ExplicitTypeCasting
+  - expert:ExtendsSpecification
+  - expert:FormalMethodParameter
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ObjectCreationStatement
+  - expert:ObjectMethodInvocation
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Casting sub and super class'
+elements:
+- type: explanation
+  location:
+    snippet: public class SubClass extends SuperClass{
+  explanations:
+  - body: This is a sub class of SuperClass
+- type: explanation
+  location:
+    snippet: public void whoAmI(){
+  explanations:
+  - body: The method whoAmI() is override
+- type: explanation
+  location:
+    snippet: SuperClass aSuperObject = new SuperClass();
+  explanations:
+  - body: the object aSuperObject belongs to the SuperClass class
+- type: explanation
+  location:
+    snippet: SubClass aSubObject = new SubClass();
+  explanations:
+  - body: the object aSubObject belongs to the SubClass class
+- type: explanation
+  location:
+    snippet: aSuperObject.whoAmI();
+  explanations:
+  - body: Prints "I am an object of the super class"
+- type: explanation
+  location:
+    snippet: ((SuperClass)aSubObject).whoAmI();
+  explanations:
+  - body: "The object aSubObject is casted to SuperClass. However it still \r\nbelongs to the SubClass and calling the method\
+      \ whoAmI() will \r\nuse the override method and prints \"I am an object of the sub \r\nclass\""
+- type: explanation
+  location:
+    snippet: ((SubClass)aSuperObject).whoAmI();
+  explanations:
+  - body: "This gives an error: an object from a super class can not be casted \r\nto the sub class, unless it was really\
+      \ created as an object \r\nof the subclass"

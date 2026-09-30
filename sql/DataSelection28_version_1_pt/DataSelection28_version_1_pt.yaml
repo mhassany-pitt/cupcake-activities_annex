@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection28_version_1_pt
+source: query.sql
+title: NestedSubqueries(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT DISTINCT customer_name
+  explanations:
+  - body: A subconsulta entre parenteses e' executada primeiro e entao usando o operador de conjunto IN, os resultados sao
+      comparados com os resultados da consulta principal. <br/> Colocando a palavra-chave DISTINCT, os nomes de clientes (customer_name)
+      duplicados serao removidos.
+- type: explanation
+  location:
+    snippet: WHERE customer_name IN
+  explanations:
+  - body: O operador IN verifica se o dado esta contido na lista retornada pela subconsulta. Por exemplo, 'X IN (A, B, C)'
+      e' a mesma coisa que '(X = A) OR (X = B) OR (X = C)'. Nesse exemplo, verifica-se se o nome do cliente (customer_name)
+      esta na tabela 'depositor'.
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+  explanations:
+  - body: O SQL possui um mecanismo para aninhar subconsultas. Uma subconsulta e' uma declaracao SELECT-FROM-WHERE ou uma
+      declaracao com as clausulas GROUP BY ou HAVING aninhadas dentro de uma outra consulta. <br/> Nesse exemplo, essa subconsulta
+      retorna os nomes dos clientes que possuem conta.

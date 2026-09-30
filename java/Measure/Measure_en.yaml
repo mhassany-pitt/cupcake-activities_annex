@@ -1,0 +1,116 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Measure
+source: BankAccount.java
+title: Measure
+description: 'Worked example: Measure'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ConstructorCall
+  - expert:java.lang.System.out.println
+  - expert:PublicConstructorSpecifier
+  - expert:ConstructorDefinition
+  - expert:LessExpression
+  - expert:PublicInterfaceSpecifier
+  - expert:DoubleDataType
+  - expert:EqualExpression
+  - expert:MethodImplementation
+  - expert:ReturnStatement
+  - expert:ObjectCreationStatement
+  - expert:SimpleAssignmentExpression
+  - expert:IfStatement
+  - expert:ObjectMethodInvocation
+  - expert:SimpleVariable
+  - expert:ImplementsSpecification
+  - expert:OrExpression
+  - expert:AbstractMethodDefinition
+  - expert:InstanceField
+  - expert:PolymorphicObjectCreationStatement
+  - expert:StringAddition
+  - expert:IntDataType
+  - expert:PostIncrementExpression
+  - expert:StringDataType
+  - expert:AddExpression
+  - expert:InterfaceBasedPolymorphism
+  - expert:PrivateFieldSpecifier
+  - expert:StringLiteral
+  - expert:InterfaceDefinition
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Measure'
+elements:
+- type: explanation
+  location:
+    snippet: public interface Measurable{
+  explanations:
+  - body: "/**   Describes any class whose objects can \r\nbe measured.\r\n*/"
+- type: explanation
+  location:
+    snippet: double getMeasure();
+  explanations:
+  - body: "/**      Computes the measure of the object.      \r\n@return the measure\r\n   */"
+- type: explanation
+  location:
+    snippet: public BankAccount(double initialBalance){
+  explanations:
+  - body: "/**      Constructs a bank account with a \r\ngiven balance.\r\n      @param initialBalance the initial balance\r\
+      \n   */"
+- type: explanation
+  location:
+    snippet: public class DataSet{
+  explanations:
+  - body: "/**   Computes the average of a set of data \r\nvalues.\r\n*/"
+- type: explanation
+  location:
+    snippet: public DataSet(){
+  explanations:
+  - body: /**      Constructs an empty data set.   */
+- type: explanation
+  location:
+    snippet: public void add(Measurable x){
+  explanations:
+  - body: "/**      Adds a data value to the data set.      \r\n@param x a data value\r\n   */"
+- type: explanation
+  location:
+    snippet: public Measurable getMaximum(){
+  explanations:
+  - body: "/**      Gets the largest of the added data.      \r\n@return the maximum or 0 if no data has \r\nbeen \r\nadded\r\
+      \n   */"
+- type: explanation
+  location:
+    snippet: public class DataSetTester{
+  explanations:
+  - body: /**   This program tests the DataSet class.*/
+- type: explanation
+  location:
+    snippet: bankData.add(new BankAccount(0));
+  explanations:
+  - body: "New BankAccount object is automatically \r\nconverted to the interface 'Measurable' that \r\nit implements and\
+      \ is added to the \r\n'bankData'.Variable 'maximum' in 'bankData' \r\nis 0."
+- type: explanation
+  location:
+    snippet: bankData.add(new BankAccount(10000));
+  explanations:
+  - body: "Another object of type BankAccount is added \r\nto 'bankData'. Variable 'maximum' in \r\n'bankData' changes to\
+      \ 10000."
+- type: explanation
+  location:
+    snippet: bankData.add(new BankAccount(2000));
+  explanations:
+  - body: "Another object of type BankAccount is added \r\nto 'bankData'. Variable 'maximum' in \r\n'bankData' remains as\
+      \ 10000."
+- type: explanation
+  location:
+    snippet: 'System.out.println("Highest balance: " + max.getMeasure());'
+  explanations:
+  - body: 'prints "Highest balance: 10000"'

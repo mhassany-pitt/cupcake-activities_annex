@@ -1,0 +1,39 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection36_version_1_pt
+source: query.sql
+title: Groupingandaggregating(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: FROM boats B, reserves R
+  explanations:
+  - body: As tabelas 'boats' e 'reserves' sao apelidadas de B e R, respectivamente.
+- type: explanation
+  location:
+    snippet: WHERE R.bid = B.bid AND b.color = red
+  explanations:
+  - body: Essa condicao testa se os barcos ja foram reservados por meio da ligacao do ID do barco na tabela 'boats' e na tabela
+      'reserves'. Alem disso, retorna apenas os barcos de cor vermelha.
+- type: explanation
+  location:
+    snippet: GROUP BY B.bid;
+  explanations:
+  - body: A funcao COUNT esta trabalhando juntamente com a clausula GROUP BY. Para calcular o numero de linhas, primeiro o
+      resultado e' agrupado pelo ID do barco (bid). Entao, a funcao COUNT e' executada.

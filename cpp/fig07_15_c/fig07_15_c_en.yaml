@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig07_15_c_en
+source: main.cpp
+title: fig07_15.c
+description: 'Worked example: fig07_15.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig07_15.c'
+elements:
+- type: explanation
+  location:
+    snippet: bubbleSort( a, SIZE );
+  explanations:
+  - body: sort the array.
+- type: explanation
+  location:
+    snippet: void bubbleSort( int * const array, const int size )
+  explanations:
+  - body: sort an array of integers using bubble sort algorithm.
+- type: explanation
+  location:
+    snippet: if ( array[ j ] > array[ j + 1 ] ) {
+  explanations:
+  - body: swap adjacent elements if they are out of order.
+- type: explanation
+  location:
+    snippet: void swap( int *element1Ptr, int *element2Ptr )
+  explanations:
+  - body: Function swap changes the values of the ints that the two pointers point to.

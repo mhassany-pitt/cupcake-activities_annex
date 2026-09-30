@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataDeletion1_version_1_pt
+source: query.sql
+title: DeletingData_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: DELETE
+  explanations:
+  - body: O 'DELETE' e' usado para excluir uma ou mais <b>LINHAS</b> de uma tabela.  As palavras-chaves 'DELETE', que define
+      o comando SQL, e 'FROM', que especifica a tabela alvo, sao obrigatorias.
+- type: explanation
+  location:
+    snippet: FROM Students;
+  explanations:
+  - body: Clausula para excluir todas as linhas da tabela 'Students'.

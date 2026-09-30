@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_6_9
+source: MainClass.java
+title: For omitting elements
+description: For omitting elements
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:AddAssignmentExpression
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:ForStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LessEqualExpression
+  - expert:MethodDefinition
+  - expert:PostIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: For omitting elements
+elements:
+- type: explanation
+  location:
+    snippet: for (int i = 1; i <= limit;) {
+  explanations:
+  - body: "Elements on the for statement can be omitted. In this case the \r\nincrement or decrement element is omitted (note\
+      \ there is no \r\nexpression after the second \";\")"
+- type: explanation
+  location:
+    snippet: sum += i++;
+  explanations:
+  - body: "The operation '+=' adds the value of the 'i' to the 'sum' and then \r\nstore the new value in the variable 'sum'.\
+      \ After that, the \r\nvariable 'i' is incremented by 1."

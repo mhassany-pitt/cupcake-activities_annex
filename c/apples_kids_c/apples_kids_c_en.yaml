@@ -1,0 +1,101 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_apples_kids_c_en
+source: main.c
+title: 'IS12:: apples_kids.c (4.8)'
+description: 'Worked example: IS12:: apples_kids.c (4.8)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:int
+  - unspecified:greater_equal
+  - unspecified:void
+  - unspecified:sub_assignment
+  - unspecified:printf
+  - unspecified:reference
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:do
+  - unspecified:main_function
+  - unspecified:post_increment
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: apples_kids.c (4.8)'
+elements:
+- type: explanation
+  location:
+    snippet: int kids, apples, rounds = 0;
+  explanations:
+  - body: The variable rounds will be used as a counter. It is initialized to 0
+- type: explanation
+  location:
+    snippet: 'printf("Kids?: ");'
+  explanations:
+  - body: This is a prompt
+- type: explanation
+  location:
+    snippet: scanf("%d", &kids);
+  explanations:
+  - body: This scanf operator places the number of kids entered by the user into variable kids
+- type: explanation
+  location:
+    snippet: 'printf("Apples?: ");'
+  explanations:
+  - body: This is a prompt
+- type: explanation
+  location:
+    snippet: scanf("%d", &apples);
+  explanations:
+  - body: This scanf operator places the number of kids entered by the user into variable kids
+- type: explanation
+  location:
+    snippet: do {
+  explanations:
+  - body: This is the start of the do-while loop. There is no condition here, it is at the end of the loop. We will proceed
+      with the first statement of the loop unconditionally
+- type: explanation
+  location:
+    snippet: apples -= kids;
+  explanations:
+  - body: This line simulates distribution of kids apples among kids. We have kids apples less (kids is subtracted from apples)
+      and each kid will get one more apple
+- type: explanation
+  location:
+    snippet: rounds++;
+  explanations:
+  - body: The counter of rounds is incremented. It also counts how many apples each kid has got (since each kid gets one apple
+      each round
+- type: explanation
+  location:
+    snippet: |-
+      printf("%d apples left after round %d
+      ", apples, rounds);
+  explanations:
+  - body: This line is useful to observe the process of apple distribution. It prints the number of apples left after each
+      round
+- type: explanation
+  location:
+    snippet: '} while (apples >= kids) ;'
+  explanations:
+  - body: This is the end of the do-while loop, the place for its condition. If the current value of variable apples is greater
+      or equal than the current value of kids (i.e., we still have aples to distribute), we go back to execute the loop body.
+      Otherwise (not en
+- type: explanation
+  location:
+    snippet: |-
+      printf ("Each kid got %d apples. %d apples left.
+      ", rounds, apples);
+  explanations:
+  - body: This is the first statement after the loop. It reports the results of our work - how many apples each kid got (this
+      is the integer division) and how many are left (this is the remainder)

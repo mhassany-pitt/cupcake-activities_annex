@@ -1,0 +1,38 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_12_en
+source: main.py
+title: Output Formatting 2
+description: 'Worked example: Output Formatting 2'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Mod
+  - parser:Call
+  - parser:Str
+  - parser:Tuple
+  - unspecified:Call
+  - unspecified:Int
+  - unspecified:Tuple
+  - unspecified:Mod
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Output Formatting 2'
+elements:
+- type: explanation
+  location:
+    snippet: print("His name is {} and his age is {}.".format("Terry", 22))
+  explanations:
+  - body: This is similar to the previous example. Here the sign '{}' is used to pass a string and a decimal value. The output
+      we get on running this code is "His name is Terry and his age is 22."

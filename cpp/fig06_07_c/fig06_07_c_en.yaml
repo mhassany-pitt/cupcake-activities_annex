@@ -1,0 +1,54 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig06_07_c_en
+source: main.cpp
+title: fig06_07.c
+description: 'Worked example: fig06_07.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig06_07.c'
+elements:
+- type: explanation
+  location:
+    snippet: '#define RESPONSE_SIZE 40'
+  explanations:
+  - body: '#define directives create symbolic constants. define array sizes.'
+- type: explanation
+  location:
+    snippet: '#define FREQUENCY_SIZE 11'
+  explanations:
+  - body: '#define directives create symbolic constants.'
+- type: explanation
+  location:
+    snippet: int frequency[ FREQUENCY_SIZE ] = { 0 };
+  explanations:
+  - body: Initialize frequency counters to 0. Frequency array is defined with 11 elements .
+- type: explanation
+  location:
+    snippet: int responses[ RESPONSE_SIZE ] = { 1, 2, 6, 4, 8, 5, 9, 7, 8, 10,
+  explanations:
+  - body: Place the survey responses in the responses array. Responses array is defined with 40 elements and its elements
+      are initialized.
+- type: explanation
+  location:
+    snippet: for ( answer = 0; answer < RESPONSE_SIZE; answer++ ) {
+  explanations:
+  - body: for each answer, select value of an element of array responses and use that value as subscript in array frequency
+      to determine element to increment.
+- type: explanation
+  location:
+    snippet: ++frequency[ responses [ answer ] ];
+  explanations:
+  - body: subscript of frequency array is given by value in responses array .

@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_using_const
+source: main.cpp
+title: Using Const
+description: 'Worked example: Using Const'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Using Const'
+elements:
+- type: explanation
+  location:
+    snippet: void tryToModifyArray( const int [] );
+  explanations:
+  - body: const qualifier tells compiler that array cannot be changed.
+- type: explanation
+  location:
+    snippet: tryToModifyArray( a );
+  explanations:
+  - body: const qualifier tells compiler that array cannot be changed.
+- type: explanation
+  location:
+    snippet: void tryToModifyArray( const int b[] )
+  explanations:
+  - body: const qualifier tells compiler that array cannot be changed.

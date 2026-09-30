@@ -1,0 +1,63 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_forloops_sumoddnumbers
+source: SumOddNumbers.java
+title: (For loops) Sum of odd numbers - CSEdPad
+description: This program sums up the odd number from 1 to 50
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:LessEqualExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:IntDataType
+  - webex:StringLiteral
+  - webex:AddAssignmentExpression
+  - webex:AddExpression
+  - webex:ForStatement
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddAssignmentExpression
+  - java_ontology:AddExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessEqualExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: This program sums up the odd number from 1 to 50
+elements:
+- type: explanation
+  location:
+    snippet: for(int i=1;i<=50;i+=2){
+  explanations:
+  - body: i+=2 will increment the for-loop by 2 steps in each iteration and continue until i is less than or equal to 50

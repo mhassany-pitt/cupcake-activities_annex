@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_2d_arrrays
+source: main.cpp
+title: Using 2D Arrays
+description: 'Worked example: Using 2D Arrays'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Using 2D Arrays'
+elements:
+- type: explanation
+  location:
+    snippet: int array1[ 2 ][ 3 ] = { { 1, 2, 3 }, { 4, 5, 6 } },
+  explanations:
+  - body: array1 is initialized with both rows full.
+- type: explanation
+  location:
+    snippet: array2[ 2 ][ 3 ] = { 1, 2, 3, 4, 5 },
+  explanations:
+  - body: array2 and array3 are initialized only partially.
+- type: explanation
+  location:
+    snippet: array3[ 2 ][ 3 ] = { { 1, 2 }, { 4 } };
+  explanations:
+  - body: array2 and array3 are initialized only partially.

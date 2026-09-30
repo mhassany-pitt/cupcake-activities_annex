@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_20_en
+source: main.py
+title: Exceptions Basics
+description: 'Worked example: Exceptions Basics'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Return
+  - parser:ExceptHandler
+  - parser:Call
+  - parser:Str
+  - parser:arg
+  - parser:TryExcept
+  - parser:FunctionDef
+  - unspecified:arg
+  - unspecified:ExceptHandler
+  - unspecified:Call
+  - unspecified:Return
+  - unspecified:FunctionDef
+  - unspecified:Str
+  - unspecified:TryExcept
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Exceptions Basics'
+elements:
+- type: explanation
+  location:
+    snippet: 'def str_to_int(var):'
+  explanations:
+  - body: defining a function 'str_to_int' which converts an integer with the type string to an int type. Here we pass the
+      argument that takes an integer with string type. For example "123". Here '123' is enclosed in doubl quotes which suggest
+      that it is a string type
+- type: explanation
+  location:
+    snippet: 'try:'
+  explanations:
+  - body: The try blocks tries to execute the code within it
+- type: explanation
+  location:
+    snippet: return int(var)
+  explanations:
+  - body: Here we return the converted value from str to int
+- type: explanation
+  location:
+    snippet: 'except ValueError:'
+  explanations:
+  - body: If the value passed in the argument 'var' does not contain numbers, then it will raise an exception (error)
+- type: explanation
+  location:
+    snippet: print("The argument does not contain numbers")
+  explanations:
+  - body: In python we have the facility to pass a custom message as an error
+- type: explanation
+  location:
+    snippet: str_to_int("xyz")
+  explanations:
+  - body: calling the function 'str_to_int'

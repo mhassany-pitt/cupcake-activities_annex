@@ -1,0 +1,135 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList2_1
+source: ArrayList2.java
+title: IS17_ArrayList2_1
+description: 'Worked example: IS17_ArrayList2_1'
+authors:
+- first: Ryan
+  last: Johnston
+  email: ryan.johnston@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList2_1'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: imports the ArrayList package from java.util.
+- type: explanation
+  location:
+    snippet: public class ArrayList2 {
+  explanations:
+  - body: Creates a new class called "ArrayList2"
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: Beginning of Main method.
+- type: explanation
+  location:
+    snippet: ArrayList<Integer> values = new ArrayList<Integer>();
+  explanations:
+  - body: Creates a new ArrayList reference variable called "values" and assigns it the reference to an empty ArrayList.
+- type: explanation
+  location:
+    snippet: values.add(1);
+  explanations:
+  - body: Adds the value 1 to the last digit of "values" (location 0).
+- type: explanation
+  location:
+    snippet: values.add(2);
+  explanations:
+  - body: Adds the value 2 to the last digit of "values" (location 1).
+- type: explanation
+  location:
+    snippet: values.add(3);
+  explanations:
+  - body: Adds the value 3 to the last digit of "values" (location 2).
+- type: explanation
+  location:
+    snippet: values.add(4);
+  explanations:
+  - body: Adds the value 4 to the last digit of "values" (location 3).
+- type: explanation
+  location:
+    snippet: values.add(5);
+  explanations:
+  - body: Adds the value 5 to the last digit of "values" (location 4).
+- type: explanation
+  location:
+    snippet: values.remove(1);
+  explanations:
+  - body: Removes the value 2 from the second location in the array list "values" (location 1).
+- type: explanation
+  location:
+    snippet: 'System.out.print("Contents of values: ");'
+  explanations:
+  - body: 'Prints a line to the screen "Contents of values: "'
+- type: explanation
+  location:
+    snippet: 'for (int v : values)'
+  explanations:
+  - body: A for loop which will iterate through the length of "values" ArrayList.
+- type: explanation
+  location:
+    snippet: System.out.print(v + " ");
+  explanations:
+  - body: Prints the contents of the value "v" from the ArrayList "values".
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: Prints a blank line.
+- type: explanation
+  location:
+    snippet: int sum = 0;
+  explanations:
+  - body: creates a new integer variable named "sum" which holds the value 0.
+- type: explanation
+  location:
+    snippet: 'for (int v : values)'
+    nth: 2
+  explanations:
+  - body: A for loop which will iterate through the length of "values" ArrayList.
+- type: explanation
+  location:
+    snippet: sum += v;
+  explanations:
+  - body: Adds the contents of "v" (which is a value from the "values" ArrayList) to the variable "sum".
+- type: explanation
+  location:
+    snippet: 'System.out.println("Sum of values: " + sum);'
+  explanations:
+  - body: Prints a line to the screen that displays the value of "sum" variable.
+- type: explanation
+  location:
+    snippet: 'System.out.println("size of values: " + values.size());'
+  explanations:
+  - body: Prints a line to the screen that displays the amount of values stored in "values" ArrayList.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: End of Main Method.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: End of "ArrayList2" class.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: Unnecessary curly bracket.

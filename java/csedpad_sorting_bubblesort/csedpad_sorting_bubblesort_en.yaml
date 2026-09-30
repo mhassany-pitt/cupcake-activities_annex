@@ -1,0 +1,107 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_sorting_bubblesort
+source: BubbleSort.java
+title: (Sorting) Bubble sort - CSEdPad
+description: Sort a given unsorted array using bubble sort in ascending order
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:java.lang.System.out.print
+  - webex:IfStatement
+  - webex:GreaterExpression
+  - webex:ArrayInitializer
+  - webex:PostIncrementExpression
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:ArrayVariable
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:LessExpression
+  - webex:IntDataType
+  - webex:StringLiteral
+  - webex:SubtractExpression
+  - webex:ForStatement
+  - webex:ArrayLength
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:ArrayInitializationStatement
+  - webex:ArrayElement
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - webex:NestedForLoops
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ArrayElement
+  - java_ontology:ArrayInitializationStatement
+  - java_ontology:ArrayInitializer
+  - java_ontology:ArrayLength
+  - java_ontology:ArrayVariable
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:GreaterExpression
+  - java_ontology:IfStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:NestedForLoops
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:SubtractExpression
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Sort a given unsorted array using bubble sort in ascending order
+elements:
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < n; i++) {
+  explanations:
+  - body: for each element of the list, it compares with the rest of the values in the array and swap their position when
+      list[j - 1] > list[j]
+- type: explanation
+  location:
+    snippet: if (list[j - 1] > list[j]) {
+  explanations:
+  - body: comparing each element with the next element.If the previous element is bigger then it gets swapped with each other.
+- type: explanation
+  location:
+    snippet: temp = list[j - 1];
+  explanations:
+  - body: swapping elements using a temp variable.
+- type: explanation
+  location:
+    snippet: int UnsortedList[] = {2, 5, -2, 6, -3, 8, 0, -7, -9, 4};
+  explanations:
+  - body: We define the unsorted list and its values.
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < UnsortedList.length; i++) {
+  explanations:
+  - body: Print the unsorted list as given.
+- type: explanation
+  location:
+    snippet: System.out.print(UnsortedList[i] + " ");
+  explanations:
+  - body: Print the sorted list after bubble sort

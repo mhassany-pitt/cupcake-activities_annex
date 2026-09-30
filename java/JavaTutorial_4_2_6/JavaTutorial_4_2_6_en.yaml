@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_2_6
+source: MainClass.java
+title: Else Clause
+description: Else Clause
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:EqualExpression
+  - expert:FormalMethodParameter
+  - expert:IfElseStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Else Clause
+elements:
+- type: explanation
+  location:
+    snippet: '} else {'
+  explanations:
+  - body: "the \"else\" clause, immediately after an if statement defines a block to execute only if \r\nthe condition is\
+      \ not met."

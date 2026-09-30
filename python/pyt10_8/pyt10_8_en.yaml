@@ -1,0 +1,67 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_8_en
+source: main.py
+title: Functions Example 2
+description: 'Worked example: Functions Example 2'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Tuple
+  - parser:Int
+  - parser:Lt
+  - parser:While
+  - parser:Call
+  - parser:arg
+  - parser:Add
+  - parser:Assign
+  - parser:FunctionDef
+  - unspecified:arg
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:FunctionDef
+  - unspecified:Int
+  - unspecified:Lt
+  - unspecified:Add
+  - unspecified:Tuple
+  - unspecified:While
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Functions Example 2'
+elements:
+- type: explanation
+  location:
+    snippet: 'def fib(n):'
+  explanations:
+  - body: Defining the function 'fib' which takes an argument 'n'
+- type: explanation
+  location:
+    snippet: a, b = 0, 1
+  explanations:
+  - body: In this statement, integer '0' is assigned to variable 'a' and integer '1' is assigned to variable 'b'
+- type: explanation
+  location:
+    snippet: 'while a < n:'
+  explanations:
+  - body: Loop till 'a' is less than the input number 'n'
+- type: explanation
+  location:
+    snippet: a, b = b, a+b
+  explanations:
+  - body: Update the variable values to continue the sequence. Here the value of 'b' is assigned to the variable 'a' and the
+      value of 'a+b' is assigned to the variable 'b'
+- type: explanation
+  location:
+    snippet: fib(50)
+  explanations:
+  - body: the function 'fib' is called by passing in the argument '50'. Hence the output will be a Fibonacci Sequence '0,
+      1, 1, 2, 3, 5, 8, 13, 21, 34'. The last number in the sequence will be less than 50

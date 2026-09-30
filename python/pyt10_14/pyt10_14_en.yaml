@@ -1,0 +1,59 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_14_en
+source: main.py
+title: Accessing Dictionary Elements
+description: 'Worked example: Accessing Dictionary Elements'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Index
+  - parser:Int
+  - parser:Call
+  - parser:Str
+  - parser:Dict
+  - parser:Assign
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:Dict
+  - unspecified:Index
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Accessing Dictionary Elements'
+elements:
+- type: explanation
+  location:
+    snippet: '#Accessing Dictionary Elements'
+  explanations:
+  - body: This example teaches how to access dictionary elements
+- type: explanation
+  location:
+    snippet: 'dictionary1 = {''name'': ''harry'',''age'':14, ''gender'': ''male''}'
+  explanations:
+  - body: Defining a dictionary with 3 key-value pairs
+- type: explanation
+  location:
+    snippet: print(dictionary1["name"])
+  explanations:
+  - body: Printing out the value of the key 'name' from the dictionary 'dictionary1'
+- type: explanation
+  location:
+    snippet: print(dictionary1["age"])
+  explanations:
+  - body: Printing out the value of the key 'age' from the dictionary 'dictionary1'
+- type: explanation
+  location:
+    snippet: print(dictionary1["gender"])
+  explanations:
+  - body: Printing out the value of the key 'gender' from the dictionary 'dictionary1'

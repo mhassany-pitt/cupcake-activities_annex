@@ -1,0 +1,29 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection12_version_1_pt
+source: query.sql
+title: ArithmeticExpression_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT loan_number, branch_name, amount * 100
+  explanations:
+  - body: E' possivel recalcular o valor de uma coluna por meio de operacoes aritmeticas, como adicao, subtracao, multiplicacao
+      e divisao. No entanto, o valor da coluna armazenada no banco de dados continua o mesmo e apenas os valores do resultado
+      da consulta sao alterados.

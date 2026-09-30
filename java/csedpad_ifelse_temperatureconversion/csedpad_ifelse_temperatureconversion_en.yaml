@@ -1,0 +1,86 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_ifelse_temperatureconversion
+source: TemperatureCoversion.java
+title: (If else) Temperature Conversion - CSEdPad
+description: Conversion of temperature from degree Celsius to degree Fahrenheit and vice versa
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:EqualExpression
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:DoubleDataType
+  - webex:MultiplyExpression
+  - webex:CharDataType
+  - webex:StringLiteral
+  - webex:DivideExpression
+  - webex:IfElseIfStatement
+  - webex:AddExpression
+  - webex:SubtractExpression
+  - webex:IfElseStatement
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddExpression
+  - java_ontology:CharDataType
+  - java_ontology:ClassDefinition
+  - java_ontology:DivideExpression
+  - java_ontology:DoubleDataType
+  - java_ontology:EqualExpression
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IfElseIfStatement
+  - java_ontology:IfElseStatement
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiplyExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:SubtractExpression
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Conversion of temperature from degree Celsius to degree Fahrenheit and vice versa
+elements:
+- type: explanation
+  location:
+    snippet: 'System.out.printf("temperature : %.2f %s %c", temp," deg ",scale);'
+  explanations:
+  - body: the formatted output is used to print only up to two decimal places of the temperature for double
+- type: explanation
+  location:
+    snippet: if(scale=='C'){
+  explanations:
+  - body: if the scale equals 'C', the first block(if condition) is executed which converts the temp to 'F' scale using the
+      formula.
+- type: explanation
+  location:
+    snippet: '}else if(scale==''F''){'
+  explanations:
+  - body: If the scale equals 'F' then the second block(else if) will be executed which will convert the temperature to 'C'
+      scale.
+- type: explanation
+  location:
+    snippet: System.out.println("Now a valid temperature scale");
+  explanations:
+  - body: If the scale equals neither, then the third block(else) is executed which prints 'Now a valid temperature scale'

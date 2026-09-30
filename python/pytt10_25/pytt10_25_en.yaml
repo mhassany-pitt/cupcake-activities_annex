@@ -1,0 +1,85 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt10_25_en
+source: main.py
+title: References - Values
+description: 'Worked example: References - Values'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Return
+  - parser:Attribute
+  - parser:Call
+  - parser:Str
+  - parser:arg
+  - parser:Assign
+  - parser:FunctionDef
+  - unspecified:arg
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Return
+  - unspecified:FunctionDef
+  - unspecified:Attribute
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: References - Values'
+elements:
+- type: explanation
+  location:
+    snippet: 'def modify(string1):'
+  explanations:
+  - body: defining the function 'modify' and passing in a string parameter
+- type: explanation
+  location:
+    snippet: string1 = string1.replace("2", "3")
+  explanations:
+  - body: replacing one character in the string that was passed in the function
+- type: explanation
+  location:
+    snippet: 'def main():'
+  explanations:
+  - body: Main function definition
+- type: explanation
+  location:
+    snippet: outer_string = "I have visited 2 countries."
+  explanations:
+  - body: defining a variable 'outer_string' and assigning a string value to it
+- type: explanation
+  location:
+    snippet: print(outer_string)
+  explanations:
+  - body: printing out the variable
+- type: explanation
+  location:
+    snippet: modify(outer_string)
+  explanations:
+  - body: calling the function 'modify' and passing in the string 'outer_string'. Note that we pass the string to the function
+      as a parameter (argument) but we do not save the value returned by the 'modify' function into the main function anywhere
+- type: explanation
+  location:
+    snippet: print(outer_string)
+    nth: 2
+  explanations:
+  - body: printing out the 'out_string'. Here the value of the variable 'out_string' will be the same
+- type: explanation
+  location:
+    snippet: outer_string = modify(outer_string)
+  explanations:
+  - body: Now we pass the same variable 'out_string' to the 'modify' function but we also save the return value into the same
+      variable, thus updating its value
+- type: explanation
+  location:
+    snippet: print(outer_string)
+    nth: 3
+  explanations:
+  - body: printing out the updated string value

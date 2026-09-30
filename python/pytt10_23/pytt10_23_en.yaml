@@ -1,0 +1,64 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt10_23_en
+source: main.py
+title: References with Lists
+description: 'Worked example: References with Lists'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: References with Lists'
+elements:
+- type: explanation
+  location:
+    snippet: 'def try_to_change_list_contents(the_list):'
+  explanations:
+  - body: Defining the function 'try_to_change_list_contents' and passing in the argument 'the_list' which will of the type
+      list
+- type: explanation
+  location:
+    snippet: print('got', the_list)
+  explanations:
+  - body: printing out the list
+- type: explanation
+  location:
+    snippet: the_list.append('four')
+  explanations:
+  - body: Here, we append the string value 'four' to the list
+- type: explanation
+  location:
+    snippet: print('changed to', the_list)
+  explanations:
+  - body: printing out the updated list
+- type: explanation
+  location:
+    snippet: outer_list = ['one', 'two', 'three']
+  explanations:
+  - body: Defining a list outside the function called 'outer_list' with 3 elements
+- type: explanation
+  location:
+    snippet: print('before, outer_list =', outer_list)
+  explanations:
+  - body: printing out the list which is the list before modification
+- type: explanation
+  location:
+    snippet: try_to_change_list_contents(outer_list)
+  explanations:
+  - body: then passing the above list as argument to the defined function 'try_to_change_list_contents'
+- type: explanation
+  location:
+    snippet: print('after, outer_list =', outer_list)
+  explanations:
+  - body: and then printing the list after modification from outside of the function to see if the original list contents
+      are modified.

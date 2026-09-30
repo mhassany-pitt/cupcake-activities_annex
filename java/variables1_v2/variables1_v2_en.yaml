@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_variables1_v2
+source: variables1.java
+title: variable declaration
+description: Variable Declaration
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ClassDefinition
+  - expert:DoubleDataType
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleVariable
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringVariable
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Variable Declaration
+elements:
+- type: explanation
+  location:
+    snippet: int i;
+  explanations:
+  - body: A variable declaration statement always contains a data type, a variable name and a semicolon. This statement declares
+      an integer variable 'i'.
+- type: explanation
+  location:
+    snippet: String sentence;
+  explanations:
+  - body: "Type of the variable identifies the kind of data that can be stored in this variable. Type 'String' is used to\
+      \ declare variables holding strings (text \r\nsequences)."
+- type: explanation
+  location:
+    snippet: int a, b;
+  explanations:
+  - body: You can declare several variables of the same type in one statement. Variable names should be separated with a comma.
+      This statement declares two integer variables 'a' and 'b'.

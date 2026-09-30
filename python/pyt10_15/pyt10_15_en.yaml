@@ -1,0 +1,69 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_15_en
+source: main.py
+title: Adding and Modifying Dictionary Elements
+description: 'Worked example: Adding and Modifying Dictionary Elements'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Add
+  - parser:Dict
+  - parser:Str
+  - parser:Call
+  - parser:Assign
+  - parser:Index
+  - parser:Int
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:Dict
+  - unspecified:Add
+  - unspecified:Index
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Adding and Modifying Dictionary Elements'
+elements:
+- type: explanation
+  location:
+    snippet: '#Accessing and modifying Dictionary Elements'
+  explanations:
+  - body: This example deals with adding elements as well as modifying elements of a dictionary
+- type: explanation
+  location:
+    snippet: 'dict = {"Name": "Terry", "score1": 80}'
+  explanations:
+  - body: Defining a dictionary with 3 key-value pairs
+- type: explanation
+  location:
+    snippet: dict["score1"] = dict["score1"] + 10
+  explanations:
+  - body: This statement deals with modifying the value of one of the element. The value of the key 'score1' was added by
+      10
+- type: explanation
+  location:
+    snippet: dict["score2"] = 92
+  explanations:
+  - body: This statement adds a new element to the dictionary whose key is 'score2' and value is '92'
+- type: explanation
+  location:
+    snippet: print(dict["score2"])
+  explanations:
+  - body: Print the value of the element 'score2'
+- type: explanation
+  location:
+    snippet: print(len(dict))
+  explanations:
+  - body: This statement prints the lendth of the dictionary. Length of a dictionary simply means number of key-value pairs
+      present in a dictionary. In this case after adding one additional element in the above statement, we now have 3 elements.
+      So the length of the dictionary is 3

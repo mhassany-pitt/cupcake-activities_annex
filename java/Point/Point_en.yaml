@@ -1,0 +1,27 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Point
+source: Point.java
+title: DEPRECATED_Point
+description: 'Worked example: DEPRECATED_Point'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Point'
+elements:
+- type: explanation
+  location:
+    snippet: public Point(int a, int b) {
+  explanations:
+  - body: You can recognize a constructor because its declaration uses the same name as the class and it has no return type.

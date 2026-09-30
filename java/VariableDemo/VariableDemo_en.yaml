@@ -1,0 +1,49 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_VariableDemo
+source: VariableDemo.java
+title: Variable Demo
+description: 'Worked example: Variable Demo'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:StringLiteral
+  - expert:SimpleAssignmentExpression
+  - expert:AddExpression
+  - expert:StringDataType
+  - expert:IntDataType
+  - expert:java.lang.System.out.print
+  - expert:java.lang.System.out.println
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Variable Demo'
+elements:
+- type: explanation
+  location:
+    snippet: int width = 10;
+  explanations:
+  - body: Declares a variable named 'width' and initializes it with integer 10.
+- type: explanation
+  location:
+    snippet: width = 20;
+  explanations:
+  - body: Changes width to 20
+- type: explanation
+  location:
+    snippet: width = height + 10;
+  explanations:
+  - body: The right hand side of an assignment can be an expression.
+- type: explanation
+  location:
+    snippet: width = width + 10;
+  explanations:
+  - body: The same variable can occur on both sides of an assignment.

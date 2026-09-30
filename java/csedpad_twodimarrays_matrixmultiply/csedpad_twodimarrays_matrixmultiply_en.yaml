@@ -1,0 +1,88 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_twodimarrays_matrixmultiply
+source: MatrixMultiply.java
+title: (Two-dim arrays) Matrix multiply - CSEdPad
+description: This program demonstrates the multiplication of two matrices using a two-dimensional array
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:java.lang.System.out.print
+  - webex:ArrayInitializer
+  - webex:PostIncrementExpression
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:ArrayVariable
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:LessExpression
+  - webex:MultiplyExpression
+  - webex:IntDataType
+  - webex:ForEachStatement
+  - webex:StringLiteral
+  - webex:MultiDimensionalArrayDataType
+  - webex:AddAssignmentExpression
+  - webex:ForStatement
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:ArrayInitializationStatement
+  - webex:ArrayElement
+  - webex:StringDataType
+  - webex:ArrayCreationStatement
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - webex:NestedForLoops
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddAssignmentExpression
+  - java_ontology:ArrayCreationStatement
+  - java_ontology:ArrayElement
+  - java_ontology:ArrayInitializationStatement
+  - java_ontology:ArrayInitializer
+  - java_ontology:ArrayVariable
+  - java_ontology:ClassDefinition
+  - java_ontology:ForEachStatement
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiDimensionalArrayDataType
+  - java_ontology:MultiplyExpression
+  - java_ontology:NestedForLoops
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: This program demonstrates the multiplication of two matrices using a two-dimensional array
+elements:
+- type: explanation
+  location:
+    snippet: int[][] x = { {1,2},{3,4} };
+  explanations:
+  - body: assign values to variable x, such that the two matrices can be multiplied
+- type: explanation
+  location:
+    snippet: int[][] y = { {4,5}, {6,7} };
+  explanations:
+  - body: assign values to variable y such that the two matrices can be multiplied

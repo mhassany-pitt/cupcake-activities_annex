@@ -1,0 +1,100 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_max3_c_en
+source: main.c
+title: 'IS12:: max3.c (5.5)'
+description: 'Worked example: IS12:: max3.c (5.5)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:greater
+  - unspecified:void
+  - unspecified:reference
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:if_else
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: max3.c (5.5)'
+elements:
+- type: explanation
+  location:
+    snippet: 'printf("Enter three integers: ");'
+  explanations:
+  - body: This is a prompt
+- type: explanation
+  location:
+    snippet: scanf("%d %d %d", &a, &b, &c);
+  explanations:
+  - body: This scanf statement gets three integers separated by a blank from the user and placed them into variables a, b
+      and c.
+- type: explanation
+  location:
+    snippet: printf("Maximum of %d, %d and %d is ", a, b, c);
+  explanations:
+  - body: This statement prints the first part of the message. At that time it is not clear which of the three values is a
+      maximum
+- type: explanation
+  location:
+    snippet: if(a > b)
+  explanations:
+  - body: This if conditional statement has expression a > b in its condition. If a is really greater than b, the value of
+      the expression will be 1 and "then" part will be executed. Otherwise, the value will be 0 and "else" part will work
+- type: explanation
+  location:
+    snippet: if(a > c)
+  explanations:
+  - body: This is then part of is. As long as we are there, we know that a > b (i.e, b can't be max), but we still need to
+      check whether a > c to find the absolute max.
+- type: explanation
+  location:
+    snippet: |-
+      printf("%d
+      ", a);
+  explanations:
+  - body: This is then part of the first inner if. If we get there, both a > b and a > c were true, so we can report a as
+      the max
+- type: explanation
+  location:
+    snippet: |-
+      printf("%d
+      ", c);
+  explanations:
+  - body: This is else part of the first inner if. If we get there, then a > b was true, but a > c was false. I.e., c >= a
+      while a > c. So, we report c as max.
+- type: explanation
+  location:
+    snippet: if(b > c)
+  explanations:
+  - body: This is else part of top level if. As long as we are there, we know that a <= b (i.e, a can't be max), but we still
+      need to check whether b > c to find the absolute max.
+- type: explanation
+  location:
+    snippet: |-
+      printf("%d
+      ", b);
+  explanations:
+  - body: This is then part of the second inner if. If we get there, then a > b was false, but b > c was true, so we can report
+      b as the max
+- type: explanation
+  location:
+    snippet: |-
+      printf("%d
+      ", c);
+    nth: 2
+  explanations:
+  - body: This is else part of the second inner if. If we get there, both a > b and b > c were false, so c >= b and b >= a.
+      We can report b as the max

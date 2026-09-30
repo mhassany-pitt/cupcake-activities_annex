@@ -1,0 +1,199 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance2_7
+source: MatchBox.java
+title: IS17_inheritance2_7
+description: 'Worked example: IS17_inheritance2_7'
+authors:
+- first: Joshua
+  last: Sawyers
+  email: joshua.sawyers@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance2_7'
+elements:
+- type: explanation
+  location:
+    snippet: class Box {
+  explanations:
+  - body: Defines a newly created class "Box"
+- type: explanation
+  location:
+    snippet: double width;
+  explanations:
+  - body: Creates an instance field of type double called "width"
+- type: explanation
+  location:
+    snippet: double height;
+  explanations:
+  - body: Creates an instance field of type double called "height"
+- type: explanation
+  location:
+    snippet: double depth;
+  explanations:
+  - body: Creates an instance field of type double called "depth"
+- type: explanation
+  location:
+    snippet: Box() {
+  explanations:
+  - body: A constructor for the "Box" class with empty parameters which would be a Default Constructor. access specifier is
+      not defined however.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: End of Constructor.
+- type: explanation
+  location:
+    snippet: Box(double w, double h, double d) {
+  explanations:
+  - body: A constructor for the "Box" class with parameters "w", "h", "d" w h and d are type double.
+- type: explanation
+  location:
+    snippet: width = w;
+  explanations:
+  - body: Assigns the instance field "width" to the value of "w"
+- type: explanation
+  location:
+    snippet: height = h;
+  explanations:
+  - body: Assigns the instance field "height" to the value of "h"
+- type: explanation
+  location:
+    snippet: depth = d;
+  explanations:
+  - body: Assigns the instance field "depth" to the value of "d"
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: End of Constructor.
+- type: explanation
+  location:
+    snippet: void getVolume() {
+  explanations:
+  - body: Declares a method with a return type void called "getVolume"
+- type: explanation
+  location:
+    snippet: 'System.out.println("Volume is : " + width * height * depth);'
+  explanations:
+  - body: 'Line is printed to screen: "Volume is : " followed by the value of the width, height and depth multiplied by each
+      other.'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: End of method block.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: End of "Box" class block.
+- type: explanation
+  location:
+    snippet: public class MatchBox extends Box {
+  explanations:
+  - body: Creates a class called "MatchBox" which is a subclass of class "Box".
+- type: explanation
+  location:
+    snippet: double weight;
+  explanations:
+  - body: An instance field entitled "weight" of type double.
+- type: explanation
+  location:
+    snippet: MatchBox() {
+  explanations:
+  - body: A default (empty) constructor for type MatchBox.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: End of Constructor.
+- type: explanation
+  location:
+    snippet: MatchBox(double w, double h, double d, double m) {
+  explanations:
+  - body: "A constructor for type MatchBox which takes parameters \"w\", \"h\", \"d\", and \"m\" \r\nA constructor for type\
+      \ MatchBox which takes parameters \"w\", \"h\", \"d\", and \"m\"  all of type double"
+- type: explanation
+  location:
+    snippet: super(w, h, d);
+  explanations:
+  - body: creates a new object of "Box" type with width of "w", height of "h" and depth of "d".
+- type: explanation
+  location:
+    snippet: weight = m;
+  explanations:
+  - body: Assigns "m" to "weight".
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: End of constructor.
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: Start of Main Method.
+- type: explanation
+  location:
+    snippet: MatchBox mb1 = new MatchBox(10, 10, 10, 10);
+  explanations:
+  - body: Creates object reference variable of type MatchBox to be called "mb1" assigns the reference to a new object of type
+      MatchBox values of width = 10, height = 10, depth = 10, weight = 10
+- type: explanation
+  location:
+    snippet: mb1.getVolume();
+  explanations:
+  - body: Returns the volume of object referenced by mb1.
+- type: explanation
+  location:
+    snippet: System.out.println("width of MatchBox 1 is " + mb1.width);
+  explanations:
+  - body: Prints the width of object referenced by mb1 to screen.
+- type: explanation
+  location:
+    snippet: System.out.println("height of MatchBox 1 is " + mb1.height);
+  explanations:
+  - body: Prints the height of object referenced by mb1 to screen.
+- type: explanation
+  location:
+    snippet: System.out.println("depth of MatchBox 1 is " + mb1.depth);
+  explanations:
+  - body: Prints the depth of object referenced by mb1 to screen.
+- type: explanation
+  location:
+    snippet: System.out.println("weight of MatchBox 1 is " + mb1.weight);
+  explanations:
+  - body: Prints the weight of object referenced by mb1 to screen.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: End of Main Method.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: End of Box class.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: Unnecessary curly bracket?

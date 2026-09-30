@@ -1,0 +1,46 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pointernot
+source: main.cpp
+title: PointerNotation
+description: 'Worked example: PointerNotation'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: PointerNotation'
+elements:
+- type: explanation
+  location:
+    snippet: |-
+      printf( "b[ %d ] = %d
+      ", i, b[ i ] );
+  explanations:
+  - body: Array subscript notation.
+- type: explanation
+  location:
+    snippet: printf( "*( b + %d ) = %d\n", offset, *( b + offset ) );
+  explanations:
+  - body: Pointer/offset notation.
+- type: explanation
+  location:
+    snippet: |-
+      printf( " bPtr[ %d ] = %d
+      ", i, bPtr[ i ] );
+  explanations:
+  - body: Pointer subscript notation.
+- type: explanation
+  location:
+    snippet: printf( "*( bPtr + %d ) = %d\n", offset, *( bPtr + offset ) );
+  explanations:
+  - body: Pointer offset notation.

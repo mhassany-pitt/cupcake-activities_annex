@@ -1,0 +1,103 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_capitalyears_c_en
+source: main.c
+title: 'IS12:: capitalyears.c (4.3)'
+description: 'Worked example: IS12:: capitalyears.c (4.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:pre_decrement
+  - unspecified:void
+  - unspecified:div
+  - unspecified:reference
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:mul
+  - unspecified:main_function
+  - unspecified:float
+  - unspecified:add_assignment
+  - unspecified:while
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: capitalyears.c (4.3)'
+elements:
+- type: explanation
+  location:
+    snippet: int years; /* years the capital stays in bank */
+  explanations:
+  - body: This variable will be used as a loop counter. It is declared as integer and will get its value below with an input
+- type: explanation
+  location:
+    snippet: 'printf("Startup capital ($$$.cc): ");'
+  explanations:
+  - body: This is a prompt
+- type: explanation
+  location:
+    snippet: scanf("%f", &capital);
+  explanations:
+  - body: This scanf statements reads an floating point value from the user and places it inside variable capital
+- type: explanation
+  location:
+    snippet: 'printf("Interest rate in percents (xx.xx): ");'
+  explanations:
+  - body: This is a prompt
+- type: explanation
+  location:
+    snippet: scanf("%f", &interest_rate);
+  explanations:
+  - body: This scanf statements reads an floating point value from the user and places it inside variable interest_rate
+- type: explanation
+  location:
+    snippet: printf("How many years? ");
+  explanations:
+  - body: This is a prompt
+- type: explanation
+  location:
+    snippet: scanf("%d", &years);
+  explanations:
+  - body: This scanf statements reads an integer value from the user and places it inside variable years
+- type: explanation
+  location:
+    snippet: while (years) {
+  explanations:
+  - body: At each iteration of the loop, the current value of the variable years is checked. If this value is zero (0), the
+      loop will will be skipped, otherwise execution will proceed with the first statement inside the loop.
+- type: explanation
+  location:
+    snippet: capital += capital * interest_rate / 100;
+  explanations:
+  - body: This statement adds the annual interest (right side) to the current value of capital. Complex assigment += is a
+      good choice for this statement
+- type: explanation
+  location:
+    snippet: --years;
+  explanations:
+  - body: The goal of this decrement statement is to subtract 1 from the current value of years. I.e., the value of counter
+      will be "one less".
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: This is the end of the block braces. We need to use block here since while statement can have only one C statement
+      inside its body. We have two and so we need to wrap them as a block.
+- type: explanation
+  location:
+    snippet: |-
+      printf("New capital %9.2f
+      ", capital);
+  explanations:
+  - body: This is the first statement after the loop. Here the execusion will resume when checking the expression controlling
+      the loop (years) we will find that it became zero. It prints the value of capital after loop execution.

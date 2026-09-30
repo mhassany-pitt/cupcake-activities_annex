@@ -1,0 +1,91 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt2_1_en
+source: main.py
+title: Variables 1
+description: 'Worked example: Variables 1'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Variables 1'
+elements:
+- type: explanation
+  location:
+    snippet: count = 44;
+  explanations:
+  - body: Assigning integer '44' to the variable 'count'
+- type: explanation
+  location:
+    snippet: half_count = count // 2
+  explanations:
+  - body: Dividing the value of 'count' by two and asigning the resultant value to the variable 'half_count'
+- type: explanation
+  location:
+    snippet: print(count, half_count)
+  explanations:
+  - body: Printing the value of both 'count' and 'half_count'. The result at this point will be '44 22'
+- type: explanation
+  location:
+    snippet: count = 99
+  explanations:
+  - body: This statement re-assigns (assigns again) new value to the variable 'count'. Note the new value of the variable
+      'count' is '99'
+- type: explanation
+  location:
+    snippet: print(count, half_count)
+    nth: 2
+  explanations:
+  - body: Printing the value of both 'count and 'half_count'. At this point the value of 'half_count' is still 22. Hence this
+      statement will print out '99 22'
+- type: explanation
+  location:
+    snippet: half_count = count / 2
+  explanations:
+  - body: Now since the new value of the variable 'count' is '99', the variable 'half_count' will get the value '49.5'
+- type: explanation
+  location:
+    snippet: print(count, half_count)
+    nth: 3
+  explanations:
+  - body: Printing out the new value of 'count' and 'half_count'
+- type: explanation
+  location:
+    snippet: count = count + 100
+  explanations:
+  - body: This statement adds '100' to the current value of 'count' and assigns the sum back to the variable 'count'. In shour
+      it updates the value of the 'count'
+- type: explanation
+  location:
+    snippet: print(count, half_count)
+    nth: 4
+  explanations:
+  - body: Now the value of 'count' and 'half_count' will be '199' and '49.5'
+- type: explanation
+  location:
+    snippet: count = "100"
+  explanations:
+  - body: This statement assigns a string '100' to the variable 'count'. Do note that the "100" is enclosed in the double
+      quotes. Hence, it is not an integer value but a string.
+- type: explanation
+  location:
+    snippet: half_count = "count"
+  explanations:
+  - body: This is again a tricky statement. Here a string 'count' is assigned to the variable 'half_count'. The value of 'half_count'
+      will be updated with a string 'count' after this statement
+- type: explanation
+  location:
+    snippet: print(count, half_count)
+    nth: 5
+  explanations:
+  - body: Printing the new value of 'count' and 'half_count'

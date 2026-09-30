@@ -1,0 +1,219 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_patternsearch_c_en
+source: main.c
+title: 'IS12:: patternsearch.c (12.3)'
+description: 'Worked example: IS12:: patternsearch.c (12.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:pre_increment
+  - unspecified:return
+  - unspecified:and
+  - unspecified:for
+  - unspecified:while
+  - unspecified:array_declaration
+  - unspecified:char
+  - unspecified:equal
+  - unspecified:post_increment
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:greater_equal
+  - unspecified:if
+  - unspecified:main_function
+  - unspecified:not_equal
+  - unspecified:less
+  - unspecified:greater
+  - unspecified:define
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:printf
+  - unspecified:sub
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: patternsearch.c (12.3)'
+elements:
+- type: explanation
+  location:
+    snippet: '#define MAXLINE 1000 /* maximum input line size */'
+  explanations:
+  - body: Limit your search to a reasonable limit.  Use a string constant, set only once, for this purpose. Note that it is
+      in all capital letters.
+- type: explanation
+  location:
+    snippet: int getline(char line[ ], int maxline);
+  explanations:
+  - body: Function prototype used in main and defined below.  A limit is set to the amount of processing allowed with the
+      value "maxline".
+- type: explanation
+  location:
+    snippet: int strindex(char source[ ], char searchfor[ ]);
+  explanations:
+  - body: The function prototype for "strindex" inputs two arrays and returns an integer.  In order to understand the program,
+      it is good to read over the function definitions below.
+- type: explanation
+  location:
+    snippet: char pattern[ ] = "ould";
+  explanations:
+  - body: The array "pattern[]" contains what to look for, in this case "ould" .
+- type: explanation
+  location:
+    snippet: int found = 0;
+  explanations:
+  - body: Initially, no lines have been searched.  "Found" is set to zero.
+- type: explanation
+  location:
+    snippet: while (getline(line, MAXLINE) > 0)
+  explanations:
+  - body: Up to a given maximum, the line length is measured.  If it exists (>0), then continue through the while loop.  Otherwise,
+      return "found" as zero, only.
+- type: explanation
+  location:
+    snippet: if (strindex(line, pattern) >= 0) {
+  explanations:
+  - body: If the matching pattern is found (see "strindex" function below), then print the line.
+- type: explanation
+  location:
+    snippet: printf("%s", line);
+  explanations:
+  - body: This prints the line when the pattern is found.
+- type: explanation
+  location:
+    snippet: found++;
+  explanations:
+  - body: This counts the number of lines which contain the pattern.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: End of If and also end of While loop, which encloses only the If statement block -- thus not requiring extra brackets.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: End of main.
+- type: explanation
+  location:
+    snippet: int getline(char s[ ], int lim)
+  explanations:
+  - body: This is the beginning of the code for the function "getline".  Overall, it reads the next line into an array and
+      returns the length.  It is the same as in the Longest Line example.
+- type: explanation
+  location:
+    snippet: |-
+      for (i = 0; i < lim-1 &&(c=getchar())!= EOF && c != '
+      '; ++i)
+  explanations:
+  - body: As long as there is a character to read, and not a carriage return, the length is counted (in the value of "i").  A
+      carriage return will throw it out of the loop.  It will stop when it reaches one less than the limit set above (MAXLINE).  Since
+      it starts
+- type: explanation
+  location:
+    snippet: s[i] = c;
+  explanations:
+  - body: The "i"-th position of the array s is assigned the value of the current character read in.
+- type: explanation
+  location:
+    snippet: |-
+      if (c == '
+      ') {
+  explanations:
+  - body: If the character is a carriage return, this is obviously the end of the line and so it isn't processed in the previous
+      inner loop.  However, it is still processed.
+- type: explanation
+  location:
+    snippet: s[i] = c;
+    nth: 2
+  explanations:
+  - body: |-
+      The "i"-th position of the array s is assigned "
+      ".  It is the next to last position in the array.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: End of loop measuring length ("getline" function).
+- type: explanation
+  location:
+    snippet: "s[i] = '\0';"
+  explanations:
+  - body: "Assign \"\0\" to the end of the character array, as is usual for strings.  Even this character is counted, as the\
+      \ last line in either of the loops above ends with adding one more to \"I\".Even this character is counted, as the last\
+      \ line in either of the loops"
+- type: explanation
+  location:
+    snippet: return i;
+  explanations:
+  - body: The final length count is returned.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: Closing bracket for the function "getline".
+- type: explanation
+  location:
+    snippet: int strindex(char s[ ], char t[ ])
+  explanations:
+  - body: Beginning of function "strindex".
+- type: explanation
+  location:
+    snippet: int i, j, k;
+  explanations:
+  - body: Each loop is given its own counter variable, and a third variable is used to pass values between them, without changing
+      the original value.
+- type: explanation
+  location:
+    snippet: "for(i = 0; s[i] != '\0'; i++) {"
+  explanations:
+  - body: "The array s[] is traversed one at a time, from beginning, s[0], to end (= '\0').  This is the outer loop. Each\
+      \ time it runs once, the inner loops spin completely."
+- type: explanation
+  location:
+    snippet: "for(j = i, k = 0; t[k] != '\0' && s[j] == t[k]; j++, k++)"
+  explanations:
+  - body: Passing the outer loop's array position for s into the beginning value for j, the nested loop begins to cycle.  As
+      long as
+- type: explanation
+  location:
+    snippet: ;
+  explanations:
+  - body: Nothing happens when this conditional statement is true, other than increment j and k.  Actually, it is checking
+      to see if every character in t[ ] is also found in s[ ].
+- type: explanation
+  location:
+    snippet: "if (k > 0 && t[k] == '\0')"
+  explanations:
+  - body: "If something has been found before this (k>0) and the last character is \"\0\", then return I.  This shows that\
+      \ the whole pattern has been found."
+- type: explanation
+  location:
+    snippet: return i;
+    nth: 2
+  explanations:
+  - body: If the above line is true, I has preserved the beginning position of the pattern within s[].
+- type: explanation
+  location:
+    snippet: return -1;
+  explanations:
+  - body: If nothing is found, return -1.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: End of function "strindex".

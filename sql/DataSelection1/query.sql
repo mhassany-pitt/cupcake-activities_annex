@@ -1,0 +1,2 @@
+SELECT sid 
+      FROM Student;

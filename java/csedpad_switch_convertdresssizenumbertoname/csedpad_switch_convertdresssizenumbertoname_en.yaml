@@ -1,0 +1,102 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_switch_convertdresssizenumbertoname
+source: ConvertDressSizeNumberToName.java
+title: (Switch) Convert dress size number - CSEdPad
+description: Given a user-supplied US dress size (2, 4, 6, etc.), output the corresponding size label (XS, S, M, L, etc.).
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:java.lang.System.out.print
+  - webex:ImportStatement
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:DefaultClause
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:StringVariable
+  - webex:ObjectCreationStatement
+  - webex:IntDataType
+  - webex:SwitchStatement
+  - webex:ConstructorCall
+  - webex:StringLiteral
+  - webex:AddAssignmentExpression
+  - webex:ObjectMethodInvocation
+  - webex:CaseClause
+  - webex:BreakStatement
+  - webex:StringInitializationStatement
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddAssignmentExpression
+  - java_ontology:BreakStatement
+  - java_ontology:CaseClause
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:DefaultClause
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ImportStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringInitializationStatement
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:SwitchStatement
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Given a user-supplied US dress size (2, 4, 6, etc.), output the corresponding size label (XS, S, M, L, etc.).
+elements:
+- type: explanation
+  location:
+    snippet: 'case 2:'
+  explanations:
+  - body: The dress size 2 maps to the size XS.
+- type: explanation
+  location:
+    snippet: 'case 4:'
+  explanations:
+  - body: The dress size 4 maps to the size XS.
+- type: explanation
+  location:
+    snippet: break;
+  explanations:
+  - body: The `break` statement causes execution to jump to the end of the switch body.
+- type: explanation
+  location:
+    snippet: 'default:'
+  explanations:
+  - body: If no other `case` label value matches the `size`, the `default` label will effectively match by default, and the
+      statements following the label will execute.
+- type: explanation
+  location:
+    snippet: break;
+    nth: 2
+  explanations:
+  - body: Although a `break` statement at the end of the switch body is essentially redundant, it is considered a best practice
+      to have it for sake of consistency with the other labeled sections.

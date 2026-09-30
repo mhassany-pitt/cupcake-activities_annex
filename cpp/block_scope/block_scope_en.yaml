@@ -1,0 +1,72 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_block_scope
+source: main.cpp
+title: Block Scope
+description: 'Worked example: Block Scope'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Block Scope'
+elements:
+- type: explanation
+  location:
+    snippet: void a( void );
+  explanations:
+  - body: useLocal reinitializes local variable x during each call.
+- type: explanation
+  location:
+    snippet: void b( void );
+  explanations:
+  - body: function useGlobal modifies global variable x during each call.
+- type: explanation
+  location:
+    snippet: void c( void );
+  explanations:
+  - body: useLocal reinitializes local variable x during each call.
+- type: explanation
+  location:
+    snippet: int x = 1;
+  explanations:
+  - body: Global variable with file scope.
+- type: explanation
+  location:
+    snippet: int x = 5;
+  explanations:
+  - body: Variable with block scope. Local variable to main.
+- type: explanation
+  location:
+    snippet: int x = 7;
+  explanations:
+  - body: Variable with block scope. Local variable to new scope.
+- type: explanation
+  location:
+    snippet: void a( void )
+  explanations:
+  - body: useLocal reinitializes local variable x during each call.
+- type: explanation
+  location:
+    snippet: int x = 25;
+  explanations:
+  - body: Variable with block scope. Initialized each time useLocal is called.
+- type: explanation
+  location:
+    snippet: void b( void )
+  explanations:
+  - body: function useGlobal modifies global variable x during each call.
+- type: explanation
+  location:
+    snippet: void c( void )
+  explanations:
+  - body: useLocal reinitializes local variable x during each call.

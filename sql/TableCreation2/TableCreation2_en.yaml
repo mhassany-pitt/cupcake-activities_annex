@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableCreation2
+source: query.sql
+title: Primary Key (1)
+description: Primary Key (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:StringType
+  - expert:SubQuery
+  - expert:Rule
+  - expert:FixedLengthCharacterString
+  - expert:AttributeName
+  - expert:AttributeSpecification
+  - expert:TupleSelectionCondition
+  - expert:BracketCharacter
+  - expert:UniqueKeyConstraint
+  - expert:CommaCharacter
+  - expert:CreateTableClause
+  - expert:CreateTableStatement
+  - expert:PrimaryKeyClause
+  - expert:PrimaryKeyConstraint
+  - sql_ontology:SubQuery
+  - sql_ontology:CreateTableStatement
+  - sql_ontology:AttributeName
+  - sql_ontology:UniqueKeyConstraint
+  - sql_ontology:CommaCharacter
+  - sql_ontology:PrimaryKeyConstraint
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:PrimaryKeyClause
+  - sql_ontology:BracketCharacter
+  - sql_ontology:AttributeSpecification
+  - sql_ontology:CreateTableClause
+  - sql_concept:TupleSelectionCondition
+  - sql_concept:Rule
+runtime:
+  language: sql
+  version: '2016'
+statement: Primary Key (1)
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE Enrolled
+  explanations:
+  - body: This table is to record enrollment information for each student, so both student ID and course ID are defined as
+      the schema of 'Enrolled' table.
+- type: explanation
+  location:
+    snippet: (sid CHAR(20),
+  explanations:
+  - body: '''sid'' is student ID and 20 digits character type.'
+- type: explanation
+  location:
+    snippet: cid CHAR(20),
+  explanations:
+  - body: '''cid'' is course ID and 20 digits character type.'
+- type: explanation
+  location:
+    snippet: grade CHAR(2),
+  explanations:
+  - body: '''grade'' is grade of each student and 2 digits character type.'
+- type: explanation
+  location:
+    snippet: PRIMARY KEY (sid, cid));
+  explanations:
+  - body: A student can take a course only once and it is not allowable to take the same course twice. Students have a single
+      grade for each course, because a primary key is specified using both sid and cid. A table's primary key must have a
+      unique value for each row of the table.

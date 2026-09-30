@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_recursion
+source: main.cpp
+title: Recursion
+description: 'Worked example: Recursion'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Recursion'
+elements:
+- type: explanation
+  location:
+    snippet: long factorial( long );
+  explanations:
+  - body: recursive definition of function factorial.
+- type: explanation
+  location:
+    snippet: for ( i = 1; i <= 10; i++ )
+  explanations:
+  - body: loop 11 times; during each iteration, calculate factorial( i ) and display result.
+- type: explanation
+  location:
+    snippet: long factorial( long number )
+  explanations:
+  - body: recursive definition of function factorial.
+- type: explanation
+  location:
+    snippet: if ( number <= 1 )
+  explanations:
+  - body: base case. If number is less than or equal to 1, factorial returns 1, no further recursion is necessary.
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: recursive step. If number is greater than 1, the statement expresses the problem as   the product of number and
+      a recursive call to factorial evaluating the factorial of number-1.

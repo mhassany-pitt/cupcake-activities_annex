@@ -1,0 +1,82 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_post_request_example
+source: PostServletExample.java
+title: 'ISD:: Post Request Example.java'
+description: 'Worked example: ISD:: Post Request Example.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD:: Post Request Example.java'
+elements:
+- type: explanation
+  location:
+    snippet: public class PostServletExample extends javax.servlet.http.HttpServlet
+  explanations:
+  - body: Declaration of the class
+- type: explanation
+  location:
+    snippet: protected void doPost(HttpServletRequest request, HttpServletResponse response)
+  explanations:
+  - body: "Header of the doPost method. HttpServletRequest and \r\nHttpServletResponse objects are passed as parameters"
+- type: explanation
+  location:
+    snippet: String say_param = request.getParameter("say");
+  explanations:
+  - body: Retrieve parameter value
+- type: explanation
+  location:
+    snippet: response.setContentType( "text/html" );
+  explanations:
+  - body: Set content type, "text/html" for HTML output
+- type: explanation
+  location:
+    snippet: PrintWriter out = response.getWriter();
+  explanations:
+  - body: Get the writer object
+- type: explanation
+  location:
+    snippet: out.println("<HTML><HEAD><TITLE>Get Servlet Example</TITLE></HEAD>");
+  explanations:
+  - body: Print the HTML header and title
+- type: explanation
+  location:
+    snippet: out.println("<BODY>");
+  explanations:
+  - body: Print opening body tag
+- type: explanation
+  location:
+    snippet: out.println("<H1>Welcome to example of doPost servlet method!</H1>");
+  explanations:
+  - body: Print welcome text
+- type: explanation
+  location:
+    snippet: out.println(((say_param != null && say_param.length() != 0)?"<p>You say:" + say_param + "</p>":""));
+  explanations:
+  - body: If retrieved parameter is not empty - display its value
+- type: explanation
+  location:
+    snippet: out.println("</BODY>");
+  explanations:
+  - body: Print closing body tag
+- type: explanation
+  location:
+    snippet: out.println("</HTML>");
+  explanations:
+  - body: Print closing html tag
+- type: explanation
+  location:
+    snippet: out.close();
+  explanations:
+  - body: Always close the writer object for better memory management

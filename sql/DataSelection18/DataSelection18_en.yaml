@@ -1,0 +1,62 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection18
+source: query.sql
+title: Alphabetic Order
+description: Alphabetic Order
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:EquiWhereJoin
+  - expert:AscendingOrdering
+  - expert:TableAlias
+  - expert:OrderingBySingleAttribute
+  - expert:WhereClause
+  - expert:SingleAttributeSelection
+  - expert:MultipleTableSelection
+  - expert:DistinctClause
+  - sql_ontology:MultipleTableSelection
+  - sql_ontology:DistinctClause
+  - sql_ontology:TableAlias
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:AscendingOrdering
+  - sql_ontology:EquiWhereJoin
+  - sql_ontology:WhereClause
+  - sql_ontology:OrderingBySingleAttribute
+runtime:
+  language: sql
+  version: '2016'
+statement: Alphabetic Order
+elements:
+- type: explanation
+  location:
+    snippet: SELECT DISTINCT customer_name
+  explanations:
+  - body: DISTINCT is to eliminated the same row of results. So the customer having loan will be displayed alphabetically
+      without duplication.
+- type: explanation
+  location:
+    snippet: FROM borrower AS T, loan AS S
+  explanations:
+  - body: Table aliases are defined for both borrower and loan table. The table alias can be used if the table name is too
+      long to write the whole name or for the convenience of query programmer
+- type: explanation
+  location:
+    snippet: WHERE T.loan_no = S.loan_no
+  explanations:
+  - body: Loan number in borrower table is matched with loan number in loan table.
+- type: explanation
+  location:
+    snippet: ORDER BY customer_name;
+  explanations:
+  - body: By using ORDER BY clause, you can define column that you want to list in order.  DESC clause specifies descending
+      order and ASC specifies ascending order and these DESC or ASC is placed right next to the column name; ascending order
+      is the default.

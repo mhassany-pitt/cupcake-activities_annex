@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_nonconstpointer
+source: main.cpp
+title: NonConstPointer
+description: 'Worked example: NonConstPointer'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: NonConstPointer'
+elements:
+- type: explanation
+  location:
+    snippet: void printCharacters( const char * );
+  explanations:
+  - body: Pointer variable sPtr is modifiable, but the data to which it points, *sPtr, is not .
+- type: explanation
+  location:
+    snippet: printCharacters( string );
+  explanations:
+  - body: Pointer variable sPtr is modifiable, but the data to which it points, *sPtr, is not .
+- type: explanation
+  location:
+    snippet: void printCharacters( const char *sPtr )
+  explanations:
+  - body: Pointer variable sPtr is modifiable, but the data to which it points, *sPtr, is not .
+- type: explanation
+  location:
+    snippet: for ( ; *sPtr != '\0'; sPtr++ )
+  explanations:
+  - body: sPtr is modified by function printCharacters.

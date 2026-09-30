@@ -1,0 +1,66 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_variables_c_en
+source: main.c
+title: 'IS12:: variables.c (3.1)'
+description: 'Worked example: IS12:: variables.c (3.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:void
+  - unspecified:div
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:add
+  - unspecified:main_function
+  - unspecified:printf
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: variables.c (3.1)'
+elements:
+- type: explanation
+  location:
+    snippet: int count, half_count;
+  explanations:
+  - body: Here two integer variables are defined. One is named count, another - half_count. Variable names have to start with
+      a letter and may include any letters and digits. Underscore '_' is an eligible letter.
+- type: explanation
+  location:
+    snippet: count = 44;
+  explanations:
+  - body: Variable count gets value 44 as a result of the assignment operation
+- type: explanation
+  location:
+    snippet: half_count = count / 2;
+  explanations:
+  - body: Variable half_count gets value 22 as a result of the assignment operation
+- type: explanation
+  location:
+    snippet: count = 99;
+  explanations:
+  - body: Variable count gets value 99 as a result of the assignment operation. Nothing happened with half_count. It is still
+      store value 22 - the last that was assigmed
+- type: explanation
+  location:
+    snippet: half_count = count / 2;
+    nth: 2
+  explanations:
+  - body: Variable half_count gets value 49 as a result of the assignment operation. Since the value of count is 99 at this
+      point, the result of integer division count / 2 is 49
+- type: explanation
+  location:
+    snippet: count = count + 1;
+  explanations:
+  - body: Variable count gets value 100 as a result of the assignment operation. Nothing happened with half_count. It is still
+      store value 49 - the last that was assigmed.

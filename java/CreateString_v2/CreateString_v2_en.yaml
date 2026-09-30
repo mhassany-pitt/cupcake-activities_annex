@@ -1,0 +1,53 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_CreateString_v2
+source: CreateString.java
+title: Creating String
+description: Creating String
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:FormalMethodParameter
+  - expert:MethodDefinition
+  - expert:ObjectCreationStatement
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleVariable
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringInitializationStatement
+  - expert:StringLiteral
+  - expert:StringVariable
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Creating String
+elements:
+- type: explanation
+  location:
+    snippet: String string1;
+  explanations:
+  - body: This line creates a String object and it has not yet been initialized. The default value is null.
+- type: explanation
+  location:
+    snippet: String string2 = new String("Hello world!");
+  explanations:
+  - body: You can create a String object by using the "new" keyword to create it.
+- type: explanation
+  location:
+    snippet: String string3 = "Hello world!";
+  explanations:
+  - body: You can also create a String object simply by writing the desired text within double quotes. The string is a series
+      of characters in your code that is enclosed in double quotes.

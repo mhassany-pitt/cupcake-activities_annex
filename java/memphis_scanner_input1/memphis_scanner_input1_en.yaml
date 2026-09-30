@@ -1,0 +1,50 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_memphis_scanner_input1
+source: HelloWorld.java
+title: Scanner input (Memphis)
+description: |-
+  Description from Memphis CS1 instructor:
+  Modifies our previous change making program to use Scanner.
+  This is a way for the program to get user input as the program is running,
+  instead of having to change values directly in the code.
+authors:
+- first: Daniel
+  last: Guerra
+  email: daniel.guerra@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:DivideExpression
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ImportStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ModulusExpression
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: |-
+  Description from Memphis CS1 instructor:
+  Modifies our previous change making program to use Scanner.
+  This is a way for the program to get user input as the program is running,
+  instead of having to change values directly in the code.
+elements: []

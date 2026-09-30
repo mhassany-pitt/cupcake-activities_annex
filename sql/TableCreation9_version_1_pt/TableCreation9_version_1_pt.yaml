@@ -1,0 +1,39 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_TableCreation9_version_1_pt
+source: query.sql
+title: PrimaryKey(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE course
+  explanations:
+  - body: Esse exemplo mostra a criacao da tabela 'course' com colunas para armazenar o identificador do curso e seu nome.
+- type: explanation
+  location:
+    snippet: (cid CHAR(20) NOT NULL PRIMARY KEY,
+  explanations:
+  - body: |-
+      O identificador do curso e' definido como 'cid'. Essa coluna nao pode ter valores nulos. <br/> <br/>
+      A chave primaria especifica um identificador unico para cada linha da tabela. Isso significa que nao existe mais de um curso com o mesmo identificador. Alem disso, a coluna definida como chave primaria nao pode conter valores nulos.
+- type: explanation
+  location:
+    snippet: cname CHAR(40));
+  explanations:
+  - body: A coluna 'cname' armazena o nome do curso e possui um tamanho fixo de 40 caracteres.

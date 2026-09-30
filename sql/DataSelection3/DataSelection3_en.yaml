@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection3
+source: query.sql
+title: Selecting All Attributes
+description: Selecting All Attributes
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AllAttributeSelection
+  - expert:RightWhitespaceTrim
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:SelectStatement
+  - expert:IntegrityConstraint
+  - expert:SingleTableSelection
+  - sql_ontology:AllAttributeSelection
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:IntegrityConstraint
+runtime:
+  language: sql
+  version: '2016'
+statement: Selecting All Attributes
+elements:
+- type: explanation
+  location:
+    snippet: SELECT *
+  explanations:
+  - body: As a convenience, SQL lets you use an asterisk (*) in place of the select list as an abbreviation for 'all columns'.
+- type: explanation
+  location:
+    snippet: FROM Student;
+  explanations:
+  - body: '''FROM'' clause is to define the target table.'

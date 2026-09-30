@@ -1,0 +1,65 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_better_copycat_c_en
+source: main.c
+title: 'IS12:: better_copycat.c (6.5)'
+description: 'Worked example: IS12:: better_copycat.c (6.5)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:return
+  - unspecified:main_function
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: better_copycat.c (6.5)'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: 'Lines that begin with # are preprocessing directives. Include directive commands the preprocessor  to include headers
+      of input/output functions so that you program can access such functions as getchar and putchar.'
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: This defines the main function of your program and it is required once and only once in your program. Main returns
+      a value of type  int and has no parmeters.
+- type: explanation
+  location:
+    snippet: int c;
+  explanations:
+  - body: Variable c has been declared as an int type.  c is represented as an int because the EOF value cannot be a char.
+- type: explanation
+  location:
+    snippet: while ((c = getchar()) != EOF)
+  explanations:
+  - body: getchar is a c function found in the stdio.h library that takes the keyboard input value and places it to the variable
+      c.  Even though c is an int, this is  legal because an int can take all char values. The input value given to c is tested
+      to see if it i
+- type: explanation
+  location:
+    snippet: putchar ( c );
+  explanations:
+  - body: putchar() is a c function found in the stdio.h library that writes characters to the screen, in this case, c.
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: Since main is declared as an int function, we return an integer value. Traditionally returning 0  tells the operating
+      system  that the program was completed OK.

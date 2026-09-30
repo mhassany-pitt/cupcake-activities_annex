@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Whileloop
+source: main.cpp
+title: Whileloop
+description: 'Worked example: Whileloop'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Whileloop'
+elements:
+- type: explanation
+  location:
+    snippet: int counter = 1;
+  explanations:
+  - body: Definition and assignment are performed simultaneously.
+- type: explanation
+  location:
+    snippet: while ( counter <= 10 )
+  explanations:
+  - body: repetition condition. The loop terminates when the control variable exceeds 10.
+- type: explanation
+  location:
+    snippet: printf ( "%d\n", counter );
+  explanations:
+  - body: display counter
+- type: explanation
+  location:
+    snippet: ++counter;
+  explanations:
+  - body: increment counter

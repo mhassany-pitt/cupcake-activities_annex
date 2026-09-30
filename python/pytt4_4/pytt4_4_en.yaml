@@ -1,0 +1,76 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt4_4_en
+source: main.py
+title: Calculating Interest Over Years
+description: 'Worked example: Calculating Interest Over Years'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Calculating Interest Over Years'
+elements:
+- type: explanation
+  location:
+    snippet: 'capital = float(input("Startup capital ($$$.cc): "))'
+  explanations:
+  - body: Taking capital amount as user input and storing it in the variable 'capital'
+- type: explanation
+  location:
+    snippet: 'interest_rate = float(input("Interest rate in percents (xx.xx): "))'
+  explanations:
+  - body: Taking interest rate as input from the user and storing it in the variable 'interest_rate'
+- type: explanation
+  location:
+    snippet: years = int(input("How many years? "))
+  explanations:
+  - body: Taking number of years as input from the user and storing it in the variable 'years'
+- type: explanation
+  location:
+    snippet: year = 1
+  explanations:
+  - body: Integer '1' is assigned to the variable 'year'. This variable will be used later as the condition for the 'while'
+      loop
+- type: explanation
+  location:
+    snippet: 'while year <= years:'
+  explanations:
+  - body: Initializing 'while' loop. This loop is set to iterate until year is less than or equal to years that was given
+      as input by the user
+- type: explanation
+  location:
+    snippet: interest = capital * interest_rate / 100;
+  explanations:
+  - body: This is the formula to calculate the interest, when the capital and interest rate are known
+- type: explanation
+  location:
+    snippet: print("Earned $", interest, "in year", year)
+  explanations:
+  - body: Printing out the interest of each year
+- type: explanation
+  location:
+    snippet: capital += interest
+  explanations:
+  - body: Updating the value of capital by adding the interest earned in that year
+- type: explanation
+  location:
+    snippet: year += 1
+  explanations:
+  - body: Updating the value of 'year'. This value has to be updated for the loop to give correct results. If this value is
+      not updated, the loop will run indefinitely
+- type: explanation
+  location:
+    snippet: print("Capital afrer", years, "years in bank is $", capital)
+  explanations:
+  - body: Once the condition is False, the program breaks out of the loop and prints out the total capital after certain amount
+      of years

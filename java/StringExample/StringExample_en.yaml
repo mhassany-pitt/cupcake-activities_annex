@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_StringExample
+source: StringExample.java
+title: DEPRECATED_StringExample
+description: 'Worked example: DEPRECATED_StringExample'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_StringExample'
+elements:
+- type: explanation
+  location:
+    snippet: String s = null;
+  explanations:
+  - body: The literal null is an object reference value that does not refer to anything.
+- type: explanation
+  location:
+    snippet: String s2 = s1 + " = 3";
+  explanations:
+  - body: You can compose long string literals by using the plus sign to concatenate two string literals.

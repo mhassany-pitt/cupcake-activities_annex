@@ -1,0 +1,192 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_longestline_c_en
+source: main.c
+title: 'IS12:: longestline.c (12.2)'
+description: 'Worked example: IS12:: longestline.c (12.2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:pre_increment
+  - unspecified:return
+  - unspecified:and
+  - unspecified:for
+  - unspecified:while
+  - unspecified:array_declaration
+  - unspecified:char
+  - unspecified:equal
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:if
+  - unspecified:main_function
+  - unspecified:not_equal
+  - unspecified:less
+  - unspecified:greater
+  - unspecified:define
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:printf
+  - unspecified:sub
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: longestline.c (12.2)'
+elements:
+- type: explanation
+  location:
+    snippet: '#define MAXLINE 1000 /* maximum input line size */'
+  explanations:
+  - body: Limit your search to a reasonable limit.  Use a string constant, set only once, for this purpose. Note that it is
+      in all capital letters.
+- type: explanation
+  location:
+    snippet: int getline(char line[ ], int maxline);
+  explanations:
+  - body: "\x0EO??U`?describes the function that will be used in the main function.  The complete code for the function will\
+      \ be written out elsewhere.  It describes the types, quantity, and order of the arguments the function accepts and the\
+      \ data type of its output."
+- type: explanation
+  location:
+    snippet: void copy(char to[ ], char from[ ]);
+  explanations:
+  - body: This line and the one above it (see comment) are called function prototypes.  The names of the two character arrays
+      in the function "copy" are helpfully named "to" and "from."
+- type: explanation
+  location:
+    snippet: max = 0;
+  explanations:
+  - body: Initially, the current longest length is set to zero, until a longer one is found.
+- type: explanation
+  location:
+    snippet: while ((len = getline(line, MAXLINE)) > 0)
+  explanations:
+  - body: As long as there is new input to search, the outer loop continues on to the next line.  It processes each line by
+      running an inner loop.  See function below for code that runs whenever "getline" is called.  In this case, the limit
+      is set to "MAXLINE" .
+- type: explanation
+  location:
+    snippet: if (len > max) {
+  explanations:
+  - body: Every time the outer, searching loop runs, the inner loop compares values, then processes the line only if the present
+      line is longer than the current maximum, using an inner loop.
+- type: explanation
+  location:
+    snippet: max = len;
+  explanations:
+  - body: When a greater value is found in the next line, the new value is placed into "max" the variable that stores the
+      current maximum.
+- type: explanation
+  location:
+    snippet: copy(longest, line);
+  explanations:
+  - body: This function copies the characters from one array to another.  Strings are arrays of characters.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: End of If statement that compares lengths.  Also, end of While loop, because it had only one statement (the If )
+      , and thus needs no curly brackets.
+- type: explanation
+  location:
+    snippet: printf("%s", longest);
+  explanations:
+  - body: Print out the result of your search.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: End of main.
+- type: explanation
+  location:
+    snippet: int getline(char s[ ], int lim)
+  explanations:
+  - body: This is the beginning of the code for the function "getline".  Overall, it reads the next line into an array and
+      returns the length.
+- type: explanation
+  location:
+    snippet: |-
+      for (i = 0; i < lim-1 &&(c=getchar())!= EOF && c != '
+      '; ++i)
+  explanations:
+  - body: As long as there is a character to read, and not a carriage return, the length is counted (in the value of "i").  A
+      carriage return will throw it out of the loop.  It will stop when it reaches one less than the limit set above (MAXLINE).  Since
+      it starts
+- type: explanation
+  location:
+    snippet: s[i] = c;
+  explanations:
+  - body: The "i"-th position of the array s is assigned the value of the current character read in.
+- type: explanation
+  location:
+    snippet: |-
+      if (c == '
+      ') {
+  explanations:
+  - body: If the character is a carriage return, this is obviously the end of the line and so it isn't processed in the previous
+      inner loop.  However, it is still processed.
+- type: explanation
+  location:
+    snippet: s[i] = c;
+    nth: 2
+  explanations:
+  - body: |-
+      The "i"-th position of the array s is assigned "
+      ".  It is the next to last position in the array.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: End of loop measuring length ("getline" function).
+- type: explanation
+  location:
+    snippet: "s[i] = '\0';"
+  explanations:
+  - body: "Assign \"\0\" to the end of the character array, as is usual for strings.  Even this character is counted, as the\
+      \ last line in either of the loops above ends with adding one more to \"I\".Even this character is counted, as the last\
+      \ line in either of the loops"
+- type: explanation
+  location:
+    snippet: return i;
+  explanations:
+  - body: The final length count is returned.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: Closing bracket for the function "getline".
+- type: explanation
+  location:
+    snippet: void copy(char to[ ], char from[ ]) {
+  explanations:
+  - body: Beginning of the function "copy"
+- type: explanation
+  location:
+    snippet: int i = 0;
+  explanations:
+  - body: Start at the first array position, which is zero.
+- type: explanation
+  location:
+    snippet: "while((to[i] = from [i]) != '\0')"
+  explanations:
+  - body: "The value of the \"I\"-th position of the array \"from\" is assigned to the same position of the array \"to\",\
+      \ as long as it doesn't equal \"\0\", the end of the string."
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: End of function getline.

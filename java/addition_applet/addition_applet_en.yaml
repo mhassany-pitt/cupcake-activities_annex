@@ -1,0 +1,94 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_addition_applet
+source: AdditionApplet.java
+title: 'ISD:: AdditionApplet.java'
+description: 'Worked example: ISD:: AdditionApplet.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD:: AdditionApplet.java'
+elements:
+- type: explanation
+  location:
+    snippet: '// Fig. 3.12: AdditionApplet.java'
+  explanations:
+  - body: Comments
+- type: explanation
+  location:
+    snippet: // Adding two floating-point numbers
+  explanations:
+  - body: Comments
+- type: explanation
+  location:
+    snippet: import java.awt.Graphics;   // import class Graphics
+  explanations:
+  - body: imports class Graphics
+- type: explanation
+  location:
+    snippet: import javax.swing.*;       // import package javax.swing
+  explanations:
+  - body: "import entire javax.swing package\r\nallows any class in the the package to be used."
+- type: explanation
+  location:
+    snippet: public class AdditionApplet extends JApplet {
+  explanations:
+  - body: "Begin class definition\r\nInherit from JApplet, imported from package javax.swing"
+- type: explanation
+  location:
+    snippet: double sum;  // sum of the values entered by the user
+  explanations:
+  - body: "Instance variable sum may be used anywhere in the class, even in other methods.\r\nData type double can store floating\
+      \ point numbers."
+- type: explanation
+  location:
+    snippet: public void init()
+  explanations:
+  - body: Method init, Normally initializes instance variables, Guaranteed to be first method called, First line must always
+      appear as above, Returns nothing (void), takes no arguments
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Begins body of method init
+- type: explanation
+  location:
+    snippet: firstNumber =
+  explanations:
+  - body: Variable firstNumber gets returned string
+- type: explanation
+  location:
+    snippet: JOptionPane.showInputDialog(
+  explanations:
+  - body: Prompts user with string
+- type: explanation
+  location:
+    snippet: number1 = Double.parseDouble( firstNumber );
+  explanations:
+  - body: "Converts String argument to a double\r\nReturns the double value"
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Ends method init
+- type: explanation
+  location:
+    snippet: g.drawRect( 15, 10, 270, 20 );
+  explanations:
+  - body: Method drawRect( x1, y1, width, height )
+- type: explanation
+  location:
+    snippet: g.drawString( "The sum is " + sum, 25, 25 );
+  explanations:
+  - body: "Sends drawString message to Graphics object to which g refers (calls method)\r\n\"The sum is\" + sum - string concatenation"

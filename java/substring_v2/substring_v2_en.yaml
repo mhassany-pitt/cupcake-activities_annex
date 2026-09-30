@@ -1,0 +1,49 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_substring_v2
+source: substring.java
+title: Substring
+description: Substring
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:java.lang.String.substring
+  - expert:MethodDefinition
+  - expert:ObjectMethodInvocation
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringInitializationStatement
+  - expert:StringLiteral
+  - expert:StringVariable
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Substring
+elements:
+- type: explanation
+  location:
+    snippet: String b = a.substring(5,7);
+  explanations:
+  - body: "substring() method returns the sub-string between its input parameters. The \r\nfirst parameter is the start position\
+      \ (here equals to 5) and the second input \r\nparameter is the end position (here equals to 7). Here the string variable\
+      \ b is \r\ninitialized with \"is\"."
+- type: explanation
+  location:
+    snippet: b = "Java is great.".substring(5,7);
+  explanations:
+  - body: "substring() method can be called by a string literal as well. Again, the string \r\nvariable b is initialized with\
+      \ \"is\"."

@@ -1,0 +1,22 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_qlinkedlist1
+source: Main.java
+title: Linked List 1
+description: 'Worked example: Linked List 1'
+authors:
+- first: Mohammad
+  last: Hassany
+  email: moh70@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Linked List 1'
+elements: []

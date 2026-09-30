@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_7_6
+source: MainClass.java
+title: For-each with char array
+description: For-each with char array
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ArrayDataType
+  - expert:ArrayInitializationStatement
+  - expert:ArrayInitializer
+  - expert:ArrayVariable
+  - expert:CharDataType
+  - expert:ClassDefinition
+  - expert:ForEachStatement
+  - expert:FormalMethodParameter
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: For-each with char array
+elements:
+- type: explanation
+  location:
+    snippet: 'for(char ch: vowels){'
+  explanations:
+  - body: For-each is used to access all elements of the char array "vowels".

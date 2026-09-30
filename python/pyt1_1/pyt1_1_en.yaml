@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt1_1_en
+source: main.py
+title: Hello World
+description: 'Worked example: Hello World'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Call
+  - parser:Str
+  - unspecified:Call
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Hello World'
+elements:
+- type: explanation
+  location:
+    snippet: print ("Hello World!")
+  explanations:
+  - body: This is a simple statement which prints out the string 'Hello World!'. Python 3 syntax suggests that everything
+      that needs to be printed out should be enclosed in the round parenthesis '()'.

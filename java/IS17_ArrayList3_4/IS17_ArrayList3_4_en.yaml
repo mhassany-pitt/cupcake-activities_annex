@@ -1,0 +1,78 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList3_4
+source: ArrayList3.java
+title: IS17_ArrayList3_4
+description: 'Worked example: IS17_ArrayList3_4'
+authors:
+- first: Aslam
+  last: Mogri
+  email: aslam.mogri@rmu.edu
+  affiliation: Robert Morris University
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList3_4'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: imports the ArrayList utility from java
+- type: explanation
+  location:
+    snippet: public class ArrayList3 {
+  explanations:
+  - body: creates a new class called ArrayList3
+- type: explanation
+  location:
+    snippet: ArrayList<String> names = new ArrayList<String>();
+  explanations:
+  - body: creates a new ArrayList names
+- type: explanation
+  location:
+    snippet: names.add( new String( "Bob" ) );
+  explanations:
+  - body: "adds anew string to the array list\r\n\r\nin this case Bob"
+- type: explanation
+  location:
+    snippet: names.add( new String( "Carol" ) );
+  explanations:
+  - body: "adds anew string to the array list\r\n\r\nin this case Carol"
+- type: explanation
+  location:
+    snippet: names.add( 1, new String( "Ted" ) );
+  explanations:
+  - body: adds new String Ted to Position 1
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+  explanations:
+  - body: finds the size of the names in the arraylist and prints out the size
+- type: explanation
+  location:
+    snippet: String theName = (String) names.get( 2 );
+  explanations:
+  - body: casts whatever is in position 2 of the array to a string
+- type: explanation
+  location:
+    snippet: 'System.out.println("the name of this element is: " + theName);'
+  explanations:
+  - body: output is the name of this element is theName
+- type: explanation
+  location:
+    snippet: names.clear( );
+  explanations:
+  - body: clears the arraylist
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+    nth: 2
+  explanations:
+  - body: prints out the size of the values in the array list

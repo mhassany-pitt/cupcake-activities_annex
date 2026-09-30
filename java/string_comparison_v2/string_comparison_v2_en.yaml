@@ -1,0 +1,67 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_string_comparison_v2
+source: string_comparison.java
+title: String Comparison
+description: String Comparison
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:IfStatement
+  - expert:java.lang.String.equals
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ObjectMethodInvocation
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringInitializationStatement
+  - expert:StringLiteral
+  - expert:StringVariable
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: String Comparison
+elements:
+- type: explanation
+  location:
+    snippet: if (s1.equals(s2))
+  explanations:
+  - body: Use the .equals() method to compare strings for equality.Here, we are comparing s1 and s2 strings. If s1 is equal
+      to s2, the next command will be executed.
+- type: explanation
+  location:
+    snippet: System.out.println("these two are equal!");
+  explanations:
+  - body: However, s1(Hell) is not equal to s2(Hello), this line will never be printed out.
+- type: explanation
+  location:
+    snippet: System.out.println(s1.compareTo(s2));
+  explanations:
+  - body: The compareTo method compares strings is dictionary order.  Here, s1(Hell) is 1 letter less than (Hello). So the
+      print out is -1.
+- type: explanation
+  location:
+    snippet: System.out.println(s3.compareTo(s1));
+  explanations:
+  - body: The compareTo method compares strings is dictionary order.  Here, s3(Hello IS17) has 6 letters more than s1(Hell).
+      So the print out is 6.
+- type: explanation
+  location:
+    snippet: System.out.println(s1.compareTo(s4));
+  explanations:
+  - body: The compareTo method compares strings is dictionary order.  Here, s1 and s4 are identical. Both are string Hell.
+      So the print out is 0.

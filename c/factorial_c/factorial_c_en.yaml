@@ -1,0 +1,119 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_factorial_c_en
+source: main.c
+title: 'IS12:: factorial.c (4.4)'
+description: 'Worked example: IS12:: factorial.c (4.4)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:scanf
+  - unspecified:int
+  - unspecified:void
+  - unspecified:printf
+  - unspecified:reference
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:mul
+  - unspecified:long
+  - unspecified:main_function
+  - unspecified:post_decrement
+  - unspecified:while
+  - unspecified:post_increment
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: factorial.c (4.4)'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: We need to use input/output library since we are using printf and scanf in this program.
+- type: explanation
+  location:
+    snippet: int n = 1; /* this number will run from 1 to n in the loop */
+  explanations:
+  - body: This variable called "running variable" - it changes with each iteration of the loop running from 1 to n
+- type: explanation
+  location:
+    snippet: long old_factorial = 1; /* the previous value of factorial for n-1 */
+  explanations:
+  - body: This variable will hold q value of the factorial. Since it can be pretty large, we use long instead of int
+- type: explanation
+  location:
+    snippet: long new_factorial; /* the value of factorial(n) to be calculated */
+  explanations:
+  - body: This variable will hold q value of the factorial. Since it can be pretty large, we use long instead of int
+- type: explanation
+  location:
+    snippet: |-
+      printf("Factorial Calculator
+
+      ");
+  explanations:
+  - body: This line simply prints a nice header for our program (with an extra new line skipped).
+- type: explanation
+  location:
+    snippet: 'printf("Enter positive integer: ");'
+  explanations:
+  - body: This is a prompt.
+- type: explanation
+  location:
+    snippet: scanf("%d", &counter);
+  explanations:
+  - body: The value entered by the user is nothing else but the number of times to run the loop. We know that by assigning
+      it to the loop control variable in a countdown loop we can make the loop running exactly the specified number of times.
+- type: explanation
+  location:
+    snippet: while (counter--) {
+  explanations:
+  - body: At each iteration of the loop, the current value of the counter is checked. If this value is zero (0), the loop
+      will will be skipped, otherwise loop statements will be executed. After the value of counter is used for checking, it
+      is decremented (post-decr
+- type: explanation
+  location:
+    snippet: new_factorial = old_factorial * n;
+  explanations:
+  - body: This statement calculates the new value of factorial using current value of n and the previous value of the factorial.
+- type: explanation
+  location:
+    snippet: |-
+      printf("Factorial(%d) = %ld
+      " , n, new_factorial);
+  explanations:
+  - body: The new value of factorial - factorial(n) - is printed in a "nice way". Note that we use %ld specification instead
+      of %d since we need to print value of type long.
+- type: explanation
+  location:
+    snippet: n++;
+  explanations:
+  - body: The running variable is incremented to prepare for the next step of the loop.
+- type: explanation
+  location:
+    snippet: old_factorial = new_factorial;
+  explanations:
+  - body: For the next statement of the loop the current new value will be the "old" (previous) value. Here we are preparing
+      for it.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: This statement ends the block that serves as the loop body
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: This is the end of the program. Note that that the loop statement ends the program - there is no statement after
+      the loop. This is normal.

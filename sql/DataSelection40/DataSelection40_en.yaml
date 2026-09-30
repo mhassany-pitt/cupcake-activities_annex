@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection40
+source: query.sql
+title: Retrieving data from view
+description: Retrieving data from view
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SingleTableSelection
+  - expert:EqualComparison
+  - expert:StringType
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:SingleAttributeSelection
+  - expert:SingleQuotationCharacter
+  - sql_ontology:EqualComparison
+  - sql_ontology:StringType
+  - sql_ontology:SelectStatement
+  - sql_ontology:SetOperation
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:SingleQuotationCharacter
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+runtime:
+  language: sql
+  version: '2016'
+statement: Retrieving data from view
+elements:
+- type: explanation
+  location:
+    snippet: FROM all_customer
+  explanations:
+  - body: The view name 'all_customer' is used in the place of table.
+- type: explanation
+  location:
+    snippet: WHERE branch_name = 'Perryridge';
+  explanations:
+  - body: The results is restricted to the customers belonging to 'Perryridge' branch.

@@ -1,0 +1,50 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_create_2d_array_v2
+source: Test2Darray2.java
+title: Create 2D Array
+description: Create 2D Array
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ArrayCreationStatement
+  - expert:ArrayElement
+  - expert:ArrayVariable
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:MethodDefinition
+  - expert:MultiDimensionalArrayDataType
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Create 2D Array
+elements:
+- type: explanation
+  location:
+    snippet: int[][] multD = new int[9][];
+  explanations:
+  - body: this line creates a two-dimensional array with 9 rows and a variable number   of columns for each row.
+- type: explanation
+  location:
+    snippet: multD[0] = new int[21];
+  explanations:
+  - body: The first row is given 21 columns.
+- type: explanation
+  location:
+    snippet: multD[1] = new int[5000];
+  explanations:
+  - body: The second row is given 5000 columns.

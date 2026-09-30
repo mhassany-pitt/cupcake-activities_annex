@@ -1,0 +1,51 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt1_7_en
+source: main.py
+title: 'Variable type: Lists'
+description: 'Worked example: Variable type: Lists'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Float
+  - parser:List
+  - parser:Call
+  - parser:USub
+  - parser:Str
+  - parser:Assign
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:List
+  - unspecified:Float
+  - unspecified:Int
+  - unspecified:USub
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Variable type: Lists'
+elements:
+- type: explanation
+  location:
+    snippet: list1 = [ 123, 'test' , 0.200, -100, True ]
+  explanations:
+  - body: Defining a list containing 5 elements and assigning it to a variable named list1
+- type: explanation
+  location:
+    snippet: list2 = [ "apples", "oranges" , "banana"]
+  explanations:
+  - body: Defining a list containing 3 elements and assigning it to a variable named list2
+- type: explanation
+  location:
+    snippet: print (list2)
+  explanations:
+  - body: Printing out the variable 'list2'

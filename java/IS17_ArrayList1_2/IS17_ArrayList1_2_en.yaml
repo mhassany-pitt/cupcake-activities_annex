@@ -1,0 +1,139 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList1_2
+source: ArrayList1.java
+title: IS17_ArrayList1_2
+description: 'Worked example: IS17_ArrayList1_2'
+authors:
+- first: Patric
+  last: Campbell
+  email: patric.campbell@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList1_2'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: This imports the ArrayList class from the java library.
+- type: explanation
+  location:
+    snippet: class USport { String school; String name;
+  explanations:
+  - body: This declares a class named USport and declares two instance fields, a String school and a String name.
+- type: explanation
+  location:
+    snippet: public USport (String s, String n) { school = s;  name = n; }
+  explanations:
+  - body: This declares a public method named USport which means it is a constructor.  IT has two parameters, a String s and
+      a String n and it assigns these to school and name respectively.
+- type: explanation
+  location:
+    snippet: public String toString() { return school + ":" + name; }
+  explanations:
+  - body: 'This declares a public method named toString that returns a String object.  IT returns the school : name.'
+- type: explanation
+  location:
+    snippet: public class ArrayList1 {
+  explanations:
+  - body: This declares a public class named ArrayList1.
+- type: explanation
+  location:
+    snippet: public static void main(String a[]) {
+  explanations:
+  - body: This is the main method of the class which means it is a driver or tester.
+- type: explanation
+  location:
+    snippet: ArrayList<USport> v = new ArrayList<USport>();
+  explanations:
+  - body: This creatres a new ArrayList named v.
+- type: explanation
+  location:
+    snippet: v.add( new USport("LSU", "Tigers")  );
+  explanations:
+  - body: This adds a new element to the ArrayList v as a new USport object with parameters "LSU" and "Tigers"
+- type: explanation
+  location:
+    snippet: v.add( new USport("Georgia", "Bulldogs") );
+  explanations:
+  - body: This adds a new element to the ArrayList v as a new USport object with parameters "Georgia" and "Bulldogs"
+- type: explanation
+  location:
+    snippet: v.add( new USport("UPitt", "Panthers")  );
+  explanations:
+  - body: This adds a new element to the ArrayList v as a new USport object with parameters "UPitt" and "Panthers"
+- type: explanation
+  location:
+    snippet: System.out.println( v );
+  explanations:
+  - body: This will print out [LSU Tigers, Georgia Bulldogs, Upitt Panters]
+- type: explanation
+  location:
+    snippet: for( int i = v.size() - 1; i >= 0; i--) {
+  explanations:
+  - body: This is a for loop that initializes i as the size of the v arraylist minus one, that runs until i is >= 0 and i
+      goes down 1 each iteration.
+- type: explanation
+  location:
+    snippet: USport us = v.get( i );
+  explanations:
+  - body: This makes the USport object us equal to the spot in the Arraylist v that i indicates depending on what part of
+      the for loop it is in.
+- type: explanation
+  location:
+    snippet: System.out.print( us.school + " " );
+  explanations:
+  - body: This prints out the name of the school in the us object.
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: This prints out a blank line.
+- type: explanation
+  location:
+    snippet: 'for(USport us: v )'
+  explanations:
+  - body: This for loop will go through each element of v one at a time.
+- type: explanation
+  location:
+    snippet: System.out.print( us.school + " " );
+    nth: 2
+  explanations:
+  - body: This will print out the name of the school of the us object.
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 2
+  explanations:
+  - body: This prints out a blank line.
+- type: explanation
+  location:
+    snippet: while ( v.size() > 0 ) {
+  explanations:
+  - body: This is a while loop that will run until the size of v is > 0.
+- type: explanation
+  location:
+    snippet: USport us = v.remove( 0 );
+  explanations:
+  - body: This assigns an element of v to us and also removes that element from v.  This will eventually make the size of
+      v 0 and get out of the while loop.
+- type: explanation
+  location:
+    snippet: System.out.print( us.name + " ");
+  explanations:
+  - body: This prints out the name of the school of the us object.
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 3
+  explanations:
+  - body: This prints out a blank line.

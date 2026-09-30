@@ -1,0 +1,133 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList1_3
+source: ArrayList1.java
+title: IS17_ArrayList1_3
+description: 'Worked example: IS17_ArrayList1_3'
+authors:
+- first: Stephen
+  last: Plumby
+  email: stephen.plumby@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList1_3'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: imports arraylist functionality to the program
+- type: explanation
+  location:
+    snippet: class USport { String school; String name;
+  explanations:
+  - body: creates a class. defines two variables of type string
+- type: explanation
+  location:
+    snippet: public USport (String s, String n) { school = s;  name = n; }
+  explanations:
+  - body: creates a method which takes two parameters. sets the parameters to the previously defined variables.
+- type: explanation
+  location:
+    snippet: public String toString() { return school + ":" + name; }
+  explanations:
+  - body: creates a method of type string. returns the variable school, a :, and then the variable name
+- type: explanation
+  location:
+    snippet: public class ArrayList1 {
+  explanations:
+  - body: creates a new class
+- type: explanation
+  location:
+    snippet: ArrayList<USport> v = new ArrayList<USport>();
+  explanations:
+  - body: creates a new arraylist on variable v
+- type: explanation
+  location:
+    snippet: v.add( new USport("LSU", "Tigers")  );
+  explanations:
+  - body: adds an entry of type USport with parameters to the arraylist v
+- type: explanation
+  location:
+    snippet: v.add( new USport("Georgia", "Bulldogs") );
+  explanations:
+  - body: adds an entry of type USport with parameters to the arraylist v
+- type: explanation
+  location:
+    snippet: v.add( new USport("UPitt", "Panthers")  );
+  explanations:
+  - body: adds an entry of type USport with parameters to the arraylist v
+- type: explanation
+  location:
+    snippet: System.out.println( v );
+  explanations:
+  - body: prints variable v to the console
+- type: explanation
+  location:
+    snippet: for( int i = v.size() - 1; i >= 0; i--) {
+  explanations:
+  - body: for loop. initalizes an integer to one less than the arraylist size. the condition is as long as that integer is
+      greater or equal to zero. after each run of the loop, the integer is decreased by one
+- type: explanation
+  location:
+    snippet: USport us = v.get( i );
+  explanations:
+  - body: creates a variable "us" of type USport. assigns the value in the arraylist with the position of the integer previously
+      created.
+- type: explanation
+  location:
+    snippet: System.out.print( us.school + " " );
+  explanations:
+  - body: prints to the console the school value for the "us" variable
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: prints a blank line
+- type: explanation
+  location:
+    snippet: 'for(USport us: v )'
+  explanations:
+  - body: for each loop. reads for every "us" within the variable "v"
+- type: explanation
+  location:
+    snippet: System.out.print( us.school + " " );
+    nth: 2
+  explanations:
+  - body: prints to the console the school value for the "us" variable
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 2
+  explanations:
+  - body: prints a blank line
+- type: explanation
+  location:
+    snippet: while ( v.size() > 0 ) {
+  explanations:
+  - body: while loop. runs as long as the size of the array is larger than zero
+- type: explanation
+  location:
+    snippet: USport us = v.remove( 0 );
+  explanations:
+  - body: sets variable "us" of type USport to whatever is in the first position of the arraylist "v" and removes the information
+      from the arraylist
+- type: explanation
+  location:
+    snippet: System.out.print( us.name + " ");
+  explanations:
+  - body: prints to the console the name value for the "us" variable
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 3
+  explanations:
+  - body: prints a blank line

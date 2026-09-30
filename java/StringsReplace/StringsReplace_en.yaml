@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_StringsReplace
+source: Main.java
+title: Strings (replace)
+description: 'Worked example: Strings (replace)'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:StringInitializationStatement
+  - expert:StringLiteral
+  - expert:java.lang.String.replace
+  - expert:StringVariable
+  - expert:java.lang.System.out.println
+  - expert:ObjectMethodInvocation
+  - expert:SimpleAssignmentExpression
+  - expert:StringDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Strings (replace)'
+elements:
+- type: explanation
+  location:
+    snippet: String newString = replaceSample.replace('r', 't');
+  explanations:
+  - body: "the method 'replace(oldChar,newChar)' returns a new string resulting from \r\nreplacing all occurrences of oldChar\
+      \ in this string with newChar.  \r\nHere, \"r\" will be replaced with \"t\"."
+- type: explanation
+  location:
+    snippet: System.out.println(newString );
+  explanations:
+  - body: prints "teplacing one chat ftom Stting"
+- type: explanation
+  location:
+    snippet: newString = replaceSample.replace("re", "RE");
+  explanations:
+  - body: Here, "re" will be replaced with "RE".
+- type: explanation
+  location:
+    snippet: System.out.println(newString );
+    nth: 2
+  explanations:
+  - body: prints "REplacing Character Sequence"

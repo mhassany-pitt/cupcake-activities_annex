@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_do_while_v2
+source: Main.java
+title: dowhile
+description: DoWhile
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:DoStatement
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:PostIncrementExpression
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+  - expert:WhileStatement
+runtime:
+  language: java
+  version: '17'
+statement: DoWhile
+elements:
+- type: explanation
+  location:
+    snippet: do {
+  explanations:
+  - body: do-while loops allows you to execute a piece of code several times, while a certain condition is true.do-while loop
+      is the post-condition loop, which means, it first executes the body of the loop and then checks for the terminating
+      condition. Hence, do-while loop will always execute at least once.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Count is: " + count);'
+  explanations:
+  - body: prints the current value of 'count'
+- type: explanation
+  location:
+    snippet: count++;
+  explanations:
+  - body: increments the value of 'count'
+- type: explanation
+  location:
+    snippet: '} while (count < 11);'
+  explanations:
+  - body: "the body of the loop executes while count < 11.In our case it executes 10 times and prints 1,2,3,...9,10.\r\nOn\
+      \ the last step it prints 10, increments count to 11 and stops since 11 is no longer less than 11."

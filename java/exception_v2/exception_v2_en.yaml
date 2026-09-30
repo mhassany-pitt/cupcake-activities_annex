@@ -1,0 +1,88 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_exception_v2
+source: divisionError.java
+title: Exceptions
+description: Exceptions
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:DivideExpression
+  - expert:EqualExpression
+  - expert:FormalMethodParameter
+  - expert:IfStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ObjectMethodInvocation
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:TryCatchStatement
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Exceptions
+elements:
+- type: explanation
+  location:
+    snippet: try{
+  explanations:
+  - body: place the statements that can cause the exception inside a try block.
+- type: explanation
+  location:
+    snippet: System.out.println(numerator/denominator);
+  explanations:
+  - body: system will print out the result of the division.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of the try block
+- type: explanation
+  location:
+    snippet: catch(Exception e){
+  explanations:
+  - body: the catch block "catches" the exceptions that could have been thrown in the try block
+- type: explanation
+  location:
+    snippet: 'System.out.println("Exception : "+ e.getMessage());'
+  explanations:
+  - body: place the handler inside a catch clause. Here, it prints out the exception message.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of the catch block
+- type: explanation
+  location:
+    snippet: finally{
+  explanations:
+  - body: the statements in a finally clause are guaranteed to be executed.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end of the if statement
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: end of the finally block

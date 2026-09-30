@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Cwhile_counter
+source: main.cpp
+title: Cwhile_counter
+description: 'Worked example: Cwhile_counter'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Cwhile_counter'
+elements:
+- type: explanation
+  location:
+    snippet: while ( student <= 10 ) {
+  explanations:
+  - body: while loop continues until 10 students have been processed.
+- type: explanation
+  location:
+    snippet: scanf( "%d", &result );
+  explanations:
+  - body: if and else statements are nested inside while loop.
+- type: explanation
+  location:
+    snippet: if ( result == 1 )
+  explanations:
+  - body: if and else statements are nested inside while loop.
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: otherwise, increment failures.
+- type: explanation
+  location:
+    snippet: student = student + 1;
+  explanations:
+  - body: increment student counter.

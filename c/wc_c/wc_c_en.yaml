@@ -1,0 +1,113 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_wc_c_en
+source: main.c
+title: 'IS12:: wc.c (118.6)'
+description: 'Worked example: IS12:: wc.c (118.6)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:define
+  - unspecified:pre_increment
+  - unspecified:printf
+  - unspecified:if
+  - unspecified:or
+  - unspecified:include
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:equal
+  - unspecified:main_function
+  - unspecified:if_else
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: wc.c (118.6)'
+elements:
+- type: explanation
+  location:
+    snippet: '#define IN 1 /* inside a word */'
+  explanations:
+  - body: It's a good style to use constants to represent states. This will represent that state "inside a word"
+- type: explanation
+  location:
+    snippet: '#define OUT 2 /* outside a word */'
+  explanations:
+  - body: It's a good style to use constants to represent states. This will represent that state "outside of a word"
+- type: explanation
+  location:
+    snippet: state = OUT;
+  explanations:
+  - body: Before we read the very first symbol, the state is "outsite of a word" - so variable state is assigned to OUT
+- type: explanation
+  location:
+    snippet: while ((c = getchar()) != EOF) {
+  explanations:
+  - body: The condition of this loop will be true (i.e., evaluated to 1) when getchar is able to read a real character from
+      standard input. If there are no more characters, getchar() will return EOF and the condition (EOF != EOF) will become
+      false.
+- type: explanation
+  location:
+    snippet: ++nc;
+  explanations:
+  - body: For any symbol read we increment nc counter - it counts total number of symbols read
+- type: explanation
+  location:
+    snippet: |-
+      if (c == '
+      ')
+  explanations:
+  - body: |-
+      This condition is true if the character read is a newline - '
+      '
+- type: explanation
+  location:
+    snippet: ++nl;
+  explanations:
+  - body: For every newline character we increment nk counter 0 it counts lines
+- type: explanation
+  location:
+    snippet: |-
+      if (c == ' ' || c == '
+      ' || c == '    ')
+  explanations:
+  - body: This condition is true if the character read is a newline, blank or tabulation
+- type: explanation
+  location:
+    snippet: state = OUT;
+    nth: 2
+  explanations:
+  - body: That means that we are  "outsite of a word" - so variable state is assigned to OUT
+- type: explanation
+  location:
+    snippet: else if (state == OUT) {
+  explanations:
+  - body: If the character read is not one of the "blanks" than we are moving through a word. This condition checks whethe
+      we just have entered the word (i.e., on the previous letter we were "out")
+- type: explanation
+  location:
+    snippet: state = IN;
+  explanations:
+  - body: If we are inside the word, the state is set to IN
+- type: explanation
+  location:
+    snippet: ++nw;
+  explanations:
+  - body: Since we have just entered a word, we increment the word count.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: There is no other else. If we are inside the word, but we also were inside when reading previous character, there
+      is nothing to do - state is already IN and there is nothing to count.

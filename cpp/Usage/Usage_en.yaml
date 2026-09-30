@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Usage
+source: main.cpp
+title: Usage
+description: 'Worked example: Usage'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Usage'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: additional header.
+- type: explanation
+  location:
+    snippet: '#include <math.h>'
+  explanations:
+  - body: additional header.
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: function main begins program execution .
+- type: explanation
+  location:
+    snippet: double amount, principal = 1000.0, rate = .05;
+  explanations:
+  - body: pow function calculates the value of the first argument raised to the power of the second argument.
+- type: explanation
+  location:
+    snippet: printf( "%4s%21s\n", "Year", "Amount on deposit" );
+  explanations:
+  - body: output table column head.
+- type: explanation
+  location:
+    snippet: amount = principal * pow( 1.0 + rate, year );
+  explanations:
+  - body: pow function calculates the value of the first argument raised to the power of the second argument.
+- type: explanation
+  location:
+    snippet: printf( "%4d%21.2f\n", year, amount );
+  explanations:
+  - body: output one table row

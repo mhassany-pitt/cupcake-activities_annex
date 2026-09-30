@@ -1,0 +1,76 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_methods_addingnumbers
+source: AddingNumbers.java
+title: (Methods) Adding numbers - CSEdPad
+description: The program will create a method that will add two given exam numbers of a student. The program will declare
+  a method that will add those numbers, create object of the class, use that object to call the method and finally show the
+  added exam numbers by p
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:ConstructorCall
+  - webex:ObjectMethodInvocation
+  - webex:AddExpression
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - webex:ReturnStatement
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:ObjectCreationStatement
+  - webex:IntDataType
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:ReturnStatement
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: The program will create a method that will add two given exam numbers of a student. The program will declare a
+  method that will add those numbers, create object of the class, use that object to call the method and finally show the
+  added exam numbers by p
+elements:
+- type: explanation
+  location:
+    snippet: public int sum(int value1, int value2) {
+  explanations:
+  - body: We define a method sum which will take two integer values as parameter, add them and return their sum as an integer
+      value.
+- type: explanation
+  location:
+    snippet: AddingNumbers addy = new AddingNumbers();
+  explanations:
+  - body: We create object of class AddingNumbers.
+- type: explanation
+  location:
+    snippet: int result = addy.sum(4, 9);
+  explanations:
+  - body: |-
+      calls the method sum which sends two integers (4,9) as parameters and
+      stores the return value from the method in the variable 'result'.

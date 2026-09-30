@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Srand
+source: main.cpp
+title: Srand
+description: 'Worked example: Srand'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Srand'
+elements:
+- type: explanation
+  location:
+    snippet: 'case 1:'
+  explanations:
+  - body: rolled 1.
+- type: explanation
+  location:
+    snippet: 'case 2:'
+  explanations:
+  - body: rolled 2.
+- type: explanation
+  location:
+    snippet: 'case 3:'
+  explanations:
+  - body: rolled 1.
+- type: explanation
+  location:
+    snippet: 'case 4:'
+  explanations:
+  - body: rolled 1.

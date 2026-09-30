@@ -1,0 +1,134 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance2_5
+source: MatchBox.java
+title: IS17_inheritance2_5
+description: 'Worked example: IS17_inheritance2_5'
+authors:
+- first: David
+  last: Nawn
+  email: david.nawn@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance2_5'
+elements:
+- type: explanation
+  location:
+    snippet: double width;
+  explanations:
+  - body: Creates a width object of type double.
+- type: explanation
+  location:
+    snippet: double height;
+  explanations:
+  - body: Creates a height object of type double.
+- type: explanation
+  location:
+    snippet: double depth;
+  explanations:
+  - body: Creates a depth object of type double.
+- type: explanation
+  location:
+    snippet: Box() {
+  explanations:
+  - body: Constructs an empty box object.
+- type: explanation
+  location:
+    snippet: Box(double w, double h, double d) {
+  explanations:
+  - body: 'Constructs a box with 3 parameters, all of type double: w, h, d.'
+- type: explanation
+  location:
+    snippet: width = w;
+  explanations:
+  - body: Sets the width object value to the value of the parameter w.
+- type: explanation
+  location:
+    snippet: height = h;
+  explanations:
+  - body: Sets the height object value to the value of the parameter h.
+- type: explanation
+  location:
+    snippet: depth = d;
+  explanations:
+  - body: Sets the depth object value to the value of the parameter d.
+- type: explanation
+  location:
+    snippet: void getVolume() {
+  explanations:
+  - body: getVolume creates a method to get the volume of the box.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Volume is : " + width * height * depth);'
+  explanations:
+  - body: Prints a line to the user with the calculated volume of the box.
+- type: explanation
+  location:
+    snippet: public class MatchBox extends Box {
+  explanations:
+  - body: The "extends" keyword sets up the relationship between a child class and a parent class. MatchBox is the child class
+      and Box is the parent class. The MatchBox class inherits all the properties of the Box class.
+- type: explanation
+  location:
+    snippet: double weight;
+  explanations:
+  - body: Creates a weight object of type double.
+- type: explanation
+  location:
+    snippet: MatchBox() {
+  explanations:
+  - body: Constructs an empty MatchBox object.
+- type: explanation
+  location:
+    snippet: MatchBox(double w, double h, double d, double m) {
+  explanations:
+  - body: 'Constructs a MatchBox with 4 parameters, all of type double: w, h, d, m.'
+- type: explanation
+  location:
+    snippet: super(w, h, d);
+  explanations:
+  - body: Reuses the superclass constructor, Box, to get the w, h, and d values. Using "super()" with the proper parameters
+      will call the constructor in the parent class, which in this case is the Box class.
+- type: explanation
+  location:
+    snippet: weight = m;
+  explanations:
+  - body: Sets the weight object value to the value of the parameter m.
+- type: explanation
+  location:
+    snippet: MatchBox mb1 = new MatchBox(10, 10, 10, 10);
+  explanations:
+  - body: Creates a new MatchBox object and assigns it to mb1.
+- type: explanation
+  location:
+    snippet: mb1.getVolume();
+  explanations:
+  - body: Calls the getVolume method on the MatchBox object mb1.
+- type: explanation
+  location:
+    snippet: System.out.println("width of MatchBox 1 is " + mb1.width);
+  explanations:
+  - body: Prints out the width of the MatchBox object mb1 to the user.
+- type: explanation
+  location:
+    snippet: System.out.println("height of MatchBox 1 is " + mb1.height);
+  explanations:
+  - body: Prints out the height of the MatchBox object mb1 to the user.
+- type: explanation
+  location:
+    snippet: System.out.println("depth of MatchBox 1 is " + mb1.depth);
+  explanations:
+  - body: Prints out the depth of the MatchBox object mb1 to the user.
+- type: explanation
+  location:
+    snippet: System.out.println("weight of MatchBox 1 is " + mb1.weight);
+  explanations:
+  - body: Prints out the weight of the MatchBox object mb1 to the user.

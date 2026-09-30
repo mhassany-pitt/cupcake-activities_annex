@@ -1,0 +1,58 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_7_8
+source: MainClass.java
+title: For-each with break
+description: For-each with break
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:EqualExpression
+  - expert:ForEachStatement
+  - expert:FormalMethodParameter
+  - expert:IfStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:NestedStatement
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+  - expert:ActualMethodParameter
+  - expert:AddAssignmentExpression
+  - expert:ArrayInitializationStatement
+  - expert:ArrayInitializer
+  - expert:ArrayVariable
+  - expert:ClassDefinition
+runtime:
+  language: java
+  version: '17'
+statement: For-each with break
+elements:
+- type: explanation
+  location:
+    snippet: 'for (int x : nums) {'
+  explanations:
+  - body: "for-each value in \"nums\", make a round putting the value in the int \r\nvariable \"x\""
+- type: explanation
+  location:
+    snippet: sum += x;
+  explanations:
+  - body: "The value of 'x' is added to the value of 'sum' and then the new \r\nvalue is stored in the sum."
+- type: explanation
+  location:
+    snippet: if (x == 5){
+  explanations:
+  - body: "if x has the value 5, break the loop. Then, the for loop only reach \r\nthe 5th element of \"nums\""

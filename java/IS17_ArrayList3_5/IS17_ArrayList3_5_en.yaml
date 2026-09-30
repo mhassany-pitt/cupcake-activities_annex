@@ -1,0 +1,100 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList3_5
+source: ArrayList3.java
+title: IS17_ArrayList3_5
+description: 'Worked example: IS17_ArrayList3_5'
+authors:
+- first: Andrew
+  last: Mowrey
+  email: andrew.mowrey@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList3_5'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: Import ArrayList package
+- type: explanation
+  location:
+    snippet: public class ArrayList3 {
+  explanations:
+  - body: Begin public class ArrayList3
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: Begin main method
+- type: explanation
+  location:
+    snippet: ArrayList<String> names = new ArrayList<String>();
+  explanations:
+  - body: '"names" implemented as a growable array'
+- type: explanation
+  location:
+    snippet: names.add( new String( "Bob" ) );
+  explanations:
+  - body: Add string "Bob" to array list "names"
+- type: explanation
+  location:
+    snippet: names.add( new String( "Carol" ) );
+  explanations:
+  - body: Add string "Carol" to array list "names"
+- type: explanation
+  location:
+    snippet: names.add( 1, new String( "Ted" ) );
+  explanations:
+  - body: Add string "Ted" to array list at position 1
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+  explanations:
+  - body: Print lenght of arrray list "names"
+- type: explanation
+  location:
+    snippet: String theName = (String) names.get( 2 );
+  explanations:
+  - body: String variable "theName" is initialized with "names" array list element number 2
+- type: explanation
+  location:
+    snippet: 'System.out.println("the name of this element is: " + theName);'
+  explanations:
+  - body: Print concatenated text and string variable "theName"
+- type: explanation
+  location:
+    snippet: names.clear( );
+  explanations:
+  - body: Remove all elements from array list "names"
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+    nth: 2
+  explanations:
+  - body: Prints the number of elements in array list "names"
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: End main method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: End class ArrayList3
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: ERROR - extra closing bracket should be removed

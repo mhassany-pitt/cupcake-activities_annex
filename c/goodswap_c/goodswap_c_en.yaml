@@ -1,0 +1,90 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_goodswap_c_en
+source: main.c
+title: 'IS12:: goodswap.c (14.1)'
+description: 'Worked example: IS12:: goodswap.c (14.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:int
+  - unspecified:dereference
+  - unspecified:void
+  - unspecified:reference
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:pointer_declaration
+  - unspecified:main_function
+  - unspecified:printf
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: goodswap.c (14.1)'
+elements:
+- type: explanation
+  location:
+    snippet: void bad_swap(int x, int y);
+  explanations:
+  - body: Function prototype for a bad swap example.
+- type: explanation
+  location:
+    snippet: void good_swap(int *p1, int *p2);
+  explanations:
+  - body: Function prototype for a good swap example, with pointers.
+- type: explanation
+  location:
+    snippet: |-
+      printf("a = %d, b = %d
+      ", a, b);
+  explanations:
+  - body: This printf statements outputs the original values.
+- type: explanation
+  location:
+    snippet: bad_swap(a, b);
+  explanations:
+  - body: The bad swap runs.
+- type: explanation
+  location:
+    snippet: |-
+      printf("a = %d, b = %d
+      ", a, b);
+    nth: 2
+  explanations:
+  - body: The results of the bad swap are printed out.  Nothing is switched.  That's because they were only switched locally,
+      and the original values for the parameters are returned.
+- type: explanation
+  location:
+    snippet: good_swap(&a, &b)
+  explanations:
+  - body: The good swap runs.
+- type: explanation
+  location:
+    snippet: |-
+      printf("a = %d, b = %d
+      ", a, b)
+  explanations:
+  - body: The results of the good swap are printed out.  It is successful because it uses pointers.  The value of the parameter
+      is left the same, but the value it CONTAINS is switched successfully.
+- type: explanation
+  location:
+    snippet: void bad_swap(int x, int y) {
+  explanations:
+  - body: This function looks like it is swapping values, in the same manner used for sorts.  However, it is only within the
+      function.  When a value is returned, the parameters retain the same values.
+- type: explanation
+  location:
+    snippet: void good_swap(int *px, int *py) {
+  explanations:
+  - body: This function also swaps values using apparently the same method as in the bad swap.  However, it doesn't swap the
+      parameters, it swaps the contents that are stored at the addresses they are pointing to.  This is successful (see output).

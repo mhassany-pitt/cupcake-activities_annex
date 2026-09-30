@@ -1,0 +1,123 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance1_2
+source: TestInheritance.java
+title: IS17_inheritance1_2
+description: 'Worked example: IS17_inheritance1_2'
+authors:
+- first: Patric
+  last: Campbell
+  email: patric.campbell@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance1_2'
+elements:
+- type: explanation
+  location:
+    snippet: class Person{
+  explanations:
+  - body: This declares a class with the name Person
+- type: explanation
+  location:
+    snippet: private String name;
+  explanations:
+  - body: This is an instance field with type String and variable name name.
+- type: explanation
+  location:
+    snippet: public void setName(String n) {
+  explanations:
+  - body: This declares a method that returns nothing, is named setName and has one parameter, a String with variable name
+      n.
+- type: explanation
+  location:
+    snippet: name = n;
+  explanations:
+  - body: This assigns n to the instance field name.
+- type: explanation
+  location:
+    snippet: public String getName(){
+  explanations:
+  - body: This declares a method that returns a String and is named getName
+- type: explanation
+  location:
+    snippet: return name;
+  explanations:
+  - body: This returns the instance field name.
+- type: explanation
+  location:
+    snippet: class Student extends Person{
+  explanations:
+  - body: This declares a class named Student that extends the parent class Person.
+- type: explanation
+  location:
+    snippet: private String stuNum;
+  explanations:
+  - body: This is an instance field with type String named stuNam.
+- type: explanation
+  location:
+    snippet: public void setStuNum(String sn)   {
+  explanations:
+  - body: This declares a method that returns nothing, is named setStuNum and has one parameter, a String sn.
+- type: explanation
+  location:
+    snippet: stuNum = sn;
+  explanations:
+  - body: This assigns sn to the instance field stuNam.
+- type: explanation
+  location:
+    snippet: public String getStuNum()   {
+  explanations:
+  - body: This declares a method that returns a String and is named getStuNum
+- type: explanation
+  location:
+    snippet: return stuNum;
+  explanations:
+  - body: This returns the instance field stuNam
+- type: explanation
+  location:
+    snippet: public class TestInheritance{
+  explanations:
+  - body: This declares a class named TestInheritance
+- type: explanation
+  location:
+    snippet: public static void main(String[] args)   {
+  explanations:
+  - body: This is the main method of the class which means it is probably a tester or driver class.
+- type: explanation
+  location:
+    snippet: Student stu = new Student();
+  explanations:
+  - body: This creates a new Student object named stu.
+- type: explanation
+  location:
+    snippet: stu.setName("Sharon Hsiao");
+  explanations:
+  - body: This calls the method setName for the object stu and assigns "Sharon Hsiao" to the name field of the stu object.
+- type: explanation
+  location:
+    snippet: stu.setStuNum("12345");
+  explanations:
+  - body: This calls the method setStuNum for the object stu and assigns 12345 to the stuNum field of the stu object.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Name: " + stu.getName());'
+  explanations:
+  - body: 'This prints to the console the following: Student Name: Sharon Hsiao'
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Number: " + stu.getStuNum());'
+  explanations:
+  - body: 'This prints to the console the following: Student Number: 12345'
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: There were no comments so I feel my annotation was good for this example.

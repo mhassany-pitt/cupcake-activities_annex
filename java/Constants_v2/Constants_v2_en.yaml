@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Constants_v2
+source: ConstantExample.java
+title: Constants
+description: Constants
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:Constant
+  - expert:ConstantInitializationStatement
+  - expert:DoubleDataType
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Constants
+elements:
+- type: explanation
+  location:
+    snippet: final int FEET_PER_YARD = 3;
+  explanations:
+  - body: Using the final keyword to declare a variable. The final keyword specifies that the value of a variable is final
+      and cannot be changed. By convention, we use all-uppercase for constants.  Here, FEET_PER_YARD is declared as a constant
+      integer, 3.
+- type: explanation
+  location:
+    snippet: final double MM_PER_INCH = 25.4;
+  explanations:
+  - body: MM_PER_INCH is declared as a constant double, 25.4.
+- type: explanation
+  location:
+    snippet: System.out.println(FEET_PER_YARD);
+  explanations:
+  - body: Prints 3.
+- type: explanation
+  location:
+    snippet: System.out.println(MM_PER_INCH);
+  explanations:
+  - body: Prints 25.4.

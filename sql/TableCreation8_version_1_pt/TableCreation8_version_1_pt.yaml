@@ -1,0 +1,60 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_TableCreation8_version_1_pt
+source: query.sql
+title: AssertionCreation(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: CREATE ASSERTION smallClub
+  explanations:
+  - body: O exemplo anterior ('Assertion Creation (1)') verifica os valores dentro da propria tabela, o que nao e' apropriado.
+      Esse exemplo explica a utilizacao do comando ASSERTION da forma correta, nao associado com nenhuma tabela. O comando
+      ASSERTION e' uma restricao do banco de dados que limita o conteudo do banco como um todo. Da mesma forma que uma restricao
+      CHECK, uma ASSERTION e' especificada como uma condicao de pesquisa. A diferenca entre as restricoes ASSERTION e CHECK
+      e' que a condicao de pesquisa de uma ASSERTION pode restringir o conteudo de varias tabelas e o relacionamento entre
+      elas. Por isso, uma ASSERTION e' especificada como parte da definicao geral do banco de dados por meio da declaracao
+      CREATE ASSERTION.
+- type: explanation
+  location:
+    snippet: CHECK
+  explanations:
+  - body: A palavra-chave 'CHECK' e' obrigatoria na criacao de uma assertion.
+- type: explanation
+  location:
+    snippet: ((SELECT COUNT(S.sid)
+  explanations:
+  - body: Nesse exemplo, ambas as tabelas 'sailors' e 'boats' sao tabelas alvo que serao comparadas como uma condicao de busca.
+      Esta linha retorna o numero de marinheiros.
+- type: explanation
+  location:
+    snippet: FROM sailors S) +
+  explanations:
+  - body: As duas consultas sao somadas.
+- type: explanation
+  location:
+    snippet: (SELECT COUNT(B.sid)
+  explanations:
+  - body: Essa consulta retorna o numero de barcos.
+- type: explanation
+  location:
+    snippet: < 100));
+  explanations:
+  - body: O resultado somado das duas consultas e' comparado com o valor 100, verificando se o valor na tupla e' menor que
+      100.

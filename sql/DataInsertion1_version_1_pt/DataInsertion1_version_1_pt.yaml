@@ -1,0 +1,34 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataInsertion1_version_1_pt
+source: query.sql
+title: InsertingData(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: INSERT INTO Students(sid, name, age)
+  explanations:
+  - body: O aluno 'Jamie Done' que tem 22 anos de idade e numero de matricula '2007001' e' inserido na tabela 'Students'.
+- type: explanation
+  location:
+    snippet: VALUES('2007001', 'Jamie Done', 22);
+  explanations:
+  - body: A clausula VALUES define os valores a serem inseridos. A ordem dos valores deve corresponder a ordem das colunas
+      da linha anterior. Se a coluna for do tipo caractere, o valor deve ser estar entre aspas. Nesse exemplo, as colunas
+      'sid' e 'name' sao do tipo caractere, entao os valores estao entre aspas.

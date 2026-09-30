@@ -1,0 +1,112 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_parampass_c_en
+source: main.c
+title: 'IS12:: parampass.c (111.2)'
+description: 'Worked example: IS12:: parampass.c (111.2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:less
+  - unspecified:int
+  - unspecified:array_declaration
+  - unspecified:pre_increment
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:return
+  - unspecified:main_function
+  - unspecified:for
+  - unspecified:printf
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: parampass.c (111.2)'
+elements:
+- type: explanation
+  location:
+    snippet: int testfunction(int[], int , int );
+  explanations:
+  - body: This the the prototype of function testfunction() defined below. It takes an integer array and two integers as parameters.
+      It returns an integer value.
+- type: explanation
+  location:
+    snippet: int testarray[] = {1, 2, 3, 4, 5, 6, 7};
+  explanations:
+  - body: Array testarray is declared and initialized. The array will hold 7 elements indexed from testarray[0] to testarray[6].
+- type: explanation
+  location:
+    snippet: int i, testscalar = 1;
+  explanations:
+  - body: Variables i and testscalar are declared and testscalar is initialized to 1.
+- type: explanation
+  location:
+    snippet: 'printf("Outside testfunction: Scalar = %d, Array = ", testscalar);'
+  explanations:
+  - body: 'Here we print the value of testscalar. Here is what will be printed: Outside testfunction: Scalar = 1, Array ='
+- type: explanation
+  location:
+    snippet: for(i=0; i < 7; ++i)
+  explanations:
+  - body: This loop prints current values from testarray. Here is what will be printed:1 2 3 4 5 6 7
+- type: explanation
+  location:
+    snippet: 'printf("After call: Scalar = %d, Array = ", testscalar);'
+  explanations:
+  - body: 'The value of testscalar was not changed after the call since it was passed by value. Here is what will be printed:
+      After call: Scalar = 1, Array ='
+- type: explanation
+  location:
+    snippet: for(i=0; i < 7; ++i)
+    nth: 2
+  explanations:
+  - body: 'The values stored in testarray has changed after the call since the array was passed by reference! Here is what
+      will be printed: 99 99 99 99 99 99 99'
+- type: explanation
+  location:
+    snippet: int testfunction(int arr[], int dim, int scal) {
+  explanations:
+  - body: This is the header of the testfunction. The first parameter arr is an array and will be passed by reference. dim
+      and scal are scalar variables and will be passed by value. They behave just like local variables initialized during
+      the call.
+- type: explanation
+  location:
+    snippet: 'printf("Inside testfunction: Scalar = %d, Array = ", scal);'
+  explanations:
+  - body: 'First the function prints the value of testscalar. The value was passed without problems. Here is what will be
+      printed: Inside testfunction: Scalar = 1, Array ='
+- type: explanation
+  location:
+    snippet: for(i=0; i < dim; ++i)
+  explanations:
+  - body: This loop prints current values from arr. Since arrays are passed by reference arr and testarray are the same array.
+      Here is what will be printed:1 2 3 4 5 6 7
+- type: explanation
+  location:
+    snippet: for(i=0; i < dim; ++i)
+    nth: 2
+  explanations:
+  - body: This loop assignes all elements of arr to 99 - but sunce arr and testarray are the same array, all vallues of testarray
+      defined in the calling finction will also be changed.
+- type: explanation
+  location:
+    snippet: scal = 99;
+  explanations:
+  - body: The value of scal is changed to 99, but it will not affect the value of testscalar in the calling function since
+      scal is just a copy of testscalar.
+- type: explanation
+  location:
+    snippet: return 1;
+  explanations:
+  - body: An integer function should return a integer value.

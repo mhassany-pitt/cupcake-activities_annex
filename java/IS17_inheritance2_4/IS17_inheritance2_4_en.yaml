@@ -1,0 +1,183 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance2_4
+source: MatchBox.java
+title: IS17_inheritance2_4
+description: 'Worked example: IS17_inheritance2_4'
+authors:
+- first: Andres
+  last: Pacheco
+  email: andres.pacheco@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance2_4'
+elements:
+- type: explanation
+  location:
+    snippet: class Box {
+  explanations:
+  - body: Class declaration Box
+- type: explanation
+  location:
+    snippet: double width;
+  explanations:
+  - body: instance double field width
+- type: explanation
+  location:
+    snippet: double height;
+  explanations:
+  - body: instance field double height
+- type: explanation
+  location:
+    snippet: double depth;
+  explanations:
+  - body: instance field double depth
+- type: explanation
+  location:
+    snippet: Box() {
+  explanations:
+  - body: first constructor for the class box
+- type: explanation
+  location:
+    snippet: Box(double w, double h, double d) {
+  explanations:
+  - body: creating object Box and passing it through w,h,d
+- type: explanation
+  location:
+    snippet: width = w;
+  explanations:
+  - body: initializing width and assigning it w
+- type: explanation
+  location:
+    snippet: height = h;
+  explanations:
+  - body: initializing height and assigning it h
+- type: explanation
+  location:
+    snippet: depth = d;
+  explanations:
+  - body: initializing depth and assigning it d
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: constructor ends here
+- type: explanation
+  location:
+    snippet: void getVolume() {
+  explanations:
+  - body: creating method getVolume
+- type: explanation
+  location:
+    snippet: 'System.out.println("Volume is : " + width * height * depth);'
+  explanations:
+  - body: 'method prints out: "Volume is :" and the result of the multiplication of width, height and depth'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: method ends
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: class box ends
+- type: explanation
+  location:
+    snippet: public class MatchBox extends Box {
+  explanations:
+  - body: creates class MatchBox that extends to Box
+- type: explanation
+  location:
+    snippet: double weight;
+  explanations:
+  - body: instance field double weight
+- type: explanation
+  location:
+    snippet: MatchBox() {
+  explanations:
+  - body: creates an empty MatchBox
+- type: explanation
+  location:
+    snippet: MatchBox(double w, double h, double d, double m) {
+  explanations:
+  - body: creates a MatchBox and passes it through parameters w,h,d,m all of which are doubles.
+- type: explanation
+  location:
+    snippet: super(w, h, d);
+  explanations:
+  - body: calls w,h,d from the super class Box
+- type: explanation
+  location:
+    snippet: weight = m;
+  explanations:
+  - body: assigns weight to double m
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: closes constructor
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: declaring the main method
+- type: explanation
+  location:
+    snippet: MatchBox mb1 = new MatchBox(10, 10, 10, 10);
+  explanations:
+  - body: creates a new MatchBox object called mbl and assigns 10 to every parameter.
+- type: explanation
+  location:
+    snippet: mb1.getVolume();
+  explanations:
+  - body: calls getVolume on object mbl.
+- type: explanation
+  location:
+    snippet: System.out.println("width of MatchBox 1 is " + mb1.width);
+  explanations:
+  - body: prints out "width of MatchBox 1 is" and displays the width of mbl
+- type: explanation
+  location:
+    snippet: System.out.println("height of MatchBox 1 is " + mb1.height);
+  explanations:
+  - body: prints out "height of MatchBox 1 is" and displays the height of mbl
+- type: explanation
+  location:
+    snippet: System.out.println("depth of MatchBox 1 is " + mb1.depth);
+  explanations:
+  - body: prints out "depth of MatchBox 1 is" and displays the depth of mbl
+- type: explanation
+  location:
+    snippet: System.out.println("weight of MatchBox 1 is " + mb1.weight);
+  explanations:
+  - body: prints out "weight of MatchBox 1 is" and displays the weight of mbl
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: closes main method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: closes class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: This will cause a compile time error, there is no opening bracket for this one

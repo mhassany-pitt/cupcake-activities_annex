@@ -1,0 +1,84 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_CashRegisterConstantField
+source: Tester.java
+title: Cash Register Tester (Constant Field)
+description: 'Worked example: Cash Register Tester (Constant Field)'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SimpleVariable
+  - expert:ClassConstantInitializationStatement
+  - expert:MultiplyExpression
+  - expert:StaticFieldSpecifier
+  - expert:ObjectCreationStatement
+  - expert:ClassField
+  - expert:ObjectMethodInvocation
+  - expert:StringAddition
+  - expert:ConstructorCall
+  - expert:PrivateFieldSpecifier
+  - expert:StringDataType
+  - expert:ConstructorDefinition
+  - expert:StringLiteral
+  - expert:DoubleDataType
+  - expert:PublicConstructorSpecifier
+  - expert:SubtractExpression
+  - expert:FinalFieldSpecifier
+  - expert:PublicFieldSpecifier
+  - expert:InstanceField
+  - expert:ReturnStatement
+  - expert:IntDataType
+  - expert:SimpleAssignmentExpression
+  - expert:AddExpression
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Cash Register Tester (Constant Field)'
+elements:
+- type: explanation
+  location:
+    snippet: public class CashRegister
+  explanations:
+  - body: /**   A cash register totals up sales and computes change due.*/
+- type: explanation
+  location:
+    snippet: public static final double QUARTER_VALUE = 0.25;
+  explanations:
+  - body: creates a constant field for the class using the keyword 'final'.
+- type: explanation
+  location:
+    snippet: public CashRegister()
+  explanations:
+  - body: /**      Constructs a cash register with no money in it.   */
+- type: explanation
+  location:
+    snippet: public void recordPurchase(double amount)
+  explanations:
+  - body: "/**      Records the purchase price of an item.      @param amount the price of the \r\npurchased item\r\n   */"
+- type: explanation
+  location:
+    snippet: public void enterPayment(int dollars, int quarters, int dimes, int nickels, int pennies)
+  explanations:
+  - body: "/**      Enters the payment received from the customer.      @param dollars the \r\nnumber of dollars in the payment\r\
+      \n      @param quarters the number of quarters in the payment\r\n      @param dimes the number of dimes in the payment\r\
+      \n      @param nickels the number of nickels in the payment\r\n      @param pennies the number of pennies in the payment\r\
+      \n   */"
+- type: explanation
+  location:
+    snippet: payment = dollars + quarters * QUARTER_VALUE + dimes * DIME_VALUE
+  explanations:
+  - body: constant fields are used to calculate the payment.
+- type: explanation
+  location:
+    snippet: public double giveChange()
+  explanations:
+  - body: "/**      Computes the change due and resets the machine for the next customer.      \r\n@return the change due\
+      \ to the customer\r\n   */"

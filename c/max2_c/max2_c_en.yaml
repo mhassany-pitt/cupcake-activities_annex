@@ -1,0 +1,69 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_max2_c_en
+source: main.c
+title: 'IS12:: max2.c (5.1)'
+description: 'Worked example: IS12:: max2.c (5.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:less
+  - unspecified:int
+  - unspecified:void
+  - unspecified:reference
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:if_else
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: max2.c (5.1)'
+elements:
+- type: explanation
+  location:
+    snippet: 'printf("Enter two integers: ");'
+  explanations:
+  - body: This is a prompt
+- type: explanation
+  location:
+    snippet: scanf("%d %d", &a, &b);
+  explanations:
+  - body: This scanf statement gets two integers separated by a blank from the user and placed them into variables a and b.
+- type: explanation
+  location:
+    snippet: printf("Maximum of %d and %d ", a, b);
+  explanations:
+  - body: This statement prints the first part of the message. At that time it is not clear which of the two values is a maximum
+- type: explanation
+  location:
+    snippet: if(a < b)
+  explanations:
+  - body: This if conditional statement has expression a < b in its condition. If a is really less than b, the value of the
+      expression will be 1 and "then" part will be executed. Otherwise, the value will be 0 and "else" part will work
+- type: explanation
+  location:
+    snippet: |-
+      printf("is %d
+      ", b);
+  explanations:
+  - body: This "then" statement will be executed if a is less than b and thus the condition value is 1. That means that b
+      is the largest of the two numbers
+- type: explanation
+  location:
+    snippet: |-
+      printf("is %d
+      ", a);
+  explanations:
+  - body: This "else" statement will be executed if a is greater of equal b and thus the condition value is 0. That means
+      that a is the maximum of the two numbers

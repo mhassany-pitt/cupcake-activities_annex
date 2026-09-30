@@ -1,0 +1,104 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_4-02_TicTacToe
+source: TicTacToe.java
+title: 4-02_TicTacToe
+description: 'Worked example: 4-02_TicTacToe'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ImportStatement
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:MultiDimensionalArrayDataType
+  - parser:StaticFieldSpecifier
+  - parser:ClassField
+  - parser:InstanceFieldInitializationStatement
+  - parser:CharDataType
+  - parser:SimpleAssignmentExpression
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:IntDataType
+  - parser:ForStatement
+  - parser:NestedForLoops
+  - parser:LessExpression
+  - parser:ArrayLength
+  - parser:PostIncrementExpression
+  - parser:InstanceFieldInvocation
+  - parser:ArrayElement
+  - parser:java.lang.System.out.print
+  - parser:ActualMethodParameter
+  - parser:StringAddition
+  - parser:StringDataType
+  - parser:StringLiteral
+  - parser:java.lang.System.out.println
+  - parser:BooleanDataType
+  - parser:IfStatement
+  - parser:EqualExpression
+  - parser:AndExpression
+  - parser:OrExpression
+  - parser:ReturnStatement
+  - parser:FALSE
+  - parser:TRUE
+  - parser:ObjectCreationStatement
+  - parser:ConstructorCall
+  - parser:WhileStatement
+  - parser:ObjectMethodInvocation
+  - parser:NotExpression
+  - parser:FormalMethodParameter
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AndExpression
+  - java_ontology:ArrayElement
+  - java_ontology:ArrayLength
+  - java_ontology:BooleanDataType
+  - java_ontology:CharDataType
+  - java_ontology:ClassDefinition
+  - java_ontology:ClassField
+  - java_ontology:ConstructorCall
+  - java_ontology:EqualExpression
+  - java_ontology:False
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:IfStatement
+  - java_ontology:ImportStatement
+  - java_ontology:InstanceFieldInitializationStatement
+  - java_ontology:InstanceFieldInvocation
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiDimensionalArrayDataType
+  - java_ontology:NestedForLoops
+  - java_ontology:NotExpression
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:OrExpression
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:ReturnStatement
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticFieldSpecifier
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:True
+  - java_ontology:VoidDataType
+  - java_ontology:WhileStatement
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: 4-02_TicTacToe'
+elements: []

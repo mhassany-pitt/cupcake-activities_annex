@@ -1,0 +1,86 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList2_5
+source: ArrayList2.java
+title: IS17_ArrayList2_5
+description: 'Worked example: IS17_ArrayList2_5'
+authors:
+- first: David
+  last: Nawn
+  email: david.nawn@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList2_5'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: Imports the ArrayList object into your project, which will allow you to use ArrayLists in your code.
+- type: explanation
+  location:
+    snippet: ArrayList<Integer> values = new ArrayList<Integer>();
+  explanations:
+  - body: Creates a new ArrayList object and assigns it to values.
+- type: explanation
+  location:
+    snippet: values.remove(1);
+  explanations:
+  - body: 'Removes the value of index #1 in the values ArrayList. Since the index numbers start at 0 and increment for each
+      new value, this line would remove "2" from the values ArrayList.'
+- type: explanation
+  location:
+    snippet: 'System.out.print("Contents of values: ");'
+  explanations:
+  - body: 'Prints out "Contents of values: " to the user.'
+- type: explanation
+  location:
+    snippet: 'for (int v : values)'
+  explanations:
+  - body: A For loop that runs through all the values in the values ArrayList and assigns each one to the integer "v".
+- type: explanation
+  location:
+    snippet: System.out.print(v + " ");
+  explanations:
+  - body: 'For each value in the ArrayList, they are printed out as "v" with a space after the value and appended to the end
+      of "Contents of values: ". The output would look like this, "Contents of values: 1 3 4 5 ".'
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: Prints a blank line to separate data.
+- type: explanation
+  location:
+    snippet: int sum = 0;
+  explanations:
+  - body: Creates a sum object of type integer whose value is "0".
+- type: explanation
+  location:
+    snippet: 'for (int v : values)'
+    nth: 2
+  explanations:
+  - body: A For loop that runs through all the values in the values ArrayList and assigns each one to the integer "v".
+- type: explanation
+  location:
+    snippet: sum += v;
+  explanations:
+  - body: Each value in the values ArrayList is added to the sum object.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Sum of values: " + sum);'
+  explanations:
+  - body: 'Prints the line "Sum of values: 13" to the user.'
+- type: explanation
+  location:
+    snippet: 'System.out.println("size of values: " + values.size());'
+  explanations:
+  - body: 'Prints the line "size of values: 4" to the user. values.size() will return the number of objects in the values
+      ArrayList.'

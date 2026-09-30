@@ -1,0 +1,206 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface2_1
+source: PolymorphismTest.java
+title: IS17_interface2_1
+description: 'Worked example: IS17_interface2_1'
+authors:
+- first: Ryan
+  last: Johnston
+  email: ryan.johnston@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface2_1'
+elements:
+- type: explanation
+  location:
+    snippet: interface Shape {
+  explanations:
+  - body: "Creates a new Interface named \"Shape\".\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: public double area();
+  explanations:
+  - body: Creates a method by the name of "area" that returns a double to be implemented by classes that implement this interface.
+- type: explanation
+  location:
+    snippet: public double volume();
+  explanations:
+  - body: Creates a method by the name of "volume" that returns a double to be implemented by classes that implement this
+      interface.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: End of Interface Block
+- type: explanation
+  location:
+    snippet: class Cube implements Shape {
+  explanations:
+  - body: "Creates a new class named \"Cube\" which implements the \"Shape\" interface. \r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: int width = 2;
+  explanations:
+  - body: "Creates a new instance field named \"width\" of type integer and initializes it to the value \"2\".\r\nNOTE: access\
+      \ specifier not defined."
+- type: explanation
+  location:
+    snippet: int length = 3;
+  explanations:
+  - body: "Creates a new instance field named \"length\" of type integer and initializes it to the value \"3\".\r\nNOTE: access\
+      \ specifier not defined."
+- type: explanation
+  location:
+    snippet: int height = 10;
+  explanations:
+  - body: "Creates a new instance field named \"height\" of type integer and initializes it to the value \"10\".\r\nNOTE:\
+      \ access specifier not defined."
+- type: explanation
+  location:
+    snippet: public double area( ) {
+  explanations:
+  - body: Implements the "area" method defined in "Shape" interface.
+- type: explanation
+  location:
+    snippet: return (width * length);
+  explanations:
+  - body: Returns the result of multiplying width and length.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: End of area method block.
+- type: explanation
+  location:
+    snippet: public double volume() {
+  explanations:
+  - body: Implements the "volume" method defined in "Shape" interface.
+- type: explanation
+  location:
+    snippet: return (width * length * height);
+  explanations:
+  - body: Returns the result of multiplying width, length, and height.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: End of "volume" method block.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: End of "Cube" class block.
+- type: explanation
+  location:
+    snippet: class Circle implements Shape {
+  explanations:
+  - body: "Creates a new class named \"Circle\" which implements the \"Shape\" interface. \r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: int radius = 10;
+  explanations:
+  - body: "Creates a new instance field named \"radius\" of type integer and initializes it to the value \"10\".\r\nNOTE:\
+      \ access specifier not defined."
+- type: explanation
+  location:
+    snippet: public double area() {
+  explanations:
+  - body: Implements the "area" method defined in "Shape" interface.
+- type: explanation
+  location:
+    snippet: return (Math.PI * radius * radius);
+  explanations:
+  - body: Returns the result of multiplying the PI constant defined in the "Math" class, "radius", and "radius".
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: End of area method block.
+- type: explanation
+  location:
+    snippet: public double volume() {
+    nth: 2
+  explanations:
+  - body: Implements the "volume" method defined in "Shape" interface.
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: Returns the value 0.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: End of "volume" method block.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: End of "Circle" class block.
+- type: explanation
+  location:
+    snippet: public class PolymorphismTest {
+  explanations:
+  - body: Creates a new class named "PolymorphismTest".
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: Beginning of the Main Method.
+- type: explanation
+  location:
+    snippet: Shape[] s = { new Cube(), new Circle() };
+  explanations:
+  - body: Creates an array of Shapes called "s" and assigns it values of a Cube and a Circle with empty parameters.
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < s.length; i++) {
+  explanations:
+  - body: For loop that will iterate the length of the array "s"
+- type: explanation
+  location:
+    snippet: System.out.println("The area and volume of " + s[i].getClass() " is " + s[i].area() + " , " + s[i].volume());
+  explanations:
+  - body: 'Prints a line to the screen that outputs the area and volume of the contents of "s" array. Prints: "The area and
+      volume of ", then the class of the object in the current position within the array given the iteration value ''i'',
+      then " is ", then the area of the  object in the current position within the array given the iteration value ''i'',
+      then " , ", then the volume of the object in the current position within the array given the iteration value ''i''.'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: End of for loop block.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: End of Main Method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 10
+  explanations:
+  - body: End of PolymorphismTest block.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 11
+  explanations:
+  - body: Unnecessary curly bracket.

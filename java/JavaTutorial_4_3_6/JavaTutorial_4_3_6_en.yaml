@@ -1,0 +1,55 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_3_6
+source: MainClass.java
+title: Switch with Enum
+description: Switch with Enum
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:BreakStatement
+  - expert:CaseClause
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:InstanceField
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ObjectVariable
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleVariable
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:SwitchStatement
+  - expert:VoidDataType
+  - expert:ActualMethodParameter
+runtime:
+  language: java
+  version: '17'
+statement: Switch with Enum
+elements:
+- type: explanation
+  location:
+    snippet: enum MyType { choice1, choice2, choice3 }
+  explanations:
+  - body: "enum allows to define a type that can take one of the defined values. In this case, the type MyType is defined\
+      \ and have the possibles values choice1, choice2 and choice3. Enum must be in the class level \r\n(outside methods)."
+- type: explanation
+  location:
+    snippet: MyType ch = MyType.choice1;
+  explanations:
+  - body: Variable "ch" is declared of the type MyType and initialized with the value choice1.
+- type: explanation
+  location:
+    snippet: switch(ch) {
+  explanations:
+  - body: Switch can evaluate any type of variables, not only integers.

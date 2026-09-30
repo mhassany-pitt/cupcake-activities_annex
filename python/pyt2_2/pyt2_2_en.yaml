@@ -1,0 +1,70 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt2_2_en
+source: main.py
+title: Comparison Operators
+description: 'Worked example: Comparison Operators'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Gt
+  - parser:GtE
+  - parser:Int
+  - parser:NotEq
+  - parser:Lt
+  - parser:Call
+  - parser:LtE
+  - parser:Eq
+  - parser:Assign
+  - unspecified:Gt
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:GtE
+  - unspecified:Eq
+  - unspecified:Int
+  - unspecified:Lt
+  - unspecified:NotEq
+  - unspecified:LtE
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Comparison Operators'
+elements:
+- type: explanation
+  location:
+    snippet: print (a == b)
+  explanations:
+  - body: Is a equal to b? Result is a boolean value True or False
+- type: explanation
+  location:
+    snippet: print (a != b)
+  explanations:
+  - body: Is a not equal to b? Result is a boolean value True or False
+- type: explanation
+  location:
+    snippet: print (a > b)
+  explanations:
+  - body: Is a greater than b? Result is a boolean value True or False
+- type: explanation
+  location:
+    snippet: print (a < b)
+  explanations:
+  - body: Is a less than b? Result is a boolean value True or False
+- type: explanation
+  location:
+    snippet: print (a >= b)
+  explanations:
+  - body: Is a greater than or equal to b? Result is a boolean value True or False
+- type: explanation
+  location:
+    snippet: print (a <= b)
+  explanations:
+  - body: Is a less than or equal to b? Result is a boolean value True or False

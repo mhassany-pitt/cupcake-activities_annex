@@ -1,0 +1,73 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_countdown2_c_en
+source: main.c
+title: 'IS12:: countdown2.c (4.2)'
+description: 'Worked example: IS12:: countdown2.c (4.2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:int
+  - unspecified:define
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:post_decrement
+  - unspecified:while
+  - unspecified:printf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: countdown2.c (4.2)'
+elements:
+- type: explanation
+  location:
+    snippet: '#define HOW_MANY 5'
+  explanations:
+  - body: Since we may want to run this program with different starting values of the loop counter, it is wise to make this
+      starting value a definable constant
+- type: explanation
+  location:
+    snippet: int counter = HOW_MANY; /* setting the counter */
+  explanations:
+  - body: This variable will be used as a loop counter. It is declared as integer and initialized with the definable constant
+      HOW_MANY
+- type: explanation
+  location:
+    snippet: |-
+      printf("Start counting...
+      ");
+  explanations:
+  - body: The line Start counting will be printed before the loop
+- type: explanation
+  location:
+    snippet: while (counter)
+  explanations:
+  - body: At each iteration of the loop, the current value of the counter is checked. If this value is zero (0), the loop
+      will will be skipped, otherwise execution will proceed with the first statement inside the loop.
+- type: explanation
+  location:
+    snippet: |-
+      printf("%d
+      " , counter--);
+  explanations:
+  - body: This statement does two things. It prints the current value of the counter and also decrements the value of counter.
+      Since post-decrement is used here, the value printed is the one before decrement.
+- type: explanation
+  location:
+    snippet: |-
+      printf("Fire!
+      ");
+  explanations:
+  - body: This is the first statement after the loop. Here the execusion will resume when checking the expression controlling
+      the loop (counter) we will find that it became zero

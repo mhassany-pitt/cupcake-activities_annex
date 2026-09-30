@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_boolean_declaration
+source: Main.java
+title: DEPRECATED_boolean declaration
+description: 'Worked example: DEPRECATED_boolean declaration'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_boolean declaration'
+elements:
+- type: explanation
+  location:
+    snippet: boolean A = true;
+  explanations:
+  - body: declares a boolean variable A and assigns it the value of true.
+- type: explanation
+  location:
+    snippet: boolean B = false;
+  explanations:
+  - body: declares a boolean variable includeSign and assigns it the value of true.

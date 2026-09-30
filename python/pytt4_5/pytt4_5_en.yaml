@@ -1,0 +1,72 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt4_5_en
+source: main.py
+title: Sum and Average Using Loops
+description: 'Worked example: Sum and Average Using Loops'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Sum and Average Using Loops'
+elements:
+- type: explanation
+  location:
+    snippet: 'count = int(input("How many numbers: "))'
+  explanations:
+  - body: Count variable takes in the total number of numbers on which operation is to be performed
+- type: explanation
+  location:
+    snippet: round = 1
+  explanations:
+  - body: The variable 'round' is initiated with the value '1'
+- type: explanation
+  location:
+    snippet: sum = 0
+  explanations:
+  - body: The variable 'sum' is initiated to '0'
+- type: explanation
+  location:
+    snippet: 'while round <= count:'
+  explanations:
+  - body: Initiating the 'while' loop with the condition to iterate until the value of round is less than or equal to count
+- type: explanation
+  location:
+    snippet: number = float(input(">"))
+  explanations:
+  - body: Then the user is asked to input a number in each iteration
+- type: explanation
+  location:
+    snippet: sum += number
+  explanations:
+  - body: The value of 'sum' is updated by adding it to the number that was given by the user
+- type: explanation
+  location:
+    snippet: round += 1
+  explanations:
+  - body: The value of 'round' in each iteration
+- type: explanation
+  location:
+    snippet: 'if count > 0:'
+  explanations:
+  - body: If the total numbers given by the users is atleast 1 or more than 1
+- type: explanation
+  location:
+    snippet: print("Sum =", sum, "Average =", sum / count)
+  explanations:
+  - body: then we calculate the sum and average of those numbers
+- type: explanation
+  location:
+    snippet: print("Can't calculate average of", count, "numbers")
+  explanations:
+  - body: Else we notify the user that the operation cannot be performed

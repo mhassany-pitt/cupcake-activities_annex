@@ -1,0 +1,126 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface2_5
+source: PolymorphismTest.java
+title: IS17_interface2_5
+description: 'Worked example: IS17_interface2_5'
+authors:
+- first: David
+  last: Nawn
+  email: david.nawn@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface2_5'
+elements:
+- type: explanation
+  location:
+    snippet: interface Shape {
+  explanations:
+  - body: Declares an interface called Shape.
+- type: explanation
+  location:
+    snippet: public double area();
+  explanations:
+  - body: area method is declared as public and expected to return an object of type double.
+- type: explanation
+  location:
+    snippet: public double volume();
+  explanations:
+  - body: volume method is declared as public and expected to return an object of type double.
+- type: explanation
+  location:
+    snippet: class Cube implements Shape {
+  explanations:
+  - body: Cube class is extended with the Shape interface. Use the keyword "implements" to implement an interface.
+- type: explanation
+  location:
+    snippet: int width = 2;
+  explanations:
+  - body: Creates a width object of type integer whose value is set to "2".
+- type: explanation
+  location:
+    snippet: int length = 3;
+  explanations:
+  - body: Creates a length object of type integer whose value is set to "3".
+- type: explanation
+  location:
+    snippet: int height = 10;
+  explanations:
+  - body: Creates a height object of type integer whose value is set to "10".
+- type: explanation
+  location:
+    snippet: public double area( ) {
+  explanations:
+  - body: area method is declared as public and expected to return an object of type double.
+- type: explanation
+  location:
+    snippet: return (width * length);
+  explanations:
+  - body: The area method returns the product of the width and length objects.
+- type: explanation
+  location:
+    snippet: public double volume() {
+  explanations:
+  - body: volume method is declared as public and expected to return an object of type double.
+- type: explanation
+  location:
+    snippet: return (width * length * height);
+  explanations:
+  - body: The volume method returns the product of the width, length, and height objects.
+- type: explanation
+  location:
+    snippet: class Circle implements Shape {
+  explanations:
+  - body: Circle class is extended with the Shape interface. Use the keyword "implements" to implement an interface.
+- type: explanation
+  location:
+    snippet: int radius = 10;
+  explanations:
+  - body: Creates a radius object of type integer whose value is set to "10".
+- type: explanation
+  location:
+    snippet: public double area() {
+  explanations:
+  - body: area method is declared as public and expected to return an object of type double.
+- type: explanation
+  location:
+    snippet: return (Math.PI * radius * radius);
+  explanations:
+  - body: The area method returns the product of Pi, and the radius squared. PI can be called from the Math object to get
+      the value of Pi.
+- type: explanation
+  location:
+    snippet: public double volume() {
+    nth: 2
+  explanations:
+  - body: volume method is declared as public and expected to return an object of type double.
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: The volume method returns the number "0".
+- type: explanation
+  location:
+    snippet: Shape[] s = { new Cube(), new Circle() };
+  explanations:
+  - body: Creates an array for the Shape interface that will hold each Cube and Circle in s.
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < s.length; i++) {
+  explanations:
+  - body: A For loop that will run until the integer i is no longer less than the length of s, and i will increment by 1 after
+      each iteration.
+- type: explanation
+  location:
+    snippet: System.out.println("The area and volume of " + s[i].getClass() " is " + s[i].area() + " , " + s[i].volume());
+  explanations:
+  - body: For the Cube object and the Circle object, the system will print out the class name of each and the area and volume
+      of each.

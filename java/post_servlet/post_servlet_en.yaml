@@ -1,0 +1,67 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_post_servlet
+source: HTTPPostServlet.java
+title: ISD::HTTPPostServlet.java
+description: 'Worked example: ISD::HTTPPostServlet.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::HTTPPostServlet.java'
+elements:
+- type: explanation
+  location:
+    snippet: // A simple survey servlet
+  explanations:
+  - body: Used to post data to server-side form handler (i.e. surveys)
+- type: explanation
+  location:
+    snippet: public class HTTPPostServlet extends HttpServlet {
+  explanations:
+  - body: Extending HttpServlet allows processing of GET and POST requests.
+- type: explanation
+  location:
+    snippet: private String animalNames[] =
+  explanations:
+  - body: Array for animal names
+- type: explanation
+  location:
+    snippet: public void doPost( HttpServletRequest request,
+  explanations:
+  - body: Responds to POST requests (default BAD_REQUEST), Same arguments as doGet (client request, server response)
+- type: explanation
+  location:
+    snippet: File f = new File( "survey.txt" );
+  explanations:
+  - body: Open survey.txt, load animals array
+- type: explanation
+  location:
+    snippet: request.getParameter( "animal" );
+  explanations:
+  - body: Use request (HttpServletRequest) method, getParameter to get value of animal.
+- type: explanation
+  location:
+    snippet: ++total;   // update total of all responses
+  explanations:
+  - body: total incremented, percentages calculated
+- type: explanation
+  location:
+    snippet: buf.append( "<BR>Results:\n<PRE>" );
+  explanations:
+  - body: <PRE> tag, Preformatted text, fixed-width
+- type: explanation
+  location:
+    snippet: buf.append( "<BR>" );
+  explanations:
+  - body: <BR> tag specifies the line break

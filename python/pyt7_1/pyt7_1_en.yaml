@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt7_1_en
+source: main.py
+title: List Basics
+description: 'Worked example: List Basics'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Call
+  - parser:List
+  - parser:Assign
+  - parser:Str
+  - unspecified:Call
+  - unspecified:List
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: List Basics'
+elements:
+- type: explanation
+  location:
+    snippet: list1 = ['abc', 'def', 100, 50000, True]
+  explanations:
+  - body: Defining list1 with 5 elements
+- type: explanation
+  location:
+    snippet: list2 = [1, 2, 3, 4]
+  explanations:
+  - body: Defining list2 with 4 elements
+- type: explanation
+  location:
+    snippet: list3 = ["a", "b", "c", "d"]
+  explanations:
+  - body: Defining list3 with 4 elements

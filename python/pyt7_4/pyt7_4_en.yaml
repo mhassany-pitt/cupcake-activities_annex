@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt7_4_en
+source: main.py
+title: Appending Values to List
+description: 'Worked example: Appending Values to List'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Attribute
+  - parser:Call
+  - parser:List
+  - parser:Assign
+  - parser:Str
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:List
+  - unspecified:Attribute
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Appending Values to List'
+elements:
+- type: explanation
+  location:
+    snippet: a.append('e')
+  explanations:
+  - body: This command adds the string element 'e' to the end of the list

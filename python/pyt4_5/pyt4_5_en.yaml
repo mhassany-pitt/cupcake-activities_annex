@@ -1,0 +1,38 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_5_en
+source: main.py
+title: Continue Statement
+description: 'Worked example: Continue Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Continue Statement'
+elements:
+- type: explanation
+  location:
+    snippet: 'for letter in ''Python'':'
+  explanations:
+  - body: Loops through each letter in the word Python
+- type: explanation
+  location:
+    snippet: 'if letter == ''h'':'
+  explanations:
+  - body: Checks if the current letter is 'h'
+- type: explanation
+  location:
+    snippet: continue
+  explanations:
+  - body: If yes, it continues. Here the 'continue' statement jumps out of the loop imediately and iterates through the next
+      element

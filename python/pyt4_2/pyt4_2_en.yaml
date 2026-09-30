@@ -1,0 +1,35 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_2_en
+source: main.py
+title: For Loop Statement
+description: 'Worked example: For Loop Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Call
+  - parser:Assign
+  - parser:For
+  - unspecified:For
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: For Loop Statement'
+elements:
+- type: explanation
+  location:
+    snippet: 'for a in range(0,5):'
+  explanations:
+  - body: This statement loops for 5 times from the value of a = 0 to a = 4

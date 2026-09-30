@@ -1,0 +1,170 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance1_1
+source: TestInheritance.java
+title: IS17_inheritance1_1
+description: 'Worked example: IS17_inheritance1_1'
+authors:
+- first: James
+  last: Bowman
+  email: james.bowman@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance1_1'
+elements:
+- type: explanation
+  location:
+    snippet: class Person{
+  explanations:
+  - body: declare a class Person
+- type: explanation
+  location:
+    snippet: private String name;
+  explanations:
+  - body: creates a private instance field called name of type String
+- type: explanation
+  location:
+    snippet: public void setName(String n) {
+  explanations:
+  - body: creates a new method called 'setName' that takes a string input.
+- type: explanation
+  location:
+    snippet: name = n;
+  explanations:
+  - body: assigns the value of the String parameter 'n' to the instance field 'name'.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: closes the setName method
+- type: explanation
+  location:
+    snippet: public String getName(){
+  explanations:
+  - body: creats a method 'getName' of type String (this type of method is known as a 'getter')
+- type: explanation
+  location:
+    snippet: return name;
+  explanations:
+  - body: returns name back to the caller.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: closes the 'getName' method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end of Person class.
+- type: explanation
+  location:
+    snippet: class Student extends Person{
+  explanations:
+  - body: creates a subclass Student that extends the superclass Person
+- type: explanation
+  location:
+    snippet: private String stuNum;
+  explanations:
+  - body: creates a private String 'stuNum'
+- type: explanation
+  location:
+    snippet: public void setStuNum(String sn)   {
+  explanations:
+  - body: creates a public method 'setStuNum' that accepts a String input
+- type: explanation
+  location:
+    snippet: stuNum = sn;
+  explanations:
+  - body: assigns the value of the String parameter 'sn' to 'stuNum'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: closes the 'setStuNum' method.
+- type: explanation
+  location:
+    snippet: public String getStuNum()   {
+  explanations:
+  - body: creates a public method 'getStuNum' of type String (this method is known as a 'getter')
+- type: explanation
+  location:
+    snippet: return stuNum;
+  explanations:
+  - body: returns the String stuNum to the caller
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: closes the 'getStuNum' method.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: closes the Student subclass.
+- type: explanation
+  location:
+    snippet: public class TestInheritance{
+  explanations:
+  - body: creates the class 'TestInheritance'
+- type: explanation
+  location:
+    snippet: public static void main(String[] args)   {
+  explanations:
+  - body: creates the main method of the program
+- type: explanation
+  location:
+    snippet: Student stu = new Student();
+  explanations:
+  - body: Initializes a new object 'stu' of the Student class.
+- type: explanation
+  location:
+    snippet: stu.setName("Sharon Hsiao");
+  explanations:
+  - body: assigns the String "Sharon Hsiao" to the name of the object 'stu'
+- type: explanation
+  location:
+    snippet: stu.setStuNum("12345");
+  explanations:
+  - body: assigns the String "12345" to the number of the object 'stu'
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Name: " + stu.getName());'
+  explanations:
+  - body: 'prints a single line "Student Name: " plus the name assigned to the object ''stu'' via the ''getName'' method.'
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Number: " + stu.getStuNum());'
+  explanations:
+  - body: 'prints a single line "Student Number: " plus the number assigned to the object ''stu'' via the ''getStuNum'' method.'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: closes the main method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: closes the 'TestInheritance' class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: syntax error.  this "}" is not needed

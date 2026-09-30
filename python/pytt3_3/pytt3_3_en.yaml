@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt3_3_en
+source: main.py
+title: Conditionals basics
+description: 'Worked example: Conditionals basics'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Conditionals basics'
+elements:
+- type: explanation
+  location:
+    snippet: 'def main(x,y):'
+  explanations:
+  - body: Function declaration which takes in 2 arguments 'x' and 'y'
+- type: explanation
+  location:
+    snippet: 'if x - y > 0:'
+  explanations:
+  - body: This statement checks if the expression 'x-y' is greater than 0
+- type: explanation
+  location:
+    snippet: print("The distance is", x - y)
+  explanations:
+  - body: If it is true, it will print out the distance (difference)
+- type: explanation
+  location:
+    snippet: print("The distance is", y - x)
+  explanations:
+  - body: If the condition is not true, it will print out the reverse difference to get the absolute value of the distance
+- type: explanation
+  location:
+    snippet: main(3, 11)
+  explanations:
+  - body: This statement calls the main function by passing 2 integer as arguments

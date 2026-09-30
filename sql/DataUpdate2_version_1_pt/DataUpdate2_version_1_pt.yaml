@@ -1,0 +1,38 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataUpdate2_version_1_pt
+source: query.sql
+title: UpdatingData(3)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: UPDATE Students S
+  explanations:
+  - body: O comando UPDATE e' utilizado para modificar os valores de uma ou mais colunas das linhas selecionadas.
+- type: explanation
+  location:
+    snippet: SET S.age = S.age+1 AND S.gpa = S.gpa-1
+  explanations:
+  - body: A clausula SET especifica uma lista de atribuicoes, sendo que cada atribuicao define o novo valor a ser atualizado.
+- type: explanation
+  location:
+    snippet: WHERE S.sid = 5368;
+  explanations:
+  - body: Uma unica tupla ou varias tuplas podem ser atualizadas no mesmo comando, dependendo da condicao definida na clausula
+      WHERE.

@@ -1,0 +1,35 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt6_3_en
+source: main.py
+title: Adding Strings
+description: 'Worked example: Adding Strings'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Add
+  - parser:Call
+  - parser:Assign
+  - parser:Str
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Add
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Adding Strings'
+elements:
+- type: explanation
+  location:
+    snippet: print (a + ' World!')
+  explanations:
+  - body: adding the strings 'Hello' and 'World!'

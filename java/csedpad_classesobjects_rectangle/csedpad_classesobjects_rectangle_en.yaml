@@ -1,0 +1,84 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_classesobjects_rectangle
+source: Rectangle.java
+title: (Classes & Objects) Rectangle - CSEdPad
+description: This program creates a rectangle object and calculates its area
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:ReturnStatement
+  - webex:ThisReference
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:InstanceField
+  - webex:ConstructorDefinition
+  - webex:VoidDataType
+  - webex:ObjectCreationStatement
+  - webex:MultiplyExpression
+  - webex:ConstructorCall
+  - webex:StringLiteral
+  - webex:ObjectMethodInvocation
+  - webex:SimpleVariable
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:FloatDataType
+  - webex:StringDataType
+  - webex:InstanceFieldInvocation
+  - webex:PrivateFieldSpecifier
+  - webex:PublicClassSpecifier
+  - webex:PublicConstructorSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:ConstructorDefinition
+  - java_ontology:FloatDataType
+  - java_ontology:FormalMethodParameter
+  - java_ontology:InstanceField
+  - java_ontology:InstanceFieldInvocation
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiplyExpression
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PrivateFieldSpecifier
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicConstructorSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:ReturnStatement
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:SimpleVariable
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:ThisReference
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: This program creates a rectangle object and calculates its area
+elements:
+- type: explanation
+  location:
+    snippet: Rectangle myBox = new Rectangle(2, 5);
+  explanations:
+  - body: Create an object of class Rectangle. This will also call constructor
+- type: explanation
+  location:
+    snippet: float area = myBox.calculateArea();
+  explanations:
+  - body: Call method calculateArea for the object

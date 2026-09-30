@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection37_version_1_pt
+source: query.sql
+title: Groupingandaggregating(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: WHERE S.age > 18
+  explanations:
+  - body: Nessa consulta, nem todos os marinheiros sao considerados. Apenas aqueles com idade maior que 18 anos sao selecionados.
+- type: explanation
+  location:
+    snippet: GROUP BY S.rating
+  explanations:
+  - body: As avaliacoes dos marinheiros sao agrupadas.
+- type: explanation
+  location:
+    snippet: HAVING 1 <
+  explanations:
+  - body: Essa consulta primeiro limita as avaliacoes que contem pelo menos 2 marinheiros. O numero total de cada avaliacao
+      que os marinheiros pertencem e' comparado com o valor 1.
+- type: explanation
+  location:
+    snippet: (SELECT COUNT(*)
+  explanations:
+  - body: Essa subconsulta conta o numero de marinheiros pertencentes a cada avaliacao.
+- type: explanation
+  location:
+    snippet: WHERE S.rating = S2.rating);
+  explanations:
+  - body: As avaliacoes (ratings) na tabela 'Sailors' sao relacionadas com as avaliacoes agrupadas na consulta principal.

@@ -1,0 +1,39 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection29_version_1_pt
+source: query.sql
+title: NestedSubqueries(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT DISTINCT customer_name
+  explanations:
+  - body: Clientes que possuem conta sao selecionados na subconsulta e depois os clientes que possuem algum emprestimo sao
+      comparados com o resultado da subconsulta.
+- type: explanation
+  location:
+    snippet: WHERE customer_name NOT IN
+  explanations:
+  - body: Na condicao da clausula WHERE, o operador NOT IN pode ser usado para verificar se o dado NAO esta no resultado da
+      subconsulta.
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+  explanations:
+  - body: Esta subconsulta retorna o nome dos clientes que possuem conta.

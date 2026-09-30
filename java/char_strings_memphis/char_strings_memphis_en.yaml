@@ -1,0 +1,119 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_char_strings_memphis
+source: CharStringDemos.java
+title: Char Strings (Memphis)
+description: Some demos of working with the char and String data types.
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ImportStatement
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:CharDataType
+  - parser:SimpleAssignmentExpression
+  - parser:java.lang.System.out.println
+  - parser:ActualMethodParameter
+  - parser:IntDataType
+  - parser:ExplicitTypeCasting
+  - parser:AddExpression
+  - parser:StringInitializationStatement
+  - parser:StringVariable
+  - parser:StringDataType
+  - parser:StringLiteral
+  - parser:StringAddition
+  - parser:java.lang.Integer.parseInt
+  - parser:DoubleDataType
+  - parser:java.lang.Double.parseDouble
+  - parser:ObjectCreationStatement
+  - parser:ConstructorCall
+  - parser:ObjectMethodInvocation
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddExpression
+  - java_ontology:CharDataType
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:DoubleDataType
+  - java_ontology:ExplicitTypeCasting
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ImportStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.Double.parseDouble
+  - java_ontology:java.lang.Integer.parseInt
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringInitializationStatement
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Some demos of working with the char and String data types.
+elements:
+- type: explanation
+  location:
+    snippet: System.out.println(x);
+  explanations:
+  - body: Shows A
+- type: explanation
+  location:
+    snippet: System.out.println(y);
+  explanations:
+  - body: Shows 0
+- type: explanation
+  location:
+    snippet: System.out.println((int)x);
+  explanations:
+  - body: Casting a char value to int converts it to its Unicode value - this shows 65
+- type: explanation
+  location:
+    snippet: System.out.println((int)y);
+  explanations:
+  - body: Shows 48 (which is the Unicode value of '0')
+- type: explanation
+  location:
+    snippet: System.out.println(x + y);
+  explanations:
+  - body: Adds the Unicode values numerically
+- type: explanation
+  location:
+    snippet: System.out.println((char)65);
+  explanations:
+  - body: Shows A, since it treats the Unicode value 65 as a char
+- type: explanation
+  location:
+    snippet: System.out.println((char)65.9);
+  explanations:
+  - body: Also shows A - it truncates the .9 and treats the Unicode value 65 as a char
+- type: explanation
+  location:
+    snippet: System.out.println(something + something2);
+  explanations:
+  - body: This is string concatenation, which combines multiple strings into a longer string
+- type: explanation
+  location:
+    snippet: String name = in.nextLine();
+  explanations:
+  - body: Use next() to read the next word of input, or nextLine() to read the entire line

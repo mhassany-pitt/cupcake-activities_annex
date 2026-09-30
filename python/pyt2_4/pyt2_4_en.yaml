@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt2_4_en
+source: main.py
+title: Bitwise Operators
+description: 'Worked example: Bitwise Operators'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Bitwise Operators'
+elements:
+- type: explanation
+  location:
+    snippet: print (a&b)
+  explanations:
+  - body: Performs Binary AND Operation
+- type: explanation
+  location:
+    snippet: print (a|b)
+  explanations:
+  - body: Performs Binary OR Operation
+- type: explanation
+  location:
+    snippet: print (a^b)
+  explanations:
+  - body: Performs Binary XOR Operation
+- type: explanation
+  location:
+    snippet: print (~a)
+  explanations:
+  - body: Performs Binary Ones Complement
+- type: explanation
+  location:
+    snippet: print (a>>1)
+  explanations:
+  - body: Performs Binary Right Shift
+- type: explanation
+  location:
+    snippet: print (a<<1)
+  explanations:
+  - body: Performs Binary Left Shift

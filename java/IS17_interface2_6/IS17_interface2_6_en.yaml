@@ -1,0 +1,136 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface2_6
+source: PolymorphismTest.java
+title: IS17_interface2_6
+description: 'Worked example: IS17_interface2_6'
+authors:
+- first: Megan
+  last: Patton
+  email: megan.patton@pghschools.org
+  affiliation: Pittsburgh Public Schools
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface2_6'
+elements:
+- type: explanation
+  location:
+    snippet: interface Shape {
+  explanations:
+  - body: Creates an interface called Shape.
+- type: explanation
+  location:
+    snippet: public double area();
+  explanations:
+  - body: Declares the area() method as public and type double.
+- type: explanation
+  location:
+    snippet: public double volume();
+  explanations:
+  - body: Declares the volume() method as public and type double.
+- type: explanation
+  location:
+    snippet: class Cube implements Shape {
+  explanations:
+  - body: Creates a class called Cube that implements the Shape interface.
+- type: explanation
+  location:
+    snippet: int width = 2;
+  explanations:
+  - body: Initializes width as an integer with the value 2.
+- type: explanation
+  location:
+    snippet: int length = 3;
+  explanations:
+  - body: Initializes length as an integer with the value 3.
+- type: explanation
+  location:
+    snippet: int height = 10;
+  explanations:
+  - body: Initializes height as an integer with the value 10.
+- type: explanation
+  location:
+    snippet: public double area( ) {
+  explanations:
+  - body: Defines the area() method.
+- type: explanation
+  location:
+    snippet: return (width * length);
+  explanations:
+  - body: Displays the value of width *height (which is 20).
+- type: explanation
+  location:
+    snippet: public double volume() {
+  explanations:
+  - body: Defines the volume() method with return type double.
+- type: explanation
+  location:
+    snippet: return (width * length * height);
+  explanations:
+  - body: Displays the volume of the Shape by multiplying the width, length, and height.
+- type: explanation
+  location:
+    snippet: class Circle implements Shape {
+  explanations:
+  - body: Creates a class called Circle which implements the Shape interface.
+- type: explanation
+  location:
+    snippet: int radius = 10;
+  explanations:
+  - body: Initializes the variable radius as an integer with the value of 10.
+- type: explanation
+  location:
+    snippet: public double area() {
+  explanations:
+  - body: Uses the area() method.
+- type: explanation
+  location:
+    snippet: return (Math.PI * radius * radius);
+  explanations:
+  - body: Displays the area of the circle by multiplying Math.PI * radius * radius.
+- type: explanation
+  location:
+    snippet: public double volume() {
+    nth: 2
+  explanations:
+  - body: Defines the volume() method.
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: Displays a 0 for the Volume of the circle.
+- type: explanation
+  location:
+    snippet: public class PolymorphismTest {
+  explanations:
+  - body: Creates a class called PolymorphismTest.
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: Declares the static, main method.
+- type: explanation
+  location:
+    snippet: Shape[] s = { new Cube(), new Circle() };
+  explanations:
+  - body: Creates a new interface Shape called s that uses the newCube() and new Circle() class.
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < s.length; i++) {
+  explanations:
+  - body: Starts a for loop for the list s that will continue for the length of the list.  Starts at position [0] using the
+      vairable i.
+- type: explanation
+  location:
+    snippet: System.out.println("The area and volume of " + s[i].getClass() " is " + s[i].area() + " , " + s[i].volume());
+  explanations:
+  - body: "Will display the area and volume of each class.  It begins with the class i = 0 and moves down the list until s.length\
+      \ has been reached.  Prints: \"The area and volume of\" Class \"is\" area, volume.\r\n\r\nNote: the + is missing after\
+      \ s[i].getClass()."

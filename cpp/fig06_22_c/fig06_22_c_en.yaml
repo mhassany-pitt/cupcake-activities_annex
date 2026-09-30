@@ -1,0 +1,82 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig06_22_c_en
+source: main.cpp
+title: fig06_22.c
+description: 'Worked example: fig06_22.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig06_22.c'
+elements:
+- type: explanation
+  location:
+    snippet: const int studentGrades[ STUDENTS ][ EXAMS ] =
+  explanations:
+  - body: initialize student grades for three students (rows).
+- type: explanation
+  location:
+    snippet: '{ 96, 87, 89, 78 },'
+  explanations:
+  - body: "Each row in the array corresponds to a single studentÃ¢Â\x80Â\x99s set of grades."
+- type: explanation
+  location:
+    snippet: for ( student = 0; student < STUDENTS; student++ ) {
+  explanations:
+  - body: calculate average grade for each student.
+- type: explanation
+  location:
+    snippet: student, average( studentGrades[ student ], EXAMS ) );
+  explanations:
+  - body: average function is passed a row of the array.
+- type: explanation
+  location:
+    snippet: int minimum( const int grades[][ EXAMS ], int pupils, int tests )
+  explanations:
+  - body: Find the minimum grade.
+- type: explanation
+  location:
+    snippet: for ( i = 0; i < pupils; i++ ) {
+  explanations:
+  - body: loop through rows of grades.
+- type: explanation
+  location:
+    snippet: for ( j = 0; j < tests; j++ ) {
+  explanations:
+  - body: loop through columns of grades.
+- type: explanation
+  location:
+    snippet: return lowGrade;
+  explanations:
+  - body: return minimum grade.
+- type: explanation
+  location:
+    snippet: int maximum( const int grades[][ EXAMS ], int pupils, int tests )
+  explanations:
+  - body: Find the maximum grade.
+- type: explanation
+  location:
+    snippet: return highGrade;
+  explanations:
+  - body: return maximum grade.
+- type: explanation
+  location:
+    snippet: double average( const int setOfGrades[], int tests )
+  explanations:
+  - body: Determine the average grade for a particular student.
+- type: explanation
+  location:
+    snippet: total += setOfGrades[ i ];
+  explanations:
+  - body: total all grades for one student.

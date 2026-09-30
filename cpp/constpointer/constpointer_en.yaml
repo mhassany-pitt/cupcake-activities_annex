@@ -1,0 +1,27 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_constpointer
+source: main.cpp
+title: ConstPointer2
+description: 'Worked example: ConstPointer2'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: ConstPointer2'
+elements:
+- type: explanation
+  location:
+    snippet: const int *const ptr = &x;
+  explanations:
+  - body: Neither pointer sPtr nor the data to which it points, *sPtr, is modifiable.

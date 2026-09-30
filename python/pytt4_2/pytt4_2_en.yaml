@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt4_2_en
+source: main.py
+title: Table of Squares
+description: 'Worked example: Table of Squares'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Table of Squares'
+elements:
+- type: explanation
+  location:
+    snippet: numbers_to_print = 10
+  explanations:
+  - body: Setting up the numbers to printed as '10'. This means that squares of numbers from 1 to 10 will be printed in the
+      program
+- type: explanation
+  location:
+    snippet: i = 1
+  explanations:
+  - body: Initializing the loop condition variable to '1'
+- type: explanation
+  location:
+    snippet: 'while i <= numbers_to_print:'
+  explanations:
+  - body: Initializing the 'while' loop with the condition to iterate until 'i' is less than or equal to 'numbers_to_print'
+      (that means iterate till 'i' is less than or equal to 10)
+- type: explanation
+  location:
+    snippet: square = i * i
+  explanations:
+  - body: This statement simply squares the number by multiplying the number with itself
+- type: explanation
+  location:
+    snippet: print(i, "squared =", square)
+  explanations:
+  - body: This statement prints out the square of the number
+- type: explanation
+  location:
+    snippet: i += 1
+  explanations:
+  - body: Incrementing the value of 'i'. This is an important step in the 'while' loop. If the value of 'i' is not incremented,
+      the 'while' loop will execute infinitely
+- type: explanation
+  location:
+    snippet: print("Done!")
+  explanations:
+  - body: When the condition is not True ('i' is greater than 'numbers_to_print'), it will exit the while loop and print the
+      string 'Done!' to inform the user that the program is terminated.

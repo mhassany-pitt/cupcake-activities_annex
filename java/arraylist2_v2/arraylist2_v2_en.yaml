@@ -1,0 +1,110 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_arraylist2_v2
+source: Main.java
+title: ArrayList Demo
+description: ArrayList Demo
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:FormalMethodParameter
+  - expert:ImportStatement
+  - expert:java.lang.System.out.println
+  - expert:java.util.ArrayList
+  - expert:java.util.ArrayList.add
+  - expert:java.util.ArrayList.remove
+  - expert:java.util.ArrayList.size
+  - expert:MethodDefinition
+  - expert:ObjectCreationStatement
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: ArrayList Demo
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: import ArrayList class from java libraries
+- type: explanation
+  location:
+    snippet: ArrayList<String> AL = new ArrayList<String>();
+  explanations:
+  - body: "The type ArrayList<String> denotes an array list of strings. The angle brackets around the \r\nString type tell\
+      \ you that String is a type parameter. You can replace String with any other \r\nclass and get a different array list\
+      \ type."
+- type: explanation
+  location:
+    snippet: AL.add("C");
+  explanations:
+  - body: add an element to the array list, AL.
+- type: explanation
+  location:
+    snippet: AL.add("A");
+  explanations:
+  - body: add another element to the array list, AL.
+- type: explanation
+  location:
+    snippet: AL.add(1, "A2");
+  explanations:
+  - body: Insert A2 at index 1
+- type: explanation
+  location:
+    snippet: 'System.out.println("Size of AL: " + AL.size());'
+  explanations:
+  - body: 'Size of AL: 7'
+- type: explanation
+  location:
+    snippet: 'System.out.println("Contents of AL: " + AL);'
+  explanations:
+  - body: 'Contents of AL: [C, A2, A, E, B, D, F]'
+- type: explanation
+  location:
+    snippet: AL.remove("F");
+  explanations:
+  - body: Remove elements "F" from the array list
+- type: explanation
+  location:
+    snippet: AL.remove(2);
+  explanations:
+  - body: Removes the element at index 2
+- type: explanation
+  location:
+    snippet: 'System.out.println("Size of AL: " + AL.size());'
+    nth: 2
+  explanations:
+  - body: 'Size of AL: 5'
+- type: explanation
+  location:
+    snippet: 'System.out.println("Contents of AL: " + AL);'
+    nth: 2
+  explanations:
+  - body: 'Contents of AL: [C, A2, E, B, D]'
+- type: explanation
+  location:
+    snippet: AL.set(2, "H");
+  explanations:
+  - body: the set(2, "H") method replaces the element at index 2 with "H". Here, "E" is replaced by "H".
+- type: explanation
+  location:
+    snippet: 'System.out.println("Contents of AL: " + AL);'
+    nth: 3
+  explanations:
+  - body: 'Contents of AL: [C, A2, H, B, D]'

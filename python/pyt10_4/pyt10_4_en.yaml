@@ -1,0 +1,100 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_4_en
+source: main.py
+title: Complex IF...ELSE Statement
+description: 'Worked example: Complex IF...ELSE Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:LtE
+  - parser:GtE
+  - parser:Int
+  - parser:Call
+  - parser:Str
+  - parser:Mod
+  - parser:Eq
+  - parser:Assign
+  - parser:If
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:GtE
+  - unspecified:Eq
+  - unspecified:Int
+  - unspecified:Str
+  - unspecified:Mod
+  - unspecified:If
+  - unspecified:LtE
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Complex IF...ELSE Statement'
+elements:
+- type: explanation
+  location:
+    snippet: 'enter_number = int(input("Please enter a number between 1 and 20: "))'
+  explanations:
+  - body: This statement takes an input from the users. int() is added to ensure that the input is treated as a integer, not
+      a string
+- type: explanation
+  location:
+    snippet: 'if enter_number >= 1:'
+  explanations:
+  - body: This conditional statement ensures the input is more than or equal to '1'
+- type: explanation
+  location:
+    snippet: 'if enter_number <= 20:'
+  explanations:
+  - body: If the above condition is true, it will check for 2nd condition. This conditional statement ensures the input is
+      less than or equal to '20'
+- type: explanation
+  location:
+    snippet: print("You have entered a valid number")
+  explanations:
+  - body: If the above 2 conditions are true, the user is notified that the entered number is valid
+- type: explanation
+  location:
+    snippet: 'if enter_number % 2 == 0:'
+  explanations:
+  - body: 3rd condition checks if the number is even. This is done by checking if the remainder is '0' when the number is
+      divided by 2
+- type: explanation
+  location:
+    snippet: print("Your number is even")
+  explanations:
+  - body: If the remainder is '0', then the number is even
+- type: explanation
+  location:
+    snippet: 'elif enter_number % 2 == 1:'
+  explanations:
+  - body: If the number is divided by '0' and the remainder is '1' then the number is odd
+- type: explanation
+  location:
+    snippet: 'else:'
+  explanations:
+  - body: If the number is not less than or equal to 20, the code will jump to this 'else' statement
+- type: explanation
+  location:
+    snippet: print("You've entered an invalid number")
+  explanations:
+  - body: User will be notified that the entered number is not valid
+- type: explanation
+  location:
+    snippet: 'else:'
+    nth: 2
+  explanations:
+  - body: If the number is not more than or equal to 1, the code will jump to this 'else' statement
+- type: explanation
+  location:
+    snippet: print("You've entered an invalid number")
+    nth: 2
+  explanations:
+  - body: User will be notified that the entered number is not valid

@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt5_1_en
+source: main.py
+title: Functions Basics
+description: 'Worked example: Functions Basics'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Functions Basics'
+elements:
+- type: explanation
+  location:
+    snippet: 'def main():'
+  explanations:
+  - body: Main Function Declaration
+- type: explanation
+  location:
+    snippet: kids = int(input("How many kids? "))
+  explanations:
+  - body: Taking number of kids as an integer input from the user
+- type: explanation
+  location:
+    snippet: apples = int(input("How many apples? "))
+  explanations:
+  - body: Taking number of apples as an integer input from the user
+- type: explanation
+  location:
+    snippet: rounds = 0
+  explanations:
+  - body: Initiating the variable 'rounds' (assigning the value '0'). This variable will be used as the counter for number
+      of rounds
+- type: explanation
+  location:
+    snippet: 'while apples >= kids:'
+  explanations:
+  - body: This while loop will iterate till the condition 'apples is greater than or equal to kids' is true.
+- type: explanation
+  location:
+    snippet: apples -= kids
+  explanations:
+  - body: decrementing the value of apples by number of kids in each iteration (round)
+- type: explanation
+  location:
+    snippet: rounds += 1
+  explanations:
+  - body: incrementing the value of 'rounds' by 1 to denote the 'number of rounds'
+- type: explanation
+  location:
+    snippet: print(apples, "apples left after round", rounds)
+  explanations:
+  - body: This will print out 'x' number of apples left after 'y' rounds. Here x and y are integer values that are computed
+      in the While loop
+- type: explanation
+  location:
+    snippet: print("Each kid got {0} apples.".format(rounds))
+  explanations:
+  - body: This print statement uses the concept of output formatting. Here the value of 'rounds' is passed within the print
+      statement by using the 'format' method and passing the argument 'rounds'. Here '0' stands for the index number of the
+      argument tuple. 'rounds' is passed as the first argument (index 0) so {0} would fetch the value of 'rounds'
+- type: explanation
+  location:
+    snippet: print("{0} apples left.".format(apples))
+  explanations:
+  - body: Here we print the number of apples left at the end. Again, here {0} represents the index number of the variable
+      in the tuple. Index 0 has the variable apples. Hence the value of apples will be printed out within the print statement.

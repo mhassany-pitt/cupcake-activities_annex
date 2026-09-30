@@ -1,0 +1,74 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fahr_input_c_en
+source: main.c
+title: 'IS12:: fahr_input.c (3.4)'
+description: 'Worked example: IS12:: fahr_input.c (3.4)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:void
+  - unspecified:div
+  - unspecified:reference
+  - unspecified:sub
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:mul
+  - unspecified:main_function
+  - unspecified:float
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: fahr_input.c (3.4)'
+elements:
+- type: explanation
+  location:
+    snippet: float fahr; /* the temperature to be converted */
+  explanations:
+  - body: This is the variable that has to get the value from user's input. It is declared with no initialization since we
+      do not know it's value yet.
+- type: explanation
+  location:
+    snippet: /* Data input */
+  explanations:
+  - body: This comment explains the purpose of the following section of the code
+- type: explanation
+  location:
+    snippet: 'printf("Enter temperature in Fahrenheit: "); /* prompt */'
+  explanations:
+  - body: "This printf statement prints the prompt to the user (to hint that the input is expected). Note that there is no\
+      \ \n at the end of the string - we want the cursor to stay at the same line"
+- type: explanation
+  location:
+    snippet: scanf("%f",&fahr); /* input */
+  explanations:
+  - body: This scanf statement will read a string entered by the user, interpret it as a floating point number (following
+      %f specification) and put the converted floating point value into variable fahr
+- type: explanation
+  location:
+    snippet: /* Calculation and printing */
+  explanations:
+  - body: This comment explains the purpose of the following section of the code
+- type: explanation
+  location:
+    snippet: |-
+      printf("%6.2f Fahrenheit = %6.2f Celsius
+      ",
+  explanations:
+  - body: printf command is often split into several lines, but the text inside "" stays on the same line!
+- type: explanation
+  location:
+    snippet: fahr, (5.0 / 9.0) * (fahr - 32));
+  explanations:
+  - body: The values to be printed are the value of farh (temperature in Fahrenheit entered by the user) and the corresponding
+      temperature in Celsius calculated with the formula. Both values are printed using %6.2 specification

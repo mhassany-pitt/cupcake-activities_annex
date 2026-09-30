@@ -1,0 +1,202 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance3_8
+source: Example1.java
+title: IS17_inheritance3_8
+description: 'Worked example: IS17_inheritance3_8'
+authors:
+- first: Angela
+  last: Zack
+  email: angela.zack@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance3_8'
+elements:
+- type: explanation
+  location:
+    snippet: class Liquid {
+  explanations:
+  - body: Class liquid
+- type: explanation
+  location:
+    snippet: void swirl(boolean clockwise) {
+  explanations:
+  - body: Method swirl with void return type.    Accepts boolean parameter clockwise.
+- type: explanation
+  location:
+    snippet: System.out.println("Swirling Liquid");
+  explanations:
+  - body: Prints Swirling Liquid and a line return.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Closing bracket for method swirl
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: Closing bracket for class liquid.
+- type: explanation
+  location:
+    snippet: class Coffee extends Liquid {
+  explanations:
+  - body: Class Coffee, extends class Liquid.  Liquid is the parent class, Coffee is the child.
+- type: explanation
+  location:
+    snippet: void swirl(boolean clockwise) {
+    nth: 2
+  explanations:
+  - body: Method swirl with void return type, this method overrides the swirl method in parent class Liquid.   Accepts boolean
+      parameter clockwise.
+- type: explanation
+  location:
+    snippet: System.out.println("Swirling Coffee");
+  explanations:
+  - body: Prints Swirling Coffee and a line return.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: Closing bracket for method swirl
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: Closing bracket for class Coffee.
+- type: explanation
+  location:
+    snippet: class Milk extends Liquid {
+  explanations:
+  - body: Class Milk extends class Liquid.  Liquid is the parent class, Milk is the child.
+- type: explanation
+  location:
+    snippet: void swirl(boolean clockwise) {
+    nth: 3
+  explanations:
+  - body: Method swirl with void return type, this method overrides the swirl method in parent class Liquid.   Accepts boolean
+      parameter clockwise.
+- type: explanation
+  location:
+    snippet: System.out.println("Swirling Milk");
+  explanations:
+  - body: Prints Swirling Milk and a line return.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: Closing bracket for method swirl.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: Closing bracket for class Milk.
+- type: explanation
+  location:
+    snippet: class Cup {
+  explanations:
+  - body: Class Cup.
+- type: explanation
+  location:
+    snippet: private Liquid innerLiquid;
+  explanations:
+  - body: Class Instance variable of type Liquid named innerLiquid.
+- type: explanation
+  location:
+    snippet: Cup(Liquid liq) {
+  explanations:
+  - body: Constructor for a Cup class.  Parameter of type Liquid to be passed in.
+- type: explanation
+  location:
+    snippet: innerLiquid = liq;
+  explanations:
+  - body: Sets the instance variable innerLiquid to the passed in variable liq.
+- type: explanation
+  location:
+    snippet: innerLiquid.swirl(false);
+  explanations:
+  - body: Invokes the method swirl which is declared based on the class type.  The output is empty as a boolean is set to
+      false.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: Closing bracket for method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: Closing bracket for Class Cup.
+- type: explanation
+  location:
+    snippet: public class Example1 {
+  explanations:
+  - body: Class Example 1.
+- type: explanation
+  location:
+    snippet: public static void main(String[] args) {
+  explanations:
+  - body: Creates a main method to run the program.
+- type: explanation
+  location:
+    snippet: Liquid liquid = new Liquid();
+  explanations:
+  - body: Creates an object of  Liquid named liquid.
+- type: explanation
+  location:
+    snippet: Liquid coffee = new Coffee();
+  explanations:
+  - body: Creates an object of Coffee named coffee.
+- type: explanation
+  location:
+    snippet: Liquid milk = new Milk();
+  explanations:
+  - body: Creates an object of Milk named milk.
+- type: explanation
+  location:
+    snippet: Cup cup1 = new Cup(liquid);
+  explanations:
+  - body: Creates a new object of Cup passing in liquid.
+- type: explanation
+  location:
+    snippet: Cup cup2 = new Cup(coffee);
+  explanations:
+  - body: Creates a new object of Cup, passing in coffee
+- type: explanation
+  location:
+    snippet: Cup cup3 = new Cup(milk);
+  explanations:
+  - body: Creates a new object of Cup, passing in milk
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: closing bracket for the main method.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 10
+  explanations:
+  - body: closing bracket for Class Example.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 11
+  explanations:
+  - body: Extra Bracket

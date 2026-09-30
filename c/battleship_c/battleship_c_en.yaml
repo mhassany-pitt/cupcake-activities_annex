@@ -1,0 +1,146 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_battleship_c_en
+source: main.c
+title: 'IS12:: battleship.c (15.1)'
+description: 'Worked example: IS12:: battleship.c (15.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:multi_dimensional_array
+  - unspecified:variable_initialization
+  - unspecified:return
+  - unspecified:do
+  - unspecified:if_else
+  - unspecified:static
+  - unspecified:array_declaration
+  - unspecified:reference
+  - unspecified:char
+  - unspecified:equal
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:if
+  - unspecified:or
+  - unspecified:main_function
+  - unspecified:less
+  - unspecified:greater
+  - unspecified:define
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:sub
+  - unspecified:function_declaration
+  - unspecified:include
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: battleship.c (15.1)'
+elements:
+- type: explanation
+  location:
+    snippet: '#define FSIZE 5'
+  explanations:
+  - body: Size of array
+- type: explanation
+  location:
+    snippet: '#define SHIP 1'
+  explanations:
+  - body: Give meaning to numbers
+- type: explanation
+  location:
+    snippet: static int battlefield[FSIZE][FSIZE] = {
+  explanations:
+  - body: Array of FSIZE size.  The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: '{1, 0, 1, 0, 0}, /* row A */'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: '{0, 0, 0, 0, 1}, /* row B */'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: '{0, 0, 0, 0, 0}, /* row D */'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: '{1, 0, 0, 0, 1}, /* row E */ };'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: int react(char c, int r);
+  explanations:
+  - body: Function to interpret moves. One is taken in as a char, then other as an int.
+- type: explanation
+  location:
+    snippet: scanf("%d %c", &col, &ch_row);
+  explanations:
+  - body: Moves are entered by column then row.
+- type: explanation
+  location:
+    snippet: '} while(react(ch_row, col) > 0);'
+  explanations:
+  - body: Then, the order is switched for the function "react"
+- type: explanation
+  location:
+    snippet: if (col == 0) {
+  explanations:
+  - body: If zero is entered, the program quits.  A second value must be entered, though, because of scanf (needs 2 values).
+- type: explanation
+  location:
+    snippet: row = r - 'A';
+  explanations:
+  - body: By subtracting 'A' from the decimal value of the char ch_row, the results for  A to E will be int row 0 to 4.
+- type: explanation
+  location:
+    snippet: if(row < 0 || row > 4)
+  explanations:
+  - body: Nothing else but A to E ( 0 to 4 above) will be accepted.
+- type: explanation
+  location:
+    snippet: |-
+      printf("Row %c is not possible!
+      ", r);
+  explanations:
+  - body: The wrong value is printed out.
+- type: explanation
+  location:
+    snippet: else if (col <1 || col >5)
+  explanations:
+  - body: Only columns 1 to 5 will be accepted.  This is more straightforward.
+- type: explanation
+  location:
+    snippet: else if (battlefield[row][col-1] == SHIP) {
+  explanations:
+  - body: If a ship is in that position, a hit will be scored.
+- type: explanation
+  location:
+    snippet: battlefield[row][col-1] = DESTROYED;
+  explanations:
+  - body: If hit, the value changes to DESTROYED, which is 2.
+- type: explanation
+  location:
+    snippet: '} else if (battlefield[row][col-1] == DESTROYED)'
+  explanations:
+  - body: If  it's already been destroyed (value 2), only a message is printed, and nothing is changed.
+- type: explanation
+  location:
+    snippet: |-
+      printf("Miss...
+      ");
+  explanations:
+  - body: If not 1 or 2, it's a miss. (SHIP 1, DESTROYED 2)

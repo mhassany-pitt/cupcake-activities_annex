@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection35_version_1_pt
+source: query.sql
+title: ViewCreation(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: CREATE VIEW all_customer AS
+  explanations:
+  - body: Uma VIEW e' uma tabela virtual no banco de dados cujo conteudo e' definido por uma consulta. Para os usuarios, uma
+      VIEW parece ser uma tabela real, mas as linhas e as colunas visiveis atraves da VIEW sao, na verdade, o resultado de
+      uma consulta que define a VIEW.
+- type: explanation
+  location:
+    snippet: (SELECT branch_name, customer_name
+  explanations:
+  - body: Essa primeira consulta retorna a agencia e o nome dos clientes que possuem contas.
+- type: explanation
+  location:
+    snippet: UNION
+  explanations:
+  - body: Uma VIEW geralmente e' uma combinacao de varias tabelas. Portanto, usar o operador UNION permite adicionar resultados
+      de duas consultas SQL diferentes. UNION e' a combinacao de dois resultados de consultas diferentes em um unico resultado
+      sem repeticao.
+- type: explanation
+  location:
+    snippet: (SELECT branch_name, customer_name
+    nth: 2
+  explanations:
+  - body: Esta segunda consulta retorna a agencia e o nome dos clientes que possuem algum emprestimo.

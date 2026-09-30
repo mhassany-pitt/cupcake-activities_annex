@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_override_v2
+source: Animal.java
+title: Override
+description: Override
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ClassDefinition
+  - expert:ExtendsSpecification
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:ReturnStatement
+  - expert:StringDataType
+  - expert:StringLiteral
+runtime:
+  language: java
+  version: '17'
+statement: Override
+elements:
+- type: explanation
+  location:
+    snippet: public class Bird extends Animal {
+  explanations:
+  - body: Bird class is a child class (a subclass) of class Animal.
+- type: explanation
+  location:
+    snippet: public String moveMethod() {
+  explanations:
+  - body: Subclasses can override methods of their superclass to provide their own implementation of a particular piece of
+      functionality. The overriding method should have the same signature (return type, method name, list of parameters),
+      as does the overridden method.Now objects of class Bird and objects of a more general class Animal will behave differently
+      when reporting their moveMethod()

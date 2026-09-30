@@ -1,0 +1,92 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_maxloop_c_en
+source: main.c
+title: 'IS12:: maxloop.c (5.4)'
+description: 'Worked example: IS12:: maxloop.c (5.4)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:less
+  - unspecified:int
+  - unspecified:define
+  - unspecified:void
+  - unspecified:printf
+  - unspecified:reference
+  - unspecified:include
+  - unspecified:if
+  - unspecified:variable_declaration
+  - unspecified:main_function
+  - unspecified:simple_assignment
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: maxloop.c (5.4)'
+elements:
+- type: explanation
+  location:
+    snippet: Reads numbers until -1 is entered. Prints the max number entered.
+  explanations:
+  - body: The semantic interpretation of this program is funding out the size of the largest group coming to the party.
+- type: explanation
+  location:
+    snippet: '#define SENTINEL -1'
+  explanations:
+  - body: This time we will use -1 as a signal to stor calculation. Since a group of -1 people can't come to a party, it is
+      a good sentinel value.
+- type: explanation
+  location:
+    snippet: int max, nextnumber;
+  explanations:
+  - body: variable max will be used to store the "running"" max value - i.e., the max of the values read so far.
+- type: explanation
+  location:
+    snippet: scanf("%d", &nextnumber); /* read first number */
+  explanations:
+  - body: This is the usual pre-reading statement
+- type: explanation
+  location:
+    snippet: max = nextnumber; /* pre-assignment */
+  explanations:
+  - body: Since we have so far only one number read, it is also the max of all read numbers
+- type: explanation
+  location:
+    snippet: while (nextnumber != SENTINEL) {
+  explanations:
+  - body: This is a sentinel reading loop. It will work until nexnumber (value read from he user) become equal to sentinel
+      - here -1
+- type: explanation
+  location:
+    snippet: if (max <  nextnumber)
+  explanations:
+  - body: If the newly read number is greater that thhe current max, then it is the new current maximum and we need to store
+      it in variable max
+- type: explanation
+  location:
+    snippet: max = nextnumber;
+  explanations:
+  - body: This line re-assigns max to the new maximum value if the condition above is true.
+- type: explanation
+  location:
+    snippet: scanf("%d", &nextnumber);
+  explanations:
+  - body: This line reads new value from the user. It is a part of sentinel reading pattern
+- type: explanation
+  location:
+    snippet: |-
+      printf ("Max = %d
+      ", max);
+  explanations:
+  - body: After the sentinel value is read and the loop stopped, the variable max stores the maximum of all read values. So,
+      it is printed.

@@ -1,0 +1,102 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_c_ch2_variable_types
+source: main.cpp
+title: Variable Types
+description: 'Worked example: Variable Types'
+authors:
+- first: Natalya
+  last: Goreva
+  email: natalya.goreva@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Variable Types'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <iostream>'
+  explanations:
+  - body: Include the library for working with streaming data to and from the user
+- type: explanation
+  location:
+    snippet: using namespace std;
+  explanations:
+  - body: Add a reference to standard namespace that includes variables, types, constants, and functions
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: Declare the main function
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Open the body of the function
+- type: explanation
+  location:
+    snippet: int checking;
+  explanations:
+  - body: Declare an integer variable checking that will store the amount of money left in the checking account
+- type: explanation
+  location:
+    snippet: unsigned int miles;
+  explanations:
+  - body: Declare an integer variable miles that will store the number of miles traveled
+- type: explanation
+  location:
+    snippet: long days;
+  explanations:
+  - body: Declare a long integer variable that will store the number of days past since the moment Columbus sailed to America
+- type: explanation
+  location:
+    snippet: checking = -20;
+  explanations:
+  - body: Assign a value to the variable checking
+- type: explanation
+  location:
+    snippet: miles = 4276;
+  explanations:
+  - body: Assign a value to the variable miles
+- type: explanation
+  location:
+    snippet: days = 190000;
+  explanations:
+  - body: Assign a value to the variable days
+- type: explanation
+  location:
+    snippet: cout << "We have made a long journey of " << miles << " miles.";
+  explanations:
+  - body: Display how many miles the journey took
+- type: explanation
+  location:
+    snippet: cout << "Our checking account balance is " << checking;
+  explanations:
+  - body: Display the amount of money in the bank account
+- type: explanation
+  location:
+    snippet: cout << "About " << days << " days ago Columbus ";
+  explanations:
+  - body: Display how many Days ago Columbus stood on this spot
+- type: explanation
+  location:
+    snippet: cout << "stood on this spot.";
+  explanations:
+  - body: This text will be displayed on the same line with the previous text
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: main() is a function, so it should return a value. We make it 0, or in this case a dummy value
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Close the function body

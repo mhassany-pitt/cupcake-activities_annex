@@ -1,0 +1,135 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance1_5
+source: TestInheritance.java
+title: IS17_inheritance1_5
+description: 'Worked example: IS17_inheritance1_5'
+authors:
+- first: Darby
+  last: Hoffman
+  email: darby.hoffman@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance1_5'
+elements:
+- type: explanation
+  location:
+    snippet: class Person{
+  explanations:
+  - body: // instance field for Person's name
+- type: explanation
+  location:
+    snippet: private String name;
+  explanations:
+  - body: // A method to initialize the instance field name to the passed String n.
+- type: explanation
+  location:
+    snippet: public void setName(String n) {
+  explanations:
+  - body: // set the passed String n as Person's name
+- type: explanation
+  location:
+    snippet: name = n;
+  explanations:
+  - body: // end method
+- type: explanation
+  location:
+    snippet: public String getName(){
+  explanations:
+  - body: // return the student's name
+- type: explanation
+  location:
+    snippet: return name;
+  explanations:
+  - body: // end method
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: // end class
+- type: explanation
+  location:
+    snippet: class Student extends Person{
+  explanations:
+  - body: // instance field for student's number
+- type: explanation
+  location:
+    snippet: public void setStuNum(String sn)   {
+  explanations:
+  - body: // set the passed String sn as student's number
+- type: explanation
+  location:
+    snippet: stuNum = sn;
+  explanations:
+  - body: // end method
+- type: explanation
+  location:
+    snippet: public String getStuNum()   {
+  explanations:
+  - body: // Return the student's number
+- type: explanation
+  location:
+    snippet: return stuNum;
+  explanations:
+  - body: // end method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: // end class
+- type: explanation
+  location:
+    snippet: public class TestInheritance{
+  explanations:
+  - body: // main method
+- type: explanation
+  location:
+    snippet: public static void main(String[] args)   {
+  explanations:
+  - body: // Create a new Student object.
+- type: explanation
+  location:
+    snippet: Student stu = new Student();
+  explanations:
+  - body: // Set the student's name as "Sharon Hsaio."
+- type: explanation
+  location:
+    snippet: stu.setName("Sharon Hsiao");
+  explanations:
+  - body: // Set Sharon's number as 12345.
+- type: explanation
+  location:
+    snippet: stu.setStuNum("12345");
+  explanations:
+  - body: // Print Sharon's name.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Name: " + stu.getName());'
+  explanations:
+  - body: // Print Sharon's student number.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Number: " + stu.getStuNum());'
+  explanations:
+  - body: // end main method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: // end class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: // unnecessary bracket

@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection13_version_1_pt
+source: query.sql
+title: MultipleComparisons(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT customer_no, borrower.loan_no, amount
+  explanations:
+  - body: Essa consulta retorna as colunas 'customer_no' e 'amount' da tabela 'loan' e a coluna 'loan_no' da tabela 'borrower'.
+      Note que a coluna 'loan_no' requer o nome da tabela (borrower) como prefixo porque ambas as tabelas 'borrower' e 'loan'
+      possuem uma coluna com o este nome. Se o nome da tabela nao for especificado, a coluna deve ser unica dentre a tabelas
+      contidas na clausula FROM.
+- type: explanation
+  location:
+    snippet: FROM borrower, loan
+  explanations:
+  - body: Os dados sao lidos de duas tabelas diferentes.
+- type: explanation
+  location:
+    snippet: WHERE borrower.loan_no = loan.loan_no AND branch_name = 'Perryridge';
+  explanations:
+  - body: Para que o valor do emprestimo seja emparelhado corretamente com o cliente, essa condicao testa se o numero do emprestimo
+      (loan_no) e' o mesmo nas duas tabelas. Adicionalmente, apenas os emprestimos da agencia 'Perryridge' sao retornados.
+      Apenas as tuplas que satisfazem as duas condicoes sao retornadas como resultado por causa do operador logico AND.

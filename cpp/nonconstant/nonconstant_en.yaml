@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_nonconstant
+source: main.cpp
+title: NonConstant
+description: 'Worked example: NonConstant'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: NonConstant'
+elements:
+- type: explanation
+  location:
+    snippet: void convertToLowercase( char * );
+  explanations:
+  - body: Both sPtr and *sPtr are modifiable.
+- type: explanation
+  location:
+    snippet: convertToLowercase( string );
+  explanations:
+  - body: Both sPtr and *sPtr are modifiable.
+- type: explanation
+  location:
+    snippet: void convertToLowercase( char *sPtr )
+  explanations:
+  - body: Both sPtr and *sPtr are modifiable.
+- type: explanation
+  location:
+    snippet: while ( *sPtr != '\0' ) {
+  explanations:
+  - body: current character is not '\0'.
+- type: explanation
+  location:
+    snippet: if ( isupper( *sPtr ) )
+  explanations:
+  - body: if character is lowercase.
+- type: explanation
+  location:
+    snippet: '*sPtr = tolower( *sPtr );'
+  explanations:
+  - body: Both sPtr and *sPtr are modified by the convertToUppercase function.
+- type: explanation
+  location:
+    snippet: ++sPtr;
+  explanations:
+  - body: Both sPtr and *sPtr are modified by the convertToUppercase function.

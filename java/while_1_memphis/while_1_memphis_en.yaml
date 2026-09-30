@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_while_1_memphis
+source: WhileDemos.java
+title: While 1 (Memphis)
+description: 'Worked example: While 1 (Memphis)'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+  - java_ontology:WhileStatement
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: While 1 (Memphis)'
+elements:
+- type: explanation
+  location:
+    snippet: int i = 0;
+  explanations:
+  - body: i is called a "counter"
+- type: explanation
+  location:
+    snippet: while (i < 5) {
+  explanations:
+  - body: Replace the 5 with the desired number of loop iterations

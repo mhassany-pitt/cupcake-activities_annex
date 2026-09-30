@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_callbyvalue
+source: main.cpp
+title: CallbyValue
+description: 'Worked example: CallbyValue'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: CallbyValue'
+elements:
+- type: explanation
+  location:
+    snippet: int cubeByValue( int );
+  explanations:
+  - body: calculate and return cube of integer argument.
+- type: explanation
+  location:
+    snippet: answer = cubeByValue( number );
+  explanations:
+  - body: pass number by value to cubeByValue.
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: cube local variable n and return result.
+- type: explanation
+  location:
+    snippet: int cubeByValue( int n )
+  explanations:
+  - body: calculate and return cube of integer argument.
+- type: explanation
+  location:
+    snippet: return n * n * n;
+  explanations:
+  - body: cube local variable n and return result.

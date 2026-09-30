@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection41_version_1_pt
+source: query.sql
+title: AggregatingDerivedRelations_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT temp.rating, temp.average
+  explanations:
+  - body: Para que o exemplo anterior fique correto, tabelas derivadas e comparacao usando a clausula WHERE podem ser utilizadas.
+      Esse exemplo tambem e' usado para recuperar as avaliacoes cuja media de idade e' o menor valor das avaliacoes. O prefixo
+      'temp' no nome das colunas vem do nome da tabela derivada.
+- type: explanation
+  location:
+    snippet: (SELECT S.rating, AVG(S.age) AS avgage
+  explanations:
+  - body: Essa subconsulta e' usada dentro da clausula FROM da consulta principal, chamada de tabela derivada. Ela calcula
+      a media de idade dos marinheiros para cada avaliacao. Os marinheiros sao agrupados pelas avaliacoes e a media de idade
+      e' calculada em cada grupo. A coluna que contem o valor da media e' renomeada para 'avgage'.
+- type: explanation
+  location:
+    snippet: GROUP BY S.rating) AS temp
+  explanations:
+  - body: A subconsulta derivada e' renomeada para 'temp'. Uma vez que foi renomeada, o novo nome pode ser usado nas consultas
+      externas.
+- type: explanation
+  location:
+    snippet: WHERE temp.avgage =
+  explanations:
+  - body: Os valores da coluna 'avgage' na tabela derivada sao comparados com a segunda subconsulta.
+- type: explanation
+  location:
+    snippet: (SELECT MIN(temp.avgage)
+  explanations:
+  - body: Esta consulta calcula o valor minimo entre as medias de idade ('avgage') da tabela derivada, 'temp'.

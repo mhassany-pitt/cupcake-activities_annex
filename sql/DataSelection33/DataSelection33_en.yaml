@@ -1,0 +1,95 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection33
+source: query.sql
+title: Derived Relations
+description: Derived Relations
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AsClause
+  - expert:RenamingAttribute
+  - expert:TableAlias
+  - expert:Assertion
+  - expert:SelectClause
+  - expert:Timestamp
+  - expert:FromClause
+  - expert:AvgFunction
+  - expert:GreaterThanComparison
+  - expert:BracketCharacter
+  - expert:SelectStatement
+  - expert:Insertion
+  - expert:CandidateKey
+  - expert:WhereClause
+  - expert:SingleAttributeGrouping
+  - expert:MultipleAttributeSelection
+  - expert:DerivedTable
+  - expert:SingleTableSelection
+  - sql_ontology:DateTimeType
+  - sql_ontology:Assertion
+  - sql_ontology:GroupByClause
+  - sql_ontology:GreaterThanComparison
+  - sql_ontology:SelectStatement
+  - sql_ontology:AsClause
+  - sql_ontology:BracketCharacter
+  - sql_ontology:DerivedTable
+  - sql_ontology:FromClause
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:AvgFunction
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_concept:Insertion
+  - sql_concept:CandidateKey
+runtime:
+  language: sql
+  version: '2016'
+statement: Derived Relations
+elements:
+- type: explanation
+  location:
+    snippet: SELECT branch_name, avg_balance
+  explanations:
+  - body: In this example, an derived subquery is used in the FROM clause.  The column names used in this main query is not
+      from the original 'account' table. It is aliase name from the derived subquery relation.
+- type: explanation
+  location:
+    snippet: FROM
+  explanations:
+  - body: SQL allows a subquery expression to be used in the FROM clause and this is the derived relations.
+- type: explanation
+  location:
+    snippet: (SELECT branch_name, AVG(balance)
+  explanations:
+  - body: This subquery is to select branch name and average account value of branch.
+- type: explanation
+  location:
+    snippet: FROM account
+  explanations:
+  - body: Note that we do not need to use the HAVING clause, since we compute the temporary relation <i>branch_avg</i> in
+      the FROM clause, and the attributes of <i>branch_avg</i> can be used directly in the WHERE clause.
+- type: explanation
+  location:
+    snippet: GROUP BY branch_name)
+  explanations:
+  - body: This GROUP BY clause is used in derived relation.
+- type: explanation
+  location:
+    snippet: AS branch_avg(branch_name, avg_balance))
+  explanations:
+  - body: The derived subquery and the two columns are renamed using tuple variables, AS. Hence, the whole subquery is 'branch_avg',
+      the first column is 'branch_name' and the second column is 'avg_balance'.
+- type: explanation
+  location:
+    snippet: WHERE avg_balance > 1200;
+  explanations:
+  - body: In order to limit the value of avg_balance column WHERE clause is used. Because the derived relations is temporal
+      table and the test value, avg_balance, is read from the table directly, there is no need to used HAVING comparison.

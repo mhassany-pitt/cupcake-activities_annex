@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt7_2_en
+source: main.py
+title: Creating list of items
+description: 'Worked example: Creating list of items'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Creating list of items'
+elements:
+- type: explanation
+  location:
+    snippet: 'def make_list():'
+  explanations:
+  - body: Defining the function 'make_list'. Here we do not pass any arguments or parameters to the function
+- type: explanation
+  location:
+    snippet: team_number = int (input ("How many teams in a hackathlon?"))
+  explanations:
+  - body: This statement takes in the user input and converts the input to 'int' type
+- type: explanation
+  location:
+    snippet: 'for i in range(team_number):'
+  explanations:
+  - body: this 'for loop' iterates from 0 to team number - 1, i.e., it iterates through each team
+- type: explanation
+  location:
+    snippet: teamlist[i] = int (input ("? "))
+  explanations:
+  - body: This statement takes in the user input to number of members in a team. Note that this is inside the for loop so
+      it will ask for number of members in each team as it iterates through each team
+- type: explanation
+  location:
+    snippet: return teamlist
+  explanations:
+  - body: It then returns the list with the numbers of members in each team

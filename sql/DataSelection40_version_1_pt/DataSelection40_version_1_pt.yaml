@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection40_version_1_pt
+source: query.sql
+title: Retrievingdatafromview_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: FROM all_customer
+  explanations:
+  - body: A view nomeada 'all_customer' e' usada no lugar de uma tabela real.
+- type: explanation
+  location:
+    snippet: WHERE branch_name = 'Perryridge';
+  explanations:
+  - body: Os resultados se restringem aos clientes pertencentes 'a agencia 'Perryridge'.

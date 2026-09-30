@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_array_declaration
+source: Main.java
+title: DEPRECATED_Array Declaration
+description: 'Worked example: DEPRECATED_Array Declaration'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Array Declaration'
+elements:
+- type: explanation
+  location:
+    snippet: doube[] A =  new double[10]
+  explanations:
+  - body: declares an array of type double, allocates memory for 10 doubles.
+- type: explanation
+  location:
+    snippet: int B[] = {50,20,45,82,25,63};
+  explanations:
+  - body: You may or may not define the size of the array in the declaration time.

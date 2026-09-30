@@ -1,0 +1,54 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_relational_operators_v2
+source: relational_operators.java
+title: relational operators
+description: relational operators
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AddExpression
+  - expert:BooleanDataType
+  - expert:ClassDefinition
+  - expert:EqualExpression
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:LessEqualExpression
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:SimpleVariable
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: relational operators
+elements:
+- type: explanation
+  location:
+    snippet: boolean flag;
+  explanations:
+  - body: "boolean type is used to store boolean values. Variable 'flag' can have only one \r\nof two values: true or false."
+- type: explanation
+  location:
+    snippet: flag = 5 < 6;
+  explanations:
+  - body: "In this case, the right side of the assignment sign '=' is a relational \r\nexpression. The result of the relational\
+      \ expression has a boolean type and \r\ncan be stored in a \r\nboolean variable. In this case the result of '5 < 6'\
+      \ is \r\ntrue, hence 'flag' becomes 'true'."
+- type: explanation
+  location:
+    snippet: flag = (i == j);
+  explanations:
+  - body: flag becomes false, since 3 is not equal to 4

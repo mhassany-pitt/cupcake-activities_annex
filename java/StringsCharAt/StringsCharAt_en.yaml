@@ -1,0 +1,41 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_StringsCharAt
+source: Main.java
+title: Strings (charAt)
+description: 'Worked example: Strings (charAt)'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ObjectMethodInvocation
+  - expert:SimpleAssignmentExpression
+  - expert:CharDataType
+  - expert:StringDataType
+  - expert:StringInitializationStatement
+  - expert:StringLiteral
+  - expert:java.lang.String.charAt
+  - expert:StringVariable
+  - expert:java.lang.System.out.println
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Strings (charAt)'
+elements:
+- type: explanation
+  location:
+    snippet: char result = s.charAt(8);
+  explanations:
+  - body: The method 'charAt()' returns a char at the specified index.
+- type: explanation
+  location:
+    snippet: System.out.println(result);
+  explanations:
+  - body: Prints a.

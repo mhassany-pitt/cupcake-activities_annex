@@ -1,0 +1,65 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_23_en
+source: main.py
+title: Writing to a text file
+description: 'Worked example: Writing to a text file'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Attribute
+  - parser:Call
+  - parser:Assign
+  - parser:Str
+  - unspecified:Attribute
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Writing to a text file'
+elements:
+- type: explanation
+  location:
+    snippet: f = open("test.txt","w")
+  explanations:
+  - body: opens file with name of "test.txt" Here we give 2 arguments. The first as we know specifies the name of the text
+      file. The second argument specifies the mode of writing. 'w' stands for write. When we open the text file using the
+      mode 'w' it erases the existing data and writes the new data that we specify
+- type: explanation
+  location:
+    snippet: f.write("This is the first Line")
+  explanations:
+  - body: This statement writes the following string into the text file
+- type: explanation
+  location:
+    snippet: f.write("This is the second line")
+  explanations:
+  - body: Writing another line into the text file
+- type: explanation
+  location:
+    snippet: f.close()
+  explanations:
+  - body: Once we have written all the required lines into the text file, we close the connection to the text file
+- type: explanation
+  location:
+    snippet: f = open("test.txt","a")
+  explanations:
+  - body: opens file with name of "test.txt". Here the second argument we specified is 'a' which stands for append. This means
+      that it does not delete the existing data when the new data is written but it appends the new data at the end of the
+      file
+- type: explanation
+  location:
+    snippet: f.close()
+    nth: 2
+  explanations:
+  - body: Finally when we are done appending the new data, we close the connection to the file

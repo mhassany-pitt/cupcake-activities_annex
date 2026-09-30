@@ -1,0 +1,67 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_multi_selection
+source: MultipleSelection.java
+title: ISD::MultipleSelection.java
+description: 'Worked example: ISD::MultipleSelection.java'
+authors:
+- first: Christopher
+  last: Banks
+  email: christopher.banks@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::MultipleSelection.java'
+elements:
+- type: explanation
+  location:
+    snippet: Container c = getContentPane();
+  explanations:
+  - body: Create a Container object
+- type: explanation
+  location:
+    snippet: colorList = new JList( colorNames );
+  explanations:
+  - body: Initialize the JList with an array of Strings.
+- type: explanation
+  location:
+    snippet: colorList.setVisibleRowCount( 5 );
+  explanations:
+  - body: Specify the number of items to appear at a time.
+- type: explanation
+  location:
+    snippet: colorList.setFixedCellHeight( 15 );
+  explanations:
+  - body: Set the cell height
+- type: explanation
+  location:
+    snippet: ListSelectionModel.MULTIPLE_INTERVAL_SELECTION );
+  explanations:
+  - body: Specify that list is to be MULTIPLE_INTERVAL_SELECTION
+- type: explanation
+  location:
+    snippet: c.add( new JScrollPane( colorList ) );
+  explanations:
+  - body: attach component to Container c.
+- type: explanation
+  location:
+    snippet: colorList.getSelectedValues() );
+  explanations:
+  - body: Use the array returned by getSelectedValues to set the items of copyList.
+- type: explanation
+  location:
+    snippet: c.add( copy );
+  explanations:
+  - body: attach component to Container c.
+- type: explanation
+  location:
+    snippet: ListSelectionModel.SINGLE_INTERVAL_SELECTION );
+  explanations:
+  - body: Select a contiguous group of items by holding Shift key.

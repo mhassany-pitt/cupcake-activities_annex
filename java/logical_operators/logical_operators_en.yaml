@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_logical_operators
+source: Main.java
+title: DEPRECATED_logical operators
+description: 'Worked example: DEPRECATED_logical operators'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_logical operators'
+elements:
+- type: explanation
+  location:
+    snippet: If (age>= 21)
+  explanations:
+  - body: 'The greater than or the equality operators can be combined to produce an operator as follows: >=. This is the "greater
+      than or equal to" operator.'
+- type: explanation
+  location:
+    snippet: If (age!= 21)
+  explanations:
+  - body: The Inequality Operator is used to compare two values for inequality.

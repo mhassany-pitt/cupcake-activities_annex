@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_StringsParse
+source: Main.java
+title: Strings (parse)
+description: 'Worked example: Strings (parse)'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:java.lang.Integer.parseInt
+  - expert:DoubleDataType
+  - expert:java.lang.System.out.println
+  - expert:IntDataType
+  - expert:java.lang.Double.parseDouble
+  - expert:SimpleAssignmentExpression
+  - expert:StringDataType
+  - expert:StringLiteral
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Strings (parse)'
+elements:
+- type: explanation
+  location:
+    snippet: int x =Integer.parseInt("9");
+  explanations:
+  - body: The method 'java.lang.Integer.parseInt(String s)' parses the string argument s as a signed decimal integer. The
+      variable x is initialized by value 9.
+- type: explanation
+  location:
+    snippet: double y = Double.parseDouble("5");
+  explanations:
+  - body: The method 'java.lang.Double.parseDouble(String s)' returns a new double initialized to the value represented by
+      the parsing of specified String as a double. Here the variable y is initialized by 5.0.
+- type: explanation
+  location:
+    snippet: System.out.println(x);
+  explanations:
+  - body: Prints 9.
+- type: explanation
+  location:
+    snippet: System.out.println(y);
+  explanations:
+  - body: Prints 5.0.

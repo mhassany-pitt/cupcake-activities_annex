@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection17_version_1_pt
+source: query.sql
+title: StringOperation_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: WHERE customer_street LIKE '%Main%';
+  explanations:
+  - body: 'O SQL possui um operador utilizado para comparar substrings. O operador ''LIKE'' utiliza padroes que sao descritos
+      utilizando dois caracteres especiais: <ul><li>porcentagem(%): o caractere % corresponde a qualquer substring. <li>sublinhado(_):
+      o caractere _ corresponde a qualquer caractere.</ul> O simbolo de porcentagem (%) corresponde a qualquer sequencia de
+      zero ou mais caracteres. Nesse exemplo, onde quer que esteja a palavra ''Main'' no endereco do cliente (customer_street)
+      resulta na condicao verdadeira. Por exemplo, qualquer um dos seguintes enderecos seriam retornados: Pittsburgh Main
+      Street, Chrismain Blvd, Main Government Bulding, Maine Avenue.'

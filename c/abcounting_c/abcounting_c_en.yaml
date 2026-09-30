@@ -1,0 +1,84 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_abcounting_c_en
+source: main.c
+title: 'IS12:: abcounting.c (118.4)'
+description: 'Worked example: IS12:: abcounting.c (118.4)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:int
+  - unspecified:void
+  - unspecified:printf
+  - unspecified:if
+  - unspecified:or
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:equal
+  - unspecified:main_function
+  - unspecified:if_else
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:post_increment
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: abcounting.c (118.4)'
+elements:
+- type: explanation
+  location:
+    snippet: int ch;
+  explanations:
+  - body: variable ch will be used to read characters from the standard input. It is defined as int since it should be able
+      to get the EOF value that is not char
+- type: explanation
+  location:
+    snippet: int a = 0, b = 0, c = 0;
+  explanations:
+  - body: 'initializing the counters. We could also do it shorter: a = b = c = 0;'
+- type: explanation
+  location:
+    snippet: while ((ch = getchar()) != EOF)
+  explanations:
+  - body: When the condition of this while loop is executed, a new character is read from the standard input and assigned
+      to ch. If it is EOF, the loop is over
+- type: explanation
+  location:
+    snippet: if (ch == 'a' || ch == 'A')
+  explanations:
+  - body: if the character read is capital or lower case A...
+- type: explanation
+  location:
+    snippet: a++;
+  explanations:
+  - body: this line increments the counter of a
+- type: explanation
+  location:
+    snippet: else if (ch == 'b' || ch == 'B')
+  explanations:
+  - body: otherwise, if the character read is capital or lower case B...
+- type: explanation
+  location:
+    snippet: b++;
+  explanations:
+  - body: this line increments the counter of b
+- type: explanation
+  location:
+    snippet: else if (ch == 'c' || ch == 'C')
+  explanations:
+  - body: otherwise, if the character read is capital or lower case B...
+- type: explanation
+  location:
+    snippet: c++;
+  explanations:
+  - body: this line increments the counter of c

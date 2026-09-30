@@ -1,0 +1,60 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_inheritance_polymorphism_1
+source: SuperClass.java
+title: Inheritance and Polymorphism
+description: 'Worked example: Inheritance and Polymorphism'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:ExtendsSpecification
+  - expert:FormalMethodParameter
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ObjectCreationStatement
+  - expert:ObjectMethodInvocation
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Inheritance and Polymorphism'
+elements:
+- type: explanation
+  location:
+    snippet: public class SubClass extends SuperClass{
+  explanations:
+  - body: Class SubClass inherits from SuperClass
+- type: explanation
+  location:
+    snippet: public void whoAmI(){
+  explanations:
+  - body: "The method whoAmI() is override, making objects in the sub class do a different \r\nthing than objects in the super\
+      \ class."
+- type: explanation
+  location:
+    snippet: SuperClass theObject = new SubClass();
+  explanations:
+  - body: "An object is created: theObject. It is declared as being in the class SuperClass. \r\nHowever it is created as\
+      \ SubClass (see the right side of the statement: new \r\nSubClass())."
+- type: explanation
+  location:
+    snippet: theObject.whoAmI();
+  explanations:
+  - body: "theObject is treated as being from the SuperClass, however, the method is \r\noverride and it prints \"I am an\
+      \ object of the sub class\"."

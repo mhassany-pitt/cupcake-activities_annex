@@ -1,0 +1,114 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_qpa_or_c_en
+source: main.c
+title: 'IS12:: qpa_or.c (117.4)'
+description: 'Worked example: IS12:: qpa_or.c (117.4)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:less
+  - unspecified:define
+  - unspecified:reference
+  - unspecified:variable_declaration
+  - unspecified:or
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:float
+  - unspecified:if_else
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: qpa_or.c (117.4)'
+elements:
+- type: explanation
+  location:
+    snippet: /* Example qpa_or.c
+  explanations:
+  - body: Name of the program
+- type: explanation
+  location:
+    snippet: Admission to BSIS program
+  explanations:
+  - body: Title of the program
+- type: explanation
+  location:
+    snippet: 'Goal: The use of else-if and or operator (II)'
+  explanations:
+  - body: Educational goal
+- type: explanation
+  location:
+    snippet: 'Author: Peter Brusilovsky'
+  explanations:
+  - body: Author
+- type: explanation
+  location:
+    snippet: You are admitted only if your general and IS QPAs
+  explanations:
+  - body: This and the following line explain the logics of the program. It is important for a reader to understand what is
+      going on
+- type: explanation
+  location:
+    snippet: '#define MINQPA 2.5'
+  explanations:
+  - body: This constant defines general QPA threshold
+- type: explanation
+  location:
+    snippet: '#define MINISQPA 2.75'
+  explanations:
+  - body: This constant defines IS QPA threshold
+- type: explanation
+  location:
+    snippet: 'printf("Your general QPA?: ");'
+  explanations:
+  - body: Prompt to enter general QPA
+- type: explanation
+  location:
+    snippet: scanf("%f", &qpa1);
+  explanations:
+  - body: The general QPA is read as a floating point number and assigned to variable qpa1
+- type: explanation
+  location:
+    snippet: 'printf("Your IS QPA?: ");'
+  explanations:
+  - body: Prompt to enter IS QPA
+- type: explanation
+  location:
+    snippet: scanf("%f", &qpa2);
+  explanations:
+  - body: The IS QPA is read as a floating point number and assigned to variable qpa1
+- type: explanation
+  location:
+    snippet: if (qpa1 < MINQPA || qpa2 < MINISQPA)
+  explanations:
+  - body: This complex condition will be true (i.e., 1) if at least one of the components is true -  ether qpa1 < MINQPA or
+      qpa2 < MINISQPA or both
+- type: explanation
+  location:
+    snippet: |-
+      printf("Your QPA is too low for BSIS
+      ");
+  explanations:
+  - body: If the complex condition is true (1) this "then" part is executed reporting low QPA
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: Else part will be executed if the condition is false, in that case it means that qpa1 >= MINQPA and qpa2 >= MINISQPA
+- type: explanation
+  location:
+    snippet: |-
+      printf("You are admitted to BSIS program!
+      ");
+  explanations:
+  - body: In that case, the report about admission is printed

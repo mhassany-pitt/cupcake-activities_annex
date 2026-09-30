@@ -1,0 +1,75 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_21_en
+source: main.py
+title: Exceptions 2
+description: 'Worked example: Exceptions 2'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Index
+  - parser:For
+  - parser:Tuple
+  - parser:Int
+  - parser:TryExcept
+  - parser:ExceptHandler
+  - parser:Call
+  - parser:arg
+  - parser:Assign
+  - parser:FunctionDef
+  - unspecified:arg
+  - unspecified:ExceptHandler
+  - unspecified:For
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:FunctionDef
+  - unspecified:Int
+  - unspecified:Tuple
+  - unspecified:Index
+  - unspecified:TryExcept
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Exceptions 2'
+elements:
+- type: explanation
+  location:
+    snippet: 'def print_number(n):'
+  explanations:
+  - body: Defining a function 'print_number' and passing in the interger argument 'n'
+- type: explanation
+  location:
+    snippet: print(n)
+  explanations:
+  - body: printing out the value of 'n'
+- type: explanation
+  location:
+    snippet: the_list = (1, 2, 3, 4, 5)
+  explanations:
+  - body: Creating a list containing 5 integer elements
+- type: explanation
+  location:
+    snippet: 'for i in range(10):'
+  explanations:
+  - body: a for loop that iterates 10 times
+- type: explanation
+  location:
+    snippet: 'try:'
+  explanations:
+  - body: the try block tries to print elements of the lists if they exist at a given index in the list
+- type: explanation
+  location:
+    snippet: 'except:'
+  explanations:
+  - body: There are 5 elements in the list and the for loop runs for 10 iterations. So, from iteration numer 6 onwards the
+      try block will not find elements at the given index. This statement means that if there are no elements at the index
+      that we are searching then we manually pass an integer argument by calling the function definition. Here instead of
+      raising an error, we customized the fail-safe.

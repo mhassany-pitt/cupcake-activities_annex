@@ -1,0 +1,40 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataDeletion3_version_1_pt
+source: query.sql
+title: DeletingwithCondition(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: DELETE FROM account
+  explanations:
+  - body: Esse exemplo mostra a exclusao de tuplas da tabela 'account'.
+- type: explanation
+  location:
+    snippet: WHERE balance <
+  explanations:
+  - body: |-
+      The order of this query execution is firstly, the subquery to calculate the average amount of all account is executed and then the balance of each account is compared with the average. Lastly, the corresponding account is deleted. <br>To limit the data, balance data is compared with the average balance in subquery result.
+
+      Primeiramente, a subconsulta e' executada para calcular o valor medio do saldo das contas e, em seguida, o saldo e' comparado com a media. Por fim, a conta que possui saldo menor que a media e' excluida.
+- type: explanation
+  location:
+    snippet: (SELECT AVG(balance)
+  explanations:
+  - body: Esta subconsulta calcula o valor medio do saldo das contas.

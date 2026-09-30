@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt7_5_en
+source: main.py
+title: Removing list elements
+description: 'Worked example: Removing list elements'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Removing list elements'
+elements:
+- type: explanation
+  location:
+    snippet: a.pop()
+  explanations:
+  - body: Since no argument is passed within the round paranthesis, it will by default remove the last element of the list
+- type: explanation
+  location:
+    snippet: a.pop(0)
+  explanations:
+  - body: This command will remove the first element fromt the list since '0' is passed as the argument in the paranthesis
+      which satands for 0th index

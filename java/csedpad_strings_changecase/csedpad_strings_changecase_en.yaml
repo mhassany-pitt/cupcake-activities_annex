@@ -1,0 +1,75 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_strings_changecase
+source: ChangeCase.java
+title: (Strings) Change case - CSEdPad
+description: |-
+  Given a string, this program converts the string into uppercase and lowercase.
+  present on those variable to either uppercase or lowercase.
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:StringVariable
+  - webex:StringLiteral
+  - webex:ObjectMethodInvocation
+  - webex:StringInitializationStatement
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringInitializationStatement
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: |-
+  Given a string, this program converts the string into uppercase and lowercase.
+  present on those variable to either uppercase or lowercase.
+elements:
+- type: explanation
+  location:
+    snippet: String full_name = "Cristiano Ronaldo";
+  explanations:
+  - body: |-
+      declare a variable full_name of string data type. It is assigned
+      a value of Cristiano Ronaldo.
+- type: explanation
+  location:
+    snippet: System.out.println(full_name.toUpperCase());
+  explanations:
+  - body: |-
+      converting the variable full_name to upper case using
+      toUpperCase method and printing the result.
+- type: explanation
+  location:
+    snippet: System.out.println(full_name.toLowerCase());
+  explanations:
+  - body: converting the variable full_name to lowercase using toLowerCase method and printing the result.

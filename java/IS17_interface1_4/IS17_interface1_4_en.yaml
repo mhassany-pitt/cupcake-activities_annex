@@ -1,0 +1,162 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface1_4
+source: TryOut.java
+title: IS17_interface1_4
+description: 'Worked example: IS17_interface1_4'
+authors:
+- first: Eric
+  last: Riemer
+  email: eric.riemer@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface1_4'
+elements:
+- type: explanation
+  location:
+    snippet: interface Act {
+  explanations:
+  - body: initialize an abstract interface class of the type Act
+- type: explanation
+  location:
+    snippet: void act();
+  explanations:
+  - body: uninstantiable placeholder of act
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: close class Act
+- type: explanation
+  location:
+    snippet: class Actor1 implements Act {
+  explanations:
+  - body: New class of type Actor1 is a subclass of the class Act
+- type: explanation
+  location:
+    snippet: public void act() {
+  explanations:
+  - body: method act that does not return a value
+- type: explanation
+  location:
+    snippet: System.out.println("To be, or not to be");
+  explanations:
+  - body: prints followed by a new line "To be, or not to be"
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of method act
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end of class Actor1
+- type: explanation
+  location:
+    snippet: class Actor2 implements Act {
+  explanations:
+  - body: New class of type Actor2 is a subclass of the class Act
+- type: explanation
+  location:
+    snippet: public void act() {
+    nth: 2
+  explanations:
+  - body: method act that does not return a value
+- type: explanation
+  location:
+    snippet: System.out.println("Wherefore art thou Romeo?");
+  explanations:
+  - body: prints followed by a new line "Wherefore art thou Romeo?"
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: end of method act
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: end of class Actor2
+- type: explanation
+  location:
+    snippet: public class TryOut {
+  explanations:
+  - body: new publicly callable class of type TryOut
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: initializes the main method (making this a class that can be run)
+- type: explanation
+  location:
+    snippet: Actor1 hamlet = new Actor1();
+  explanations:
+  - body: create a new instance of Actor1 labeled hamlet
+- type: explanation
+  location:
+    snippet: Actor2 juliet = new Actor2();
+  explanations:
+  - body: create a new instance of Actor2 labeled juliet
+- type: explanation
+  location:
+    snippet: tryout(hamlet);
+  explanations:
+  - body: call the method tryout with the parameter hamlet
+- type: explanation
+  location:
+    snippet: tryout(juliet);
+  explanations:
+  - body: call the method tryout with the parameter juliet
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: close main method
+- type: explanation
+  location:
+    snippet: private static void tryout(Act actor) {
+  explanations:
+  - body: new private method tryout that receives an actor of the type Act
+- type: explanation
+  location:
+    snippet: actor.act();
+  explanations:
+  - body: runs the given actor through the method act
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: end of method tryout
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: end of class tryout
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: error on } remove it
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 10
+  explanations:
+  - body: error on } remove it

@@ -1,0 +1,88 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_CreateObjectDemo_v2
+source: CreateObjectDemo.java
+title: Object Creation and Method Calls
+description: Object Creation and Method Calls
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:FormalMethodParameter
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ObjectCreationStatement
+  - expert:ObjectMethodInvocation
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Object Creation and Method Calls
+elements:
+- type: explanation
+  location:
+    snippet: Point myPoint = new Point(23, 94);
+  explanations:
+  - body: The code before the equal sign are all variable declarations that associate a variable name with an object type.
+      The new keyword is a Java operator that creates the object. The new operator is followed by a call to a constructor,
+      which initializes the new object.
+- type: explanation
+  location:
+    snippet: Rectangle rectOne = new Rectangle(myPoint , 100, 200);
+  explanations:
+  - body: This line of code creates an object of class Rectangle and assigns it to the variable 'rectOne'. myPoint object
+      is used as one of the parameters to specisfy the origin of the rectangle
+- type: explanation
+  location:
+    snippet: Rectangle rectTwo = new Rectangle(myPoint , 50, 100);
+  explanations:
+  - body: Another object of class Rectangle is created
+- type: explanation
+  location:
+    snippet: 'System.out.println("Width of rectOne: " + rectOne.getWidth());'
+  explanations:
+  - body: To print the width of rectOne we invoke method getWdith() on the object rectOne and print the result.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Height of rectOne: " + rectOne.getHeight());'
+  explanations:
+  - body: Similar for the height of this rectangle - we call the method getHeight() for it and display the result
+- type: explanation
+  location:
+    snippet: 'System.out.println("Area of rectOne: " + rectOne.getArea());'
+  explanations:
+  - body: This line prints the area of rectOne
+- type: explanation
+  location:
+    snippet: rectTwo.move(10, 20);
+  explanations:
+  - body: Unlike three previous methods that we used only to retrieve the data of an object, this method changes the object
+      data. This is a mutator method. It moves rectTwo by modifying the x and y coordinates of its origin.
+- type: explanation
+  location:
+    snippet: 'System.out.println("X Position of rectTwo: " + rectTwo.getOrigin().getX());'
+  explanations:
+  - body: This method prints the X coordinate of rectTwo's origin. We invoke method getOrigin() on rectTwo() to get an access
+      to the Point object that stores rectTwo's origin and then we invoke getX() method on the retrieved Point object to obtain
+      the X coordinate of the origin.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Y Position of rectTwo: " + rectTwo.getOrigin().getY());'
+  explanations:
+  - body: Similar to print the Y coordinate of rectTwo's origin.

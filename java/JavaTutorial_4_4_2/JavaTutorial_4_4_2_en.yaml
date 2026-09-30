@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_4_2
+source: MainClass.java
+title: Sum using While
+description: Sum using While
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LessEqualExpression
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+  - expert:WhileStatement
+runtime:
+  language: java
+  version: '17'
+statement: Sum using While
+elements:
+- type: explanation
+  location:
+    snippet: while (i <= limit) {
+  explanations:
+  - body: This while evaluates condition (i<=limit) 20 times
+- type: explanation
+  location:
+    snippet: System.out.println("sum = " + sum);
+  explanations:
+  - body: Prints "sum = 20"
+- type: explanation
+  location:
+    snippet: System.out.println("i = " + i);
+  explanations:
+  - body: Prints i = 21

@@ -1,0 +1,135 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableCreation5
+source: query.sql
+title: Check Constraint (1)
+description: Check Constraint (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SimpleSubQuery
+  - expert:Rule
+  - expert:StringType
+  - expert:SubstringExtraction
+  - expert:SelectClause
+  - expert:TableAlias
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:AttributeSpecification
+  - expert:TupleSelectionCondition
+  - expert:SelectStatement
+  - expert:UniqueKeyConstraint
+  - expert:BracketCharacter
+  - expert:WhereClause
+  - expert:CheckConstraint
+  - expert:NumericType
+  - expert:CommaCharacter
+  - expert:SingleAttributeSelection
+  - expert:MultipleTableSelection
+  - expert:CreateTableClause
+  - expert:CreateTableStatement
+  - expert:NotEqualComparison
+  - expert:DatabaseManagement
+  - expert:DateTimeType
+  - expert:SingleTableSelection
+  - expert:DotCharacter
+  - expert:PrimaryKeyClause
+  - expert:PrimaryKeyConstraint
+  - expert:EqualComparison
+  - sql_ontology:MultipleTableSelection
+  - sql_ontology:SubQuery
+  - sql_ontology:DotCharacter
+  - sql_ontology:AttributeName
+  - sql_ontology:CheckConstraint
+  - sql_ontology:TableAlias
+  - sql_ontology:CommaCharacter
+  - sql_ontology:PrimaryKeyConstraint
+  - sql_ontology:PrimaryKeyClause
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:CreateTableStatement
+  - sql_ontology:SelectClause
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:CreateTableClause
+  - sql_ontology:UniqueKeyConstraint
+  - sql_ontology:Integer
+  - sql_ontology:AttributeSpecification
+  - sql_ontology:FromClause
+  - sql_ontology:EqualComparison
+  - sql_ontology:NotEqualComparison
+  - sql_ontology:SelectStatement
+  - sql_ontology:BracketCharacter
+  - sql_ontology:Date
+  - sql_ontology:WhereClause
+  - sql_concept:TupleSelectionCondition
+  - sql_concept:Rule
+  - sql_concept:SubstringExtraction
+runtime:
+  language: sql
+  version: '2016'
+statement: Check Constraint (1)
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE Reserves
+  explanations:
+  - body: This is to create table named 'Reserves'. It has three columns - sname, bid, and day.
+- type: explanation
+  location:
+    snippet: (sname CHAR(10),
+  explanations:
+  - body: '''sname'' column is 10 ditigs character domain type.'
+- type: explanation
+  location:
+    snippet: bid INTEGER,
+  explanations:
+  - body: '''bid'' is integer domain type.'
+- type: explanation
+  location:
+    snippet: day DATE,
+  explanations:
+  - body: '''day'' is date domain type.'
+- type: explanation
+  location:
+    snippet: PRIMARY KEY(bid, day),
+  explanations:
+  - body: One boat have to be reserved once in a day.
+- type: explanation
+  location:
+    snippet: CONSTRAINT noInterlakeRes
+  explanations:
+  - body: This is to define CHECK constraint. Before defining constraint, it is capable to specify the constraint name. The
+      following CHECK constraint is named as 'noInterlakeRes'.
+- type: explanation
+  location:
+    snippet: CHECK
+  explanations:
+  - body: CHECK contraint is a search condition that produces a true/false value. When a check constraint is specified for
+      a column, the DBMS authomatically checks the value of that column each time a new row is inserted or a row is updated
+      to ensure that the search condition is true. A column check constraint is specified as part of the column definition
+      within the CREATE TABLE statement.
+- type: explanation
+  location:
+    snippet: ('Interlake' <>
+  explanations:
+  - body: In this example, CHECK constraint named 'noInterlakeRes' is to check whether the name of boat ('bname') that a person
+      want to reserve is 'Interlake'. It is to limit the reservation of 'Interlake' boat.
+- type: explanation
+  location:
+    snippet: (SELECT B.bname
+  explanations:
+  - body: This subquery is to specify the condition should be checked for 'Interlake' column. This subquery is to read boat
+      name from 'boats' table.
+- type: explanation
+  location:
+    snippet: WHERE B.bid = bid)));
+  explanations:
+  - body: This is to read boat name in 'boats' table corresponding to the boat id.

@@ -1,0 +1,78 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_3_en
+source: main.py
+title: Logical Operators
+description: 'Worked example: Logical Operators'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:And
+  - parser:Int
+  - parser:Or
+  - parser:NotEq
+  - parser:Call
+  - parser:Not
+  - parser:Eq
+  - parser:Assign
+  - parser:If
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Not
+  - unspecified:Or
+  - unspecified:Eq
+  - unspecified:Int
+  - unspecified:NotEq
+  - unspecified:If
+  - unspecified:And
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Logical Operators'
+elements:
+- type: explanation
+  location:
+    snippet: a = 1
+  explanations:
+  - body: Assigning integer '1' to the variable 'a'
+- type: explanation
+  location:
+    snippet: b = 2
+  explanations:
+  - body: Assigning integer '2' to the variable 'b'
+- type: explanation
+  location:
+    snippet: 'if a == 1 and b == 2:'
+  explanations:
+  - body: This statement checks if 'a' is equal to '1' as well as if 'b' i equal to '2'. Here the 'and' operator denotes that
+      both the conditions should be true
+- type: explanation
+  location:
+    snippet: 'if a == 0 or b == 2:'
+  explanations:
+  - body: This statement checks if 'a' is equal to '0' or if 'b' is equal to '2'. Here the 'or' operator denotes that any
+      one condition should be true. It is fine if both the conditions are true. But it is not fine if none of the conditions
+      are true
+- type: explanation
+  location:
+    snippet: 'if not (a == 1 and b == 3):'
+  explanations:
+  - body: This is a slightly tricky operator usage. The condition inside the round parenthesis states that both a=1 and b=3
+      shoud be satisfied due to the use of 'and' operator. But since both the conditions are not satisfied, the condition
+      inside the parenthesis is False. But then there is a 'not' operator outside of the parenthesis which reverses the case
+      Hence the entire statement is summarized as "Check if the conditions inside the parenthesis is not true"
+- type: explanation
+  location:
+    snippet: 'if a != 0 and b != 3:'
+  explanations:
+  - body: |-
+      This statement is read as follows:
+      Check if 'a' is not equal to '0' and 'b' is not equal to '3'. Here due to the use of 'and' operator, both the conditions should be satisfied

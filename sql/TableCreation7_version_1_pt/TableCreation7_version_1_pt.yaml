@@ -1,0 +1,58 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_TableCreation7_version_1_pt
+source: query.sql
+title: AssertionCreation(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE sailors
+  explanations:
+  - body: Esse exemplo mostra a criacao de uma tabela para marinheiros. Sempre que um novo marinheiro for adicionado deve-se
+      verificar se a soma do numero de marinheiros e o numero de barcos nao sejam maiores que 100. <b>** Esse exemplo esta
+      relacionado com o proximo exemplo.</b>
+- type: explanation
+  location:
+    snippet: CHECK
+  explanations:
+  - body: Esse exemplo especifica que o numero total de marinheiros e de barcos deve ser menor que 100. No entanto, esse exemplo
+      esta ERRADO. Esta restricao que verifica ambas as tabelas 'sailors' e 'boats' pertence a tabela 'sailors' recursivamente.
+      Se nao existir nenhum marinheiro (tabela vazia), o numero de barcos podera ser um valor qualquer!
+- type: explanation
+  location:
+    snippet: ((SELECT COUNT(S.sid)
+  explanations:
+  - body: <b>Esse primeiro exemplo esta ERRADO.</b> Se a tabela 'sailors' estiver vazia, o numero de tuplas para os barcos
+      podera ser qualquer coisa! Ela retorna o numero identificador do marinheiro. A consulta mais interna e' executada primeiro.
+- type: explanation
+  location:
+    snippet: FROM sailor S) +
+  explanations:
+  - body: Duas consultas diferentes sao ligadas utilizando sinal de adicao (+). Ambos os resultados da consulta sao somados.
+- type: explanation
+  location:
+    snippet: (SELECT COUNT(B.sid)
+  explanations:
+  - body: Essa consulta retorna o numero de barcos.
+- type: explanation
+  location:
+    snippet: < 100));
+  explanations:
+  - body: Os resultados somados das duas subconsultas sao comparados com o valor 100. Se o valor da soma for menor que 100,
+      a condicao e' satisfeita e a tupla fara' parte do resultado final.

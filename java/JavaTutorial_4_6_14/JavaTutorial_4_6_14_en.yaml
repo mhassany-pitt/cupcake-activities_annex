@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_6_14
+source: Main.java
+title: Print Out a Diamond
+description: Print Out a Diamond
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:AddAssignmentExpression
+  - expert:ClassDefinition
+  - expert:DivideExpression
+  - expert:FormalMethodParameter
+  - expert:ForStatement
+  - expert:GreaterExpression
+  - expert:IntDataType
+  - expert:java.lang.System.out.print
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:NestedStatement
+  - expert:PostIncrementExpression
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:SubtractExpression
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Print Out a Diamond
+elements:
+- type: explanation
+  location:
+    snippet: for (int i = 1; i < 10; i += 2) {
+  explanations:
+  - body: "'i' starts with value 1, and for repeat until i=> 10. 'i' is incremented by 2 in each round. 'i' represents the\
+      \ \r\namount of stars that we want to print in each line for the upper part of the star. To position the starts according\
+      \ \r\nto the line to form the upper triangle, the next loop will print a number of spaces."
+- type: explanation
+  location:
+    snippet: for (int j = 0; j < 9 - i / 2; j++)
+  explanations:
+  - body: "'j' starts with 0, and increments by 1 until j>=9-(i/2). Consider precedence of division. This for is nested and\
+      \ \r\nthe value of 'i' will change. At the first time i=1, and i/2 is 0. Then the for prints 9 spaces. Next time, the\
+      \ for \r\nwill print 8 spaces (i is 3, i/2 results in 1)."
+- type: explanation
+  location:
+    snippet: for (int j = 0; j < i; j++)
+  explanations:
+  - body: This for prints many '*' as the current value of 'i'
+- type: explanation
+  location:
+    snippet: for (int i = 7; i > 0; i -= 2) {
+  explanations:
+  - body: i will decrement by 2. This for loop (with the nested loops below) will print the lower part of the diamond
+- type: explanation
+  location:
+    snippet: for (int j = 0; j < 9 - i / 2; j++)
+    nth: 2
+  explanations:
+  - body: as i decrements, this for will print more spaces
+- type: explanation
+  location:
+    snippet: for (int j = 0; j < i; j++)
+    nth: 2
+  explanations:
+  - body: as i decrements, this for will print less asterisks (*)

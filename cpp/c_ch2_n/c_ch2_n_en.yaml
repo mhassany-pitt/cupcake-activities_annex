@@ -1,0 +1,73 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_c_ch2_n
+source: main.cpp
+title: Using End of Line Statement
+description: 'Worked example: Using End of Line Statement'
+authors:
+- first: Natalya
+  last: Goreva
+  email: natalya.goreva@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Using End of Line Statement'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <iostream>'
+  explanations:
+  - body: Include the library for working with streaming data to and from the user
+- type: explanation
+  location:
+    snippet: using namespace std;
+  explanations:
+  - body: Add a reference to standard namespace that includes variables, types, constants, and functions
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: Declare the main function
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Open the body of the function
+- type: explanation
+  location:
+    snippet: cout << "The following items were top sellers";
+  explanations:
+  - body: 'Output the text on the screen: the following text will not have any line breaks because we did not include them
+      in the code'
+- type: explanation
+  location:
+    snippet: cout << "during the month of June:";
+  explanations:
+  - body: Output the text on the screen
+- type: explanation
+  location:
+    snippet: cout << "Computer gamesCoffee";
+  explanations:
+  - body: Output the text on the screen
+- type: explanation
+  location:
+    snippet: cout << "Aspirin";
+  explanations:
+  - body: Output the text on the screen
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: main() is a function, so it should return a value. We make it 0, or in this case a dummy value
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Close the body of the function

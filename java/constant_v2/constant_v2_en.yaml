@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_constant_v2
+source: MainClass.java
+title: Constant2
+description: Constant2
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:ConstantInvocation
+  - expert:FormalMethodParameter
+  - expert:java.lang.Math
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Constant2
+elements:
+- type: explanation
+  location:
+    snippet: System.out.println(Math.E);
+  explanations:
+  - body: "E is the base of the natural logarithms. You can directly use this constant from the \r\nMath class without any\
+      \ declaration. The print out is \"2.718281828459045\"."
+- type: explanation
+  location:
+    snippet: System.out.println(Math.PI);
+  explanations:
+  - body: "PI is the ratio of the circumference of a circle to its diameter. The print out is \r\n\"3.141592653589793\"."

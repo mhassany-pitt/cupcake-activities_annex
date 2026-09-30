@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt2_3_en
+source: main.py
+title: Currency Conversion Kiosk
+description: 'Worked example: Currency Conversion Kiosk'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Currency Conversion Kiosk'
+elements:
+- type: explanation
+  location:
+    snippet: dollars_for_euro = 1.2
+  explanations:
+  - body: Assigning the float value '1.2' to the variable 'dollars_for_euros'. Ths specifies the ratio of rates of euros to
+      the dollar.
+- type: explanation
+  location:
+    snippet: commission = 3
+  explanations:
+  - body: Assigning the integer value '3' to the variable 'commission'. This specifies the commission charges.
+- type: explanation
+  location:
+    snippet: euro = 100
+  explanations:
+  - body: Assigning the integer value '100' to the variable 'euros'. This specifies the number of euros to be converted.
+- type: explanation
+  location:
+    snippet: dollars = euro * dollars_for_euro - commission
+  explanations:
+  - body: This is a simple Arithmetic operation to convert euros to dollar. It also considers the commission rate.
+- type: explanation
+  location:
+    snippet: print("For", euro, "euros you will get", dollars, "dollars")
+  explanations:
+  - body: This statement prints out the dollars you will receive in return when you give 100 euros.

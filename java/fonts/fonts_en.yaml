@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fonts
+source: Fonts.java
+title: ISD::Fonts.java
+description: 'Worked example: ISD::Fonts.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::Fonts.java'
+elements:
+- type: explanation
+  location:
+    snippet: g.setFont( new Font( "Serif", Font.BOLD, 12 ) );
+  explanations:
+  - body: Notice use of Font objects and method calls
+- type: explanation
+  location:
+    snippet: new Font( "Serif", Font.BOLD + Font.ITALIC, 18 ) );
+  explanations:
+  - body: 'Constructor takes three arguments. name: any font supported by system (Serif), style: Combinations: (FONT.ITALIC
+      + FONT.BOLD), size: measured in points (1/72 of an inch)'

@@ -1,0 +1,38 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt1_6_en
+source: main.py
+title: 'Variable type: Strings'
+description: 'Worked example: Variable type: Strings'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Call
+  - parser:Assign
+  - parser:Str
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Variable type: Strings'
+elements:
+- type: explanation
+  location:
+    snippet: string1 = "This is an example Srting"
+  explanations:
+  - body: Assigning string type to the variable 'string1'
+- type: explanation
+  location:
+    snippet: print (string1)
+  explanations:
+  - body: Prints out the complete string

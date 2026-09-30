@@ -1,0 +1,27 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt9_3_en
+source: main.py
+title: Updating Dictionary Elements
+description: 'Worked example: Updating Dictionary Elements'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Updating Dictionary Elements'
+elements:
+- type: explanation
+  location:
+    snippet: dict1['Age'] = 8
+  explanations:
+  - body: Update existing entry for the key 'Age'

@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_3_2
+source: MainClass.java
+title: Switch Statement
+description: Switch Statement
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:BreakStatement
+  - expert:CaseClause
+  - expert:ClassDefinition
+  - expert:DefaultClause
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:SwitchStatement
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Switch Statement
+elements:
+- type: explanation
+  location:
+    snippet: switch (choice) {
+  explanations:
+  - body: switch evaluates the value of a variable
+- type: explanation
+  location:
+    snippet: 'case 1:'
+  explanations:
+  - body: 'Each possible value we want to consider is defined in a case clause. This can be read as: "In the case that the
+      value of choice is 1, do..."'
+- type: explanation
+  location:
+    snippet: break;
+  explanations:
+  - body: "Each case clause should finish with a \"break\" statement. Otherwise, the next case will be executed even if the\
+      \ value of \"choice\" does not met the condition. In this way, several \"cases\" can be concatenated to \r\nexecute\
+      \ the same block if any of the conditions is met."
+- type: explanation
+  location:
+    snippet: 'default:'
+  explanations:
+  - body: The default clause is executed if none of the cases match.

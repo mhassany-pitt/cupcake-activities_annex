@@ -1,0 +1,73 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_calculating1_c_en
+source: main.c
+title: 'IS12:: calculating1.c (2.3)'
+description: 'Worked example: IS12:: calculating1.c (2.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:void
+  - unspecified:div
+  - unspecified:include
+  - unspecified:add
+  - unspecified:mod
+  - unspecified:mul
+  - unspecified:main_function
+  - unspecified:printf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: calculating1.c (2.3)'
+elements:
+- type: explanation
+  location:
+    snippet: |-
+      printf("1234 + 4321 =  %5d
+      ", 1234 + 4321);
+  explanations:
+  - body: The result of this integer addition operation will occupy exactly 5 positions in the output. Since there are only
+      4 digits in the result, one position will be left blank. To use leading zero instead of leading blank use %05d istead
+      of %5d
+- type: explanation
+  location:
+    snippet: |-
+      printf("2 * 3.1415 =  %7.1f
+      ", 2 * 3.1415);
+  explanations:
+  - body: The  result of this floating point multiplication will occupy exactly 7 positions of the output, out of them exactly
+      1 after decimal pount. This is prescribed by %7.1f specification
+- type: explanation
+  location:
+    snippet: |-
+      printf("5 / 2 = %d
+      ", 5 / 2); /* integer division */
+  explanations:
+  - body: This line will print 5 / 2 = 2 because of integer division. The results of dividing an integer into another integer
+      has to be also integer, so only an integer part will be returned as result. (the correct math result is 2.5, but C is
+      not math!)
+- type: explanation
+  location:
+    snippet: |-
+      printf("5.0 / 2 = %f
+      ", 5.0 / 2); /* type conversion */
+  explanations:
+  - body: A way to fight integer division if you need a real result. This line will print 2.5 in a standard floating point
+      format. Since 5.0 is a floating point number, 2 will be also converted from integer to floating point and 5.0/2.0 will
+      result in 2.5
+- type: explanation
+  location:
+    snippet: |-
+      printf("5 %% 2 = %d
+      ", 5 % 2); /* mod operaion */
+  explanations:
+  - body: This line will print 1 - the remainder of integer division (5 / 2). The remainder operation % has to be applied
+      to integer numbers and its result is integer.

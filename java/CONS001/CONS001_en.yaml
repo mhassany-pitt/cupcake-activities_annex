@@ -1,0 +1,40 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_CONS001
+source: Constant.java
+title: Constants_Memphis_01
+description: Example of Constant (final) in Java.
+authors:
+- first: Hasan
+  last: Mashrique
+  email: hasan.mashrique@memphis.edu
+  affiliation: University of Memphis
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:Constant
+  - java_ontology:ConstantInitializationStatement
+  - java_ontology:DoubleDataType
+  - java_ontology:FormalMethodParameter
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Example of Constant (final) in Java.
+elements:
+- type: explanation
+  location:
+    snippet: final double PI = 3.1416;
+  explanations:
+  - body: Declaring local final variable which stays fixed every time and gives error if changed.

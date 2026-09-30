@@ -1,0 +1,71 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection28
+source: query.sql
+title: Nested Subqueries (1)
+description: Nested Subqueries (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SubstringExtraction
+  - expert:SelectClause
+  - expert:AttributeName
+  - expert:FromClause
+  - expert:ToUpperCase
+  - expert:BracketCharacter
+  - expert:InPredicate
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:IntegrityOnUpdate
+  - expert:SetOperation
+  - expert:SimpleSubquery
+  - expert:SingleAttributeSelection
+  - expert:DistinctClause
+  - expert:SingleTableSelection
+  - sql_ontology:DistinctClause
+  - sql_ontology:AttributeName
+  - sql_ontology:SelectStatement
+  - sql_ontology:SetOperation
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:SimpleSubquery
+  - sql_ontology:IntegrityOnUpdate
+  - sql_ontology:InPredicate
+  - sql_ontology:BracketCharacter
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_concept:SubstringExtraction
+  - sql_concept:ToUpperCase
+runtime:
+  language: sql
+  version: '2016'
+statement: Nested Subqueries (1)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT DISTINCT customer_name
+  explanations:
+  - body: The subquery covered by round parenthesis is calculated at first and then using set membership test, the results
+      are compared with main query results. <Br>By specifying DISTINCT, duplications in customer_name are eliminated.
+- type: explanation
+  location:
+    snippet: WHERE customer_name IN
+  explanations:
+  - body: IN set membership test is to see whether a data value matches one of a list of target values. For instance, 'X IN
+      (A, B, C)' is completely equivalent to '(X = A) OR (X = B) OR (X = C)'. In this example, customer name is tested with
+      the customer names in 'depositor' table.
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+  explanations:
+  - body: SQL provides a mechanism for nesting subqueries. A subquery is a SELECT-FROM-WHERE statement or statement containing
+      GROUP BY and HAVING that is nested within another query. <br>This query is to find customer name having account.

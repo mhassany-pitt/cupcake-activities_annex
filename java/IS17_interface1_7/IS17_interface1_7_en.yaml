@@ -1,0 +1,156 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface1_7
+source: TryOut.java
+title: IS17_interface1_7
+description: 'Worked example: IS17_interface1_7'
+authors:
+- first: John
+  last: Moan
+  email: john.moan@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface1_7'
+elements:
+- type: explanation
+  location:
+    snippet: interface Act {
+  explanations:
+  - body: the interface act is declared
+- type: explanation
+  location:
+    snippet: void act();
+  explanations:
+  - body: a void method act is declared
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of interface
+- type: explanation
+  location:
+    snippet: class Actor1 implements Act {
+  explanations:
+  - body: a class Actor1 utilizing interface Act is declared
+- type: explanation
+  location:
+    snippet: public void act() {
+  explanations:
+  - body: a void method act is declared
+- type: explanation
+  location:
+    snippet: System.out.println("To be, or not to be");
+  explanations:
+  - body: Outputs to the console the String "To be, or not to be"
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of method body
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end of class
+- type: explanation
+  location:
+    snippet: class Actor2 implements Act {
+  explanations:
+  - body: A class Actor2 that utilizes interface Act is declared
+- type: explanation
+  location:
+    snippet: public void act() {
+    nth: 2
+  explanations:
+  - body: A method act is declared
+- type: explanation
+  location:
+    snippet: System.out.println("Wherefore art thou Romeo?");
+  explanations:
+  - body: Outputs to the console the String "Wherefore art thou Romeo?"
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: end of method body
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: end of class
+- type: explanation
+  location:
+    snippet: public class TryOut {
+  explanations:
+  - body: A class TryOut is declared to test the methods of the classes Actor1 and Actor2. (which both utilize interface Act)
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: Main method of the program is defined
+- type: explanation
+  location:
+    snippet: Actor1 hamlet = new Actor1();
+  explanations:
+  - body: An object  (hamlet) of Actor1 class is created
+- type: explanation
+  location:
+    snippet: Actor2 juliet = new Actor2();
+  explanations:
+  - body: An object (juliet) of Actor2 class is created
+- type: explanation
+  location:
+    snippet: tryout(hamlet);
+  explanations:
+  - body: the tryout method is called on hamlet
+- type: explanation
+  location:
+    snippet: tryout(juliet);
+  explanations:
+  - body: the tryout method is called on juliet
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: end of class
+- type: explanation
+  location:
+    snippet: private static void tryout(Act actor) {
+  explanations:
+  - body: a private void method (tryout) is declared with the parameter Act actor
+- type: explanation
+  location:
+    snippet: actor.act();
+  explanations:
+  - body: a method invoking th act method on actor
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: end of method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: end of class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: '***NOTE: My annotations received no useful, comments I did my best to refine on my own'

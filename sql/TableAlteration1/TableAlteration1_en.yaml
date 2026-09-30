@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableAlteration1
+source: query.sql
+title: Column Addition
+description: Column Addition
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AddColumnClause
+  - expert:NumericType
+  - expert:AlterTableClause
+  - expert:AlterTableStatement
+  - expert:AttributeName
+  - expert:Integer
+  - expert:DatabaseDeletion
+  - expert:RangeTest
+  - sql_ontology:AlterTableClause
+  - sql_ontology:AttributeName
+  - sql_ontology:Integer
+  - sql_ontology:AddColumnClause
+  - sql_ontology:AlterTableStatement
+  - sql_concept:RangeTest
+runtime:
+  language: sql
+  version: '2016'
+statement: Column Addition
+elements:
+- type: explanation
+  location:
+    snippet: ALTER TABLE Students
+  explanations:
+  - body: This ALTER TABLE statement is to add column title 'firstYear' to the existing 'Students' table.
+- type: explanation
+  location:
+    snippet: ADD COLUMN firstYear INTEGER;
+  explanations:
+  - body: The most common use of the ALTER TABLE statement. The column definition clause in the ALTER TABLE statement is just
+      like the one in the CREATE TABLE statement and it works the same way.

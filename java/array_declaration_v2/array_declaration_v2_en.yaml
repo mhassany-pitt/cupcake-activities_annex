@@ -1,0 +1,46 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_array_declaration_v2
+source: array_declaration.java
+title: Array Declaration
+description: Array Declaration
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ArrayCreationStatement
+  - expert:ArrayDataType
+  - expert:ArrayInitializationStatement
+  - expert:ArrayInitializer
+  - expert:ArrayVariable
+  - expert:ClassDefinition
+  - expert:DoubleDataType
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Array Declaration
+elements:
+- type: explanation
+  location:
+    snippet: double[] A =  new double[10];
+  explanations:
+  - body: declares an array of type double, allocates memory for 10 doubles.
+- type: explanation
+  location:
+    snippet: int B[] = {50,20,45,82,25,63};
+  explanations:
+  - body: You may or may not define the size of the array in the declaration time.

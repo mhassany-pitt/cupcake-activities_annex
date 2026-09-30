@@ -1,0 +1,93 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableCreation3
+source: query.sql
+title: Primary Key and Unique Key
+description: Primary Key and Unique Key
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ExceptionOfTupleSetWithDuplicate
+  - expert:StringType
+  - expert:SubQuery
+  - expert:Rule
+  - expert:FixedLengthCharacterString
+  - expert:AttributeName
+  - expert:AttributeSpecification
+  - expert:TupleSelectionCondition
+  - expert:UniqueClause
+  - expert:UniqueConstraint
+  - expert:BracketCharacter
+  - expert:UniqueKeyConstraint
+  - expert:CommaCharacter
+  - expert:CreateTableClause
+  - expert:CreateTableStatement
+  - expert:NotNullClause
+  - expert:NotNullConstraint
+  - expert:PrimaryKeyClause
+  - expert:PrimaryKeyConstraint
+  - sql_ontology:NotNullConstraint
+  - sql_ontology:CreateTableStatement
+  - sql_ontology:SubQuery
+  - sql_ontology:AttributeName
+  - sql_ontology:UniqueClause
+  - sql_ontology:UniqueKeyConstraint
+  - sql_ontology:UniqueConstraint
+  - sql_ontology:PrimaryKeyConstraint
+  - sql_ontology:CommaCharacter
+  - sql_ontology:PrimaryKeyClause
+  - sql_ontology:BracketCharacter
+  - sql_ontology:AttributeSpecification
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:CreateTableClause
+  - sql_ontology:NotNullClause
+  - sql_concept:TupleSelectionCondition
+  - sql_concept:Rule
+  - sql_concept:ExceptionOfTupleSetWithDuplicate
+runtime:
+  language: sql
+  version: '2016'
+statement: Primary Key and Unique Key
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE Enrolled
+  explanations:
+  - body: Students can take a single course only once, not more than once.
+- type: explanation
+  location:
+    snippet: (eid CHAR(20) NOT NULL,
+  explanations:
+  - body: This column is for enrollment ID and it is defined as primary key. Hence, the value should be unique among rows
+      of the table
+- type: explanation
+  location:
+    snippet: sid CHAR(20),
+  explanations:
+  - body: This column is for student ID and it is defined as a part of candidate key which is defined in UNIQUE clause.
+- type: explanation
+  location:
+    snippet: cid CHAR(20),
+  explanations:
+  - body: This course ID is also another part of candidate key which is defined in UNIQUE clause.
+- type: explanation
+  location:
+    snippet: PRIMARY KEY (eid),
+  explanations:
+  - body: If there is more than one same eids, there is integrity error.
+- type: explanation
+  location:
+    snippet: UNIQUE (sid, cid));
+  explanations:
+  - body: UNIQUE keyword is to specify an unique value in every row, but not the primary key of a table. The unique values
+      which can be primary key is called as candidate key. In this example, the pair of cid and sid should be unique. A student
+      whose sid is 1324 can enroll in 'DB Management' course once but not more than once. Howver, the student can take other
+      classes having differnt cids. It is possible to define the UNIQUE key as an attribute constraint.

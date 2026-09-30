@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection8
+source: query.sql
+title: Comparison Condition (2)
+description: Comparison Condition (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AggregateOperation
+  - expert:RightWhitespaceTrim
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:SelectStatement
+  - expert:BracketCharacter
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:LessThanComparison
+  - expert:MultipleAttributeSelection
+  - expert:CountingNoInColumn
+  - expert:MultiplicationExpression
+  - expert:NullValueIgnorance
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - sql_ontology:SetOperation
+  - sql_ontology:LessThanComparison
+  - sql_ontology:NumericType
+  - sql_ontology:BracketCharacter
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:MultiplicationExpression
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:WhereClause
+  - sql_ontology:CountFunction
+  - sql_concept:NullValueIgnorance
+  - sql_concept:AggregateOperation
+runtime:
+  language: sql
+  version: '2016'
+statement: Comparison Condition (2)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT City, Sales, Target
+  explanations:
+  - body: This is to choose cities, the sales amount and the target amount from 'Offices' table.
+- type: explanation
+  location:
+    snippet: WHERE Sales < (.8 * Target);
+  explanations:
+  - body: This is to find sales less than 80 percent of the target amount. To process this condition, SQL constructs a temporary
+      column containing the value of the expression (.8 * Target), 'Target' is one column in 'Offices' table and then compares
+      them with values in 'Sales' column.

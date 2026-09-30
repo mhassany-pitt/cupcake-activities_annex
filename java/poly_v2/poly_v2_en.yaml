@@ -1,0 +1,96 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_poly_v2
+source: PolymorphismTest.java
+title: polymorphism
+description: 'Worked example: polymorphism'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:ExplicitTypeCasting
+  - expert:ExtendsSpecification
+  - expert:FormalMethodParameter
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ObjectCreationStatement
+  - expert:ObjectMethodInvocation
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: polymorphism'
+elements:
+- type: explanation
+  location:
+    snippet: class Manager extends Employee {
+  explanations:
+  - body: Manager class inherits all the properties of Employee class
+- type: explanation
+  location:
+    snippet: public void work() {
+  explanations:
+  - body: "The sub class (in his case Manager is subclass of Employee) can change the way it behave by \r\noverriding methods.\
+      \ The method \r\nwork() is override here making Manager objects give a different \r\nresponse than Employee objects."
+- type: explanation
+  location:
+    snippet: public void manage() {
+  explanations:
+  - body: This method is new in class Manager. Employee objects don't have it.
+- type: explanation
+  location:
+    snippet: Employee employee = new Manager();
+  explanations:
+  - body: "Create an object of the Manager class. The reference employee is declared as Employee class, \r\nbut the object\
+      \ is finally created \r\nas \r\nManager."
+- type: explanation
+  location:
+    snippet: System.out.println(employee.getClass().getName());
+  explanations:
+  - body: This line prints out the class name of the employee object. Here, it prints Manager.
+- type: explanation
+  location:
+    snippet: employee.work();
+  explanations:
+  - body: "Although employee object is declared as being from Employee class, it is in fact a Manager \r\nobject. This makes\
+      \ the object to use the override method and print \"I am a Manager.\" The \r\nprocess goes as follows: i) the employee\
+      \ object is treated as being from the class Employee, ii) \r\nthe work() method is found in the class Employee, but\
+      \ has been override by the real class the \r\nobject belongs to (Manager), and iii) then method work is called in its\
+      \ override version."
+- type: explanation
+  location:
+    snippet: employee.manage();
+  explanations:
+  - body: "This gives an error. The employee object is declared as Employee (even when is initialized as a \r\nManager), and\
+      \ Employee class does not have the method manage()."
+- type: explanation
+  location:
+    snippet: Manager manager = (Manager) employee;
+  explanations:
+  - body: "This line will solve the last line problem. Cast the employee object to Manager class will make \r\nmanager reference\
+      \ be treated as a Manager object in all cases."
+- type: explanation
+  location:
+    snippet: manager.work();
+  explanations:
+  - body: This line prints out "I am a manager."
+- type: explanation
+  location:
+    snippet: manager.manage();
+  explanations:
+  - body: This line prints out "Managing ..."

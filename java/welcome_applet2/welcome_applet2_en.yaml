@@ -1,0 +1,58 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_welcome_applet2
+source: WelcomeApplet2.java
+title: 'ISD:: WelcomeApplet2.java'
+description: 'Worked example: ISD:: WelcomeApplet2.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD:: WelcomeApplet2.java'
+elements:
+- type: explanation
+  location:
+    snippet: import javax.swing.JApplet;  // import class JApplet
+  explanations:
+  - body: "import statements tell compiler where to locate classes used\r\nWhen you create applets, import the JApplet class\
+      \ (package javax.swing)"
+- type: explanation
+  location:
+    snippet: import java.awt.Graphics;    // import class Graphics
+  explanations:
+  - body: "import the Graphics class (package java.awt) to draw graphics \r\nCan draw lines, rectangles ovals, strings of\
+      \ characters"
+- type: explanation
+  location:
+    snippet: public class WelcomeApplet2 extends JApplet {
+  explanations:
+  - body: "Begins class definition for class WelcomeApplet\r\nextends followed by class name\r\nIndicates the class to inherit\
+      \ from (JApplet)\r\nWelcomeApplet now has methods and data of JApplet"
+- type: explanation
+  location:
+    snippet: public void paint( Graphics g )
+  explanations:
+  - body: "Our class inherits method paint from JApplet\r\nvoid means paint returns nothing when it finishes its task\r\n\
+      paint gets parameters automatically"
+- type: explanation
+  location:
+    snippet: g.drawString( "Welcome to", 25, 25 );
+  explanations:
+  - body: The two drawString statements simulate a newline.  In fact, the concept of lines of text does not exist when drawing
+      strings.
+- type: explanation
+  location:
+    snippet: g.drawString( "Java Programming!", 25, 40 );
+  explanations:
+  - body: The two drawString statements simulate a newline.  In fact, the concept of lines of text does not exist when drawing
+      strings.

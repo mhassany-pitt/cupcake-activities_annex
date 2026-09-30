@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_2_5
+source: MainClass.java
+title: If Statement
+description: If Statement
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:EqualExpression
+  - expert:FormalMethodParameter
+  - expert:IfStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: If Statement
+elements:
+- type: explanation
+  location:
+    snippet: int a = 0;
+  explanations:
+  - body: An int variables is declared and initialized with the value 0.
+- type: explanation
+  location:
+    snippet: if (a == 0) {
+  explanations:
+  - body: "The if statement allows execute statements only when a specific condition is met. In this \r\ncase the statement\
+      \ below will be executed only \r\nif the value of a is equal to 0. Note that the \r\ncomparison operator is double equal\
+      \ \"==\"."

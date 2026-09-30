@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig07_24_c_en
+source: main.cpp
+title: fig07_24.c
+description: 'Worked example: fig07_24.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig07_24.c'
+elements:
+- type: explanation
+  location:
+    snippet: const char *suit[ 4 ] = { "Hearts", "Diamonds", "Clubs", "Spades" };
+  explanations:
+  - body: suit and face arrays are arrays of pointers.
+- type: explanation
+  location:
+    snippet: const char *face[ 13 ] =
+  explanations:
+  - body: suit and face arrays are arrays of pointers.
+- type: explanation
+  location:
+    snippet: do {
+  explanations:
+  - body: "doâ\x80¦while loop selects a random spot for each card."
+- type: explanation
+  location:
+    snippet: if ( wDeck[ row ][ column ] == card ) {
+  explanations:
+  - body: if slot contains current card, display card.

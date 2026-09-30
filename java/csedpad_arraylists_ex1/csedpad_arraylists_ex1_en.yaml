@@ -1,0 +1,98 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_arraylists_ex1
+source: ArrayListEx1.java
+title: (Arraylists) Ex1 - CsEdPad
+description: This program shows a person original travel list and creating new travel list from original and making some changes
+  on new travel list.
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:java.lang.System.out.print
+  - webex:java.util.ArrayList.get
+  - webex:ImportStatement
+  - webex:PostIncrementExpression
+  - webex:MethodDefinition
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:java.util.ArrayList
+  - webex:ObjectCreationStatement
+  - webex:LessExpression
+  - webex:IntDataType
+  - webex:ConstructorCall
+  - webex:GenericObjectCreationStatement
+  - webex:StringLiteral
+  - webex:java.util.ArrayList.add
+  - webex:ForStatement
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:java.util.ArrayList.remove
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:GenericObjectCreationStatement
+  - java_ontology:ImportStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:java.util.ArrayList
+  - java_ontology:java.util.ArrayList.add
+  - java_ontology:java.util.ArrayList.get
+  - java_ontology:java.util.ArrayList.remove
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: This program shows a person original travel list and creating new travel list from original and making some changes
+  on new travel list.
+elements:
+- type: explanation
+  location:
+    snippet: ArrayList < String > travelList = new ArrayList < String > ();
+  explanations:
+  - body: Creates an arraylist named travelList
+- type: explanation
+  location:
+    snippet: travelList.add("Switzerland");
+  explanations:
+  - body: Adds Swizerland to arraylist travelList
+- type: explanation
+  location:
+    snippet: newTravelList.add(i, travelList.get(i));
+  explanations:
+  - body: Gets element of arraylist travelList at position i and add the element to arraylist newTravelList at index position
+      i
+- type: explanation
+  location:
+    snippet: newTravelList.remove("China");
+  explanations:
+  - body: Removes China from arraylist  newTravelList
+- type: explanation
+  location:
+    snippet: newTravelList.remove(0);
+  explanations:
+  - body: Removes element of arraylist newTravelList at index position 0

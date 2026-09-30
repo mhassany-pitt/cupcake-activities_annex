@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_while_v2
+source: Main.java
+title: While
+description: While
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:PostIncrementExpression
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+  - expert:WhileStatement
+runtime:
+  language: java
+  version: '17'
+statement: While
+elements:
+- type: explanation
+  location:
+    snippet: while (count < 11) {
+  explanations:
+  - body: "while statement allows you to execute a piece of code several times, while a certain condition is true. In this\
+      \ case we execute a block of statements while 'count' is less than 11\r\nwhile-loop is a loop with pre-condition, which\
+      \ means it checks for the condition before going into the loop"
+- type: explanation
+  location:
+    snippet: 'System.out.println("Count is: " + count);'
+  explanations:
+  - body: on every step of the loop we print the current value of 'count'...
+- type: explanation
+  location:
+    snippet: count++;
+  explanations:
+  - body: and then we increment the value of 'count' by 1.Hence, this loop  will execute 10 times and it will print 1,2,3....9,10.On
+      the last step after it prints 10, and increase 'count' to 11 the 'while'-condition becomes false, since 'count' is not
+      lees then 11 any more. And the loop stops.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of the while-loop

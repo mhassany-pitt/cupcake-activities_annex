@@ -1,0 +1,53 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt4_1_en
+source: main.py
+title: Countdown to Zero
+description: 'Worked example: Countdown to Zero'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Countdown to Zero'
+elements:
+- type: explanation
+  location:
+    snippet: counter = 10
+  explanations:
+  - body: The counter variable is set to the value '10'
+- type: explanation
+  location:
+    snippet: print("Start counting...")
+  explanations:
+  - body: Inform the user that the counting has started
+- type: explanation
+  location:
+    snippet: 'while counter > 0:'
+  explanations:
+  - body: Initialize the While loop and set the condition to loop till the value of the counter is greater than zero
+- type: explanation
+  location:
+    snippet: print(counter)
+  explanations:
+  - body: Print out the current counter value. This will print out the counter value in each iteration.
+- type: explanation
+  location:
+    snippet: counter = counter - 1
+  explanations:
+  - body: Decrement the counter value by one
+- type: explanation
+  location:
+    snippet: print("Fire!")
+  explanations:
+  - body: When the counter value is '0', the while loop condition is not met and the loop will exit. It will then print the
+      string 'Fire!'

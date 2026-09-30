@@ -1,0 +1,56 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_7_5
+source: MainClass.java
+title: For-Each
+description: For-Each
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:AddAssignmentExpression
+  - expert:ArrayInitializationStatement
+  - expert:ArrayInitializer
+  - expert:ArrayVariable
+  - expert:ClassDefinition
+  - expert:ForEachStatement
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: For-Each
+elements:
+- type: explanation
+  location:
+    snippet: 'for(int x : nums) {'
+  explanations:
+  - body: "Another form of the for loop called \"for each\". In this case, in \r\neach round of the for, the variable \"x\"\
+      \ takes the next value in the \r\narray \"nums\"."
+- type: explanation
+  location:
+    snippet: sum += x;
+  explanations:
+  - body: "The value of 'x' is added to the value of 'sum' and then the new \r\nvalue is stored in the sum."
+- type: explanation
+  location:
+    snippet: 'System.out.println("Summation: " + sum);'
+  explanations:
+  - body: 'Prints "Summation: 55"'

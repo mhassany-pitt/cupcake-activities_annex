@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_math_class_1_memphis
+source: MathDemos.java
+title: Math class 1 (Memphis)
+description: Simple example of how to use Java Math methods. This program shows that the trig identity sin^2(x) + cos^2(x)
+  = 1 is true for any value of x.
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:DoubleDataType
+  - parser:SimpleAssignmentExpression
+  - parser:ActualMethodParameter
+  - parser:MultiplyExpression
+  - parser:AddExpression
+  - parser:java.lang.Math.pow
+  - parser:java.lang.System.out.println
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:DoubleDataType
+  - java_ontology:FormalMethodParameter
+  - java_ontology:java.lang.Math.pow
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiplyExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Simple example of how to use Java Math methods. This program shows that the trig identity sin^2(x) + cos^2(x) =
+  1 is true for any value of x.
+elements:
+- type: explanation
+  location:
+    snippet: System.out.println(result);
+  explanations:
+  - body: Should see 1.0, regardless of what value is assigned to theta

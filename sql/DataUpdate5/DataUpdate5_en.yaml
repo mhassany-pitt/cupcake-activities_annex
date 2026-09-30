@@ -1,0 +1,85 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataUpdate5
+source: query.sql
+title: Updating with subquery
+description: Updating with subquery
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AdditionExpression
+  - expert:SQLBasicConcept
+  - expert:Assertion
+  - expert:SubstringExtraction
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:ToUpperCase
+  - expert:GreaterThanComparison
+  - expert:SelectStatement
+  - expert:SingleAttributeGrouping
+  - expert:UpdateClause
+  - expert:InPredicate
+  - expert:UpdateStatement
+  - expert:WhereClause
+  - expert:SetClause
+  - expert:IntegrityOnUpdate
+  - expert:SetOperation
+  - expert:SimpleSubquery
+  - expert:SingleAttributeSelection
+  - expert:DistinctClause
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - sql_ontology:DistinctClause
+  - sql_ontology:UpdateClause
+  - sql_ontology:GroupByClause
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:GreaterThanComparison
+  - sql_ontology:SelectClause
+  - sql_ontology:SetClause
+  - sql_ontology:Assertion
+  - sql_ontology:UpdateStatement
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:NumericType
+  - sql_ontology:SimpleSubquery
+  - sql_ontology:SetOperation
+  - sql_ontology:FromClause
+  - sql_ontology:AdditionExpression
+  - sql_ontology:SelectStatement
+  - sql_ontology:IntegrityOnUpdate
+  - sql_ontology:InPredicate
+  - sql_ontology:WhereClause
+  - sql_concept:SubstringExtraction
+  - sql_concept:ToUpperCase
+runtime:
+  language: sql
+  version: '2016'
+statement: Updating with subquery
+elements:
+- type: explanation
+  location:
+    snippet: SET credit_limit = credit_limit + 5000.00
+  explanations:
+  - body: Before executing update, subquery in parenthesis is executed to limit the data. After then, this addition of $5,000
+      to current credit limit is updated.
+- type: explanation
+  location:
+    snippet: WHERE cust_num IN
+  explanations:
+  - body: WHERE clause choose one of the customers in the results of subquery. IN is the common search condition. It tests
+      whether a data value matches one of the list of value in the right part. It compares instances in 'cust_num' to the
+      results of subquery.
+- type: explanation
+  location:
+    snippet: (SELECT DISTINCT cust
+  explanations:
+  - body: This SELECT query is subquery, a query within a query. This query is to retrieve the list of customers who bought
+      product in amout of 25000. When choose some data collectively, it is efficient to use subquery.  Subquery let users
+      select rows to update based on information contains in other tables.

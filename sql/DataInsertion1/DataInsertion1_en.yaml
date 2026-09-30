@@ -1,0 +1,59 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataInsertion1
+source: query.sql
+title: Inserting Data (1)
+description: Inserting Data (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:StringType
+  - expert:SubQuery
+  - expert:SubQueryCheckingDuplicateTuples
+  - expert:AttributeName
+  - expert:Insertion
+  - expert:BracketCharacter
+  - expert:ValuesClause
+  - expert:InsertIntoClause
+  - expert:InsertStatement
+  - expert:CommaCharacter
+  - expert:SingleQuotationCharacter
+  - expert:NumericType
+  - expert:Deletion
+  - sql_ontology:InsertIntoClause
+  - sql_ontology:SubQuery
+  - sql_ontology:AttributeName
+  - sql_ontology:StringType
+  - sql_ontology:CommaCharacter
+  - sql_ontology:NumericType
+  - sql_ontology:BracketCharacter
+  - sql_ontology:ValuesClause
+  - sql_ontology:SingleQuotationCharacter
+  - sql_ontology:InsertStatement
+  - sql_concept:Deletion
+  - sql_concept:SubQueryCheckingDuplicateTuples
+runtime:
+  language: sql
+  version: '2016'
+statement: Inserting Data (1)
+elements:
+- type: explanation
+  location:
+    snippet: INSERT INTO Students(sid, name, age)
+  explanations:
+  - body: Student 'Jamie Done' who is 22 years old and his student id number, '2007001' are inserted into 'Students' table.
+- type: explanation
+  location:
+    snippet: VALUES('2007001', 'Jamie Done', 22);
+  explanations:
+  - body: VALUES clause is to define the inserted value. The order of values should correspond to the column order. Especially,
+      if the column has character domain type, it is embraced by single/double quotation. 'sid' and 'name' column have character
+      domain type, so the value has single quotation.

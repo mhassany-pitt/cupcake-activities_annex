@@ -1,0 +1,92 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection32
+source: query.sql
+title: Aggregating Subquery
+description: Aggregating Subquery
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AllPredicate
+  - expert:TargetTableDeclaration
+  - expert:SelectClause
+  - expert:Timestamp
+  - expert:FromClause
+  - expert:AvgFunction
+  - expert:Boolean
+  - expert:GreaterThanOrEqualComparison
+  - expert:HavingClause
+  - expert:SelectStatement
+  - expert:Insertion
+  - expert:ComparisonOperation
+  - expert:SingleAttributeGrouping
+  - expert:SingleAttributeSelection
+  - expert:DataManipulationLanguage
+  - expert:NumericType
+  - expert:SimpleSubquery
+  - expert:SingleTableSelection
+  - sql_ontology:DateTimeType
+  - sql_ontology:AllPredicate
+  - sql_ontology:GroupByClause
+  - sql_ontology:GreaterThanOrEqualComparison
+  - sql_ontology:SelectStatement
+  - sql_ontology:BooleanType
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:NumericType
+  - sql_ontology:HavingClause
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:AvgFunction
+  - sql_ontology:SelectClause
+  - sql_concept:DataManipulationLanguage
+  - sql_concept:Insertion
+  - sql_concept:TargetTableDeclaration
+runtime:
+  language: sql
+  version: '2016'
+statement: Aggregating Subquery
+elements:
+- type: explanation
+  location:
+    snippet: SELECT branch_name
+  explanations:
+  - body: Firstly, average value of all branches are calculated in subquery and then using ALL test, the average account value
+      of each branch is compared with the subquery results.
+- type: explanation
+  location:
+    snippet: FROM account
+  explanations:
+  - body: This to find the branches with the largest average account balance.
+- type: explanation
+  location:
+    snippet: GROUP BY branch_name
+  explanations:
+  - body: This is to group the account balance according to the branch.
+- type: explanation
+  location:
+    snippet: HAVING AVG(balance) >= ALL
+  explanations:
+  - body: This is condition to find the largest average account value using ALL test. Just as the WHERE clause can be used
+      to select and reject the individual rows, the HAVING clause can be used to select and reject row groups. The format
+      of the HAVING clause parallels that of the WHERE clause, but this HAVING clause can be used as a GROUP search conditions.
+      To perform this >= comparison, the balance is grouped by the branch_name and the average value is calculated. The calculated
+      single value is compared with ALL average value of each branch and if they are smaller or equal to the single value,
+      it yields TRUE.
+- type: explanation
+  location:
+    snippet: (SELECT AVG(balance)
+  explanations:
+  - body: This is to calculated average account value of each branch.
+- type: explanation
+  location:
+    snippet: GROUP BY branch_name);
+  explanations:
+  - body: This is to specify to group the balance value by branch and then the grouped value is calculated in AVG function.

@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection25_version_1_pt
+source: query.sql
+title: GroupedQueries_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT branch_name, AVG(balance)
+  explanations:
+  - body: Usando o GROUP BY para agrupar os resultados por agencia.
+- type: explanation
+  location:
+    snippet: GROUP BY branch_name;
+  explanations:
+  - body: A clausula GROUP BY e' usada para agrupar os dados da tabela em uma unica tupla para cada grupo. Nesse exemplo,
+      os resultados sao agrupados pelo nome das agencias (branch_name).

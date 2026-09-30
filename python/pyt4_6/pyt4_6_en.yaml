@@ -1,0 +1,38 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_6_en
+source: main.py
+title: Pass Statement
+description: 'Worked example: Pass Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Pass Statement'
+elements:
+- type: explanation
+  location:
+    snippet: 'for letter in ''Python'':'
+  explanations:
+  - body: Loops through every letter in the word Python
+- type: explanation
+  location:
+    snippet: 'if letter == ''h'':'
+  explanations:
+  - body: checks if the current letter is 'h'
+- type: explanation
+  location:
+    snippet: pass
+  explanations:
+  - body: If yes, it will pass. Here pass does nothing.It can be used when a statement is required syntactically but the program
+      requires no action.

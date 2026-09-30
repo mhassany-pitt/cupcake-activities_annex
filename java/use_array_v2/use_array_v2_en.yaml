@@ -1,0 +1,56 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_use_array_v2
+source: use_array.java
+title: Using an Array2
+description: Using an Array2
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ArrayCreationStatement
+  - expert:ArrayDataType
+  - expert:ArrayElement
+  - expert:ArrayLength
+  - expert:ArrayVariable
+  - expert:ClassDefinition
+  - expert:DoubleDataType
+  - expert:FormalMethodParameter
+  - expert:ForStatement
+  - expert:IntDataType
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:MultiplyExpression
+  - expert:PostIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Using an Array2
+elements:
+- type: explanation
+  location:
+    snippet: double[] data = new double[10];
+  explanations:
+  - body: declares an array of type double, allocates memory for 10 doubles
+- type: explanation
+  location:
+    snippet: data[i] = i * i;
+  explanations:
+  - body: 'data array contains accordingly: 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, but not 100'
+- type: explanation
+  location:
+    snippet: System.out.println(data[i]);
+  explanations:
+  - body: prints data[i] and starts a new line.

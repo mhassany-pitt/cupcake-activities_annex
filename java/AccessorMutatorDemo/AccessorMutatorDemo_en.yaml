@@ -1,0 +1,58 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_AccessorMutatorDemo
+source: AccessorMutatorDemo.java
+title: Accessor Mutator Demo
+description: 'Worked example: Accessor Mutator Demo'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ConstructorCall
+  - expert:SimpleAssignmentExpression
+  - expert:DoubleDataType
+  - expert:StringDataType
+  - expert:ImportStatement
+  - expert:StringLiteral
+  - expert:java.lang.System.out.print
+  - expert:java.lang.System.out.println
+  - expert:ObjectCreationStatement
+  - expert:ObjectMethodInvocation
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Accessor Mutator Demo'
+elements:
+- type: explanation
+  location:
+    snippet: public class AccessorMutatorDemo
+  explanations:
+  - body: This example demonstrates accessors and mutators.
+- type: explanation
+  location:
+    snippet: double width = box.getWidth();
+  explanations:
+  - body: getWidth is an accessor method
+- type: explanation
+  location:
+    snippet: 'System.out.print("box: ");'
+  explanations:
+  - body: Calling an accessor doesn't change the object
+- type: explanation
+  location:
+    snippet: box.translate(15, 25);
+  explanations:
+  - body: translate is a mutator method
+- type: explanation
+  location:
+    snippet: 'System.out.print("box: ");'
+    nth: 2
+  explanations:
+  - body: Calling a mutator changes the object.

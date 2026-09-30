@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt3_2_en
+source: main.py
+title: Interest Capital and Interest
+description: 'Worked example: Interest Capital and Interest'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Interest Capital and Interest'
+elements:
+- type: explanation
+  location:
+    snippet: rate1 = 5
+  explanations:
+  - body: Assigning value 5 to the variable 'rate1'
+- type: explanation
+  location:
+    snippet: threshold = 50
+  explanations:
+  - body: Similarly keeping the threshold value to '50'
+- type: explanation
+  location:
+    snippet: rate2 = 6
+  explanations:
+  - body: Assigning the value of 'rate2' to '6'
+- type: explanation
+  location:
+    snippet: 'capital = float(input("Enter your capital: "))'
+  explanations:
+  - body: Taking in the float value of capital from user
+- type: explanation
+  location:
+    snippet: 'if capital < threshold:'
+  explanations:
+  - body: If capital is less than threshold provided...
+- type: explanation
+  location:
+    snippet: interest_rate = rate1
+  explanations:
+  - body: take 'rate1' as the interest rate
+- type: explanation
+  location:
+    snippet: interest_rate = rate2
+  explanations:
+  - body: else take 'rate2' as the interest rate
+- type: explanation
+  location:
+    snippet: print("Rate for", capital, "is", interest_rate, "%")
+  explanations:
+  - body: Printing out the capital and the interest rate
+- type: explanation
+  location:
+    snippet: annual_interest = capital * interest_rate / 100;
+  explanations:
+  - body: calculating and printing the interest and new capital
+- type: explanation
+  location:
+    snippet: print("Interest is $", annual_interest)
+  explanations:
+  - body: Printing out the new interest rate
+- type: explanation
+  location:
+    snippet: print("New capital is $", capital + annual_interest)
+  explanations:
+  - body: Printing out the new capital

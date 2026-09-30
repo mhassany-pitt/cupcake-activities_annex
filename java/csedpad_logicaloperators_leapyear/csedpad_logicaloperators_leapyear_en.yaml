@@ -1,0 +1,70 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_logicaloperators_leapyear
+source: LeapYear.java
+title: (LogicalOperators) Leap year - CSEdPad
+description: This program checks whether a year is a leap year or not
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:AndExpression
+  - webex:EqualExpression
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:StringVariable
+  - webex:ModulusExpression
+  - webex:IntDataType
+  - webex:NotEqualExpression
+  - webex:StringLiteral
+  - webex:SimpleVariable
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:OrExpression
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AndExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:EqualExpression
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ModulusExpression
+  - java_ontology:NotEqualExpression
+  - java_ontology:OrExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:SimpleVariable
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: This program checks whether a year is a leap year or not
+elements:
+- type: explanation
+  location:
+    snippet: 'leapYear = (year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0)) ? "It''s a leap Year": "Not a Leap year!";'
+  explanations:
+  - body: The ternary operator '?:' is used to check the whether the year is leap year of not. in a ternary operator all the
+      statement until ? represents a condition . for example '(year % 400 == 0) || ((year % 4 == 0) && (year % 100 != 0))'
+      represents a condition under evaluation if the condition evaluates true then value between '?' and ':' will be assigned
+      to the variable leapYear else the value between ':' and ';' will e assigned to the variable leapYear

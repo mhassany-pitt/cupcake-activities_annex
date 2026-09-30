@@ -1,0 +1,74 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_switch_memphis
+source: SwitchDemo.java
+title: Switch (Memphis)
+description: Demonstrates how to use Java switch statement.  This program determines whether an integer between 1 and 10 is
+  prime. (Prime numbers are integers that are divisible by only themselves and 1.  2 is considered the smallest prime number.)
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:IntDataType
+  - parser:SimpleAssignmentExpression
+  - parser:SwitchStatement
+  - parser:CaseClause
+  - parser:BreakStatement
+  - parser:DefaultClause
+  - parser:java.lang.System.out.println
+  - parser:ActualMethodParameter
+  - parser:StringLiteral
+  - parser:StringDataType
+  - java_ontology:ActualMethodParameter
+  - java_ontology:BreakStatement
+  - java_ontology:CaseClause
+  - java_ontology:ClassDefinition
+  - java_ontology:DefaultClause
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:SwitchStatement
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Demonstrates how to use Java switch statement.  This program determines whether an integer between 1 and 10 is
+  prime. (Prime numbers are integers that are divisible by only themselves and 1.  2 is considered the smallest prime number.)
+elements:
+- type: explanation
+  location:
+    snippet: switch (x) {
+  explanations:
+  - body: The switch statement can work on any int or String value.
+- type: explanation
+  location:
+    snippet: 'case 2:'
+  explanations:
+  - body: Find the first case that matches x's value, then run all actions until either a break or the end of the switch block
+      is reached.
+- type: explanation
+  location:
+    snippet: 'default:'
+  explanations:
+  - body: The default case runs if *none* of the preceding cases have been met.

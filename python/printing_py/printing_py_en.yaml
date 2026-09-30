@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_printing_py
+source: main.py
+title: printing.py
+description: Printing strings and numbers
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Float
+  - parser:Call
+  - parser:Str
+  - unspecified:Int
+  - unspecified:Call
+  - unspecified:Float
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: Printing strings and numbers
+elements:
+- type: explanation
+  location:
+    snippet: '# Example: Printing primitive data with print'
+  explanations:
+  - body: This is a comment. A string that starts with a hash symbol will be ignored by the interpreter and could be used
+      for comments. In this case, it explains the nature of the file content
+- type: explanation
+  location:
+    snippet: print("Hello, World!")
+  explanations:
+  - body: To print a string of symbols, use print function and provide the string delimited by double quotes inside brackets.
+      This line of code prints Hello, World! when interpreted
+- type: explanation
+  location:
+    snippet: print("Here are integers:", 10, 99)
+  explanations:
+  - body: Print function can have several papameters separated by comas. It prints the values of all its parameters one by
+      one, left to right, separating them by a space. This line will print Here are integers 10 99
+- type: explanation
+  location:
+    snippet: 'print("Here are floats: ", 3.1415, 0.001)'
+  explanations:
+  - body: 'This print function has three parameters. First is string "Here are floats", second is a floating point literal
+      3.1414 and third is another floating point literal 0.001. It prints the values of these three parameters one by one,
+      separating by a blank. The result will be Here are floats:  3.1415 0.001'
+- type: explanation
+  location:
+    snippet: 'print("Here are strings: ", "IS12", "hello!")'
+  explanations:
+  - body: 'This print function has three parameters, all are strings. It will print all of them left to right separating by
+      a blank. The result will be Here are strings:  IS12 hello!'

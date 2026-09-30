@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig07_12_c_en
+source: main.cpp
+title: fig07_12.c
+description: 'Worked example: fig07_12.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig07_12.c'
+elements:
+- type: explanation
+  location:
+    snippet: void f( const int *xPtr );
+  explanations:
+  - body: Pointer variable xPtr is modifiable, but the data to which it points, *xPtr, is not .
+- type: explanation
+  location:
+    snippet: '*xPtr = 100;'
+  explanations:
+  - body: '*xPtr has the const qualifier, so attempting to modify its value causes an error.'

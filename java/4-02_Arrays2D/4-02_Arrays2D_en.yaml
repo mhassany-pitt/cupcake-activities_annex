@@ -1,0 +1,107 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_4-02_Arrays2D
+source: Arrays2D.java
+title: 4-02_Arrays2D
+description: 'Worked example: 4-02_Arrays2D'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:IntDataType
+  - parser:SimpleAssignmentExpression
+  - parser:ArrayElement
+  - parser:ForStatement
+  - parser:NestedForLoops
+  - parser:LessExpression
+  - parser:ArrayLength
+  - parser:PostIncrementExpression
+  - parser:InstanceFieldInvocation
+  - parser:IfStatement
+  - parser:GreaterExpression
+  - parser:ReturnStatement
+  - parser:VoidDataType
+  - parser:ArrayInitializationStatement
+  - parser:ArrayInitializer
+  - parser:ArrayVariable
+  - parser:MultiDimensionalArrayDataType
+  - parser:java.lang.System.out.print
+  - parser:ActualMethodParameter
+  - parser:StringAddition
+  - parser:StringDataType
+  - parser:StringLiteral
+  - parser:java.lang.System.out.println
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ArrayElement
+  - java_ontology:ArrayInitializationStatement
+  - java_ontology:ArrayInitializer
+  - java_ontology:ArrayLength
+  - java_ontology:ArrayVariable
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:GreaterExpression
+  - java_ontology:IfStatement
+  - java_ontology:InstanceFieldInvocation
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiDimensionalArrayDataType
+  - java_ontology:NestedForLoops
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:ReturnStatement
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: 4-02_Arrays2D'
+elements:
+- type: explanation
+  location:
+    snippet: int max = x[0][0];
+  explanations:
+  - body: Assume the max is the upper-left element.
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < x.length; i++) {
+  explanations:
+  - body: For each row, i...
+- type: explanation
+  location:
+    snippet: for (int j = 0; j < x[i].length; j++) {
+  explanations:
+  - body: For each column, j...
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < x.length; i++) {
+    nth: 2
+  explanations:
+  - body: i represents the current row
+- type: explanation
+  location:
+    snippet: for (int j = 0; j < x[i].length; j++) {
+    nth: 2
+  explanations:
+  - body: j represents the current column of row i

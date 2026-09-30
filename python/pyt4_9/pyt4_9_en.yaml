@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_9_en
+source: main.py
+title: Break Statement
+description: 'Worked example: Break Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Break Statement'
+elements:
+- type: explanation
+  location:
+    snippet: 'for letter in ''Python'':'
+  explanations:
+  - body: 'This for loop statement is read in the following way: iterate through each letter in the string ''Python'''
+- type: explanation
+  location:
+    snippet: 'if letter == ''h'':'
+  explanations:
+  - body: it checks if the current letter is 'h'
+- type: explanation
+  location:
+    snippet: break
+  explanations:
+  - body: if the current letter is 'h', it will break out of the for loop and execute statements outside of the loop
+- type: explanation
+  location:
+    snippet: print('Current Letter :', letter)
+  explanations:
+  - body: If the current letter is not 'h' and hence if the loop did not break, it will print out the current letter

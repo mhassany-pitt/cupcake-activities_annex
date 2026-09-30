@@ -1,0 +1,60 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection38
+source: query.sql
+title: Grouping and aggregating (3)
+description: Grouping and aggregating (3)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:EqualComparison
+  - expert:ReferentialAction
+  - expert:TableAlias
+  - expert:Timestamp
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AvgFunction
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:ComparisonOperation
+  - expert:MinFunction
+  - expert:CountFunction
+  - expert:SimpleSubquery
+  - expert:SingleAttributeSelection
+  - expert:DotCharacter
+  - expert:SingleTableSelection
+  - sql_ontology:EqualComparison
+  - sql_ontology:DateTimeType
+  - sql_ontology:DotCharacter
+  - sql_ontology:TableAlias
+  - sql_ontology:SelectStatement
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:SimpleSubquery
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:AvgFunction
+  - sql_ontology:MinFunction
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_ontology:CountFunction
+  - sql_concept:ReferentialAction
+  - sql_concept:ComparisonOperation
+runtime:
+  language: sql
+  version: '2016'
+statement: Grouping and aggregating (3)
+elements:
+- type: explanation
+  location:
+    snippet: (SELECT MIN (AVG(S2.age))
+  explanations:
+  - body: This example is WRONG, because aggregate operations cannot be nested. This query tried to calculate average age
+      of sailors and minimum value of it again. AVG function cannot be nested by another aggregate function.

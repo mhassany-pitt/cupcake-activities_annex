@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_11_en
+source: main.py
+title: Pass Statement
+description: 'Worked example: Pass Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Pass Statement'
+elements:
+- type: explanation
+  location:
+    snippet: 'for letter in ''Python'':'
+  explanations:
+  - body: 'This for loop statement is read in the following way: iterate through each letter in the string ''Python'''
+- type: explanation
+  location:
+    snippet: 'if letter == ''h'':'
+  explanations:
+  - body: it checks if the current letter is 'h'
+- type: explanation
+  location:
+    snippet: pass
+  explanations:
+  - body: This statement dones nothing...actually nothing. It is used when a statement is required syntactically but you do
+      not want any command or code to execute.
+- type: explanation
+  location:
+    snippet: print('Current Letter :', letter)
+  explanations:
+  - body: This statement will print all the letters including 'h' because the 'pass' statement actually does nothing

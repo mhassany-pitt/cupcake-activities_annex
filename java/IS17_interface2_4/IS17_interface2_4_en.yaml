@@ -1,0 +1,163 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface2_4
+source: PolymorphismTest.java
+title: IS17_interface2_4
+description: 'Worked example: IS17_interface2_4'
+authors:
+- first: Andres
+  last: Pacheco
+  email: andres.pacheco@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface2_4'
+elements:
+- type: explanation
+  location:
+    snippet: interface Shape {
+  explanations:
+  - body: creates the interface shape
+- type: explanation
+  location:
+    snippet: public double area();
+  explanations:
+  - body: creates method area
+- type: explanation
+  location:
+    snippet: public double volume();
+  explanations:
+  - body: creates method volume
+- type: explanation
+  location:
+    snippet: class Cube implements Shape {
+  explanations:
+  - body: creates class Cube which implements interface shape
+- type: explanation
+  location:
+    snippet: int width = 2;
+  explanations:
+  - body: declares width in the instance field and assigns it 2
+- type: explanation
+  location:
+    snippet: int length = 3;
+  explanations:
+  - body: declares length in the instance field and assigns it 3
+- type: explanation
+  location:
+    snippet: int height = 10;
+  explanations:
+  - body: declares height in the instance field and assigns it 10
+- type: explanation
+  location:
+    snippet: public double area( ) {
+  explanations:
+  - body: calls method area
+- type: explanation
+  location:
+    snippet: return (width * length);
+  explanations:
+  - body: returns the area of the shape
+- type: explanation
+  location:
+    snippet: public double volume() {
+  explanations:
+  - body: calls method volume
+- type: explanation
+  location:
+    snippet: return (width * length * height);
+  explanations:
+  - body: returns the volume of the shape
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: ends class
+- type: explanation
+  location:
+    snippet: class Circle implements Shape {
+  explanations:
+  - body: creates class Circle while implementing interface shape
+- type: explanation
+  location:
+    snippet: int radius = 10;
+  explanations:
+  - body: declares radius in the instance field and assigns it 10
+- type: explanation
+  location:
+    snippet: public double area() {
+  explanations:
+  - body: calls method area
+- type: explanation
+  location:
+    snippet: return (Math.PI * radius * radius);
+  explanations:
+  - body: returns the area of the cirlce
+- type: explanation
+  location:
+    snippet: public double volume() {
+    nth: 2
+  explanations:
+  - body: calls method volume
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: returns the volume of a circle. But because a cirlce is actually flat, it's volume is non-existent. Thus the volume
+      is 0.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: ends the class
+- type: explanation
+  location:
+    snippet: public class PolymorphismTest {
+  explanations:
+  - body: creates class PolymorphismTest
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: calls for a main method
+- type: explanation
+  location:
+    snippet: Shape[] s = { new Cube(), new Circle() };
+  explanations:
+  - body: creates array s and it creates a new cube and cirlce
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < s.length; i++) {
+  explanations:
+  - body: for loop that increments the count until i ==  the length of array s
+- type: explanation
+  location:
+    snippet: System.out.println("The area and volume of " + s[i].getClass() " is " + s[i].area() + " , " + s[i].volume());
+  explanations:
+  - body: prints out the string "The area of and volume of the array is and it prints the shape, area and volume of the shapes
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: finishes loop
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: finishes main method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: finishes class

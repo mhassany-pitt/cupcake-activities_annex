@@ -1,0 +1,101 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_2_en
+source: main.py
+title: ELIF (ELSE IF) Statement
+description: 'Worked example: ELIF (ELSE IF) Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:GtE
+  - parser:Int
+  - parser:Call
+  - parser:Str
+  - parser:Assign
+  - parser:If
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:GtE
+  - unspecified:Int
+  - unspecified:If
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: ELIF (ELSE IF) Statement'
+elements:
+- type: explanation
+  location:
+    snippet: '#ELIF (Else...If) Statement to find out the Letter Grade of a student from a score'
+  explanations:
+  - body: In case of more than one conditions, repeatedly increasing indentation with an 'if' statement as the 'else' block
+      can be annoying and distracting. One solution to this is to use 'elif' statement. It is a short version of Else...IF
+- type: explanation
+  location:
+    snippet: score = 82
+  explanations:
+  - body: Assigning the integer '82' to the variable 'score'. In other words, taking in the student's score out of 100 as
+      an input
+- type: explanation
+  location:
+    snippet: 'if score >= 90:'
+  explanations:
+  - body: First condition is to check if the score is above 90
+- type: explanation
+  location:
+    snippet: letter = 'A'
+  explanations:
+  - body: If the score is above 90, the letter grade 'A' is assigned to the student
+- type: explanation
+  location:
+    snippet: 'elif score >= 80:'
+  explanations:
+  - body: else if the score is more than or equal to 80
+- type: explanation
+  location:
+    snippet: letter = 'B'
+  explanations:
+  - body: the letter grade 'B' is assigned to the student
+- type: explanation
+  location:
+    snippet: 'elif score >= 70:'
+  explanations:
+  - body: else if the score is more than or equal to 70
+- type: explanation
+  location:
+    snippet: letter = 'C'
+  explanations:
+  - body: the letter grade 'C' is assigned to the student
+- type: explanation
+  location:
+    snippet: 'elif score >= 60:'
+  explanations:
+  - body: else if the score is more than or equal to 60
+- type: explanation
+  location:
+    snippet: letter = 'D'
+  explanations:
+  - body: the letter grade 'D' is assigned to the student
+- type: explanation
+  location:
+    snippet: 'else:'
+  explanations:
+  - body: If none of the above conditions are true then the score of the student is less than 60
+- type: explanation
+  location:
+    snippet: letter = 'F'
+  explanations:
+  - body: If the score is less than 60, then the letter grade 'F' is assigned to the student
+- type: explanation
+  location:
+    snippet: print(letter)
+  explanations:
+  - body: Print out the letter grade

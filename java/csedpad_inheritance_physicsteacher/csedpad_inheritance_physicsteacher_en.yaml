@@ -1,0 +1,119 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_inheritance_physicsteacher
+source: Teacher.java
+title: (Inheritance) Physics teacher - CSEdPad
+description: Demonstrate the inheritance concept by creating a superclass Teacher with a private string features designation
+  and collegeName and does function. Then creates subclass PhysicsTeacher that extends the Teacher class with a private String
+  feature mainSubje
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:MethodDefinition
+  - webex:ExtendsSpecification
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:InstanceField
+  - webex:VoidDataType
+  - webex:StringVariable
+  - webex:ObjectCreationStatement
+  - webex:ConstructorCall
+  - webex:StringLiteral
+  - webex:InstanceFieldInitializationStatement
+  - webex:ObjectMethodInvocation
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:ExtendsSpecification
+  - java_ontology:FormalMethodParameter
+  - java_ontology:InstanceField
+  - java_ontology:InstanceFieldInitializationStatement
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Demonstrate the inheritance concept by creating a superclass Teacher with a private string features designation
+  and collegeName and does function. Then creates subclass PhysicsTeacher that extends the Teacher class with a private String
+  feature mainSubje
+elements:
+- type: explanation
+  location:
+    snippet: public class Teacher {
+  explanations:
+  - body: Declare a class name Teacher
+- type: explanation
+  location:
+    snippet: String designation = "Teacher";
+  explanations:
+  - body: Declare a private string feature name designation and initialize it to Teacher
+- type: explanation
+  location:
+    snippet: String collegeName = "Beginnersbook";
+  explanations:
+  - body: Declare a private string feature name collegeName and initialize it to Beginnersbook
+- type: explanation
+  location:
+    snippet: void does(){
+  explanations:
+  - body: Declare a private function name does that print teaching
+- type: explanation
+  location:
+    snippet: public class PhysicsTeacher extends Teacher{
+  explanations:
+  - body: Declare a sub class name PhysicsTeacher that extend Vehicle Teacher
+- type: explanation
+  location:
+    snippet: String mainSubject = "Physics";
+  explanations:
+  - body: declare private String feature name mainSubject and initialize it to Physics
+- type: explanation
+  location:
+    snippet: PhysicsTeacher obj = new PhysicsTeacher();
+  explanations:
+  - body: declares an object name obj from the class PhysicsTeacher
+- type: explanation
+  location:
+    snippet: System.out.println(obj.collegeName);
+  explanations:
+  - body: Display the value of the collegeName attribute from the Teacher class
+- type: explanation
+  location:
+    snippet: System.out.println(obj.designation);
+  explanations:
+  - body: Display the value of the designation attribute from the Teacher class
+- type: explanation
+  location:
+    snippet: System.out.println(obj.mainSubject);
+  explanations:
+  - body: Display the value of the mainSubject attribute from the PhysicsTeacher class
+- type: explanation
+  location:
+    snippet: obj.does();
+  explanations:
+  - body: call the function does from Teacher class

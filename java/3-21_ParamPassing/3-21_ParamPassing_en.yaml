@@ -1,0 +1,60 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_3-21_ParamPassing
+source: ParamPassing.java
+title: 3-21_ParamPassing
+description: 'Worked example: 3-21_ParamPassing'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:IntDataType
+  - parser:java.lang.System.out.println
+  - parser:ActualMethodParameter
+  - parser:StringLiteral
+  - parser:StringDataType
+  - parser:StringAddition
+  - parser:SimpleAssignmentExpression
+  - parser:ArrayElement
+  - parser:ArrayInitializationStatement
+  - parser:ArrayInitializer
+  - parser:ArrayVariable
+  - parser:ArrayDataType
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ArrayDataType
+  - java_ontology:VoidDataType
+  - java_ontology:ArrayInitializationStatement
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StringLiteral
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ArrayElement
+  - java_ontology:MethodDefinition
+  - java_ontology:ClassDefinition
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:ArrayInitializer
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:IntDataType
+  - java_ontology:ArrayVariable
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: 3-21_ParamPassing'
+elements: []

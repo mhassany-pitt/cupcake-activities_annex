@@ -1,0 +1,30 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection23_version_1_pt
+source: query.sql
+title: AggregateFunctions(3)
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT COUNT(*)
+  explanations:
+  - body: A funcao de agregacao COUNT() calcula a quantidade de tuplas retornadas. Se o nome da coluna for especificado, a
+      funcao retorna o numero de valores naquela coluna. Por exemplo, COUNT(customer_name) e' utilizado para calcular a quantidade
+      de valores contidos na coluna 'customer_name' e COUNT(*) e' utilizado para contar a quantidade de linhas retornadas
+      pela consulta.

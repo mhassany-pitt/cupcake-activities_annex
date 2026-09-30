@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_bubblesortpf
+source: main.cpp
+title: BubbleSortPF
+description: 'Worked example: BubbleSortPF'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: BubbleSortPF'
+elements:
+- type: explanation
+  location:
+    snippet: void bubbleSort( int *, const int );
+  explanations:
+  - body: multipurpose bubble sort; parameter compare is a pointer to the comparison function that determines sorting order.
+- type: explanation
+  location:
+    snippet: void bubbleSort( int *array, const int size )
+  explanations:
+  - body: multipurpose bubble sort; parameter compare is a pointer to the comparison function that determines sorting order.

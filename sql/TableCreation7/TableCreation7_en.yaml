@@ -1,0 +1,116 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableCreation7
+source: query.sql
+title: Assertion Creation (1)
+description: Assertion Creation (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AdditionExpression
+  - expert:SQLBasicConcept
+  - expert:SimpleSubQuery
+  - expert:Rule
+  - expert:CountFunction
+  - expert:StringType
+  - expert:TableAlias
+  - expert:Assertion
+  - expert:SubstringExtraction
+  - expert:Float
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:TableAlteration
+  - expert:AttributeName
+  - expert:AttributeSpecification
+  - expert:TupleSelectionCondition
+  - expert:SelectStatement
+  - expert:UniqueKeyConstraint
+  - expert:BracketCharacter
+  - expert:CheckConstraint
+  - expert:NumericType
+  - expert:CommaCharacter
+  - expert:LessThanComparison
+  - expert:SingleAttributeSelection
+  - expert:CreateTableClause
+  - expert:CreateTableStatement
+  - expert:DatabaseManagement
+  - expert:SingleTableSelection
+  - expert:PrimaryKeyClause
+  - expert:Double
+  - expert:PrimaryKeyConstraint
+  - sql_ontology:SubQuery
+  - sql_ontology:AttributeName
+  - sql_ontology:CheckConstraint
+  - sql_ontology:CommaCharacter
+  - sql_ontology:PrimaryKeyConstraint
+  - sql_ontology:PrimaryKeyClause
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:CreateTableStatement
+  - sql_ontology:SelectClause
+  - sql_ontology:Assertion
+  - sql_ontology:Double
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:CreateTableClause
+  - sql_ontology:UniqueKeyConstraint
+  - sql_ontology:LessThanOrEqualComparison
+  - sql_ontology:Integer
+  - sql_ontology:Float
+  - sql_ontology:AttributeSpecification
+  - sql_ontology:FromClause
+  - sql_ontology:AdditionExpression
+  - sql_ontology:SelectStatement
+  - sql_ontology:AlterTableStatement
+  - sql_ontology:BracketCharacter
+  - sql_concept:TupleSelectionCondition
+  - sql_concept:Rule
+  - sql_concept:SubstringExtraction
+runtime:
+  language: sql
+  version: '2016'
+statement: Assertion Creation (1)
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE sailors
+  explanations:
+  - body: This example is to create table for sailors and everything to insert sailor it is required to check whether the
+      sum of the number of sailors and the number of boats are not exceeded 100. <b>** This example is connected to the next
+      example.</b>
+- type: explanation
+  location:
+    snippet: CHECK
+  explanations:
+  - body: This example is to specify the total number of sailors and boats should be less 100. However, this example is WRONG.
+      This check constraint which checks both 'sailor' and 'boats' tables belongs to 'sailors' table itself recursively. If
+      sailors is empty, the number of Boats tuples can be anything!
+- type: explanation
+  location:
+    snippet: ((SELECT COUNT(S.sid)
+  explanations:
+  - body: <b>This first example is WRONG.</b> If sailors is empty, the number of Boats tuples can be anything! It returns
+      the number sailor id. The most nested query is executed firstly.
+- type: explanation
+  location:
+    snippet: FROM sailor S) +
+  explanations:
+  - body: Two separate queries are linked using summation sign. Both query results are sum up.
+- type: explanation
+  location:
+    snippet: (SELECT COUNT(B.sid)
+  explanations:
+  - body: This query returns the number of boats.
+- type: explanation
+  location:
+    snippet: < 100));
+  explanations:
+  - body: The summed results of two subqueries is compared with '100' and if the value is less than 100, the condition is
+      satisfied.

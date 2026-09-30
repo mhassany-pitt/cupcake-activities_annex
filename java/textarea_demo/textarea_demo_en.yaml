@@ -1,0 +1,91 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_textarea_demo
+source: TextAreaDemo.java
+title: ISD::TextAreaDemo.java
+description: 'Worked example: ISD::TextAreaDemo.java'
+authors:
+- first: Patrick
+  last: Cross
+  email: patrick.cross@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::TextAreaDemo.java'
+elements:
+- type: explanation
+  location:
+    snippet: private JTextArea t1, t2;
+  explanations:
+  - body: Like JTextField, inherits from JTextComponent
+- type: explanation
+  location:
+    snippet: Box b = Box.createHorizontalBox();
+  explanations:
+  - body: Create Box container.
+- type: explanation
+  location:
+    snippet: t1 = new JTextArea( s, 10, 15 );
+  explanations:
+  - body: Create a new JTextArea, initialized with String s, 10 rows, 15 columns.
+- type: explanation
+  location:
+    snippet: b.add( new JScrollPane( t1 ) );
+  explanations:
+  - body: Create a JScrollPane, providing scrolling for t1.  Attach the JScrollPane to Box b.
+- type: explanation
+  location:
+    snippet: t2.setText( t1.getSelectedText() );
+  explanations:
+  - body: Set tge selected text of t1 as the text of t2.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Column named sid, which is character domain type, has 20 digit space and does not allow NULL value. <br><br>In the
+      body of the CREATE TABLE clause, the columns of the newly created table are defined. Column definition should be started
+      with the round parenthesis. Firstly, every column in the table must have a unique name, but the names may duplicate
+      those of columns in other tables. Secondly, domain name is to identify the kind of data that the column stores. This
+      additional information is enclosed in parenthesis following the keyword that specifies the data type. Lastly, required
+      data is to determine whether the column contains required data and prevents NULL values from appearing in the column;
+      otherwise, NULL values are allowed.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: Column named sid, which is character domain type, has 20 digit space and does not allow NULL value. <br><br>In the
+      body of the CREATE TABLE clause, the columns of the newly created table are defined. Column definition should be started
+      with the round parenthesis. Firstly, every column in the table must have a unique name, but the names may duplicate
+      those of columns in other tables. Secondly, domain name is to identify the kind of data that the column stores. This
+      additional information is enclosed in parenthesis following the keyword that specifies the data type. Lastly, required
+      data is to determine whether the column contains required data and prevents NULL values from appearing in the column;
+      otherwise, NULL values are allowed.
+- type: explanation
+  location:
+    snippet: );
+  explanations:
+  - body: Column named sid, which is character domain type, has 20 digit space and does not allow NULL value. <br><br>In the
+      body of the CREATE TABLE clause, the columns of the newly created table are defined. Column definition should be started
+      with the round parenthesis. Firstly, every column in the table must have a unique name, but the names may duplicate
+      those of columns in other tables. Secondly, domain name is to identify the kind of data that the column stores. This
+      additional information is enclosed in parenthesis following the keyword that specifies the data type. Lastly, required
+      data is to determine whether the column contains required data and prevents NULL values from appearing in the column;
+      otherwise, NULL values are allowed.
+- type: explanation
+  location:
+    snippet: b.add( copy );
+  explanations:
+  - body: Add the copy button to the Box container b.
+- type: explanation
+  location:
+    snippet: b.add( new JScrollPane( t2 ) );
+  explanations:
+  - body: Create a JScrollPane, providing scrolling for t2.  Attach the JScrollPane to Box b.

@@ -1,0 +1,70 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_simple_inheritance_1
+source: Pet.java
+title: Simple Inheritance
+description: 'Worked example: Simple Inheritance'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:ExtendsSpecification
+  - expert:FormalMethodParameter
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ObjectCreationStatement
+  - expert:ObjectMethodInvocation
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Simple Inheritance'
+elements:
+- type: explanation
+  location:
+    snippet: public class Pet {
+  explanations:
+  - body: "The class Pet has some code implementing 3 methods: speak(), \r\njump() and walk()"
+- type: explanation
+  location:
+    snippet: public class Dog extends Pet {
+  explanations:
+  - body: "The class Dog extends Pet. This means it inherits all code implemented in class Pet. In general, \"Inheritance\"\
+      \ happens when ClassB extends ClassA, then ClassA is called \"superclass\" and ClassB is called \"subclass\". In this\
+      \ example, \nPet is the superclass and Dog is the subclass."
+- type: explanation
+  location:
+    snippet: Dog myDog = new Dog();
+  explanations:
+  - body: An object of class Dog is created.
+- type: explanation
+  location:
+    snippet: myDog.speak();
+  explanations:
+  - body: "Even when Dog class has no methods by its own, it inherits the \r\nmethods of the superclass Pet. This line prints\
+      \ \"speaking!\""
+- type: explanation
+  location:
+    snippet: myDog.walk();
+  explanations:
+  - body: Method walk() is inherited from class Pet. This line prints "walking!"
+- type: explanation
+  location:
+    snippet: myDog.jump();
+  explanations:
+  - body: "Method jump() is inherited from class Pet. This line prints \r\n\"jumping!\""

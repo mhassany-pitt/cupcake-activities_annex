@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_WhileStatement
+source: main.cpp
+title: WhileStatement
+description: 'Worked example: WhileStatement'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: WhileStatement'
+elements:
+- type: explanation
+  location:
+    snippet: int counter = 1;
+  explanations:
+  - body: increments counter then checks if it is less than or equal to 10.
+- type: explanation
+  location:
+    snippet: '} while ( ++counter <= 10 );'
+  explanations:
+  - body: increments counter then checks if it is less than or equal to 10.

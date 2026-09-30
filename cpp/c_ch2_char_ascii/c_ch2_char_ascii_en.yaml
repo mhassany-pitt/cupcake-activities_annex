@@ -1,0 +1,78 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_c_ch2_char_ascii
+source: main.cpp
+title: Character Numbers ASCII
+description: 'Worked example: Character Numbers ASCII'
+authors:
+- first: Natalya
+  last: Goreva
+  email: natalya.goreva@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Character Numbers ASCII'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <iostream>'
+  explanations:
+  - body: Include the library for working with streaming data to and from the user
+- type: explanation
+  location:
+    snippet: using namespace std;
+  explanations:
+  - body: Add a reference to standard namespace that includes variables, types, constants, and functions
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: Declare the main function
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Open the function body
+- type: explanation
+  location:
+    snippet: char letter;
+  explanations:
+  - body: Declare a variable of the character type (can store only one character in it)
+- type: explanation
+  location:
+    snippet: letter = 65;
+  explanations:
+  - body: 65 is the ASCII code for the character A
+- type: explanation
+  location:
+    snippet: cout << letter << endl;
+  explanations:
+  - body: Output the value of the variable (the letter"A" will be in the output)
+- type: explanation
+  location:
+    snippet: letter = 66;
+  explanations:
+  - body: 66 is the ASCII code for the character B
+- type: explanation
+  location:
+    snippet: cout << letter << endl;
+    nth: 2
+  explanations:
+  - body: Output the new value of the variable (the letter"B" will be in the output this time)
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: main() is a function, so it should return a value. We make it 0, or in this case a dummy value
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Close the function body

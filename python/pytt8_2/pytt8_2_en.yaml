@@ -1,0 +1,58 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt8_2_en
+source: main.py
+title: String Index Search
+description: 'Worked example: String Index Search'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: String Index Search'
+elements:
+- type: explanation
+  location:
+    snippet: 'def main ():'
+  explanations:
+  - body: define main function
+- type: explanation
+  location:
+    snippet: mystring = input ("Enter string to search?")
+  explanations:
+  - body: take a string input from the user and store it in the variable 'mystring'
+- type: explanation
+  location:
+    snippet: mysym = input ("Enter symbold to search for?")
+  explanations:
+  - body: taking the symbol (character) as input and storing it in the variable 'mysym'
+- type: explanation
+  location:
+    snippet: 'if mysym in mystring:'
+  explanations:
+  - body: this statement checks if the symbol or the character given as input from user is in the string
+- type: explanation
+  location:
+    snippet: print(mystring.index(mysym))
+  explanations:
+  - body: if yes, it will print out the index where that symbol appears in the string. Not the use of an inbuilt method index()
+- type: explanation
+  location:
+    snippet: print(mysym + " not in " + mystring)
+  explanations:
+  - body: if the symbol is not found in the string, then it wil print out a nice error message saying that the symbols id
+      not in the given string
+- type: explanation
+  location:
+    snippet: main()
+  explanations:
+  - body: calling the main fuction

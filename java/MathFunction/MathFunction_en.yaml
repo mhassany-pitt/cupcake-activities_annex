@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_MathFunction
+source: Main.java
+title: DEPRECATED_Math Functions
+description: 'Worked example: DEPRECATED_Math Functions'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Math Functions'
+elements:
+- type: explanation
+  location:
+    snippet: int i = Math.abs(-9);
+  explanations:
+  - body: The absolute value of a number .
+- type: explanation
+  location:
+    snippet: double j = Math.ceil(4.00001) ;
+  explanations:
+  - body: The ceiling of a number is the smallest integer greater than or equal to  the number. Every integer is its own ceiling.

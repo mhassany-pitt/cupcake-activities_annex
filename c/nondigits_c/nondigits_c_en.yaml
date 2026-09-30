@@ -1,0 +1,62 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_nondigits_c_en
+source: main.c
+title: 'IS12:: nondigits.c (118.7)'
+description: 'Worked example: IS12:: nondigits.c (118.7)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:int
+  - unspecified:greater_equal
+  - unspecified:void
+  - unspecified:printf
+  - unspecified:if
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:and
+  - unspecified:main_function
+  - unspecified:less_equal
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:post_increment
+  - unspecified:simple_assignment
+  - unspecified:not
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: nondigits.c (118.7)'
+elements:
+- type: explanation
+  location:
+    snippet: '/* Example: Counting non-digits in the stream of text */'
+  explanations:
+  - body: This is the header comment. It explains what the program is doing.
+- type: explanation
+  location:
+    snippet: int ch;
+  explanations:
+  - body: Variable ch will be used to read characters from the standard input. It is defined as int since it should be able
+      to get the EOF value that is not char
+- type: explanation
+  location:
+    snippet: while ((ch = getchar()) != EOF)
+  explanations:
+  - body: When the condition of this while loop is evaluated, a new character is read from the standard input and assigned
+      to ch. If getchar() returns EOF, the loop is over
+- type: explanation
+  location:
+    snippet: if (! (ch >= '0' && ch <= '9'))
+  explanations:
+  - body: The condition (ch >= '0' && ch <= '9') returns 1 (true) if ch is one of the digits 0 to 9 and returns 0 (false)
+      otherwise. The negation of this condition made with ! (not) operation convirts 0 to 1 and 1 to 0. The negated condition
+      is 1 (true) for any non

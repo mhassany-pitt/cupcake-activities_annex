@@ -1,0 +1,65 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_CashRegisterTester
+source: CashRegisterTester.java
+title: Cash Register Tester
+description: 'Worked example: Cash Register Tester'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Cash Register Tester'
+elements:
+- type: explanation
+  location:
+    snippet: public class CashRegisterTester
+  explanations:
+  - body: "/**   A class to test the CashRegister class.\r\n*/"
+- type: explanation
+  location:
+    snippet: public class CashRegister
+  explanations:
+  - body: "/**   A cash register totals up sales and computes change due.\r\n*/"
+- type: explanation
+  location:
+    snippet: public CashRegister(double rate)
+  explanations:
+  - body: "/**      Constructs a cash register with no money in it.\r\n      @param rate the tax rate for taxable purchases\r\
+      \n   */"
+- type: explanation
+  location:
+    snippet: public void recordPurchase(double amount)
+  explanations:
+  - body: "/**      Records the sale of a tax-free item.\r\n      @param amount the price of the item\r\n   */"
+- type: explanation
+  location:
+    snippet: public void recordTaxablePurchase(double amount)
+  explanations:
+  - body: "/**      Records the sale of a taxable item.\r\n      @param amount the price of the item\r\n   */"
+- type: explanation
+  location:
+    snippet: public void receivePayment(double amount)
+  explanations:
+  - body: "/**      Processes a payment received from the customer.\r\n      @param amount the amount of the payment\r\n \
+      \  */"
+- type: explanation
+  location:
+    snippet: public double getSalesTax()
+  explanations:
+  - body: "/**      Processes the sales tax due.\r\n      @return the sales tax due\r\n   */"
+- type: explanation
+  location:
+    snippet: public double giveChange()
+  explanations:
+  - body: "/**      Computes the change due and resets the machine for the \r\nnext customer.\r\n      @return the change\
+      \ due to the customer\r\n   */"

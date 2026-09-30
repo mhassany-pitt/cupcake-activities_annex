@@ -1,0 +1,49 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataInsertion4_version_1_pt
+source: query.sql
+title: InsertingData(4)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: INSERT INTO depositor
+  explanations:
+  - body: Exemplo de insercao de dados na tabela 'depositor'.
+- type: explanation
+  location:
+    snippet: SELECT customer_name, loan_no
+  explanations:
+  - body: Para atribuir as contas criadas aos clientes da agencia 'Perryridge', o nome do cliente (coluna 'customer_name')
+      na tabela 'borrower' e o numero do emprestimo (coluna 'loan_no') na tabela 'loan' sao selecionados para serem armazenados
+      na tabela 'depositor' (depositante) .
+- type: explanation
+  location:
+    snippet: FROM loan, borrower
+  explanations:
+  - body: '''customer_name'' pertence a tabela ''borrower'' e ''loan_no'' pertence a tabela ''loan''.'
+- type: explanation
+  location:
+    snippet: WHERE branch_name ='Perryridge'
+  explanations:
+  - body: Seleciona apenas os clientes da agencia 'Perryridge'.
+- type: explanation
+  location:
+    snippet: AND loan.accont_no = borrower.account_no;
+  explanations:
+  - body: Verifica se cada devedor possui uma conta de emprestimo.

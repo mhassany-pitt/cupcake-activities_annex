@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig06_10_c_en
+source: main.cpp
+title: fig06_10.c
+description: 'Worked example: fig06_10.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig06_10.c'
+elements:
+- type: explanation
+  location:
+    snippet: char string1[ 20 ];
+  explanations:
+  - body: reserves 20 characters.
+- type: explanation
+  location:
+    snippet: char string2[] = "string literal";
+  explanations:
+  - body: string2 array is defined with one element for each character, so 15 elements including null character /0.
+- type: explanation
+  location:
+    snippet: scanf( "%s", string1 );
+  explanations:
+  - body: input ended by whitespace character.
+- type: explanation
+  location:
+    snippet: for ( i = 0; string1[ i ] != '\0'; i++ ) {
+  explanations:
+  - body: for loop prints characters of string1 array with spaces in between.

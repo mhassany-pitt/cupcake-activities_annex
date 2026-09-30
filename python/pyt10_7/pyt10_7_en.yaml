@@ -1,0 +1,100 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_7_en
+source: main.py
+title: Functions Example 1
+description: 'Worked example: Functions Example 1'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Gt
+  - parser:Int
+  - parser:Lt
+  - parser:Call
+  - parser:USub
+  - parser:Str
+  - parser:arg
+  - parser:Eq
+  - parser:FunctionDef
+  - parser:If
+  - unspecified:Gt
+  - unspecified:arg
+  - unspecified:Call
+  - unspecified:Eq
+  - unspecified:FunctionDef
+  - unspecified:Int
+  - unspecified:Lt
+  - unspecified:If
+  - unspecified:USub
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Functions Example 1'
+elements:
+- type: explanation
+  location:
+    snippet: 'def attendance(number):'
+  explanations:
+  - body: Defining the function 'attendance' which takes in the argument 'number'. Here 'number' is the percent of students
+      present in a class for example.
+- type: explanation
+  location:
+    snippet: 'if number == 0:'
+  explanations:
+  - body: Checking for the condition number=0 (none of the student were present)
+- type: explanation
+  location:
+    snippet: 'elif number < 0:'
+  explanations:
+  - body: Checking for another condition where the number is less than zero. This is an invalid input since the number of
+      students cannot be less than 0
+- type: explanation
+  location:
+    snippet: 'else:'
+  explanations:
+  - body: If none of the above conditions are true...check for the following...
+- type: explanation
+  location:
+    snippet: 'if number > 100:'
+  explanations:
+  - body: Is the number greater than 100? This number is out of range since a class cannot have more than 100% students.
+- type: explanation
+  location:
+    snippet: 'elif number >70:'
+  explanations:
+  - body: If not, is he number greater than 70?
+- type: explanation
+  location:
+    snippet: 'else:'
+    nth: 2
+  explanations:
+  - body: If none of the above conditions is true, then the number is between 1 to 70.
+- type: explanation
+  location:
+    snippet: attendance(-1)
+  explanations:
+  - body: The function 'attendace' is called by passing the number '-1'
+- type: explanation
+  location:
+    snippet: attendance(20)
+  explanations:
+  - body: The function 'attendace' is called by passing the number '20'
+- type: explanation
+  location:
+    snippet: attendance(80)
+  explanations:
+  - body: The function 'attendace' is called by passing the number '80'
+- type: explanation
+  location:
+    snippet: attendance(1000)
+  explanations:
+  - body: The function 'attendace' is called by passing the number '1000'

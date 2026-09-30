@@ -1,0 +1,95 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_if_else_memphis1
+source: RoboBouncer.java
+title: If else nested (Memphis)
+description: Demo of using if with else - this program simulates a bouncer at a club.
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ImportStatement
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:SimpleAssignmentExpression
+  - parser:ObjectCreationStatement
+  - parser:ConstructorCall
+  - parser:ActualMethodParameter
+  - parser:java.lang.System.out.println
+  - parser:StringLiteral
+  - parser:StringDataType
+  - parser:IntDataType
+  - parser:ObjectMethodInvocation
+  - parser:IfElseStatement
+  - parser:GreaterEqualExpression
+  - parser:StringAddition
+  - parser:SubtractExpression
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:FormalMethodParameter
+  - java_ontology:GreaterEqualExpression
+  - java_ontology:IfElseStatement
+  - java_ontology:ImportStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:SubtractExpression
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Demo of using if with else - this program simulates a bouncer at a club.
+elements:
+- type: explanation
+  location:
+    snippet: int age = bounce.nextInt();
+  explanations:
+  - body: Get user input for his/her age
+- type: explanation
+  location:
+    snippet: if (age >= 21) {
+  explanations:
+  - body: The user can enter if s/he is at least 21
+- type: explanation
+  location:
+    snippet: '} else {'
+  explanations:
+  - body: If the user is not at least 21, show an error message
+- type: explanation
+  location:
+    snippet: if (age >= 13) {
+  explanations:
+  - body: Show a PG-13 rated error message
+- type: explanation
+  location:
+    snippet: '} else {'
+    nth: 2
+  explanations:
+  - body: Show a G rated error message
+- type: explanation
+  location:
+    snippet: System.out.println("Come back in " + (21 - age) + " years :)");
+  explanations:
+  - body: This line runs regardless of which error message was shown.

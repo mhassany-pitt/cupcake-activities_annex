@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt8_2_en
+source: main.py
+title: Accessing Tuple Index
+description: 'Worked example: Accessing Tuple Index'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Accessing Tuple Index'
+elements:
+- type: explanation
+  location:
+    snippet: print (a[2])
+  explanations:
+  - body: Accessing the index 2 element of the tuple (3rd element since the tuple index always starts from 0)
+- type: explanation
+  location:
+    snippet: print (a[3])
+  explanations:
+  - body: Accessing the index 3 element of the tuple (4th element since the tuple index always starts from 0)

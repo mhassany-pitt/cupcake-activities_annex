@@ -1,0 +1,46 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_testNull
+source: Main.java
+title: Testing for null
+description: 'Worked example: Testing for null'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:null
+  - expert:nullInitialization
+  - expert:SimpleAssignmentExpression
+  - expert:StringDataType
+  - expert:EqualExpression
+  - expert:StringLiteral
+  - expert:StringVariable
+  - expert:java.lang.System.out.println
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Testing for null'
+elements:
+- type: explanation
+  location:
+    snippet: String str1 = null;
+  explanations:
+  - body: "when object reference is initialized with 'null', it refers to no object at \r\nall. It is common to use the 'null'\
+      \ value to indicate that a value has \r\nnever been set."
+- type: explanation
+  location:
+    snippet: System.out.println(str1 == null);
+  explanations:
+  - body: prints true;
+- type: explanation
+  location:
+    snippet: System.out.println(str1 == "");
+  explanations:
+  - body: '''null'' reference is not the same as the empty string. So, it prints false.'

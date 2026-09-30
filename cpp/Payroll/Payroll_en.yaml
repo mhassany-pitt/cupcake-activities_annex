@@ -1,0 +1,27 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Payroll
+source: main.cpp
+title: Payroll
+description: 'Worked example: Payroll'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Payroll'
+elements:
+- type: explanation
+  location:
+    snippet: while (  hours != -1.0  )
+  explanations:
+  - body: while loop iterates as long as counter <= 10.

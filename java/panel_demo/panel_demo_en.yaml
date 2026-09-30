@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_panel_demo
+source: PanelDemo.java
+title: ISD::PanelDemo.java
+description: 'Worked example: ISD::PanelDemo.java'
+authors:
+- first: Troy
+  last: Kerns
+  email: troy.kerns@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::PanelDemo.java'
+elements:
+- type: explanation
+  location:
+    snippet: private JPanel buttonPanel;
+  explanations:
+  - body: Class JPanel inherits from JComponent, which inherits from java.awt.Container. Every JPanel is a Container
+- type: explanation
+  location:
+    snippet: buttonPanel = new JPanel();
+  explanations:
+  - body: Create a new panel.
+- type: explanation
+  location:
+    snippet: buttonPanel.add( buttons[ i ] );
+  explanations:
+  - body: Add components to panel. JPanel sized to components it contains, Grows to accomodate components as they are added
+- type: explanation
+  location:
+    snippet: c.add( buttonPanel, BorderLayout.SOUTH );
+  explanations:
+  - body: Add panel to the content pane (BorderLayout.SOUTH).

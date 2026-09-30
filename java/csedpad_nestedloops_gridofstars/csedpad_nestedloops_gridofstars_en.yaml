@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_nestedloops_gridofstars
+source: nestedLoopsGridOfStars.java
+title: (Nested Loops) Grid of stars - CSEdPad
+description: Print a grid of stars.
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:java.lang.System.out.print
+  - webex:PostIncrementExpression
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:LessExpression
+  - webex:IntDataType
+  - webex:StringLiteral
+  - webex:ForStatement
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - webex:NestedForLoops
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:NestedForLoops
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Print a grid of stars.
+elements:
+- type: explanation
+  location:
+    snippet: for ( int col = 0 ; col < width ; col++ )
+  explanations:
+  - body: This is the nested or inner loop which in this case displays one row of stars
+- type: explanation
+  location:
+    snippet: System.out.println( "" ) ;
+  explanations:
+  - body: Move to the new row by printing a new line character.

@@ -1,0 +1,94 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_static_arrays
+source: main.cpp
+title: Static Arrays
+description: 'Worked example: Static Arrays'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Static Arrays'
+elements:
+- type: explanation
+  location:
+    snippet: void staticArrayInit( void );
+  explanations:
+  - body: function to demonstrate a static local array.
+- type: explanation
+  location:
+    snippet: void automaticArrayInit( void );
+  explanations:
+  - body: function to demonstrate an automatic local array.
+- type: explanation
+  location:
+    snippet: staticArrayInit();
+  explanations:
+  - body: function to demonstrate a static local array.
+- type: explanation
+  location:
+    snippet: automaticArrayInit();
+  explanations:
+  - body: function to demonstrate an automatic local array.
+- type: explanation
+  location:
+    snippet: staticArrayInit();
+    nth: 2
+  explanations:
+  - body: function to demonstrate a static local array.
+- type: explanation
+  location:
+    snippet: automaticArrayInit();
+    nth: 2
+  explanations:
+  - body: function to demonstrate an automatic local array.
+- type: explanation
+  location:
+    snippet: void staticArrayInit( void )
+  explanations:
+  - body: function to demonstrate a static local array.
+- type: explanation
+  location:
+    snippet: static int a[ 3 ];
+  explanations:
+  - body: static array is created only once, when staticArrayInit is first called.
+- type: explanation
+  location:
+    snippet: printf( "array1[%d] = %d  ", i, a[ i ] );
+  explanations:
+  - body: output contents of array1
+- type: explanation
+  location:
+    snippet: printf( "array1[%d] = %d  ", i, a[ i ] += 5 );
+  explanations:
+  - body: modify and output contents of array1.
+- type: explanation
+  location:
+    snippet: void automaticArrayInit( void )
+  explanations:
+  - body: function to demonstrate an automatic local array.
+- type: explanation
+  location:
+    snippet: int a[ 3 ] = { 1, 2, 3 }, i;
+  explanations:
+  - body: automatic array is recreated every time automaticArrayInit is called.
+- type: explanation
+  location:
+    snippet: printf("array1[ %d ] = %d  ", i, a[ i ] );
+  explanations:
+  - body: output contents of array1
+- type: explanation
+  location:
+    snippet: printf( "array1[ %d ] = %d  ", i, a[ i ] += 5 );
+  explanations:
+  - body: modify and output contents of array1.

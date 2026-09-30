@@ -1,0 +1,59 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection19
+source: query.sql
+title: Combining Query Results (1)
+description: Combining Query Results (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:UnionOfTwoTupleSetsWithDuplicate
+  - expert:UnionOperation
+  - expert:SelectStatement
+  - expert:BracketCharacter
+  - expert:SingleAttributeSelection
+  - expert:SingleTableSelection
+  - sql_ontology:SelectStatement
+  - sql_ontology:UnionOperation
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:BracketCharacter
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:SelectClause
+  - sql_concept:UnionOfTwoTupleSetsWithDuplicate
+runtime:
+  language: sql
+  version: '2016'
+statement: Combining Query Results (1)
+elements:
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+  explanations:
+  - body: The first SELECT statement is to choose customers who have account.
+- type: explanation
+  location:
+    snippet: UNION
+  explanations:
+  - body: The UNION operation is to combine the results of two or more queries into a single table of query results. The major
+      restriction of UNION operation is that the two tables must contain the same number of columns. It is also important
+      that the domain type of each column in both tables should be identical. Because the UNION operation combines two sets
+      of query results, it would tend to produce duplicate rows. However, <u>by default</u>, the UNION operation eliminates
+      duplicate rows as part of its processing. If you want to retain duplicate rows, you can specify the ALL keyword following
+      the UNION like 'UNION ALL.'
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+    nth: 2
+  explanations:
+  - body: Second SELECT statement is to find customers who have loan

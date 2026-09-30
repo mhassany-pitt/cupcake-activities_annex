@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_c_ch2_simple_cout
+source: main.cpp
+title: Simple cout
+description: 'Worked example: Simple cout'
+authors:
+- first: Natalya
+  last: Goreva
+  email: natalya.goreva@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Simple cout'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <iostream>'
+  explanations:
+  - body: Include the library for working with streaming data to and from the user
+- type: explanation
+  location:
+    snippet: using namespace std;
+  explanations:
+  - body: Add a reference to standard namespace that includes variables, types, constants, and functions
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: Declare the main function in the project
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Open the body of the function
+- type: explanation
+  location:
+    snippet: cout << "Programming is great fun!";
+  explanations:
+  - body: Display a message on the screen
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: main() is a function, so it should return a value. We make it 0, or in this case a dummy value
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Close the function body

@@ -1,0 +1,67 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig02_05_c_en
+source: main.cpp
+title: fig02_05.c
+description: 'Worked example: fig02_05.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig02_05.c'
+elements:
+- type: explanation
+  location:
+    snippet: int integer1;
+  explanations:
+  - body: Definitions of variables.first number to be input by user.
+- type: explanation
+  location:
+    snippet: int integer2;
+  explanations:
+  - body: Definitions of variables.second number to be input by user.
+- type: explanation
+  location:
+    snippet: int sum;
+  explanations:
+  - body: Definitions of variables.variable in which sum will be stored.
+- type: explanation
+  location:
+    snippet: scanf( "%d", &integer1 );
+  explanations:
+  - body: scanf obtains a value from the user and assigns it to integer1.
+- type: explanation
+  location:
+    snippet: scanf( "%d", &integer2 );
+  explanations:
+  - body: scanf obtains a value from the user and assigns it to integer2.
+- type: explanation
+  location:
+    snippet: sum = integer1 + integer2;
+  explanations:
+  - body: Assigns total to sum.
+- type: explanation
+  location:
+    snippet: printf( "Sum is %d\n", sum );
+  explanations:
+  - body: print sum.
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: indicate that program ended successfully.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end function main.

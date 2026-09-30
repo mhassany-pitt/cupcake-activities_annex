@@ -1,0 +1,55 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_nested_loops
+source: Main.java
+title: DEPRECATED_Nested Loops
+description: 'Worked example: DEPRECATED_Nested Loops'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:Nested Loops
+  - java_ontology:MultiplyExpression
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicAccessSpecifier
+  - java_ontology:VoidDataType
+  - java_ontology:ObjectVariable
+  - java_ontology:ConstructorCall
+  - java_ontology:LessExpression
+  - java_ontology:SubtractExpression
+  - java_ontology:PrivateAccessSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:DoubleDataType
+  - java_ontology:StatementBlock
+  - java_ontology:FormalMethodParameter
+  - java_ontology:InstanceFieldDefinitionStatement
+  - java_ontology:AddAssignmentExpression
+  - java_ontology:PostIncrementExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:LessEqualExpression
+  - java_ontology:VariableInitializationStatement
+  - java_ontology:ClassDefinition
+  - java_ontology:ExpressionStatement
+  - java_ontology:ConstructorDefinition
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:AddExpression
+  - java_ontology:SimpleVariable
+  - java_ontology:IntDataType
+  - java_ontology:NestedStatement
+  - java_ontology:ReturnStatement
+  - java_ontology:InstanceField
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Nested Loops'
+elements: []

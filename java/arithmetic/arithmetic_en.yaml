@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_arithmetic
+source: Main.java
+title: DEPRECATED_arithmetic operations
+description: 'Worked example: DEPRECATED_arithmetic operations'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_arithmetic operations'
+elements:
+- type: explanation
+  location:
+    snippet: int result = 1 + 2;
+  explanations:
+  - body: result is now 3
+- type: explanation
+  location:
+    snippet: result = result - 1;
+  explanations:
+  - body: result is now 2
+- type: explanation
+  location:
+    snippet: result = result * 2;
+  explanations:
+  - body: result is now 4
+- type: explanation
+  location:
+    snippet: result = result / 2;
+  explanations:
+  - body: result is now 2
+- type: explanation
+  location:
+    snippet: result = result + 8;
+  explanations:
+  - body: result is now 10
+- type: explanation
+  location:
+    snippet: result = result % 7;
+  explanations:
+  - body: '"%", which divides one operand by another and returns the remainder as its result.result is now 3'

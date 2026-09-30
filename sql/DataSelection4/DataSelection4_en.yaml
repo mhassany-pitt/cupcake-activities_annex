@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection4
+source: query.sql
+title: Skipping Duplicates
+description: Skipping Duplicates
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:RightWhitespaceTrim
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:SelectStatement
+  - expert:IntegrityOnUpdate
+  - expert:SingleAttributeSelection
+  - expert:SingleTableSelection
+  - expert:DistinctClause
+  - sql_ontology:IntegrityOnUpdate
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:DistinctClause
+  - sql_ontology:SingleAttributeSelection
+runtime:
+  language: sql
+  version: '2016'
+statement: Skipping Duplicates
+elements:
+- type: explanation
+  location:
+    snippet: SELECT DISTINCT name
+  explanations:
+  - body: DISTINCT keyword eliminates rows of query results in SELECT statement and is located before the column name to erase
+      the duplicate. If the DISTINCT keyword is omitted, SQL does not eliminate duplicate and it has the same result when
+      user use ALL  keyword instead of DISTINCT.

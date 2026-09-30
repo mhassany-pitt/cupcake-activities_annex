@@ -1,0 +1,97 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_inheritance_polymorphism_2
+source: Pet.java
+title: A Dog is also a Pet
+description: 'Worked example: A Dog is also a Pet'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ArrayCreationStatement
+  - expert:ArrayDataType
+  - expert:ArrayElement
+  - expert:ArrayLength
+  - expert:ArrayVariable
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:ExtendsSpecification
+  - expert:FormalMethodParameter
+  - expert:ForStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:ObjectCreationStatement
+  - expert:ObjectMethodInvocation
+  - expert:PostIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: A Dog is also a Pet'
+elements:
+- type: explanation
+  location:
+    snippet: public void speak(){
+  explanations:
+  - body: method speak() is override
+- type: explanation
+  location:
+    snippet: public void speak(){
+    nth: 2
+  explanations:
+  - body: method speak() is override.
+- type: explanation
+  location:
+    snippet: Pet[] myPets = new Pet[3];
+  explanations:
+  - body: an array of objects Pet is created
+- type: explanation
+  location:
+    snippet: myPets[0] = new Dog();
+  explanations:
+  - body: first object in the array is created as a Dog.
+- type: explanation
+  location:
+    snippet: myPets[1] = new Cat();
+  explanations:
+  - body: second object in the array is created as a Cat.
+- type: explanation
+  location:
+    snippet: myPets[2] = new Dog();
+  explanations:
+  - body: third object in the array is created as a Dog.
+- type: explanation
+  location:
+    snippet: whoTheyAre(myPets);
+  explanations:
+  - body: the method whoTheyAre() is called passing the array myPets as a parameter.
+- type: explanation
+  location:
+    snippet: public static void whoTheyAre(Pet[] pets){
+  explanations:
+  - body: "the method receives an array of objects of class Pet. Since Pet is superclass \r\nof Dog and Cat, Dog and Cat objets\
+      \ are also \r\nconsider as Pet objects."
+- type: explanation
+  location:
+    snippet: pets[i].speak();
+  explanations:
+  - body: "each object is accessed and the method speak is called. All objects in the \r\narray \"pets\" are treated as objects\
+      \ of the class \r\nPet, however, they can be from any of the subclasses of Pet. \r\nDepending on which class is the\
+      \ object (Dog, Cat, or Pet), the corresponding \r\nversion of speak() will be called. In this specific \r\nexample,\
+      \ the program will output: \r\nwoof! woof!\r\nmeow!\r\nwoof! woof!"

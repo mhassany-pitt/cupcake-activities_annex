@@ -1,0 +1,80 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_PrimitiveDataTypes_v2
+source: PrimitiveDataTypes.java
+title: Primitive Data Types
+description: Primitive Data Types
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:BooleanDataType
+  - expert:ByteDataType
+  - expert:CharDataType
+  - expert:ClassDefinition
+  - expert:DoubleDataType
+  - expert:FloatDataType
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:LongDataType
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:ShortDataType
+  - expert:StaticMethodSpecifier
+  - expert:True
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Primitive Data Types
+elements:
+- type: explanation
+  location:
+    snippet: byte byteNumber = 7;
+  explanations:
+  - body: The type describing a single byte, with range -128 . . . 127
+- type: explanation
+  location:
+    snippet: short shortNumber = 1234;
+  explanations:
+  - body: The short integer type, with range -32,768 . . . 32,767
+- type: explanation
+  location:
+    snippet: int integerNumber = 1;
+  explanations:
+  - body: The integer type, with range -2,147,483,648 . . . 2,147,483,647
+- type: explanation
+  location:
+    snippet: long longNumber = 123456789L;
+  explanations:
+  - body: "The long integer type, with range -9,223,372,036,854,775,808 . . . \r\n9,223,372,036,854,775,807. This type is\
+      \ specified by adding \"L\" at the end \r\nof the number."
+- type: explanation
+  location:
+    snippet: float floatNumber = 1.2F;
+  explanations:
+  - body: "The single-precision floating-point type, with a range of aboutÂ±10^38 and \r\nabout 7 significant decimal digits.\
+      \ This type is specified by adding \"F\" at \r\nthe \r\nend \r\nof the number."
+- type: explanation
+  location:
+    snippet: double doubleNumber = 1.496;
+  explanations:
+  - body: "The double-precision floating-point type, with a range of about Â±10^308 and \r\nabout 15 significant decimal digits"
+- type: explanation
+  location:
+    snippet: boolean b = true;
+  explanations:
+  - body: The type with the two truth values false and true
+- type: explanation
+  location:
+    snippet: char myChar = 'X';
+  explanations:
+  - body: The character type, representing code units in the Unicode encoding scheme

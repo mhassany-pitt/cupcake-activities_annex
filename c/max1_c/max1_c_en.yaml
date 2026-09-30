@@ -1,0 +1,70 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_max1_c_en
+source: main.c
+title: 'IS12:: max1.c (5.2)'
+description: 'Worked example: IS12:: max1.c (5.2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:less
+  - unspecified:int
+  - unspecified:void
+  - unspecified:reference
+  - unspecified:if
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:main_function
+  - unspecified:simple_assignment
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: max1.c (5.2)'
+elements:
+- type: explanation
+  location:
+    snippet: 'printf("Enter two integers: ");'
+  explanations:
+  - body: This is a prompt
+- type: explanation
+  location:
+    snippet: scanf("%d %d", &a, &b);
+  explanations:
+  - body: This scanf statement gets two integers separated by a blank from the user and placed them into variables a and b
+- type: explanation
+  location:
+    snippet: max = a;
+  explanations:
+  - body: This is a pre-assignment. We make a hypothesis that a is the maximum and pre-assign max to a
+- type: explanation
+  location:
+    snippet: if(a < b)
+  explanations:
+  - body: Our original hypothesis can be wrong. Here we are checking this case - maybe a is really less than b? If it is true,
+      then the value of (a < b) is 1 and "then" statement will be executed.
+- type: explanation
+  location:
+    snippet: max = b;
+  explanations:
+  - body: This "then" statement will be executed if a is really less than b. In that case b is the maximun, our hypothesis
+      was wrong and we need to correct the situation assigning max to b
+- type: explanation
+  location:
+    snippet: printf("Maximum of %d and %d is %d", a, b, max);
+  explanations:
+  - body: Whatever is the maximum value, it is now assigned to the variable max. We simply print its value for maximum.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: This is the end of the main function body

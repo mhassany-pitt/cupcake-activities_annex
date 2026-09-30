@@ -1,0 +1,28 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection38_version_1_pt
+source: query.sql
+title: Groupingandaggregating(3)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: (SELECT MIN (AVG(S2.age))
+  explanations:
+  - body: Esse exemplo esta ERRADO porque as operacoes de agregacao nao podem ser aninhadas. Essa consulta tentava calcular
+      a media da idade dos marinheiros e o valor minimo. A funcao AVG nao pode ser aninhada com nenhuma outra funcao de agregacao.

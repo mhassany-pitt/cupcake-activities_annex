@@ -1,0 +1,41 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection20_version_1_pt
+source: query.sql
+title: CombiningQueryResults(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+  explanations:
+  - body: Esta primeira consulta retorna os clientes que possuem conta.
+- type: explanation
+  location:
+    snippet: INTERSECT
+  explanations:
+  - body: A operacao INTERSECT produz uma unica tabela com as tuplas que aparecem nos resultados das outras consultas. O resultado
+      das duas consultas deve possuir o mesmo numero de colunas e com mesmos tipos de dados. <u>Por padrao</u>, a operacao
+      INTERSECT elimina as linhas repetidas. Caso queira manter as linhas repetidas, a palavra-chave ALL pode ser usada depois
+      da palavra INTERSECT, como 'INTERSECT ALL'.
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+    nth: 2
+  explanations:
+  - body: Esta consulta retorna os clientes que possuem algum emprestimo.

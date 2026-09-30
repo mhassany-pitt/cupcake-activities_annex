@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt7_6_en
+source: main.py
+title: Addiing Lists
+description: 'Worked example: Addiing Lists'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:List
+  - parser:Add
+  - parser:Call
+  - parser:Assign
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:List
+  - unspecified:Int
+  - unspecified:Add
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Addiing Lists'
+elements:
+- type: explanation
+  location:
+    snippet: c = a+b
+  explanations:
+  - body: This command adds two lists and combines it into a single summed up list

@@ -1,0 +1,35 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_inheritance1_v2
+source: Main.java
+title: Inheritance
+description: Inheritance
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ClassDefinition
+  - expert:ExtendsSpecification
+runtime:
+  language: java
+  version: '17'
+statement: Inheritance
+elements:
+- type: explanation
+  location:
+    snippet: class MountainBike extends Bicycle {
+  explanations:
+  - body: Java uses the "extends" keyword to set the relationship between a child class and a parent class. Here, MountainBike
+      is the child class and Bicycle is the parent class. MountainBike class inherits all the properties of the Bicycle class.
+- type: explanation
+  location:
+    snippet: '...'
+  explanations:
+  - body: new fields and methods defining a mountain bike can go here.

@@ -1,0 +1,143 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance2_2
+source: MatchBox.java
+title: IS17_inheritance2_2
+description: 'Worked example: IS17_inheritance2_2'
+authors:
+- first: Michael
+  last: Logoyda
+  email: michael.logoyda@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance2_2'
+elements:
+- type: explanation
+  location:
+    snippet: class Box {
+  explanations:
+  - body: This class allows for creation of a box with certain dimensions.
+- type: explanation
+  location:
+    snippet: double width;
+  explanations:
+  - body: Initialization of variable of type double named width with default package access.
+- type: explanation
+  location:
+    snippet: double height;
+  explanations:
+  - body: Initialization of variable of type double named height with default package access.
+- type: explanation
+  location:
+    snippet: double depth;
+  explanations:
+  - body: Initialization of variable of type double named depth with default package access.
+- type: explanation
+  location:
+    snippet: Box() {
+  explanations:
+  - body: Method creates a box object with no dimensions with default package access.
+- type: explanation
+  location:
+    snippet: Box(double w, double h, double d) {
+  explanations:
+  - body: Constructor method creates a box with width w, height h, and depth d. Default package access.
+- type: explanation
+  location:
+    snippet: width = w;
+  explanations:
+  - body: Sets constructor input w to width.
+- type: explanation
+  location:
+    snippet: height = h;
+  explanations:
+  - body: Sets constructor input h to height.
+- type: explanation
+  location:
+    snippet: depth = d;
+  explanations:
+  - body: Set constructor input d to depth.
+- type: explanation
+  location:
+    snippet: void getVolume() {
+  explanations:
+  - body: Method returns the volume of the box. Default package access.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Volume is : " + width * height * depth);'
+  explanations:
+  - body: Calculating width * height * depth as volume and showing in a System.out.println.
+- type: explanation
+  location:
+    snippet: public class MatchBox extends Box {
+  explanations:
+  - body: This class allows for creation of a matchbox by extending the box class. It adds the ability to give weight to the
+      box.
+- type: explanation
+  location:
+    snippet: double weight;
+  explanations:
+  - body: Initialization of variable of type double named weight.
+- type: explanation
+  location:
+    snippet: MatchBox() {
+  explanations:
+  - body: Constructor creates an empty matchbox. Default package access.
+- type: explanation
+  location:
+    snippet: MatchBox(double w, double h, double d, double m) {
+  explanations:
+  - body: Constructor creates a matchbox with width w, height h, depth d, and weight m. Default package access.
+- type: explanation
+  location:
+    snippet: super(w, h, d);
+  explanations:
+  - body: Inherits w, h, and d from box constructor in class box.
+- type: explanation
+  location:
+    snippet: weight = m;
+  explanations:
+  - body: Sets input m to weight.
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: Defines the static, main method for output as a void object (with String output). Method if public.
+- type: explanation
+  location:
+    snippet: MatchBox mb1 = new MatchBox(10, 10, 10, 10);
+  explanations:
+  - body: Creates a new matchbox named mb1 with all attributes set to 10
+- type: explanation
+  location:
+    snippet: mb1.getVolume();
+  explanations:
+  - body: 'Accesses getVolume method from class box and will have output: Volume is: 1000'
+- type: explanation
+  location:
+    snippet: System.out.println("width of MatchBox 1 is " + mb1.width);
+  explanations:
+  - body: New line output width of MatchBox 1 is 10
+- type: explanation
+  location:
+    snippet: System.out.println("height of MatchBox 1 is " + mb1.height);
+  explanations:
+  - body: New line output height of MatchBox 1 is 10
+- type: explanation
+  location:
+    snippet: System.out.println("depth of MatchBox 1 is " + mb1.depth);
+  explanations:
+  - body: New line output depth of MatchBox 1 is 10
+- type: explanation
+  location:
+    snippet: System.out.println("weight of MatchBox 1 is " + mb1.weight);
+  explanations:
+  - body: New line output weight of MatchBox 1 is 10

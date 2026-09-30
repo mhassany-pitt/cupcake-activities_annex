@@ -1,0 +1,75 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_nested_loops_v2
+source: nested_loops.java
+title: Nested Loops
+description: Nested Loops
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:ForStatement
+  - expert:GreaterExpression
+  - expert:IntDataType
+  - expert:java.lang.System.out.print
+  - expert:java.lang.System.out.println
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:NestedStatement
+  - expert:PostDecrementExpression
+  - expert:PostIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Nested Loops
+elements:
+- type: explanation
+  location:
+    snippet: for(int i=0;i<7;i++) {
+  explanations:
+  - body: the first loop starts with i = 0. i increases 1 for each iteration and terminates while i reaches 7.
+- type: explanation
+  location:
+    snippet: for(int j=7;j>i;j--) {
+  explanations:
+  - body: "the second for loop will be completely executed for each repetition of the enclosing for loop, and each time the\
+      \ enclosing loop variable 'i' will \r\nhave an incremented value. The first time, 'i' will be 0 and 'j' will start form\
+      \ 7 and will decrement in each step down to 1 (condition is j>i), \r\nrepeating a total of 7 times. Next time, 'i' will\
+      \ be 1 and this inner for loop will repeat from j=7 to j=2 (6 times)."
+- type: explanation
+  location:
+    snippet: System.out.print("*");
+  explanations:
+  - body: this line prints out an '*' and no new line character. Each loop will print a number of consecutive '*'.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of the second for loop.
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: this line prints a blank line.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of the first for loop.

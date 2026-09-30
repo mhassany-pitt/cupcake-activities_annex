@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_increment
+source: Increment.java
+title: DEPRECATED_increment
+description: 'Worked example: DEPRECATED_increment'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_increment'
+elements:
+- type: explanation
+  location:
+    snippet: c = 5;
+  explanations:
+  - body: assign 5 to c
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+  explanations:
+  - body: prints 5
+- type: explanation
+  location:
+    snippet: System.out.println( c++ );
+  explanations:
+  - body: prints 5 then postincrements
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+    nth: 2
+  explanations:
+  - body: prints 6
+- type: explanation
+  location:
+    snippet: c = 5;
+    nth: 2
+  explanations:
+  - body: assign 5 to c
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+    nth: 3
+  explanations:
+  - body: prints 5
+- type: explanation
+  location:
+    snippet: System.out.println( ++c );
+  explanations:
+  - body: preincrements then prints 6
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+    nth: 4
+  explanations:
+  - body: prints 6
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end main
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end class Increment

@@ -1,0 +1,64 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_exceptionhandling_arithmetic
+source: Arithmetic.java
+title: (Exception Handling) Arithmetic - CSEdPad
+description: Given two numbers, this program checks what happens when a number is divided by zero.
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:TryCatchStatement
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:IntDataType
+  - webex:StringLiteral
+  - webex:DivideExpression
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:DivideExpression
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:TryCatchStatement
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Given two numbers, this program checks what happens when a number is divided by zero.
+elements:
+- type: explanation
+  location:
+    snippet: try {
+  explanations:
+  - body: Tries executing code, providing opportunity to catch and handle errors
+- type: explanation
+  location:
+    snippet: catch (ArithmeticException e) {
+  explanations:
+  - body: Arithmetic Exception is thrown when we try to divide a number by

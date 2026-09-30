@@ -1,0 +1,95 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataInsertion4
+source: query.sql
+title: Inserting Data (4)
+description: Inserting Data (4)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ReferentialAction
+  - expert:EquiWhereJoin
+  - expert:StringType
+  - expert:FixedLengthCharacterString
+  - expert:AndLogicalOperator
+  - expert:SimpleSubQuery
+  - expert:SubQueryCheckingDuplicateTuples
+  - expert:SelectClause
+  - expert:TableAlias
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:Insertion
+  - expert:SelectStatement
+  - expert:InsertIntoClause
+  - expert:WhereClause
+  - expert:InsertStatement
+  - expert:SetOperation
+  - expert:CommaCharacter
+  - expert:MultipleAttributeSelection
+  - expert:MultipleTableSelection
+  - expert:SingleQuotationCharacter
+  - expert:Deletion
+  - expert:DotCharacter
+  - expert:EqualComparison
+  - sql_ontology:MultipleTableSelection
+  - sql_ontology:InsertIntoClause
+  - sql_ontology:SubQuery
+  - sql_ontology:DotCharacter
+  - sql_ontology:AttributeName
+  - sql_ontology:TableAlias
+  - sql_ontology:AndLogicalOperator
+  - sql_ontology:CommaCharacter
+  - sql_ontology:EquiWhereJoin
+  - sql_ontology:SelectClause
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:SingleQuotationCharacter
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:SetOperation
+  - sql_ontology:FromClause
+  - sql_ontology:InsertStatement
+  - sql_ontology:EqualComparison
+  - sql_ontology:StringType
+  - sql_ontology:SelectStatement
+  - sql_ontology:WhereClause
+  - sql_concept:Deletion
+  - sql_concept:ReferentialAction
+  - sql_concept:SubQueryCheckingDuplicateTuples
+runtime:
+  language: sql
+  version: '2016'
+statement: Inserting Data (4)
+elements:
+- type: explanation
+  location:
+    snippet: INSERT INTO depositor
+  explanations:
+  - body: The data is inserted into 'depositor' table.
+- type: explanation
+  location:
+    snippet: SELECT customer_name, loan_no
+  explanations:
+  - body: To assign created accounts to customers belonging to 'Perryridge', 'customer_name' in borrower table and 'loan_no'
+      in loan table is selected. The data stored in the target 'depositor' table are these two data.
+- type: explanation
+  location:
+    snippet: FROM loan, borrower
+  explanations:
+  - body: '''customer_name'' is from ''borrower'' table and ''loan_no'' is from ''loan'' table.'
+- type: explanation
+  location:
+    snippet: WHERE branch_name ='Perryridge'
+  explanations:
+  - body: This is to choose customer from 'Perryridge' branch.
+- type: explanation
+  location:
+    snippet: AND loan.accont_no = borrower.account_no;
+  explanations:
+  - body: This is to check whether each borrower has loan account.

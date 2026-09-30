@@ -1,0 +1,49 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_3_5
+source: Main.java
+title: Nested Switch
+description: Nested Switch
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:BreakStatement
+  - expert:CaseClause
+  - expert:ClassDefinition
+  - expert:DefaultClause
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:NestedStatement
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:SwitchStatement
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Nested Switch
+elements:
+- type: explanation
+  location:
+    snippet: switch (j) {
+  explanations:
+  - body: This is a nested switch. Note how indentation makes code readable.
+- type: explanation
+  location:
+    snippet: 'case 1:'
+  explanations:
+  - body: This is the case executed

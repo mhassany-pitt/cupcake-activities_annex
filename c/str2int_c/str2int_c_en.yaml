@@ -1,0 +1,139 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_str2int_c_en
+source: main.c
+title: 'IS12:: str2int.c (12.4)'
+description: 'Worked example: IS12:: str2int.c (12.4)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:pre_increment
+  - unspecified:return
+  - unspecified:mul
+  - unspecified:and
+  - unspecified:for
+  - unspecified:array_declaration
+  - unspecified:char
+  - unspecified:equal
+  - unspecified:less_equal
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:greater_equal
+  - unspecified:if
+  - unspecified:add
+  - unspecified:main_function
+  - unspecified:not_equal
+  - unspecified:less
+  - unspecified:greater
+  - unspecified:define
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:printf
+  - unspecified:sub
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: str2int.c (12.4)'
+elements:
+- type: explanation
+  location:
+    snippet: int atoi(char []); /* converts string to int */
+  explanations:
+  - body: This is the prototype for function atoi defined below. It has one parameter that is an array of characters
+- type: explanation
+  location:
+    snippet: int getline(char [], int); /* reads string from input */
+  explanations:
+  - body: 'This is the prototype for function getline defined below. It has two parameters: an array of characters and an
+      integer'
+- type: explanation
+  location:
+    snippet: char buf[BUFSIZE];
+  explanations:
+  - body: This array will serve as buffer for storing the user input (that is a sequence of characters).
+- type: explanation
+  location:
+    snippet: if (getline(buf, BUFSIZE) > 0)
+  explanations:
+  - body: During the evaluation of the condition part of this if statement the function getline will be called. It will read
+      a line, place it int array buf and return the number of symbols read.
+- type: explanation
+  location:
+    snippet: |-
+      printf("You have entered string %s and it was converted to %d
+      ", buf, atoi(buf));
+  explanations:
+  - body: The function atoi will be called during the execusion of printf. It will take buf as a parameter, convert string
+      buf into a number and return this number.
+- type: explanation
+  location:
+    snippet: int atoi(char s[])
+  explanations:
+  - body: Function atoi receives an array of characters through its first parameter s
+- type: explanation
+  location:
+    snippet: for (i = 0; s[i] >= '0' && s[i] <= '9'; ++i)
+  explanations:
+  - body: In each iteration of this loop we consider next character in the array s. The loop will stop when the character
+      to be considered is not a digit
+- type: explanation
+  location:
+    snippet: n = 10 * n + (s[i] - '0');
+  explanations:
+  - body: (s[i] - '0') will convert the digit stored at s[i] into its numeric representation (i.e., convert symbol '8' into
+      number 8
+- type: explanation
+  location:
+    snippet: return n;
+  explanations:
+  - body: When the loop is over, we return tha accumulated number as a conversion result
+- type: explanation
+  location:
+    snippet: int getline(char s[], int lim)
+  explanations:
+  - body: This function will get a line from standard input and place it into array s. If the line is too long, however, only
+      lim-1 symbols will be read to avoid overrunning the buffer s
+- type: explanation
+  location:
+    snippet: |-
+      for (i = 0; i < lim-1 &&(c=getchar())!= EOF && c != '
+      '; ++i)
+  explanations:
+  - body: This loop will end either when we already read lim-1 symbols, or we hit end of file, or we just read a new line
+      (i.e, the line is over).
+- type: explanation
+  location:
+    snippet: s[i] = c;
+  explanations:
+  - body: While we are inside the loop, we place just read symbol them into the next position in the array.
+- type: explanation
+  location:
+    snippet: |-
+      if (c == '
+      ') {
+  explanations:
+  - body: |-
+      If we quit the loop because we found '
+      ', we are not done yet. We need to this add '
+      ' to the buffer.
+- type: explanation
+  location:
+    snippet: "s[i] = '\0';"
+  explanations:
+  - body: "This statement properly terminate the line with '\0' making it a correct string."
+- type: explanation
+  location:
+    snippet: return i;
+  explanations:
+  - body: The function returns the number of symbols read. Note that if we encountered EOF at the very beginning of reading,
+      it will  return 0.

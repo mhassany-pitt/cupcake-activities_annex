@@ -1,0 +1,93 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_recpower_c_en
+source: main.c
+title: 'IS12:: recpower.c (24.2)'
+description: 'Worked example: IS12:: recpower.c (24.2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:greater_equal
+  - unspecified:void
+  - unspecified:reference
+  - unspecified:if
+  - unspecified:sub
+  - unspecified:function_declaration
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:return
+  - unspecified:mul
+  - unspecified:equal
+  - unspecified:main_function
+  - unspecified:if_else
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: recpower.c (24.2)'
+elements:
+- type: explanation
+  location:
+    snippet: int power(int, int);
+  explanations:
+  - body: A prototype for the function power
+- type: explanation
+  location:
+    snippet: 'printf("Enter a and b: ");'
+  explanations:
+  - body: We are printing a prompt here, so to keep the cursor on the same line, we do not use '/n'
+- type: explanation
+  location:
+    snippet: scanf("%d %d", &a, &b);
+  explanations:
+  - body: Reading two integer values with one call to scanf function
+- type: explanation
+  location:
+    snippet: if(b >= 0)
+  explanations:
+  - body: Our function power can only calculate a <sup>b</sup> for non-negative b. So, before calling it, we need to check
+      the input data.
+- type: explanation
+  location:
+    snippet: |-
+      printf("%d power %d = %d
+      ", a, b, power(a, b));
+  explanations:
+  - body: This printf function will call function power(a, b) and print the returned result.
+- type: explanation
+  location:
+    snippet: int power(int base, int exp) {
+  explanations:
+  - body: The function power is recursive, though we can't say it just from its header.
+- type: explanation
+  location:
+    snippet: if(exp == 0)
+  explanations:
+  - body: This is the base case in
+- type: explanation
+  location:
+    snippet: return 1;
+  explanations:
+  - body: Anything power 0 is simply 1. We can return the answer right away.
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: Here we will treat the recursive case.
+- type: explanation
+  location:
+    snippet: return (base * power(base, exp - 1));
+  explanations:
+  - body: This is a recursive call of function power. It is recursive since we call function power from inside function power.
+      Note that the recursive call decrease the complexity of a problem. If we have started, for example, with power(3, 5),
+      the recursive call w

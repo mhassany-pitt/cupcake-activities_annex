@@ -1,0 +1,80 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_printing1_c_en
+source: main.c
+title: 'IS12:: printing1.c (2.1)'
+description: 'Worked example: IS12:: printing1.c (2.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:printf
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:void
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: printing1.c (2.1)'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: This line is required since we are using printf
+- type: explanation
+  location:
+    snippet: void main()
+  explanations:
+  - body: When the program is called, function main will be executed. Every program should have function main. void indicates
+      that main does not return a value.
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Opening bracket of main
+- type: explanation
+  location:
+    snippet: |-
+      printf("Hello, World!
+      ");
+  explanations:
+  - body: This printf statement will print Hello, World! and move printing cursor to the beginning of next line
+- type: explanation
+  location:
+    snippet: |-
+      printf("Here are integers: %5d %8d
+      ", 10, 99);
+  explanations:
+  - body: Two integer values will be printed there. First one (10) will occupy exactly 5 output positions as specified by
+      %5d. Second will  occupy  8 positions as specified by %8d. Since 10 and 99 themselves occupy  2 positions each, leading
+      blanks are printed
+- type: explanation
+  location:
+    snippet: |-
+      printf("Here are floats: %4.2f %8.5f
+      ", 3.1415, 0.001);
+  explanations:
+  - body: This printf statements will print two floating point values - one will be printed as 3.14 thus occupying as requested
+      4 positions in total with 2 after point and another as  0.00100 occupying all 8 requested positions with 5 digits after
+      the point
+- type: explanation
+  location:
+    snippet: |-
+      printf("Here are characters: %c %c
+      ", 'A', '@');
+  explanations:
+  - body: 'The %c specification is for printing characters. In this case the program will print: Here are characters A G  Note
+      that ''A'' and ''@'' are literal constants and have to be in single quotes.'
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Closing bracket of main

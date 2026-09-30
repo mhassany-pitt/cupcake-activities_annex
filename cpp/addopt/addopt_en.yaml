@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_addopt
+source: main.cpp
+title: deferencing
+description: 'Worked example: deferencing'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: deferencing'
+elements:
+- type: explanation
+  location:
+    snippet: int a;
+  explanations:
+  - body: aPtr is a pointer to an integer.
+- type: explanation
+  location:
+    snippet: int *aPtr;
+  explanations:
+  - body: aPtr is a pointer to an integer.
+- type: explanation
+  location:
+    snippet: aPtr = &a;
+  explanations:
+  - body: aPtr set to address of a.
+- type: explanation
+  location:
+    snippet: '"\nThe value of aPtr is %p", &a, aPtr );'
+  explanations:
+  - body: If aPtr points to a, then &a and aPtr have the same value.
+- type: explanation
+  location:
+    snippet: printf( "\n\nThe value of a is %d"
+  explanations:
+  - body: a and *aPtr have the same value.
+- type: explanation
+  location:
+    snippet: '"\nThe value of *aPtr is %d", a, *aPtr );'
+  explanations:
+  - body: a and *aPtr have the same value.
+- type: explanation
+  location:
+    snippet: '"\n*&aPtr = %p\n", &*aPtr, *&aPtr );'
+  explanations:
+  - body: '&*aPtr and *&aPtr have the same value.'

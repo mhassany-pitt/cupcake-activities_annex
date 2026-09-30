@@ -1,0 +1,69 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection29
+source: query.sql
+title: Nested Subqueries (2)
+description: Nested Subqueries (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SubstringExtraction
+  - expert:TableSelection
+  - expert:SelectClause
+  - expert:AttributeName
+  - expert:FromClause
+  - expert:BracketCharacter
+  - expert:InPredicate
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:IntegrityOnUpdate
+  - expert:SimpleSubquery
+  - expert:SingleAttributeSelection
+  - expert:DistinctClause
+  - expert:PredicateNegation
+  - expert:SingleTableSelection
+  - sql_ontology:DistinctClause
+  - sql_ontology:AttributeName
+  - sql_ontology:PredicateNegation
+  - sql_ontology:SelectStatement
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:SimpleSubquery
+  - sql_ontology:IntegrityOnUpdate
+  - sql_ontology:InPredicate
+  - sql_ontology:BracketCharacter
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_concept:SubstringExtraction
+  - sql_concept:TableSelection
+runtime:
+  language: sql
+  version: '2016'
+statement: Nested Subqueries (2)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT DISTINCT customer_name
+  explanations:
+  - body: Customers having account are selected in subquery at first and then, customers having loan are compared with the
+      results of subquery.
+- type: explanation
+  location:
+    snippet: WHERE customer_name NOT IN
+  explanations:
+  - body: You can check whether the data value does not match any of the target value by using the NOT IN form of the condition
+      test.
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+  explanations:
+  - body: This subquery is to find customers having account.

@@ -1,0 +1,83 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_inheritance_constructors_1
+source: Container.java
+title: Inheritance and Constructors 1
+description: 'Worked example: Inheritance and Constructors 1'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ClassDefinition
+  - expert:ConstructorDefinition
+  - expert:ExtendsSpecification
+  - expert:FormalMethodParameter
+  - expert:InstanceField
+  - expert:InstanceFieldInvocation
+  - expert:IntDataType
+  - expert:PrivateFieldSpecifier
+  - expert:PublicClassSpecifier
+  - expert:PublicConstructorSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:SimpleVariable
+  - expert:SuperclassConstructorCall
+  - expert:ThisReference
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Inheritance and Constructors 1'
+elements:
+- type: explanation
+  location:
+    snippet: public Container(int capacity){
+  explanations:
+  - body: "The Container class creates a constructor which asks for an int parameter. This \r\nmeans that for creating a Container\
+      \ object, we need to specify the capacity. \r\nThus, the null constructor Container() is \"deactivate\" in the class\
+      \ : we can not \r\ncreate Container objects by doing just \"new Container()\", we need to specify the \r\ncapacity."
+- type: explanation
+  location:
+    snippet: this.capacity = capacity;
+  explanations:
+  - body: "the operator this refers to the object which is being built. In this case is used to \r\ndifferentiate the capacity\
+      \ attribute of the object (this.capacity) from the \r\nparameter \r\ncapacity of the constructor (avoid to write something\
+      \ like capacity = capacity.)"
+- type: explanation
+  location:
+    snippet: public class PaperBox extends Container {
+  explanations:
+  - body: PaperBox class is a subclass of Container
+- type: explanation
+  location:
+    snippet: public PaperBox(int capacity){
+  explanations:
+  - body: This is the constructor of the class.
+- type: explanation
+  location:
+    snippet: super(capacity);
+  explanations:
+  - body: "Since the super class Container does not have a null constructor, we need to \r\nexplicitly call its constructor,\
+      \ using the reference super(). Here super() refers to \r\nthe \r\nconstructor Container(int capacity) in class Container."
+- type: explanation
+  location:
+    snippet: public class GallonPlasticBottle extends Container {
+  explanations:
+  - body: "GallonPlasticBottle class is a subclass of Container and is aimed to create objects \r\nrepresenting plastic bottles\
+      \ of 1 gallon capacity"
+- type: explanation
+  location:
+    snippet: public GallonPlasticBottle(){
+  explanations:
+  - body: This is the constructor of the class.
+- type: explanation
+  location:
+    snippet: super(1);
+  explanations:
+  - body: "Here we need to call the super class constructor, and since GallonPlasticBottle will \r\ndefine objects of 1 gallon\
+      \ capacity, the value 1 is passed"

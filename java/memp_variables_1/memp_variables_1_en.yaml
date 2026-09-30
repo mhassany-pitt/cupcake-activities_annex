@@ -1,0 +1,60 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_memp_variables_1
+source: MyClass.java
+title: memp_variables_1
+description: This is an example taken from google drive
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ActualMethodParameter
+  - java_ontology:BooleanDataType
+  - java_ontology:ClassDefinition
+  - java_ontology:FloatDataType
+  - java_ontology:FormalMethodParameter
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringInitializationStatement
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:True
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: This is an example taken from google drive
+elements:
+- type: explanation
+  location:
+    snippet: public class MyClass {
+  explanations:
+  - body: This is MyClass declaration.
+- type: explanation
+  location:
+    snippet: public static void main(String[] args) {
+  explanations:
+  - body: This is main method.
+- type: explanation
+  location:
+    snippet: boolean isStudent = true;
+  explanations:
+  - body: //declares variables  and assign values
+- type: explanation
+  location:
+    snippet: System.out.println("Is Student? :" +isStudent);
+  explanations:
+  - body: display variables

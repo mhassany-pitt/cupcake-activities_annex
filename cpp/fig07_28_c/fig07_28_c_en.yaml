@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig07_28_c_en
+source: main.cpp
+title: fig07_28.c
+description: 'Worked example: fig07_28.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig07_28.c'
+elements:
+- type: explanation
+  location:
+    snippet: void (*f[ 3 ])( int ) = { function1, function2, function3 };
+  explanations:
+  - body: Initialize array of 3 pointers to functions that each take an int argument and return void.
+- type: explanation
+  location:
+    snippet: (*f[ choice ])( choice );
+  explanations:
+  - body: invoke function at location choice in array f and pass choice as an argument.

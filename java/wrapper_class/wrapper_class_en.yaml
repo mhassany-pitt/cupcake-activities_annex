@@ -1,0 +1,39 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_wrapper_class
+source: Wrapper.java
+title: DEPRECATED_Wrapper Classes
+description: 'Worked example: DEPRECATED_Wrapper Classes'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Wrapper Classes'
+elements:
+- type: explanation
+  location:
+    snippet: ArrayList AL = new ArrayList();
+  explanations:
+  - body: Declares an ArrayList AL to store objects.
+- type: explanation
+  location:
+    snippet: AL.add(new Integer(1));
+  explanations:
+  - body: ArrayLists only store references. For each of the eight primitive data types in Java there is a matching "wrapper
+      class" that can be used to store a value of that type.
+- type: explanation
+  location:
+    snippet: Integer iw =(Integer) AL.get(i);
+  explanations:
+  - body: When you want to retrieve the values wrapped up in the Integers that are in the ArrayList elements you will need
+      to cast the elements back to Integers

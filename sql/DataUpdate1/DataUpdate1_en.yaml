@@ -1,0 +1,71 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataUpdate1
+source: query.sql
+title: Updating Data (2)
+description: Updating Data (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:TableAlias
+  - expert:UnionOperation
+  - expert:GreaterThanOrEqualComparison
+  - expert:SingleAttributeGrouping
+  - expert:UpdateClause
+  - expert:UpdateStatement
+  - expert:WhereClause
+  - expert:SetClause
+  - expert:CombinationWithAll
+  - expert:SetOperation
+  - expert:MultiplicationExpression
+  - expert:DataManipulationLanguage
+  - expert:NullValueIgnorance
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - expert:DotCharacter
+  - sql_ontology:DotCharacter
+  - sql_ontology:UpdateClause
+  - sql_ontology:TableAlias
+  - sql_ontology:GroupByClause
+  - sql_ontology:GreaterThanOrEqualComparison
+  - sql_ontology:UpdateStatement
+  - sql_ontology:SetOperation
+  - sql_ontology:UnionOperation
+  - sql_ontology:NumericType
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:MultiplicationExpression
+  - sql_ontology:WhereClause
+  - sql_ontology:SetClause
+  - sql_concept:NullValueIgnorance
+  - sql_concept:DataManipulationLanguage
+runtime:
+  language: sql
+  version: '2016'
+statement: Updating Data (2)
+elements:
+- type: explanation
+  location:
+    snippet: UPDATE Students S
+  explanations:
+  - body: The 'UPDATE' keyword is followed by table 'Students' and the table is renamed as 'S' because it is little bit long
+      to use.
+- type: explanation
+  location:
+    snippet: SET S.gpa = S.gpa*1.01
+  explanations:
+  - body: The SET clause is mandantory in UPDATE statement and it specifies which columns are to be updated. Because table
+      name is renamed as 'S' the column name is assigned by it using dot. Each instance in 'gpa' is read, calculates 101%
+      of the value, and is reassigned to new value.
+- type: explanation
+  location:
+    snippet: WHERE S.gpa >= 3.3;
+  explanations:
+  - body: Not all instances are updated and gpas which is just equal or higher than 3.3 are selected.

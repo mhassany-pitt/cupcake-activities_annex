@@ -1,0 +1,35 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection26_version_1_pt
+source: query.sql
+title: GroupedQuerieswithCondition_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: GROUP BY branch_name
+  explanations:
+  - body: O resultado e' agrupado e condensado para cada nome de agencia (branch_name).
+- type: explanation
+  location:
+    snippet: HAVING AVG(balance) > 600;
+  explanations:
+  - body: Assim como a clausula WHERE, a clausula HAVING pode ser utilizada para selecionar e excluir linhas de determinados
+      grupos. <br/> Conforme especificado pelo GROUP BY, a informacao de saldo e' agrupada e totalizada por nome de agencia
+      e entao a media dos saldos e' calculada. Se a media dos subtotal for maior que 600, entao a tupla e' retornada. O formato
+      da clausula HAVING e' similar ao formato da clausula WHERE, mas a clausula HAVING pode ser usada como um grupo.

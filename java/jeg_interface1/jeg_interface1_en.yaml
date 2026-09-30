@@ -1,0 +1,59 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_jeg_interface1
+source: JavaInterfaceExample.java
+title: DEPRECATED_Interface
+description: 'Worked example: DEPRECATED_Interface'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Interface'
+elements:
+- type: explanation
+  location:
+    snippet: interface SimpleInterface1{
+  explanations:
+  - body: declare an interface
+- type: explanation
+  location:
+    snippet: public void sayHello();
+  explanations:
+  - body: sayHello() method is declared as public.
+- type: explanation
+  location:
+    snippet: public class JavaInterfaceExample implements SimpleInterface1{
+  explanations:
+  - body: JavaInterfaceExample class is extended while interfaces are implemented.Use the keyword "implements" to implement
+      an interface.
+- type: explanation
+  location:
+    snippet: JavaInterfaceExample javaInterfaceExample = new JavaInterfaceExample();
+  explanations:
+  - body: create an object of the class
+- type: explanation
+  location:
+    snippet: javaInterfaceExample.sayHello();
+  explanations:
+  - body: invoke sayHello() method which is declared in SimpleInterface interface.the output is "Hello IS17!"
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of the main() method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of the JavaInterfaceExample  class

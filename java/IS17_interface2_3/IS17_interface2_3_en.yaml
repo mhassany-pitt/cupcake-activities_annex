@@ -1,0 +1,192 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface2_3
+source: PolymorphismTest.java
+title: IS17_interface2_3
+description: 'Worked example: IS17_interface2_3'
+authors:
+- first: Eric
+  last: Napolitan
+  email: eric.napolitan@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface2_3'
+elements:
+- type: explanation
+  location:
+    snippet: interface Shape {
+  explanations:
+  - body: declare the interface Shape
+- type: explanation
+  location:
+    snippet: public double area();
+  explanations:
+  - body: creates the method double area that returns a double
+- type: explanation
+  location:
+    snippet: public double volume();
+  explanations:
+  - body: creates the method double volume that returns a double
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: ends the interface Shape
+- type: explanation
+  location:
+    snippet: class Cube implements Shape {
+  explanations:
+  - body: start of the class Cube which uses the interface Shape
+- type: explanation
+  location:
+    snippet: int width = 2;
+  explanations:
+  - body: assigns int width to be 2
+- type: explanation
+  location:
+    snippet: int length = 3;
+  explanations:
+  - body: assigns int length to be 3
+- type: explanation
+  location:
+    snippet: int height = 10;
+  explanations:
+  - body: assigns int height to be 10
+- type: explanation
+  location:
+    snippet: public double area( ) {
+  explanations:
+  - body: start of the method double area
+- type: explanation
+  location:
+    snippet: return (width * length);
+  explanations:
+  - body: returns the width * length as a double which would be 6
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of the method
+- type: explanation
+  location:
+    snippet: public double volume() {
+  explanations:
+  - body: start of the method double volume
+- type: explanation
+  location:
+    snippet: return (width * length * height);
+  explanations:
+  - body: returns width multiplied by length multiplied by height  in the type of a double which would be 60
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end of the method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: end of the class
+- type: explanation
+  location:
+    snippet: class Circle implements Shape {
+  explanations:
+  - body: start of the class Circle which uses the interface Shape
+- type: explanation
+  location:
+    snippet: int radius = 10;
+  explanations:
+  - body: assigns int radius to be 10
+- type: explanation
+  location:
+    snippet: public double area() {
+  explanations:
+  - body: start of the method double area
+- type: explanation
+  location:
+    snippet: return (Math.PI * radius * radius);
+  explanations:
+  - body: returns  314 in the type of double
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: ends the method
+- type: explanation
+  location:
+    snippet: public double volume() {
+    nth: 2
+  explanations:
+  - body: start of the method double volume
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: returns 0
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: end of the method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: end of the class
+- type: explanation
+  location:
+    snippet: public class PolymorphismTest {
+  explanations:
+  - body: start of the class polymorphismtest
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: start of the main function
+- type: explanation
+  location:
+    snippet: Shape[] s = { new Cube(), new Circle() };
+  explanations:
+  - body: creates a list of Shape's called s  with a circle and a cube in it
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < s.length; i++) {
+  explanations:
+  - body: similar to a for each loop since it goes through each element in the list
+- type: explanation
+  location:
+    snippet: System.out.println("The area and volume of " + s[i].getClass() " is " + s[i].area() + " , " + s[i].volume());
+  explanations:
+  - body: "prints   The area and volume of Cube is   6, 60\r\n             The area and volume of  circle is  314,  0"
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: ends the main function
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: ends  polymorphismtest class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 10
+  explanations:
+  - body: ends the circle class

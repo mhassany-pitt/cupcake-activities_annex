@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_StringsEqualsIgnoreCase
+source: Test.java
+title: Strings (equalsIgnoreCase)
+description: 'Worked example: Strings (equalsIgnoreCase)'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SimpleAssignmentExpression
+  - expert:BooleanDataType
+  - expert:SimpleVariable
+  - expert:StringConstructorCall
+  - expert:java.lang.String.equals
+  - expert:StringCreationStatement
+  - expert:java.lang.String.equalsIgnoreCase
+  - expert:StringDataType
+  - expert:java.lang.System.out.println
+  - expert:StringLiteral
+  - expert:StringVariable
+  - expert:ObjectMethodInvocation
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Strings (equalsIgnoreCase)'
+elements:
+- type: explanation
+  location:
+    snippet: isEqual = str1.equals( str2 );
+  explanations:
+  - body: The equals() method evaluates if the two strings (str1 and str2) are equal. This comparison is case-sensitive. Here
+      it returns 'false'.
+- type: explanation
+  location:
+    snippet: System.out.println(isEqual);
+  explanations:
+  - body: Prints false.
+- type: explanation
+  location:
+    snippet: isEqual = str1.equalsIgnoreCase( Str2 );
+  explanations:
+  - body: The equalsIgnoreCase() method evaluates if the two strings (str1 and str2) are equal without differentiating between
+      upper and lower-case letters (the comparison is case-insensitive). Here it returns 'true'.
+- type: explanation
+  location:
+    snippet: System.out.println(isEqual);
+    nth: 2
+  explanations:
+  - body: Prints true.

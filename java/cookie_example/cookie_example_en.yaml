@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_cookie_example
+source: CookieExample.java
+title: ISD::CookieExample.java
+description: 'Worked example: ISD::CookieExample.java'
+authors:
+- first: Jesse
+  last: Laney
+  email: jesse.laney@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::CookieExample.java'
+elements:
+- type: explanation
+  location:
+    snippet: cookies = request.getCookies(); // get client's cookies
+  explanations:
+  - body: Returns array of Cookies.
+- type: explanation
+  location:
+    snippet: cookies[ i ].getName() + " How to Program. " +
+  explanations:
+  - body: Use cookies to determine recommended book and ISBN.
+- type: explanation
+  location:
+    snippet: else {
+  explanations:
+  - body: If cookies have expired, no recommendations.

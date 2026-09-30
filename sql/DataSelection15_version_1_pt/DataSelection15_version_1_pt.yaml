@@ -1,0 +1,28 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection15_version_1_pt
+source: query.sql
+title: RangeTest(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: WHERE date BETWEEN '01-OCT-06' AND '31-DEC-06';
+  explanations:
+  - body: O teste de intervalo tambem pode ser aplicado a datas. Essa clausula e' equivalente a (date >= '01-OCT-06') AND
+      (date <= '31-DEC-06')

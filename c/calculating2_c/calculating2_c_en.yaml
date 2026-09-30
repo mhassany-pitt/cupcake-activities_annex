@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_calculating2_c_en
+source: main.c
+title: 'IS12:: calculating2.c (2.4)'
+description: 'Worked example: IS12:: calculating2.c (2.4)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:void
+  - unspecified:div
+  - unspecified:include
+  - unspecified:mul
+  - unspecified:main_function
+  - unspecified:printf
+  - unspecified:sub
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: calculating2.c (2.4)'
+elements:
+- type: explanation
+  location:
+    snippet: /* Temperature Converter */
+  explanations:
+  - body: This is a comments that specifies the nature of the program. It is less formal than in other examples - just to
+      demonstrate some simple ways to write comments for your program
+- type: explanation
+  location:
+    snippet: |-
+      printf("100 Fahrenheit = %6.2f Celsius
+      ",
+  explanations:
+  - body: This is the first line of the printf call.
+- type: explanation
+  location:
+    snippet: (5.0 / 9.0) * (100 - 32));
+  explanations:
+  - body: This is the second line of the printf call. A long statement can be spread over several lines to make it more readable.
+      Semicolon marks the end of the statement.

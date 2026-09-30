@@ -1,0 +1,50 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataUpdate3
+source: query.sql
+title: Updating Data (1)
+description: Updating Data (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SingleAttributeGrouping
+  - expert:UpdateClause
+  - expert:UpdateStatement
+  - expert:SetClause
+  - expert:CombinationWithAll
+  - expert:MultiplicationExpression
+  - expert:NullValueIgnorance
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - sql_ontology:UpdateClause
+  - sql_ontology:UpdateStatement
+  - sql_ontology:GroupByClause
+  - sql_ontology:NumericType
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:MultiplicationExpression
+  - sql_ontology:SetClause
+  - sql_concept:NullValueIgnorance
+runtime:
+  language: sql
+  version: '2016'
+statement: Updating Data (1)
+elements:
+- type: explanation
+  location:
+    snippet: UPDATE Salesrep
+  explanations:
+  - body: The WHERE clause can be omitted if all data in a certain column should be changed. In this example, all quota data
+      of sales representative are increased 5%.
+- type: explanation
+  location:
+    snippet: SET quota = 1.05 * quota;
+  explanations:
+  - body: Quotas of all sales representatives are added 5%.

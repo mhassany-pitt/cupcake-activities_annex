@@ -1,0 +1,34 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_inner_v2
+source: Outter.java
+title: Inner Classes
+description: 'Worked example: Inner Classes'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Inner Classes'
+elements:
+- type: explanation
+  location:
+    snippet: class Inner {
+  explanations:
+  - body: "This Inner class is declared inside another class or inside a method within a class. When you have a class \r\n\
+      that serves a very limited purpose, you can declare \r\nthe class as an inner class. In this case the class \r\n'Inner'\
+      \ is declared inside the method that uses it. \r\nInner classes should not be visible elsewhere in a \r\nprogram."
+- type: explanation
+  location:
+    snippet: System.out.println("$"+USD);
+  explanations:
+  - body: this method prints out the dollar sign in front of the static integer value.

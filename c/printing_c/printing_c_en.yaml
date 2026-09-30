@@ -1,0 +1,59 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_printing_c_en
+source: main.c
+title: 'IS12:: printing.c (2)'
+description: 'Worked example: IS12:: printing.c (2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:printf
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:void
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: printing.c (2)'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: This line allows us to use input/output library that contains, in particular, function printf
+- type: explanation
+  location:
+    snippet: |-
+      printf("Hello, World!
+      ");
+  explanations:
+  - body: This printf call prints "Hello, World!" on the console and moves cursor to the new line
+- type: explanation
+  location:
+    snippet: |-
+      printf("Here are integers: %d %d
+      ", 10, 99);
+  explanations:
+  - body: This printf call  prints two integer numbers (10 and 99) in "default" format and moves cursor to the new line
+- type: explanation
+  location:
+    snippet: |-
+      printf("Here are floats: %f %f
+      ", 3.1415, 0.001);
+  explanations:
+  - body: This printf call  prints two real (floating point) numbers in "default" format and moves cursor to the new line
+- type: explanation
+  location:
+    snippet: |-
+      printf("Here are characters: %c %c
+      ", 'A', '@');
+  explanations:
+  - body: This printf call  prints two symbols (A and @ separated by a blank and moves cursor to the new line

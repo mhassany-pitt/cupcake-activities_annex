@@ -1,0 +1,53 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_key_demo
+source: KeyDemo.java
+title: ISD::KeyDemo.java
+description: 'Worked example: ISD::KeyDemo.java'
+authors:
+- first: Kenyetta
+  last: Kitchens
+  email: kenyetta.kitchens@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::KeyDemo.java'
+elements:
+- type: explanation
+  location:
+    snippet: public class KeyDemo extends JFrame implements KeyListener {
+  explanations:
+  - body: Class implements interface KeyListener, so it must define the three required methods.
+- type: explanation
+  location:
+    snippet: addKeyListener( this );
+  explanations:
+  - body: Register the event handler.
+- type: explanation
+  location:
+    snippet: e.getKeyText( e.getKeyCode() );
+  explanations:
+  - body: getKeyCode returns the virtual key code. getKeyText converts the key code to a String containing the name.
+- type: explanation
+  location:
+    snippet: e.getKeyText( e.getKeyCode() );
+    nth: 2
+  explanations:
+  - body: getKeyCode returns the virtual key code. getKeyText converts the key code to a String containing the name.
+- type: explanation
+  location:
+    snippet: '( e.isActionKey() ? "" : "not " ) +'
+  explanations:
+  - body: Test if the key is an action key
+- type: explanation
+  location:
+    snippet: e.getKeyModifiersText( e.getModifiers() );
+  explanations:
+  - body: getModifiers returns the modifier keys, and getKeyModifersText turns them into a String.

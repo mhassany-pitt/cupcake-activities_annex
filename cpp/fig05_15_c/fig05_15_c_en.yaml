@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig05_15_c_en
+source: main.cpp
+title: fig05_15.c
+description: 'Worked example: fig05_15.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig05_15.c'
+elements:
+- type: explanation
+  location:
+    snippet: scanf( "%ld", &number );
+  explanations:
+  - body: obtain integer from user.
+- type: explanation
+  location:
+    snippet: result = fibonacci( number );
+  explanations:
+  - body: calculate fibonacci value for number input by user.
+- type: explanation
+  location:
+    snippet: long fibonacci( long n )
+  explanations:
+  - body: Recursive definition of function fibonacci.
+- type: explanation
+  location:
+    snippet: if ( n == 0 || n == 1 ) {
+  explanations:
+  - body: base case. Each time fibonacci is invoked, it immediately tests for the base case, n is equal to 0 or 1. If this
+      is true, n is returned.
+- type: explanation
+  location:
+    snippet: else {
+  explanations:
+  - body: recursive step. If n is greater than 1, the recursion step generates two recursive calls.

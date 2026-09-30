@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_StringsConcatenation
+source: Main.java
+title: Strings (Concatenation)
+description: 'Worked example: Strings (Concatenation)'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Strings (Concatenation)'
+elements:
+- type: explanation
+  location:
+    snippet: String concat = str1 + str2 + str3;
+  explanations:
+  - body: "The operator '+' concatenates the \r\nthree strings and creates a longer \r\nstring '1+2'."
+- type: explanation
+  location:
+    snippet: System.out.println(concat+"="+3);
+  explanations:
+  - body: "Whenever one of the arguments of \r\n'+' operator is a string, the other \r\nargument is converted to a string.\
+      \  \r\nHere, '1+2=3' is printed."

@@ -1,0 +1,34 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataUpdate4_version_1_pt
+source: query.sql
+title: Updatingwithcondition_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: UPDATE Customers
+  explanations:
+  - body: Esse exemplo mostra que mais de uma condicao pode ser definida no mesmo SQL para que mais de uma tupla seja atualizada.
+- type: explanation
+  location:
+    snippet: WHERE cust_rep IN (105, 106, 107);
+  explanations:
+  - body: A palavra-chave IN e' utilizada em operacoes de conjuntos. Ela testa se um valor esta contido em uma lista de valores.
+      Nesse exemplo, se o valor da coluna 'cust_rep' for 105, 106 ou 107 entao a condicao se torna VERDADEIRA e as tuplas
+      sao atualizadas.

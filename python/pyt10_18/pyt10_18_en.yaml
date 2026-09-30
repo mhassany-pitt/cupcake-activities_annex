@@ -1,0 +1,107 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_18_en
+source: main.py
+title: Classes - Inheritance
+description: 'Worked example: Classes - Inheritance'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Attribute
+  - parser:ClassDef
+  - parser:Call
+  - parser:Str
+  - parser:arg
+  - parser:Assign
+  - parser:FunctionDef
+  - unspecified:arg
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:ClassDef
+  - unspecified:FunctionDef
+  - unspecified:Int
+  - unspecified:Attribute
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Classes - Inheritance'
+elements:
+- type: explanation
+  location:
+    snippet: 'class Parent:'
+  explanations:
+  - body: define 'Parent' class
+- type: explanation
+  location:
+    snippet: parentAttr = 100
+  explanations:
+  - body: assigning value '100' to the 'parent' variable
+- type: explanation
+  location:
+    snippet: 'def __init__(self):'
+  explanations:
+  - body: A constructor definition
+- type: explanation
+  location:
+    snippet: 'def parentMethod(self):'
+  explanations:
+  - body: defining a function called 'parentMethod'
+- type: explanation
+  location:
+    snippet: 'def setAttr(self, attr):'
+  explanations:
+  - body: defining another function called 'setAttr'
+- type: explanation
+  location:
+    snippet: Parent.parentAttr = attr
+  explanations:
+  - body: assigning the value of attr (which was passed as an argument) to the local variable parentAttr
+- type: explanation
+  location:
+    snippet: 'def getAttr(self):'
+  explanations:
+  - body: defining another function 'getAttr'
+- type: explanation
+  location:
+    snippet: 'class Child(Parent): # define child class'
+  explanations:
+  - body: Now we define a 'Child' class. Here we pass 'Parent' as an argument. This is the core concept of inheritance. Instead
+      of starting from scratch, you can create a class by deriving it from a preexisting class by listing the parent class
+      in parentheses after the new class name.The child class inherits the attributes of its parent class, and you can use
+      those attributes as if they were defined in the child class. A child class can also override data members and methods
+      from the parent.
+- type: explanation
+  location:
+    snippet: c = Child()
+  explanations:
+  - body: Instantiating the Child class
+- type: explanation
+  location:
+    snippet: c.childMethod()
+  explanations:
+  - body: child calls its method
+- type: explanation
+  location:
+    snippet: c.parentMethod()
+  explanations:
+  - body: calls parent's method
+- type: explanation
+  location:
+    snippet: c.setAttr(200)
+  explanations:
+  - body: again call parent's method
+- type: explanation
+  location:
+    snippet: c.getAttr()
+  explanations:
+  - body: once again call parent's method

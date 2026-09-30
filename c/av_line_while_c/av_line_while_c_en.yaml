@@ -1,0 +1,80 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_av_line_while_c_en
+source: main.c
+title: 'IS12:: av_line_while.c (118.1)'
+description: 'Worked example: IS12:: av_line_while.c (118.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:void
+  - unspecified:pre_increment
+  - unspecified:div
+  - unspecified:printf
+  - unspecified:include
+  - unspecified:if
+  - unspecified:explicit_type_cast
+  - unspecified:variable_declaration
+  - unspecified:equal
+  - unspecified:main_function
+  - unspecified:long
+  - unspecified:float
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: av_line_while.c (118.1)'
+elements:
+- type: explanation
+  location:
+    snippet: int c, nl;
+  explanations:
+  - body: Variable c has to be defined as an integer since it may get EOF value as a result if the assignment below. EOF (usually,
+      -1)  is not a char value.
+- type: explanation
+  location:
+    snippet: long nc;
+  explanations:
+  - body: Variable nc is defined as long to enable us to count symbols in large files.
+- type: explanation
+  location:
+    snippet: nl = 0; nc = 0;
+  explanations:
+  - body: Another way to to it would be nl = nc = 0;
+- type: explanation
+  location:
+    snippet: while((c = getchar()) != EOF) {
+  explanations:
+  - body: This is a standatd way in C to read a sequence of characters. Variable c gets the value (code) of the new character
+      from the standard input to be processed. This value is also returned as the value of (c = getchar()) expression. It
+      is them compared with E
+- type: explanation
+  location:
+    snippet: ++nl;
+  explanations:
+  - body: This line will be executed only when c is the newline symbol - i.e., once for every new line.
+- type: explanation
+  location:
+    snippet: if(nl)
+  explanations:
+  - body: If nl is still 0 (i.e., there were no lines of input) we will not execute the following statement and will avoid
+      a division by zero error.
+- type: explanation
+  location:
+    snippet: |-
+      printf("Average line length is %.2f
+      ", nc / (float) nl);
+  explanations:
+  - body: Since both nc and nl are integral type variables, we need to use expplicit casting to avoid integer division. We
+      want a floating point result that will give us a more precise value for the average line lengh.

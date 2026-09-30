@@ -1,0 +1,64 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt4_3_en
+source: main.py
+title: Conversion Table (Fahrenheit to Celsius)
+description: 'Worked example: Conversion Table (Fahrenheit to Celsius)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Conversion Table (Fahrenheit to Celsius)'
+elements:
+- type: explanation
+  location:
+    snippet: lower = 0
+  explanations:
+  - body: Assigning the lower bound value to the variable 'lower'
+- type: explanation
+  location:
+    snippet: upper = 300
+  explanations:
+  - body: Assigning the upper bound value to the variable 'upper'
+- type: explanation
+  location:
+    snippet: step = 20
+  explanations:
+  - body: Defining the step size of the conversion table. The variable 'step' is used for this purpose. In this case we define
+      the step size to be 20
+- type: explanation
+  location:
+    snippet: fahr = lower
+  explanations:
+  - body: This statement basically assigns the value of variable 'lower' to the variable 'fahr'
+- type: explanation
+  location:
+    snippet: 'while fahr < upper:'
+  explanations:
+  - body: Initializing the 'while' loop and setting the condition so that it iterates till the value of 'fahr' is less than
+      the value of 'upper' (less than 300)
+- type: explanation
+  location:
+    snippet: celsius = (5.0 / 9.0) * (fahr - 32.0);
+  explanations:
+  - body: This is the conversion formula to convert the temperature from Fahrenheit to Celsius
+- type: explanation
+  location:
+    snippet: print (fahr, "F =", celsius, "C")
+  explanations:
+  - body: Printing out the result
+- type: explanation
+  location:
+    snippet: fahr += step
+  explanations:
+  - body: Incrementing the value of Fahrenheit by step size (20)

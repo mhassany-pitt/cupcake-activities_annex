@@ -1,0 +1,80 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableCreation6
+source: query.sql
+title: Check Constraint (2)
+description: Check Constraint (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:FixedLengthCharacterString
+  - expert:AndLogicalOperator
+  - expert:SubQuery
+  - expert:Rule
+  - expert:NumericType
+  - expert:Float
+  - expert:AttributeName
+  - expert:AttributeSpecification
+  - expert:AvgFunction
+  - expert:TupleSelectionCondition
+  - expert:GreaterThanOrEqualComparison
+  - expert:UniqueKeyConstraint
+  - expert:BracketCharacter
+  - expert:CheckConstraint
+  - expert:Integer
+  - expert:CommaCharacter
+  - expert:LessThanOrEqualComparison
+  - expert:CreateTableClause
+  - expert:CreateTableStatement
+  - expert:DatabaseManagement
+  - expert:DataManipulationLanguage
+  - expert:PrimaryKeyClause
+  - expert:Double
+  - expert:PrimaryKeyConstraint
+  - sql_ontology:SubQuery
+  - sql_ontology:AttributeName
+  - sql_ontology:CheckConstraint
+  - sql_ontology:AndLogicalOperator
+  - sql_ontology:CommaCharacter
+  - sql_ontology:PrimaryKeyConstraint
+  - sql_ontology:PrimaryKeyClause
+  - sql_ontology:CreateTableStatement
+  - sql_ontology:GreaterThanOrEqualComparison
+  - sql_ontology:Double
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:CreateTableClause
+  - sql_ontology:UniqueKeyConstraint
+  - sql_ontology:LessThanOrEqualComparison
+  - sql_ontology:Integer
+  - sql_ontology:Float
+  - sql_ontology:AttributeSpecification
+  - sql_ontology:BracketCharacter
+  - sql_ontology:AvgFunction
+  - sql_concept:TupleSelectionCondition
+  - sql_concept:Rule
+  - sql_concept:DataManipulationLanguage
+runtime:
+  language: sql
+  version: '2016'
+statement: Check Constraint (2)
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE Sailors
+  explanations:
+  - body: This example is to define 'Sailors' table. There are four columns - sid, sname, rating, and age.
+- type: explanation
+  location:
+    snippet: CHECK (rating >= 1 AND rating <= 10));
+  explanations:
+  - body: Especially, the value of 'rating' is restricted to the value from 1 to 10. When a check constraint is specified
+      for a column the DBMS authomatically checks the value of that column each time a new row is inserted or a row is updated
+      to ensure that the search condition is true.

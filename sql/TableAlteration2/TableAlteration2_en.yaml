@@ -1,0 +1,46 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableAlteration2
+source: query.sql
+title: Column Drop
+description: Column Drop
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AlterTableClause
+  - expert:AlterTableStatement
+  - expert:AttributeName
+  - expert:TableCreation
+  - expert:DropColumnClause
+  - expert:RangeTest
+  - sql_ontology:AlterTableStatement
+  - sql_ontology:AlterTableClause
+  - sql_ontology:DropColumnClause
+  - sql_ontology:AttributeName
+  - sql_concept:RangeTest
+  - sql_concept:TableCreation
+runtime:
+  language: sql
+  version: '2016'
+statement: Column Drop
+elements:
+- type: explanation
+  location:
+    snippet: ALTER TABLE Student
+  explanations:
+  - body: The ALTER TABLE statement can be used to drop one or more columns from an existing table. Note that dropping a column
+      can pose the data-integrity issues. For example, if you drop a column that is a primary key in some relationship, the
+      foreign key columns that refer to the dropped column become invalid.
+- type: explanation
+  location:
+    snippet: DROP COLUMN age;
+  explanations:
+  - body: DROP COLUMN clause is followed by the column name to be dropped - 'age'

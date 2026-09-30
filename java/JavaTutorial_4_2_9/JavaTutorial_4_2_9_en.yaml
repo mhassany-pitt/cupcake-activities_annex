@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_2_9
+source: MainClass.java
+title: Using ||
+description: Using ||
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:IfStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:ModulusExpression
+  - expert:NotEqualExpression
+  - expert:OrExpression
+  - expert:PreIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Using ||
+elements:
+- type: explanation
+  location:
+    snippet: if (++value % 2 != 0 || ++count < limit) {
+  explanations:
+  - body: "The operator || (OR) makes the expression true if any or both sides are true. In this case the comparison \r\n\"\
+      ++value % 2 != 0\" gives true (++ increments value \r\nto 9 and \"% 2\" computes the rest of 9/2), thus all the \r\n\
+      expression is evaluated to true."

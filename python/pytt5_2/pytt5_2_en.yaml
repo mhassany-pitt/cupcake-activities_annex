@@ -1,0 +1,76 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt5_2_en
+source: main.py
+title: Function - Repetitive Calling
+description: 'Worked example: Function - Repetitive Calling'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Function - Repetitive Calling'
+elements:
+- type: explanation
+  location:
+    snippet: 'def happy():'
+  explanations:
+  - body: Defining the function 'happy'. Here empty parenthesis states that no extra argument is passed.
+- type: explanation
+  location:
+    snippet: 'def bday(name):'
+  explanations:
+  - body: Defining another function 'bday'. This function takes in the argument 'name'. Argument can be considered as input
+      given to the function
+- type: explanation
+  location:
+    snippet: happy()
+  explanations:
+  - body: This statement calls the function 'happy' inside of the function 'bday'. This will print out the contents of the
+      'happy' function
+- type: explanation
+  location:
+    snippet: happy()
+    nth: 2
+  explanations:
+  - body: We can call a function multiple times
+- type: explanation
+  location:
+    snippet: print("Happy Birthday, dear {0}!".format(name))
+  explanations:
+  - body: Printing out the message by passing the 'name' within the print statement.
+- type: explanation
+  location:
+    snippet: 'def main():'
+  explanations:
+  - body: Main function declaration
+- type: explanation
+  location:
+    snippet: bday("Mary")
+  explanations:
+  - body: calling the function 'bday' by passing the argument 'Mary'
+- type: explanation
+  location:
+    snippet: bday("Josh")
+  explanations:
+  - body: calling the function 'bday' by passing the argument 'Josh'
+- type: explanation
+  location:
+    snippet: bday("Professor Flynn")
+  explanations:
+  - body: calling the function 'bday' by passing the argument 'Flynn'
+- type: explanation
+  location:
+    snippet: main()
+  explanations:
+  - body: Calling the main function. So at a glance, the 'main' function is called, which then calls the 'bday' function by
+      passing in the argument 'name' as a string. The bday function then in turn calls the 'happy' function

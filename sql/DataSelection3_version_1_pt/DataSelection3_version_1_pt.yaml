@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection3_version_1_pt
+source: query.sql
+title: SelectingAllAttributes_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT *
+  explanations:
+  - body: Por comodidade, pode-se usar o asterisco (*) no lugar da lista de colunas a serem retornadas como se fosse uma abreviacao
+      para "todas as colunas".
+- type: explanation
+  location:
+    snippet: FROM Student;
+  explanations:
+  - body: A clausula 'FROM' define em qual tabela a consulta SQL sera executada.

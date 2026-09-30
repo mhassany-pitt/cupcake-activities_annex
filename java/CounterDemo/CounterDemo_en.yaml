@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_CounterDemo
+source: CounterDemo.java
+title: Counter Demo
+description: 'Worked example: Counter Demo'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ReturnStatement
+  - expert:InstanceField
+  - expert:SimpleAssignmentExpression
+  - expert:IntDataType
+  - expert:SimpleVariable
+  - expert:java.lang.System.out.print
+  - expert:java.lang.System.out.println
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:ObjectCreationStatement
+  - expert:ObjectMethodInvocation
+  - expert:AddExpression
+  - expert:PrivateFieldSpecifier
+  - expert:ConstructorCall
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Counter Demo'
+elements:
+- type: explanation
+  location:
+    snippet: int result = tally.getValue();
+  explanations:
+  - body: Sets result to 2
+- type: explanation
+  location:
+    snippet: public class Counter
+  explanations:
+  - body: This class models a tally counter.
+- type: explanation
+  location:
+    snippet: public int getValue()
+  explanations:
+  - body: "/**\r\n     Gets the current value of this counter.\r\n     @return the current value\r\n*/"
+- type: explanation
+  location:
+    snippet: public void click()
+  explanations:
+  - body: "/**\r\n      Advances the value of this counter by 1.\r\n   */"
+- type: explanation
+  location:
+    snippet: public void reset()
+  explanations:
+  - body: "/**\r\n      Resets the value of this counter to 0.\r\n   */"

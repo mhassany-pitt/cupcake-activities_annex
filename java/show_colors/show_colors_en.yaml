@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_show_colors
+source: ShowColors.java
+title: ISD::ShowColors.java
+description: 'Worked example: ISD::ShowColors.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::ShowColors.java'
+elements:
+- type: explanation
+  location:
+    snippet: public void paint( Graphics g )
+  explanations:
+  - body: Method paint takes Graphics object as argument. paint called automatically when applet starts, it's often called
+      in response to an event.
+- type: explanation
+  location:
+    snippet: g.setColor( new Color( 255, 0, 0 ) );
+  explanations:
+  - body: Call to setColor, takes a Color object.
+- type: explanation
+  location:
+    snippet: g.fillRect( 25, 25, 100, 20 );
+  explanations:
+  - body: fillRect fills a rectangle (more later)
+- type: explanation
+  location:
+    snippet: 'g.drawString( "RGB values: " + c.getRed() + ", " +'
+  explanations:
+  - body: Color methods getRed, getGreen, getBlue return an integer between 0 and 255 representing amount

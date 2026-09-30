@@ -1,0 +1,41 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection21_version_1_pt
+source: query.sql
+title: CombiningQueryResults(3)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+  explanations:
+  - body: Esta consulta retorna os clientes que possuem conta.
+- type: explanation
+  location:
+    snippet: EXCEPT
+  explanations:
+  - body: O operador EXCEPT produz um unica tabela contendo as tuplas que aparecem no resultado da primeira consulta mas nao
+      aparecem no resultado da segunda consulta. Note que o resultado das duas consultas devem possuir o mesmo numero de colunas
+      e com os mesmos tipos de dados. <u>Por padrao</u>, o operador EXCEPT elimina as linhas duplicadas. Caso queira manter
+      as linhas duplicadas, deve-se utilizar a palavra-chave ALL depois da palavra EXCEPT, como 'EXCEPT ALL'.
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+    nth: 2
+  explanations:
+  - body: Esta consulta retorna os clientes que possuem algum emprestimo.

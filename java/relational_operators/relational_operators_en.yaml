@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_relational_operators
+source: Main.java
+title: DEPRECATED_relational operators
+description: 'Worked example: DEPRECATED_relational operators'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_relational operators'
+elements:
+- type: explanation
+  location:
+    snippet: flag = 5 < 6;
+  explanations:
+  - body: "The relational operators can be used in assignment to boolean variables.\r\nflag is true."
+- type: explanation
+  location:
+    snippet: flag = (i == j);
+  explanations:
+  - body: flag is now false
+- type: explanation
+  location:
+    snippet: flag = (j + 2) <= 6;
+  explanations:
+  - body: flag is now true

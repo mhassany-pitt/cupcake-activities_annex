@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection5
+source: query.sql
+title: Aggregate Functions (1)
+description: Aggregate Functions (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:RightWhitespaceTrim
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:Timestamp
+  - expert:AvgFunction
+  - expert:SelectStatement
+  - expert:SingleAttributeSelection
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - sql_ontology:DateTimeType
+  - sql_ontology:AttributeName
+  - sql_ontology:SelectStatement
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:NumericType
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:AvgFunction
+  - sql_ontology:SelectClause
+runtime:
+  language: sql
+  version: '2016'
+statement: Aggregate Functions (1)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT AVG(gpa)
+  explanations:
+  - body: The AVG() aggregate function takes a column of data and computes its average. In this example, 'gpa' column is averaged
+      out and produces a single average value.

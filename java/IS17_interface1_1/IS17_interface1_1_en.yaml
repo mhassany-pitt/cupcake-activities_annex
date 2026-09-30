@@ -1,0 +1,162 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface1_1
+source: TryOut.java
+title: IS17_interface1_1
+description: 'Worked example: IS17_interface1_1'
+authors:
+- first: James
+  last: Bowman
+  email: james.bowman@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface1_1'
+elements:
+- type: explanation
+  location:
+    snippet: interface Act {
+  explanations:
+  - body: creates a new interface 'Act'
+- type: explanation
+  location:
+    snippet: void act();
+  explanations:
+  - body: constructs a interface 'act' of type void
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: closes the interface
+- type: explanation
+  location:
+    snippet: class Actor1 implements Act {
+  explanations:
+  - body: creates a class 'Actor1' wich implements the Act interface
+- type: explanation
+  location:
+    snippet: public void act() {
+  explanations:
+  - body: intializes the interface 'act'
+- type: explanation
+  location:
+    snippet: System.out.println("To be, or not to be");
+  explanations:
+  - body: prints a single String line "To be, or not to be"
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: closes the 'act' interface
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: closes the 'Actor1' class
+- type: explanation
+  location:
+    snippet: class Actor2 implements Act {
+  explanations:
+  - body: creates a class 'Actor2' wich implement the Act interface
+- type: explanation
+  location:
+    snippet: public void act() {
+    nth: 2
+  explanations:
+  - body: intializes the interface 'act'
+- type: explanation
+  location:
+    snippet: System.out.println("Wherefore art thou Romeo?");
+  explanations:
+  - body: prints a single String line "Wherefore art thou Romeo?"
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: closes the 'act' interface
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: closes the 'Actor2' class
+- type: explanation
+  location:
+    snippet: public class TryOut {
+  explanations:
+  - body: creates a new class 'TryOut'
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: creates the main method of the program
+- type: explanation
+  location:
+    snippet: Actor1 hamlet = new Actor1();
+  explanations:
+  - body: creates a new object 'hamlet' of the Actor1 class
+- type: explanation
+  location:
+    snippet: Actor2 juliet = new Actor2();
+  explanations:
+  - body: creats a new object 'juliet' of the Actor2 class
+- type: explanation
+  location:
+    snippet: tryout(hamlet);
+  explanations:
+  - body: invokes the 'tryout' method on the object 'hamlet'
+- type: explanation
+  location:
+    snippet: tryout(juliet);
+  explanations:
+  - body: invokes the 'tryout' method on the object 'juliet'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: ends the 'TryOut' class
+- type: explanation
+  location:
+    snippet: private static void tryout(Act actor) {
+  explanations:
+  - body: creates a new static method 'tryout' which accepts an object from the 'Act' class as a parameter.
+- type: explanation
+  location:
+    snippet: actor.act();
+  explanations:
+  - body: invokes the 'act' interface on the object actor.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: closes the 'tryout' method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: closes the 'TryOut' class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: 'error: this "}" is not necessary'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 10
+  explanations:
+  - body: 'error: this "}" is not necessary'

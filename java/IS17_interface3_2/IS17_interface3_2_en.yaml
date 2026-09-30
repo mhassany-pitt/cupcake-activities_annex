@@ -1,0 +1,215 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface3_2
+source: Main.java
+title: IS17_interface3_2
+description: 'Worked example: IS17_interface3_2'
+authors:
+- first: Annette
+  last: Rico
+  email: annette.rico@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface3_2'
+elements:
+- type: explanation
+  location:
+    snippet: interface Fruit {
+  explanations:
+  - body: declare interface Fruit
+- type: explanation
+  location:
+    snippet: public boolean hasAPeel();
+  explanations:
+  - body: hasAPeel method is declared public
+- type: explanation
+  location:
+    snippet: interface Vegetable {
+  explanations:
+  - body: declare interface Vegetable
+- type: explanation
+  location:
+    snippet: public boolean isARoot();
+  explanations:
+  - body: isARoot method is declared Public
+- type: explanation
+  location:
+    snippet: class FandVUtility {
+  explanations:
+  - body: FandVUtility class declaration
+- type: explanation
+  location:
+    snippet: static String doesThisHaveAPeel(Fruit fruitIn){
+  explanations:
+  - body: doesThisHaveAPeel method is declared static and has one Fruit parameter and returns a String
+- type: explanation
+  location:
+    snippet: if (fruitIn.hasAPeel())
+  explanations:
+  - body: An if statement with the condition being a call to the hasAPeel method
+- type: explanation
+  location:
+    snippet: return "This has a peel";
+  explanations:
+  - body: return statement to return String "This has a peel" since if condition was met
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: the else statement, where all conditions that were not met at the if condition are routed in the program
+- type: explanation
+  location:
+    snippet: return "This does not have a peel";
+  explanations:
+  - body: returns a String noting that the fruit does not have a peel
+- type: explanation
+  location:
+    snippet: static String isThisARoot(Vegetable vegetableIn){
+  explanations:
+  - body: The isThisARoot method is declared static and takes a Vegetable parameter and returns a String
+- type: explanation
+  location:
+    snippet: if (vegetableIn.isARoot())
+  explanations:
+  - body: An if statement to check if it has a root by calling the isARoot method
+- type: explanation
+  location:
+    snippet: return "This is a root";
+  explanations:
+  - body: returns String to reflect it is a root since the condition was met
+- type: explanation
+  location:
+    snippet: else
+    nth: 2
+  explanations:
+  - body: The else statement, where all other conditions are routed that do not meet the if's condition
+- type: explanation
+  location:
+    snippet: return "This is not a root";
+  explanations:
+  - body: returns a String to reflect that the vegetable is not a root
+- type: explanation
+  location:
+    snippet: static String doesThisHaveAPeelOrIsThisRoot(Tomato tomatoIn){
+  explanations:
+  - body: The doesThisHaveAPeelOrIsThisRoot method is declared static and takes a Tomato parameter and returns a String
+- type: explanation
+  location:
+    snippet: if (tomatoIn.hasAPeel() && tomatoIn.isARoot())
+  explanations:
+  - body: An if statement to check if the tomato has a peel and is a root by calling the hasAPeel and isARoot methods.  Since
+      the and (&&) logic is used both conditions must be met.
+- type: explanation
+  location:
+    snippet: return "This both has a peel and is a root";
+  explanations:
+  - body: Return a String to reflect that both the has a peel and is a root conditions were met
+- type: explanation
+  location:
+    snippet: else if (tomatoIn.hasAPeel() || tomatoIn.isARoot())
+  explanations:
+  - body: The else if statement checks if one of the conditions are met by using an or (||) logic condition with the hasAPeel
+      and isARoot method calls.
+- type: explanation
+  location:
+    snippet: return "This either has a peel or is a root";
+  explanations:
+  - body: Returns a String to reflect one condition (has a peel or is a root) was met
+- type: explanation
+  location:
+    snippet: else
+    nth: 3
+  explanations:
+  - body: If neither the if or the else if conditions were met, the program goes to the else statement with all other conditions
+- type: explanation
+  location:
+    snippet: return "This neither has a peel or is a root";
+  explanations:
+  - body: Returns a String to reflect that it doesn't have a peel or a root
+- type: explanation
+  location:
+    snippet: class Tomato implements Fruit, Vegetable {
+  explanations:
+  - body: Tomato class is extended with the interfaces Fruit and Vegetable by using the keyword implements.
+- type: explanation
+  location:
+    snippet: boolean peel = false;
+  explanations:
+  - body: Variable declaration and initialization (to false) of boolean variable peel
+- type: explanation
+  location:
+    snippet: boolean root = false;
+  explanations:
+  - body: Variable declaration and initialization(to false) of boolean variable root
+- type: explanation
+  location:
+    snippet: public Tomato() {}
+  explanations:
+  - body: The tomato class is declared public
+- type: explanation
+  location:
+    snippet: public boolean hasAPeel(){
+  explanations:
+  - body: The hasAPeel method of interface Fruit is implemented
+- type: explanation
+  location:
+    snippet: return peel;
+  explanations:
+  - body: Returns boolean variable peel
+- type: explanation
+  location:
+    snippet: public boolean isARoot() {
+  explanations:
+  - body: The isARoot method of interface Vegetable is implemented
+- type: explanation
+  location:
+    snippet: return root;
+  explanations:
+  - body: Returns boolean variable root
+- type: explanation
+  location:
+    snippet: public static void main(String[] args) {
+  explanations:
+  - body: The main method of the class tomato, this is where the program begins
+- type: explanation
+  location:
+    snippet: Tomato tomato = new Tomato();
+  explanations:
+  - body: A new tomato is declared and initialized by using constructor of class Tomato.
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.isThisARoot(tomato));
+  explanations:
+  - body: The tomato object tomato is passed to the isThisARoot method of FandVUtility class.  The return string of this method
+      is sent to the output by the System.out.println method.
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.doesThisHaveAPeel(tomato));
+  explanations:
+  - body: The tomato object tomato is passed to the doesthisHaveAPeel method of FandVUtility class.  The return string of
+      this method is sent to the output via the System.out.println method.
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.doesThisHaveAPeelOrIsThisRoot(tomato));
+  explanations:
+  - body: The Tomato object tomato is passed to the doesthisHaveAPeelOrIsThisRoot method of FandVUtility class.  The return
+      string of this method is sent to the output via the System.out.println method.
+- type: explanation
+  location:
+    snippet: Fruit tomatoFruit = new Tomato();
+  explanations:
+  - body: A new Fruit object is declared and intialized with a tomato created with constructor of the Tomato class.
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.doesThisHaveAPeel(tomatoFruit));
+  explanations:
+  - body: The Fruit object tomatoeFruit is passed to the doesthisHaveAPeel method of FandVUtility class.  The return string
+      of this method is sent to the output via the System.out.println method.

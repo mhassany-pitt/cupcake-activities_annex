@@ -1,0 +1,86 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList1
+source: ArrayList1.java
+title: IS17_ArrayList1
+description: 'Worked example: IS17_ArrayList1'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList1'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: You need to use this import statement to work with ArrayLists
+- type: explanation
+  location:
+    snippet: class USport { String school; String name;
+  explanations:
+  - body: "Objects of these class are college sport teams. A college sport team is simply a \r\ncombination of two strings\
+      \ - one for the college name, one for the team name."
+- type: explanation
+  location:
+    snippet: public USport (String s, String n) { school = s;  name = n; }
+  explanations:
+  - body: This is a simple constructor to create USport objects from two strings.
+- type: explanation
+  location:
+    snippet: public String toString() { return school + ":" + name; }
+  explanations:
+  - body: "To do it in a Java way, we provide toString method for our class. It allows good-\r\nlooking representation of\
+      \ an object in a string form"
+- type: explanation
+  location:
+    snippet: ArrayList<USport> v = new ArrayList<USport>();
+  explanations:
+  - body: We defined ArrayList v to hold a list of objects of class USport
+- type: explanation
+  location:
+    snippet: v.add( new USport("LSU", "Tigers")  );
+  explanations:
+  - body: Creating an object for LSU Tigers and adding it to ArrayList v right away
+- type: explanation
+  location:
+    snippet: v.add( new USport("Georgia", "Bulldogs") );
+  explanations:
+  - body: Creating an object for Georgia Bulldogs and adding it to ArrayList v right away
+- type: explanation
+  location:
+    snippet: v.add( new USport("Pitt", "Panthers")  );
+  explanations:
+  - body: Creating an object for Pitt Panthers and adding it to ArrayList v
+- type: explanation
+  location:
+    snippet: System.out.println( v );
+  explanations:
+  - body: This statement will print the content of arraylist v
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: printing newline
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 2
+  explanations:
+  - body: printing newline
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 3
+  explanations:
+  - body: printing newline

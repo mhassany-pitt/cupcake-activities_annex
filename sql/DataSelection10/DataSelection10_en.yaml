@@ -1,0 +1,69 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection10
+source: query.sql
+title: Multiple Table Selection (1)
+description: Multiple Table Selection (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ReferentialAction
+  - expert:EquiWhereJoin
+  - expert:FixedLengthCharacterString
+  - expert:AndLogicalOperator
+  - expert:SelectClause
+  - expert:TableAlias
+  - expert:FromClause
+  - expert:QualifiedAttributeName
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:MultipleAttributeSelection
+  - expert:CountingNoInColumn
+  - expert:NegativeSetMembership
+  - expert:SingleQuotationCharacter
+  - expert:MultipleTableSelection
+  - expert:StringConstant
+  - expert:DotCharacter
+  - expert:EqualComparison
+  - sql_ontology:EqualComparison
+  - sql_ontology:TableAlias
+  - sql_ontology:StringConstant
+  - sql_ontology:AndLogicalOperator
+  - sql_ontology:QualifiedAttributeName
+  - sql_ontology:EquiWhereJoin
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:WhereClause
+runtime:
+  language: sql
+  version: '2016'
+statement: Multiple Table Selection (1)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT S.name, E.cid
+  explanations:
+  - body: This example is to retrieve student's name and course id.
+- type: explanation
+  location:
+    snippet: FROM Student S, Enrolled E
+  explanations:
+  - body: The FROM clause identifies all of the tables that contribute data to the query results. This SQL statement retrieves
+      data from two tables - Students and Enrolled. If a query refers to another user's talbe or the name of the table is
+      very long, it becomes easier to use shorter aliases like S, and E for the two tables. Once table aliases are defined,
+      it is important to specify table alias in column select list. 'name' column is attached to 'Students' table alias S,
+      and 'cid' is attached to 'Enrolled' table alias E.
+- type: explanation
+  location:
+    snippet: WHERE S.sid = E.sid AND E.grade = "A";
+  explanations:
+  - body: In condition, table aliases also are used. It compares sid column values in both 'Students' and 'Enrolled'. <br>This
+      condition is to find the students who get A grade.

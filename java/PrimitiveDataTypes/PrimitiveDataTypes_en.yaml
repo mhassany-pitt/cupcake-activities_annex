@@ -1,0 +1,62 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_PrimitiveDataTypes
+source: Main.java
+title: DEPRECATED_Primitive Data Types
+description: 'Worked example: DEPRECATED_Primitive Data Types'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Primitive Data Types'
+elements:
+- type: explanation
+  location:
+    snippet: byte byteNumber = 7;
+  explanations:
+  - body: variables of type byte can store numbers from -128 to 127
+- type: explanation
+  location:
+    snippet: short shortNumber = 1234;
+  explanations:
+  - body: variables of type short can store numbers from -32768 to 32767
+- type: explanation
+  location:
+    snippet: int integerNumber = 1;
+  explanations:
+  - body: type int is a default type for integer values
+- type: explanation
+  location:
+    snippet: long longNumber = 123456789L;
+  explanations:
+  - body: type long can be used to store very big integer numbers
+- type: explanation
+  location:
+    snippet: float floatNumber = 9E-28F;
+  explanations:
+  - body: float type is used for floating-point numbers that do not need double precision
+- type: explanation
+  location:
+    snippet: double doubleNumber = 1.496;
+  explanations:
+  - body: default type for floating-point numbers
+- type: explanation
+  location:
+    snippet: boolean b = true;
+  explanations:
+  - body: 'logic type stores one of two possible values: true and false'
+- type: explanation
+  location:
+    snippet: char myChar = 'X';
+  explanations:
+  - body: character type. It s values are character codes in Unicode encoding scheme

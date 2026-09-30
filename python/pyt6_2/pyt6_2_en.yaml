@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt6_2_en
+source: main.py
+title: Sub-Strings
+description: 'Worked example: Sub-Strings'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Slice
+  - parser:Call
+  - parser:Assign
+  - parser:Str
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:Slice
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Sub-Strings'
+elements:
+- type: explanation
+  location:
+    snippet: print (a[:3])
+  explanations:
+  - body: Prints the string 'Hello World' from beginning till the element number 3
+- type: explanation
+  location:
+    snippet: print (a[6:])
+  explanations:
+  - body: Prints the string 'Hello World' from element number 6 till the end
+- type: explanation
+  location:
+    snippet: print (a[2:4])
+  explanations:
+  - body: Prints the string 'Hello World' from element number 2 till the element number 4

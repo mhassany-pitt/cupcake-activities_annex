@@ -1,0 +1,67 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Sentinel_value
+source: main.cpp
+title: Sentinel_value
+description: 'Worked example: Sentinel_value'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Sentinel_value'
+elements:
+- type: explanation
+  location:
+    snippet: float averageScore;
+  explanations:
+  - body: float type indicates variable can be a non-integer.
+- type: explanation
+  location:
+    snippet: keepCounter = 0;
+  explanations:
+  - body: initialize loop counter.
+- type: explanation
+  location:
+    snippet: scanf( "%d", &score );
+  explanations:
+  - body: read next grade.
+- type: explanation
+  location:
+    snippet: keepCounter = keepCounter + 1;
+  explanations:
+  - body: increment counter.
+- type: explanation
+  location:
+    snippet: scanf("%d", &score);
+  explanations:
+  - body: read next grade.
+- type: explanation
+  location:
+    snippet: if ( keepCounter != 0 ) {
+  explanations:
+  - body: Ensures the user entered at least one grade.
+- type: explanation
+  location:
+    snippet: averageScore = ( float ) totalScore / keepCounter;
+  explanations:
+  - body: Converts total to float type.
+- type: explanation
+  location:
+    snippet: printf( "Class average is %.2f\n", averageScore );
+  explanations:
+  - body: Prints result with 2 digits after decimal point.
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: if no grades were entered, output message.

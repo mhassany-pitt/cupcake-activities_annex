@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_metrics
+source: Metrics.java
+title: ISD::Metrics.java
+description: 'Worked example: ISD::Metrics.java'
+authors:
+- first: Sharon
+  last: Hsiao
+  email: sharon.hsiao@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::Metrics.java'
+elements:
+- type: explanation
+  location:
+    snippet: FontMetrics fm = g.getFontMetrics();
+  explanations:
+  - body: Create new fontMetrics object, with fontmetrics for current font.
+- type: explanation
+  location:
+    snippet: fm = g.getFontMetrics( font );
+  explanations:
+  - body: returns FontMetrics object for current font

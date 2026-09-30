@@ -1,0 +1,67 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_logicaloperators_comparenumbers
+source: CompareNumbers.java
+title: (LogicalOperators) Compare numbers - CSEdPad
+description: This program check whether two numbers are equal or not
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:EqualExpression
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:IntDataType
+  - webex:StringLiteral
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:EqualExpression
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: This program check whether two numbers are equal or not
+elements:
+- type: explanation
+  location:
+    snippet: System.out.println("number1 equals number2:"+(number1==number));
+  explanations:
+  - body: number1==number evaluates true if  number1(40) equals number(40) else false
+- type: explanation
+  location:
+    snippet: System.out.println("number2 equals number3:"+(number2==number));
+  explanations:
+  - body: number1==number evaluates true if  number2(50) equals number(40) else false
+- type: explanation
+  location:
+    snippet: System.out.println("number1 equals number3:"+(number1==number));
+  explanations:
+  - body: number1==number evaluates true if  number3(40) equals number(40) else false

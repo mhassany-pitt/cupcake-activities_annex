@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_2_2
+source: MainClass.java
+title: If with complex condition
+description: If with complex condition
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:GreaterExpression
+  - expert:IfStatement
+  - expert:IntDataType
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:OrExpression
+  - expert:PostIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: If with complex condition
+elements:
+- type: explanation
+  location:
+    snippet: if (x < w || y > z) {
+  explanations:
+  - body: "This If statement checks two conditions, one with less than and one \r\nwith greater than comparison. The conditions\
+      \ are connected with OR \r\noperator. It \r\nmeans that the whole complex condition will be true if *at least* one \r\
+      \nof its \r\nparts is true (i.e., first, second, or both)."
+- type: explanation
+  location:
+    snippet: y++;
+  explanations:
+  - body: The value of y gets incremented, i.e., increased by one

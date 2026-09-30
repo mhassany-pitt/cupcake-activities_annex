@@ -1,0 +1,80 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_ArrayListTester
+source: ArrayListTester.java
+title: ArrayList Tester
+description: 'Worked example: ArrayList Tester'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ConstructorCall
+  - expert:ObjectCreationStatement
+  - expert:ObjectMethodInvocation
+  - expert:GenericObjectCreationStatement
+  - expert:ImportStatement
+  - expert:java.lang.System.out.println
+  - expert:SimpleAssignmentExpression
+  - expert:java.util.ArrayList
+  - expert:java.util.ArrayList.add
+  - expert:StringAddition
+  - expert:java.util.ArrayList.get
+  - expert:StringDataType
+  - expert:java.util.ArrayList.remove
+  - expert:StringLiteral
+  - expert:java.util.ArrayList.size
+  - expert:SubtractExpression
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ArrayList Tester'
+elements:
+- type: explanation
+  location:
+    snippet: public class ArrayListTester
+  explanations:
+  - body: /**   This program tests the ArrayList class.*/
+- type: explanation
+  location:
+    snippet: ArrayList<BankAccount> accounts = new ArrayList<BankAccount>();
+  explanations:
+  - body: This line creates an arrayList of BankAccount objects.
+- type: explanation
+  location:
+    snippet: accounts.add(new BankAccount(1001));
+  explanations:
+  - body: creates a BankAccount object with account number 1001 and adds that to the list.
+- type: explanation
+  location:
+    snippet: accounts.remove(0);
+  explanations:
+  - body: "The remove(i) method removes the element at index i, here remove(0) removes \r\nthe BankAccount object with account\
+      \ number 1001."
+- type: explanation
+  location:
+    snippet: 'System.out.println("Size: " + accounts.size());'
+  explanations:
+  - body: The size() method returns the list size, here the size is 3.
+- type: explanation
+  location:
+    snippet: BankAccount first = accounts.get(0);
+  explanations:
+  - body: "The method get(i) returns the object at index i in the list. Here, get(0) returns the \r\nfirst element in the\
+      \ list at index 0."
+- type: explanation
+  location:
+    snippet: + first.getAccountNumber());
+  explanations:
+  - body: gets the account number of the first element in the list and prints 1008.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Last account number: "'
+  explanations:
+  - body: gets the account number of the last element in the list and prints 1729.

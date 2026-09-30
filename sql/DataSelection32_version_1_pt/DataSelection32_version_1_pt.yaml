@@ -1,0 +1,59 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection32_version_1_pt
+source: query.sql
+title: AggregatingSubquery_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT branch_name
+  explanations:
+  - body: Primeiro, o valor medio de todas as agencias e' calculado em uma subconsulta e entao, utilizando o teste ALL, o
+      valor medio por conta de cada agencia e' comparado aos resultados da subconsulta.
+- type: explanation
+  location:
+    snippet: FROM account
+  explanations:
+  - body: Recuperando as agencias com maior media de saldo entre as contas.
+- type: explanation
+  location:
+    snippet: GROUP BY branch_name
+  explanations:
+  - body: Esta linha agrupa o saldo das contas de acordo com o nome das agencias.
+- type: explanation
+  location:
+    snippet: HAVING AVG(balance) >= ALL
+  explanations:
+  - body: Essa condicao procura a maior media de saldo utilizando o teste ALL. Da mesma forma que a clausula WHERE e' utilizada
+      para selecionar e elimitar linhas individuais, a clausula HAVING e' utilizada para selecionar e eliminar linhas agrupadas.
+      O formato da clausula HAVING e' parecido com o formato da clausula WHERE, mas a clausula HAVING pode se usada como uma
+      condicao de busca em grupos. Para que a comparacao >= seja realizada, o saldo e' agrupado pelo nome da agencia e a media
+      e' calculada. O valor unico calculado e' comparado com todas as medias das agencias e se todos forem menores ou iguais
+      ao valor comparado, a condicao retorna o resultado VERDADEIRO, fazendo com que a tupla pertenca ao resultado final.
+- type: explanation
+  location:
+    snippet: (SELECT AVG(balance)
+  explanations:
+  - body: Esta linha calcula a media do saldo das contas de cada agencia.
+- type: explanation
+  location:
+    snippet: GROUP BY branch_name);
+  explanations:
+  - body: Especifica o agrupamento do saldo pelo nome das agencias e para que o valor agrupado possa ser calculado pela funcao
+      AVG.

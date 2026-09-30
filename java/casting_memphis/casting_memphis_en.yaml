@@ -1,0 +1,122 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_casting_memphis
+source: VariableDemos.java
+title: Casting data types (Memphis)
+description: The code below demonstrates how to swap the values of x and y, and perform some casting operations to convert
+  variables from one data type into another
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:IntDataType
+  - parser:SimpleAssignmentExpression
+  - parser:java.lang.System.out.println
+  - parser:ActualMethodParameter
+  - parser:StringAddition
+  - parser:StringDataType
+  - parser:StringLiteral
+  - parser:DoubleDataType
+  - parser:ExplicitTypeCasting
+  - parser:ByteDataType
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ByteDataType
+  - java_ontology:ClassDefinition
+  - java_ontology:DoubleDataType
+  - java_ontology:ExplicitTypeCasting
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: The code below demonstrates how to swap the values of x and y, and perform some casting operations to convert variables
+  from one data type into another
+elements:
+- type: explanation
+  location:
+    snippet: int x = 4, y = 10;
+  explanations:
+  - body: Declares two int variables named x and y, and assigns them values of 4 and 10, respectively
+- type: explanation
+  location:
+    snippet: System.out.println(x + ", " + y);
+  explanations:
+  - body: Shows 4, 10
+- type: explanation
+  location:
+    snippet: x = y;
+  explanations:
+  - body: This line does *not* mean that x and y are always the same!  It simply says "store the value of y into the variable
+      x, once"
+- type: explanation
+  location:
+    snippet: System.out.println(x + ", " + y);
+    nth: 2
+  explanations:
+  - body: Shows 10, 10
+- type: explanation
+  location:
+    snippet: y = 8;
+  explanations:
+  - body: This line changes y into 8, but x is unaffected
+- type: explanation
+  location:
+    snippet: System.out.println(x + ", " + y);
+    nth: 3
+  explanations:
+  - body: Shows 10, 8
+- type: explanation
+  location:
+    snippet: int temp = x;
+  explanations:
+  - body: Create a new variable named temp to store the old value of x
+- type: explanation
+  location:
+    snippet: x = y;
+    nth: 2
+  explanations:
+  - body: Replace x with the value of y
+- type: explanation
+  location:
+    snippet: y = temp;
+  explanations:
+  - body: Replace y with the value of temp (which is the old value of x)
+- type: explanation
+  location:
+    snippet: double z = 2;
+  explanations:
+  - body: implicit cast (z will hold the value of 2.0)
+- type: explanation
+  location:
+    snippet: int z1 = (int)2.5;
+  explanations:
+  - body: explicit cast required (z1 will hold the value of 2)
+- type: explanation
+  location:
+    snippet: byte small = (byte)200;
+  explanations:
+  - body: explicit cast required (small will the last 8 bits of the int value 200)

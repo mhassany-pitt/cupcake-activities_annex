@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_static_method_v2
+source: KmToMilesMethod.java
+title: Static Method
+description: 'Worked example: Static Method'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Static Method'
+elements:
+- type: explanation
+  location:
+    snippet: mi = convertKmToMi(km);
+  explanations:
+  - body: calling the static method convertKmToMi().
+- type: explanation
+  location:
+    snippet: System.out.println(mi);
+  explanations:
+  - body: the output will be 0.621.
+- type: explanation
+  location:
+    snippet: private static double convertKmToMi(double kilometers) {
+  explanations:
+  - body: declare a private static method called convertKmToMi.

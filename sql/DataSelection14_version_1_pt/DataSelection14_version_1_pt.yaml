@@ -1,0 +1,29 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection14_version_1_pt
+source: query.sql
+title: RangeTest(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: WHERE amount BETWEEN 2000 AND 100000;
+  explanations:
+  - body: A clausula BETWEEN e' um operador de intervalo. O teste de intervalo verifica se o valor da coluna esta entre dois
+      valores especificados. A parte da esquerda da palavra-chave AND representa o limite inferior do intervalo e a parte
+      da direita representa o limite superior do intervalo. Essa clausula e' equivalente 'a (amount >= 2000) AND (amount <=100000).

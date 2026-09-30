@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_helloworld_c_en
+source: main.c
+title: 'IS12:: helloworld.c (1.1)'
+description: 'Worked example: IS12:: helloworld.c (1.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:printf
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:void
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: helloworld.c (1.1)'
+elements:
+- type: explanation
+  location:
+    snippet: /* This is our first program */
+  explanations:
+  - body: This is a comment. Comments are written not for computers but for humans. The computer will ignore everything between
+      /* and */. Humans need comments to understand the program.
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: '#include is a command which tells the compiler that the standard input / output  library will be used. Thus printf
+      will be recognized as a standard output function'
+- type: explanation
+  location:
+    snippet: void main()
+  explanations:
+  - body: Execution of a C program always begins at the main() function. Every C program must have one (only one) main() function.
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: The open brace ({) marks the beginning of the function body, which is one or more program statements which perform
+      some task
+- type: explanation
+  location:
+    snippet: printf("Hello, World!  ");
+  explanations:
+  - body: This statement is a function call to the printf function in the C Standard I/O Library. It displays the message
+      which is the argument to the function. The    denotes the newline. We can use printf because we told the compiler to
+      use Standard I/O Library.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: The closing brace (}) marks the end of the function body

@@ -1,0 +1,81 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_copycat_c_en
+source: main.c
+title: 'IS12:: copycat.c (6.6)'
+description: 'Worked example: IS12:: copycat.c (6.6)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: copycat.c (6.6)'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: This is a preprocessor command. System header file stdio.h will be   inserted there during compilationWe include
+      stdio.h header file because it contains function   prototypes for getchar and putchar and a definition of symbolic   constant
+      EOF
+- type: explanation
+  location:
+    snippet: main () {
+  explanations:
+  - body: This is the start of main function definition. Every program should   have function main
+- type: explanation
+  location:
+    snippet: int c;
+  explanations:
+  - body: c is defined as integer because getchar function can return EOF - an   integer value that is outside of the range
+      of char values
+- type: explanation
+  location:
+    snippet: c = getchar();
+  explanations:
+  - body: This is call pre-reading. The first symbol is read before we enter   while loop since c has to have a value before
+      we enter while loop.
+- type: explanation
+  location:
+    snippet: while(c != EOF) {
+  explanations:
+  - body: This is the header of while loop. The loop works while condition in   brackets is true
+- type: explanation
+  location:
+    snippet: putchar(c);
+  explanations:
+  - body: Character stored in variable c is placed to the standard output
+- type: explanation
+  location:
+    snippet: c = getchar();
+    nth: 2
+  explanations:
+  - body: New character is read from the standard input. The characted assigned   to variable c.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: This bracket closes while operator
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: This bracket closes definition function main.

@@ -1,0 +1,70 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_whileloops_whileloopsex1
+source: Main.java
+title: (While loops) While Loops Ex 1 - CSEdPad
+description: 'Loop with simple loop variable increment: Assume you have a list of 1,000 people in alphabetical order and you
+  are assigned to collect from the first person on the list $1, from the second person $2, and so on from the 1,000th person
+  you collect $1,000.'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:PostIncrementExpression
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:LessEqualExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:WhileStatement
+  - webex:IntDataType
+  - webex:StringLiteral
+  - webex:AddAssignmentExpression
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddAssignmentExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessEqualExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:PostIncrementExpression
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+  - java_ontology:WhileStatement
+runtime:
+  language: java
+  version: '17'
+statement: 'Loop with simple loop variable increment: Assume you have a list of 1,000 people in alphabetical order and you
+  are assigned to collect from the first person on the list $1, from the second person $2, and so on from the 1,000th person
+  you collect $1,000.'
+elements:
+- type: explanation
+  location:
+    snippet: while (i <= 1000) {
+  explanations:
+  - body: (loop condition that depends on variable i)
+- type: explanation
+  location:
+    snippet: i++;
+  explanations:
+  - body: (loop variable i is being incremented which is important in order for the loop condition to change)

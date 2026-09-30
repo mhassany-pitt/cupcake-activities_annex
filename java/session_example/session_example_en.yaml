@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_session_example
+source: SessionExample.java
+title: ISD::SessionExample.java
+description: 'Worked example: ISD::SessionExample.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::SessionExample.java'
+elements:
+- type: explanation
+  location:
+    snippet: HttpSession session = request.getSession( true );
+  explanations:
+  - body: Load HttpSession if exists, create if does not.
+- type: explanation
+  location:
+    snippet: session.putValue( language, getISBN( language ) );
+  explanations:
+  - body: Set name/value pair.
+- type: explanation
+  location:
+    snippet: HttpSession session = request.getSession( false );
+  explanations:
+  - body: Do not create object if does not exist.  session set to null.
+- type: explanation
+  location:
+    snippet: valueNames = session.getValueNames();
+  explanations:
+  - body: Put names into array.
+- type: explanation
+  location:
+    snippet: (String) session.getValue( valueNames[ i ] );
+  explanations:
+  - body: Get value associated with name.

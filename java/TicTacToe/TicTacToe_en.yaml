@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TicTacToe
+source: TicTacToe.java
+title: Tic-Tac-Toe
+description: 'Worked example: Tic-Tac-Toe'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:PublicConstructorSpecifier
+  - expert:ArrayElement
+  - expert:java.lang.String.equals
+  - expert:ClassConstantInitializationStatement
+  - expert:LessExpression
+  - expert:ReturnStatement
+  - expert:SimpleAssignmentExpression
+  - expert:ClassField
+  - expert:MultiDimensionalArrayDataType
+  - expert:SimpleVariable
+  - expert:ConstructorDefinition
+  - expert:NestedForLoops
+  - expert:StaticFieldSpecifier
+  - expert:FinalFieldSpecifier
+  - expert:ObjectMethodInvocation
+  - expert:StringAddition
+  - expert:OverridingToString
+  - expert:StringDataType
+  - expert:ForStatement
+  - expert:PostIncrementExpression
+  - expert:StringInitializationStatement
+  - expert:IfStatement
+  - expert:PrivateFieldSpecifier
+  - expert:StringLiteral
+  - expert:InstanceField
+  - expert:StringVariable
+  - expert:AddExpression
+  - expert:IntDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Tic-Tac-Toe'
+elements:
+- type: explanation
+  location:
+    snippet: public class TicTacToe
+  explanations:
+  - body: /**   A 3 x 3 tic-tac-toe board.*/
+- type: explanation
+  location:
+    snippet: public TicTacToe()
+  explanations:
+  - body: /**      Constructs an empty board.   */
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < ROWS; i++)
+  explanations:
+  - body: Fill with spaces
+- type: explanation
+  location:
+    snippet: public void set(int i, int j, String player)
+  explanations:
+  - body: "/**      Sets a field in the board. The field \r\nmust be unoccupied.\r\n      @param i the row index \r\n    \
+      \  @param j the column index \r\n      @param player the player (\"x\" or \"o\")\r\n   */"
+- type: explanation
+  location:
+    snippet: public String toString()
+  explanations:
+  - body: "/**      Creates a string representation of the \r\nboard, such as \r\n      |x  o|\r\n      |  x |\r\n      |\
+      \   o|\r\n\r\n      @return the string representation\r\n   */"

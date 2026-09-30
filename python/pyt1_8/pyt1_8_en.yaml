@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt1_8_en
+source: main.py
+title: 'Variable type: Tuples'
+description: 'Worked example: Variable type: Tuples'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Variable type: Tuples'
+elements:
+- type: explanation
+  location:
+    snippet: tuple1 = ('sample_text', 100 , 5.5, False)
+  explanations:
+  - body: Defining a tuple with 4 elements and assigning it to the variable 'tuple1'
+- type: explanation
+  location:
+    snippet: print (tuple1)
+  explanations:
+  - body: Printing the tuple

@@ -1,0 +1,82 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_c_ch2_multiline_cout
+source: main.cpp
+title: Multiline cout
+description: 'Worked example: Multiline cout'
+authors:
+- first: Natalya
+  last: Goreva
+  email: natalya.goreva@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Multiline cout'
+elements:
+- type: explanation
+  location:
+    snippet: // A well-adjusted printing program
+  explanations:
+  - body: This is a comment line
+- type: explanation
+  location:
+    snippet: '#include <iostream>'
+  explanations:
+  - body: Include the library for working with streaming data to and from the user
+- type: explanation
+  location:
+    snippet: using namespace std;
+  explanations:
+  - body: Add a reference to standard namespace that includes variables, types, constants, and functions
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: Declare the main function of the application
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Open the body of the function
+- type: explanation
+  location:
+    snippet: cout << "The following items were top sellers" << endl;
+  explanations:
+  - body: Output a line of text and use endl to switch to the next line
+- type: explanation
+  location:
+    snippet: cout << "during the month of June:" << endl;
+  explanations:
+  - body: Output a line of text and use endl to switch to the next line
+- type: explanation
+  location:
+    snippet: cout << "Computer games" << endl;
+  explanations:
+  - body: Output a line of text and use endl to switch to the next line
+- type: explanation
+  location:
+    snippet: cout << "Coffee" << endl;
+  explanations:
+  - body: Output a line of text and use endl to switch to the next line
+- type: explanation
+  location:
+    snippet: cout << "Aspirin" << endl;
+  explanations:
+  - body: Output a line of text and use endl to switch to the next line
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: Return 0, which is a dummy value
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Close the body of the function

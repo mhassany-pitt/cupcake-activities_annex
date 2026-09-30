@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection22
+source: query.sql
+title: Aggregate Functions (2)
+description: Aggregate Functions (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:EqualComparison
+  - expert:ReferentialAction
+  - expert:StringType
+  - expert:SelectClause
+  - expert:Timestamp
+  - expert:FromClause
+  - expert:AvgFunction
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:SingleAttributeSelection
+  - expert:SingleQuotationCharacter
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - sql_ontology:EqualComparison
+  - sql_ontology:DateTimeType
+  - sql_ontology:StringType
+  - sql_ontology:SelectStatement
+  - sql_ontology:SetOperation
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:NumericType
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:AvgFunction
+  - sql_ontology:SingleQuotationCharacter
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_concept:ReferentialAction
+runtime:
+  language: sql
+  version: '2016'
+statement: Aggregate Functions (2)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT AVG(balance)
+  explanations:
+  - body: The AVG() aggregate function computes the average of a column of data values and retrieve the calculated average
+      value only. The data in the column must have a numeric type.
+- type: explanation
+  location:
+    snippet: WHERE branch_name = 'Perryridge';
+  explanations:
+  - body: This condition is to limit the retrieved data to 'Perryridge' branch.

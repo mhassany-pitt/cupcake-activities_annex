@@ -1,0 +1,76 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_comparison_operators_v2
+source: Main.java
+title: comparison operators
+description: comparison operators
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:EqualExpression
+  - expert:FormalMethodParameter
+  - expert:GreaterExpression
+  - expert:IfStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LessEqualExpression
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:NotEqualExpression
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: comparison operators
+elements:
+- type: explanation
+  location:
+    snippet: if(value1 == value2) System.out.println("equal");
+  explanations:
+  - body: "If statement allows you to execute certain code only under specific \r\ncondition. Equal operator '==' checks if\
+      \ two numeric values are equal \r\nto each other.\r\nIn this case if value1 is equal to value2 the program \r\nprints\
+      \ \"equal\".\r\nIn our case value1 is not equal to value2, so nothing is printed \r\nhere"
+- type: explanation
+  location:
+    snippet: if(value1 != value2) System.out.println("not equal");
+  explanations:
+  - body: "Operator '!=' means not-equal. Here we print the resulting string only \r\nif value1 is not equal to value2. In\
+      \ our case value1 is not \r\nequal to value2, so \"not equal\" is printed"
+- type: explanation
+  location:
+    snippet: if(value1 > value2) System.out.println("greater than");
+  explanations:
+  - body: "If value1 is greater than value2  we print \"greater than\". In our case \r\nvalue1 is not greater than value2,\
+      \ so nothing is printed here"
+- type: explanation
+  location:
+    snippet: if(value1 >= value2) System.out.println("greater than or equal");
+  explanations:
+  - body: "Operator '>=' allows to combine two conditions. If value1 is either \r\nequal to value2 or it is greater than value2\
+      \ we print \"greater \r\nthan or equal\".\r\nIn our case value1 is less than value2, so nothing is printed \r\nhere"
+- type: explanation
+  location:
+    snippet: if(value1 < value2) System.out.println("less than");
+  explanations:
+  - body: "If value1 is less than value2  we print \"less than\". In our case value1 is \r\nless than value2, so \"less than\"\
+      \ is printed"
+- type: explanation
+  location:
+    snippet: if(value1 <= value2) System.out.println("less than or equal");
+  explanations:
+  - body: "Operator '<=' allows to combine two conditions. If value1 is either \r\nequal to value2 or it is less than value2\
+      \ we print \"less than or \r\nequal\".\r\nIn our case value1 is less than value2, so the string \r\nis printed"

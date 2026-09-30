@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection23
+source: query.sql
+title: Aggregate Functions (3)
+description: Aggregate Functions (3)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AllAttributeSelection
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:SelectStatement
+  - expert:ColumnAddition
+  - expert:CountFunction
+  - expert:SingleTableSelection
+  - sql_ontology:SelectStatement
+  - sql_ontology:AllAttributeSelection
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:SelectClause
+  - sql_ontology:CountFunction
+  - sql_concept:ColumnAddition
+runtime:
+  language: sql
+  version: '2016'
+statement: Aggregate Functions (3)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT COUNT(*)
+  explanations:
+  - body: The COUNT() aggregate function calculate the total number of tuples. If the column name is specified as a part of
+      the operation, it counts the number of values in a column. For example, COUNT(customer_name) is to calculate the total
+      number of 'customer_name' values. COUNT(*) is to count rows of query results.

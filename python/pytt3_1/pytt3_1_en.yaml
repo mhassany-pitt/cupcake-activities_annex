@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt3_1_en
+source: main.py
+title: Maximum of 2 Numbers
+description: 'Worked example: Maximum of 2 Numbers'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Maximum of 2 Numbers'
+elements:
+- type: explanation
+  location:
+    snippet: a = float(input("First number?"))
+  explanations:
+  - body: Taking First number as an input from the user and storing it in the variable 'a'
+- type: explanation
+  location:
+    snippet: b = float(input("Second number?"))
+  explanations:
+  - body: Taking Second number as an input from the user and storing it in the variable 'b'
+- type: explanation
+  location:
+    snippet: max = a
+  explanations:
+  - body: Here, we assume that a is the maximum of two numbers
+- type: explanation
+  location:
+    snippet: 'if b > max:'
+  explanations:
+  - body: But we check the condition, if 'b' is greater than max (i.e. 'a'), then...
+- type: explanation
+  location:
+    snippet: max = b
+  explanations:
+  - body: then value of 'b' is assigned to 'max'
+- type: explanation
+  location:
+    snippet: print(max, "is the maximum")
+  explanations:
+  - body: Printing out the max number

@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection20
+source: query.sql
+title: Combining Query Results (2)
+description: Combining Query Results (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:SelectStatement
+  - expert:BracketCharacter
+  - expert:IntersectOperation
+  - expert:SingleAttributeSelection
+  - expert:SingleTableSelection
+  - expert:QueryLanguage
+  - sql_ontology:IntersectOperation
+  - sql_ontology:SelectStatement
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:BracketCharacter
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:SelectClause
+  - sql_concept:QueryLanguage
+runtime:
+  language: sql
+  version: '2016'
+statement: Combining Query Results (2)
+elements:
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+  explanations:
+  - body: This first query is to find customers having account.
+- type: explanation
+  location:
+    snippet: INTERSECT
+  explanations:
+  - body: The INTERSECT operation produces a single table of the query results appearing in both input tables. It is important
+      that the two tables must contain the same number of columns and the domain type of each column in both tables should
+      be identical. <u>By default</u>, the INTERSECT operation eliminates duplicate rows as part of its processing. If you
+      want to retain duplicate rows, you can specify the ALL keyword following the INTERSECT like 'INTERSECT ALL'
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+    nth: 2
+  explanations:
+  - body: This query is to find customers having loan.

@@ -1,0 +1,27 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt8_3_en
+source: main.py
+title: Adding Tuples
+description: 'Worked example: Adding Tuples'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Adding Tuples'
+elements:
+- type: explanation
+  location:
+    snippet: c = a+b
+  explanations:
+  - body: Adding Tuple a and Tuple b

@@ -1,0 +1,39 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_logical_operators_v2
+source: Main.java
+title: logical operators
+description: Logical Operators
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:GreaterEqualExpression
+  - expert:java.lang.System.out.println
+  - expert:NotEqualExpression
+  - expert:StringDataType
+  - expert:StringLiteral
+runtime:
+  language: java
+  version: '17'
+statement: Logical Operators
+elements:
+- type: explanation
+  location:
+    snippet: If (age>= 21)
+  explanations:
+  - body: The greater than or the equality operators can be combined to produce an operator as follows >=. This is the "greater
+      than or equal to" operator.
+- type: explanation
+  location:
+    snippet: If (age!= 21)
+  explanations:
+  - body: The Inequality Operator is used to compare two values for inequality.

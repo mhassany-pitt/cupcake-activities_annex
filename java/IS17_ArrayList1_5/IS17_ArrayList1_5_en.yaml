@@ -1,0 +1,111 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList1_5
+source: ArrayList1.java
+title: IS17_ArrayList1_5
+description: 'Worked example: IS17_ArrayList1_5'
+authors:
+- first: Darby
+  last: Hoffman
+  email: darby.hoffman@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList1_5'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: // import ArrayList class
+- type: explanation
+  location:
+    snippet: class USport { String school; String name;
+  explanations:
+  - body: // constructor initializing school and mascot name instance fields with the passed Strings s and n
+- type: explanation
+  location:
+    snippet: public USport (String s, String n) { school = s;  name = n; }
+  explanations:
+  - body: // A method to override the toString() method
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: //end USport class
+- type: explanation
+  location:
+    snippet: public class ArrayList1 {
+  explanations:
+  - body: // main method
+- type: explanation
+  location:
+    snippet: public static void main(String a[]) {
+  explanations:
+  - body: // Create new ArrayList v.
+- type: explanation
+  location:
+    snippet: ArrayList<USport> v = new ArrayList<USport>();
+  explanations:
+  - body: // Create new USport Objects and add them to v.
+- type: explanation
+  location:
+    snippet: v.add( new USport("UPitt", "Panthers")  );
+  explanations:
+  - body: // Print the contents of ArrayList v.
+- type: explanation
+  location:
+    snippet: System.out.print( us.school + " " );
+  explanations:
+  - body: // end for each loop
+- type: explanation
+  location:
+    snippet: while ( v.size() > 0 ) {
+  explanations:
+  - body: // . . . remove the first element from the list. . .
+- type: explanation
+  location:
+    snippet: USport us = v.remove( 0 );
+  explanations:
+  - body: // . . . and print that element's mascot name.
+- type: explanation
+  location:
+    snippet: System.out.print( us.name + " ");
+  explanations:
+  - body: // end while loop
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: // blank line
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: // end main method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: // end ArrayList1 class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: // unnecessary bracket
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: // unnecessary bracket

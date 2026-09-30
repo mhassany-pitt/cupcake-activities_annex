@@ -1,0 +1,46 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_4_3
+source: MainClass.java
+title: While with double
+description: While with double
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:DoubleDataType
+  - expert:FormalMethodParameter
+  - expert:java.lang.System.out.println
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+  - expert:WhileStatement
+runtime:
+  language: java
+  version: '17'
+statement: While with double
+elements:
+- type: explanation
+  location:
+    snippet: while(r < 0.99d) {
+  explanations:
+  - body: "The while condition compares double variables. Note the \"d\" in the suffix of the number 0.99 indicating it is\
+      \ a \r\ndouble."
+- type: explanation
+  location:
+    snippet: r = Math.random();
+  explanations:
+  - body: Math.random() method generate a random number (of type double) between 0 and 1.

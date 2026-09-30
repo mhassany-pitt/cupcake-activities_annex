@@ -1,0 +1,70 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_SwapExample
+source: FunctionExample.java
+title: SwapExample
+description: 'Worked example: SwapExample'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:SimpleAssignmentExpression
+  - parser:IntDataType
+  - parser:VoidDataType
+  - parser:StaticMethodSpecifier
+  - parser:PublicMethodSpecifier
+  - parser:MethodDefinition
+  - parser:FormalMethodParameter
+  - parser:DoubleDataType
+  - parser:AddExpression
+  - parser:StringAddition
+  - parser:StringDataType
+  - parser:StringLiteral
+  - parser:ActualMethodParameter
+  - parser:java.lang.System.out.println
+  - parser:InstanceFieldInitializationStatement
+  - parser:ClassField
+  - parser:StaticFieldSpecifier
+  - parser:PublicClassSpecifier
+  - parser:ClassDefinition
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:ClassField
+  - java_ontology:DoubleDataType
+  - java_ontology:FormalMethodParameter
+  - java_ontology:InstanceFieldInitializationStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticFieldSpecifier
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: SwapExample'
+elements:
+- type: explanation
+  location:
+    snippet: public static void swap(double a, double b){
+  explanations:
+  - body: Method that swaps the values of two double variables
+- type: explanation
+  location:
+    snippet: public static void swap(int a, int b){
+  explanations:
+  - body: Same method as previous one, but in this case its input are two integer variables

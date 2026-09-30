@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_button_test
+source: ButtonTest.java
+title: ISD::ButtonTest.java
+description: 'Worked example: ISD::ButtonTest.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::ButtonTest.java'
+elements:
+- type: explanation
+  location:
+    snippet: plainButton = new JButton( "Plain Button" );
+  explanations:
+  - body: Create JButtons.
+- type: explanation
+  location:
+    snippet: fancyButton = new JButton( "Fancy Button", bug1);
+  explanations:
+  - body: Initialize fancyButton with an ImageIcon.
+- type: explanation
+  location:
+    snippet: fancyButton.setRolloverIcon( bug2 );
+  explanations:
+  - body: Set a different icon to appear when the mouse is over the JButton.
+- type: explanation
+  location:
+    snippet: '"You pressed: " + e.getActionCommand() );'
+  explanations:
+  - body: getActionCommand returns label of button that generated event.

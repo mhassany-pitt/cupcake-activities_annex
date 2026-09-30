@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_1_5
+source: MainClass.java
+title: Multiple Variables 2
+description: Multiple Variables 2
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Multiple Variables 2
+elements:
+- type: explanation
+  location:
+    snippet: int a = 0,
+  explanations:
+  - body: "Multiple variable declaration and initialization. Note that each line is \r\nseparated by comma."
+- type: explanation
+  location:
+    snippet: d = 0;
+  explanations:
+  - body: last declaration must end with ";"
+- type: explanation
+  location:
+    snippet: System.out.println(a);
+  explanations:
+  - body: prints 0

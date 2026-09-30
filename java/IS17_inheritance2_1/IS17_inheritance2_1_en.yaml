@@ -1,0 +1,200 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance2_1
+source: MatchBox.java
+title: IS17_inheritance2_1
+description: 'Worked example: IS17_inheritance2_1'
+authors:
+- first: Ryan
+  last: Johnston
+  email: ryan.johnston@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance2_1'
+elements:
+- type: explanation
+  location:
+    snippet: class Box {
+  explanations:
+  - body: "Defines the beginning of a newly created class \"Box\"\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: double width;
+  explanations:
+  - body: "Creates an instance field of type double called \"width\".\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: double height;
+  explanations:
+  - body: "Creates an instance field of type double called \"height\".\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: double depth;
+  explanations:
+  - body: "Creates an instance field of type double called \"depth\".\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: Box() {
+  explanations:
+  - body: "A constructor for the \"Box\" class with empty parameters (Default Constructor).\r\nNOTE: access specifier not\
+      \ defined."
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: End of Constructor.
+- type: explanation
+  location:
+    snippet: Box(double w, double h, double d) {
+  explanations:
+  - body: "A constructor for the \"Box\" class with parameters \"w\", \"h\", \"d\", all of type double.\r\nNOTE: access specifier\
+      \ not defined."
+- type: explanation
+  location:
+    snippet: width = w;
+  explanations:
+  - body: "Assigns the instance field \"width\" to the value of \"w\".\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: height = h;
+  explanations:
+  - body: "Assigns the instance field \"height\" to the value of \"h\".\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: depth = d;
+  explanations:
+  - body: "Assigns the instance field \"depth\" to the value of \"d\".\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: End of Constructor.
+- type: explanation
+  location:
+    snippet: void getVolume() {
+  explanations:
+  - body: "Declares a method with a return type void called \"getVolume\".\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: 'System.out.println("Volume is : " + width * height * depth);'
+  explanations:
+  - body: 'A line will be printed to the screen which will read "Volume is : " followed by the width, height, and depth declared
+      when the object was constructed.'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: End of method block.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: End of "Box" class block.
+- type: explanation
+  location:
+    snippet: public class MatchBox extends Box {
+  explanations:
+  - body: Creates a class called "MatchBox" which is a subclass of class "Box".
+- type: explanation
+  location:
+    snippet: double weight;
+  explanations:
+  - body: "An instance field entitled \"weight\" of type double.\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: MatchBox() {
+  explanations:
+  - body: "A default (empty) constructor for type MatchBox.\r\nNOTE: access specifier not defined."
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: End of Constructor.
+- type: explanation
+  location:
+    snippet: MatchBox(double w, double h, double d, double m) {
+  explanations:
+  - body: "A constructor for type MatchBox which takes parameters \"w\", \"h\", \"d\", and \"m\" all of type double.\r\nNOTE:\
+      \ access specifier not defined."
+- type: explanation
+  location:
+    snippet: super(w, h, d);
+  explanations:
+  - body: creates a new object of "Box" type with width of "w", height of "h" and depth of "d".
+- type: explanation
+  location:
+    snippet: weight = m;
+  explanations:
+  - body: Assigns "m" to "weight".
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: End of constructor.
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: Start of Main Method.
+- type: explanation
+  location:
+    snippet: MatchBox mb1 = new MatchBox(10, 10, 10, 10);
+  explanations:
+  - body: Creates an object reference variable of type "MatchBox" called "mb1" and assigns it the reference to a new object
+      of type MatchBox with values width=10, height=10, depth=10, and weight=10.
+- type: explanation
+  location:
+    snippet: mb1.getVolume();
+  explanations:
+  - body: Returns the volume of object referenced by mb1.
+- type: explanation
+  location:
+    snippet: System.out.println("width of MatchBox 1 is " + mb1.width);
+  explanations:
+  - body: Prints the width of object referenced by mb1 to screen.
+- type: explanation
+  location:
+    snippet: System.out.println("height of MatchBox 1 is " + mb1.height);
+  explanations:
+  - body: Prints the height of object referenced by mb1 to screen.
+- type: explanation
+  location:
+    snippet: System.out.println("depth of MatchBox 1 is " + mb1.depth);
+  explanations:
+  - body: Prints the depth of object referenced by mb1 to screen.
+- type: explanation
+  location:
+    snippet: System.out.println("weight of MatchBox 1 is " + mb1.weight);
+  explanations:
+  - body: Prints the weight of object referenced by mb1 to screen.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: End of Main Method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: End of Box class.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: Unnecessary curly bracket.

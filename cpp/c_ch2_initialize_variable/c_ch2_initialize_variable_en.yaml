@@ -1,0 +1,82 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_c_ch2_initialize_variable
+source: main.cpp
+title: Initializing Variables
+description: 'Worked example: Initializing Variables'
+authors:
+- first: Natalya
+  last: Goreva
+  email: natalya.goreva@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: Initializing Variables'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <iostream>'
+  explanations:
+  - body: Include the library for working with streaming data to and from the user
+- type: explanation
+  location:
+    snippet: '#include <string>'
+  explanations:
+  - body: Include the library for working with streaming data to and from the user
+- type: explanation
+  location:
+    snippet: using namespace std;
+  explanations:
+  - body: Include the library for working with string variables
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: declare the main function
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Open the body of the function
+- type: explanation
+  location:
+    snippet: string month = "February";
+  explanations:
+  - body: month is initialized to "February"
+- type: explanation
+  location:
+    snippet: int year,
+  explanations:
+  - body: year is not initialized
+- type: explanation
+  location:
+    snippet: days = 28;
+  explanations:
+  - body: days is initialized to 28
+- type: explanation
+  location:
+    snippet: year = 2007;
+  explanations:
+  - body: Now year is assigned a value
+- type: explanation
+  location:
+    snippet: cout << "In "   << year << " " << month
+  explanations:
+  - body: Display the message (using the variables created earlier) that there were 28 days in February in 2008
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: main() is a function, so it should return a value. We make it 0, or in this case a dummy value
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Close the body of the funciton

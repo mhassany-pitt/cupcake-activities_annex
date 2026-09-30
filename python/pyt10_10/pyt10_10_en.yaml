@@ -1,0 +1,44 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_10_en
+source: main.py
+title: Simple Input 2
+description: 'Worked example: Simple Input 2'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Simple Input 2'
+elements:
+- type: explanation
+  location:
+    snippet: 'applicant = input("Enter the applicant''s name: ")'
+  explanations:
+  - body: This statement takes applicant's name as input from the user
+- type: explanation
+  location:
+    snippet: 'interviewer = input("Enter the interviewer''s name: ")'
+  explanations:
+  - body: This statement takes interviewer's name as input from the user
+- type: explanation
+  location:
+    snippet: 'time = input("Enter the appointment time: ")'
+  explanations:
+  - body: This statement takes time of the interview as input from the user
+- type: explanation
+  location:
+    snippet: print(interviewer, "will interview", applicant, "at", time)
+  explanations:
+  - body: This simply prints a one-line summary of the details taken from the user in the above statements. Note the text
+      in double quotations is string where as the text without quotations is the variable that is called (printing a variable's
+      value)

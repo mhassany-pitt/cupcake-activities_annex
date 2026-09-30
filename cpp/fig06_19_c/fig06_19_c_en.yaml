@@ -1,0 +1,92 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig06_19_c_en
+source: main.cpp
+title: fig06_19.c
+description: 'Worked example: fig06_19.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig06_19.c'
+elements:
+- type: explanation
+  location:
+    snippet: int binarySearch( const int b[], int searchKey, int low, int high )
+  explanations:
+  - body: function to perform binary search of an array.
+- type: explanation
+  location:
+    snippet: int middle;
+  explanations:
+  - body: variable to hold middle element of array.
+- type: explanation
+  location:
+    snippet: while ( low <= high ) {
+  explanations:
+  - body: loop until low subscript is greater than high subscript.
+- type: explanation
+  location:
+    snippet: middle = ( low + high ) / 2;
+  explanations:
+  - body: determine middle element of subarray being searched.
+- type: explanation
+  location:
+    snippet: printRow( b, low, middle, high );
+  explanations:
+  - body: display subarray used in this loop iteration.
+- type: explanation
+  location:
+    snippet: if ( searchKey == b[ middle ] ) {
+  explanations:
+  - body: if searchKey matched middle element, return middle.
+- type: explanation
+  location:
+    snippet: return middle;
+  explanations:
+  - body: If value is found, return its index.
+- type: explanation
+  location:
+    snippet: else if ( searchKey < b[ middle ] ) {
+  explanations:
+  - body: if searchKey less than middle element, set new high.
+- type: explanation
+  location:
+    snippet: high = middle - 1;
+  explanations:
+  - body: If value is too high, search the left half of array.
+- type: explanation
+  location:
+    snippet: else {
+  explanations:
+  - body: if searchKey greater than middle element, set new low.
+- type: explanation
+  location:
+    snippet: low = middle + 1;
+  explanations:
+  - body: If value is too low, search the right half of array.
+- type: explanation
+  location:
+    snippet: return -1;
+  explanations:
+  - body: searchKey not found.
+- type: explanation
+  location:
+    snippet: for ( i = 0; i < SIZE; i++ ) {
+  explanations:
+  - body: loop through entire array.
+- type: explanation
+  location:
+    snippet: if ( i < low || i > high ) {
+  explanations:
+  - body: display spaces if outside current subarray range.

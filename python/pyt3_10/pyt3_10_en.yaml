@@ -1,0 +1,83 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt3_10_en
+source: main.py
+title: Nested IF...ELSE Statement 2
+description: 'Worked example: Nested IF...ELSE Statement 2'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Lt
+  - parser:Call
+  - parser:Str
+  - parser:If
+  - parser:Eq
+  - parser:Assign
+  - parser:Mod
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Eq
+  - unspecified:Int
+  - unspecified:Lt
+  - unspecified:Mod
+  - unspecified:If
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Nested IF...ELSE Statement 2'
+elements:
+- type: explanation
+  location:
+    snippet: number = 6
+  explanations:
+  - body: The variable 'number' is assigned a value '6'
+- type: explanation
+  location:
+    snippet: 'if number < 10:'
+  explanations:
+  - body: 'Condition 1: Check if the number is less than 10? In this case it is true so the code will execute inside this
+      ''if'' Statement'
+- type: explanation
+  location:
+    snippet: 'if number % 2 == 0:'
+  explanations:
+  - body: 'Condition 2: Given that condition 1 is true, check if the number is perfectly divisible by 2? Yes, number 6 is
+      perfectly divisibly by 2. So this condition is true aswel.'
+- type: explanation
+  location:
+    snippet: 'if number % 3 == 0:'
+  explanations:
+  - body: 'Condition 3: Given that the condition 1 and 2 ae true, check if the number is also perfectly divisible by 3? Yes,
+      number 6 is perfectly divisibly by 3. So this condition is true aswel'
+- type: explanation
+  location:
+    snippet: print("The selected number is 6")
+  explanations:
+  - body: Since all the above conditions were true, it will execute this print statement.
+- type: explanation
+  location:
+    snippet: 'else:'
+  explanations:
+  - body: If condition 3 was not true, the code would have jumped to this 'else' statement
+- type: explanation
+  location:
+    snippet: 'else:'
+    nth: 2
+  explanations:
+  - body: If condition 2 was not true, the code would have jumped to this 'else' statement
+- type: explanation
+  location:
+    snippet: 'else:'
+    nth: 3
+  explanations:
+  - body: If condition 1 was not true, the code would have jumped to this 'else' statement

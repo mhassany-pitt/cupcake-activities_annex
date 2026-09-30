@@ -1,0 +1,84 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_eaxmple1
+source: TestInheritance.java
+title: IS17_inheritance1
+description: 'Worked example: IS17_inheritance1'
+authors:
+- first: Sharon
+  last: Hsiao
+  email: sharon.hsiao@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance1'
+elements:
+- type: explanation
+  location:
+    snippet: class Person{
+  explanations:
+  - body: declare the class Person
+- type: explanation
+  location:
+    snippet: private String name;
+  explanations:
+  - body: create a string name as private
+- type: explanation
+  location:
+    snippet: name = n;
+  explanations:
+  - body: assign the value of n to the instance name
+- type: explanation
+  location:
+    snippet: public String getName(){
+  explanations:
+  - body: declare a public methdod getName as type string
+- type: explanation
+  location:
+    snippet: return name;
+  explanations:
+  - body: return value of name
+- type: explanation
+  location:
+    snippet: class Student extends Person{
+  explanations:
+  - body: Student inherits all properties from the Person class.
+- type: explanation
+  location:
+    snippet: public void setStuNum(String sn)   {
+  explanations:
+  - body: declare the setStuNum() method as public to set student number
+- type: explanation
+  location:
+    snippet: public static void main(String[] args)   {
+  explanations:
+  - body: the main method, which is also the driver class
+- type: explanation
+  location:
+    snippet: Student stu = new Student();
+  explanations:
+  - body: create the student object.
+- type: explanation
+  location:
+    snippet: stu.setName("Sharon Hsiao");
+  explanations:
+  - body: invoke setName method to set the name.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Name: " + stu.getName());'
+  explanations:
+  - body: 'print out the student name by using stu object to invoke stu.getName() method. the output should be "Student Name:
+      Sharon Hsiao"'
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Number: " + stu.getStuNum());'
+  explanations:
+  - body: 'print out the student name by using stu object to invoke stu.getNum() method. the output should be "Student Number:
+      12345"'

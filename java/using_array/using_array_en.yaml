@@ -1,0 +1,27 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_using_array
+source: Main.java
+title: DEPRECATED_Using an Array1
+description: 'Worked example: DEPRECATED_Using an Array1'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Using an Array1'
+elements:
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < 5; i++)
+  explanations:
+  - body: use a loop to set all the values of an array to 0.

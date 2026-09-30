@@ -1,0 +1,108 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_arrayio_c_en
+source: main.c
+title: 'IS12:: arrayio.c (119.1)'
+description: 'Worked example: IS12:: arrayio.c (119.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:less
+  - unspecified:int
+  - unspecified:array_declaration
+  - unspecified:pre_increment
+  - unspecified:reference
+  - unspecified:define
+  - unspecified:include
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:simple_assignment
+  - unspecified:main_function
+  - unspecified:while
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: arrayio.c (119.1)'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: This is a preprocessor command. System header file stdio.h will be   inserted there during compilation.  We include
+      stdio.h header file because it contains function prototypes for printf
+- type: explanation
+  location:
+    snippet: '#define DIM 5 /* dimension of the array */'
+  explanations:
+  - body: The define statement sets up a meaningful, symbolic constant for the size (dimemsion) of the array that is used
+      consistently throughout the program.  In this case, wherever N is used, the value 7 will replace it literally.   Defining
+      constants is useful i
+- type: explanation
+  location:
+    snippet: int ar[DIM]; /* elements from ar[0] to ar[DIM-1]; */
+  explanations:
+  - body: An array of 5 integer values is defined.  Elements of this array have indexes from 0 to 4.
+- type: explanation
+  location:
+    snippet: int i;
+  explanations:
+  - body: i is the loop control (counter) variable that keeps track of loop iterations.
+- type: explanation
+  location:
+    snippet: i = 0;
+  explanations:
+  - body: We have to start with array element with index 0. So we assign i to 0
+- type: explanation
+  location:
+    snippet: while(i < DIM) {
+  explanations:
+  - body: Last iteration of this loop happens with when i has value DIM - 1 - i.e., for the last element of the array. On
+      the next step, i will get value DIM (5 in this case) and since 5 < 5 is false (0), the loop will end. This the loop
+      will execute exactly once f
+- type: explanation
+  location:
+    snippet: 'printf("Element %d: ", i);'
+  explanations:
+  - body: This prints a prompt for entering the value for the next element of the array
+- type: explanation
+  location:
+    snippet: scanf("%d", &ar[i]);
+  explanations:
+  - body: This line shows that a value can be "scanned" inside an element of an array the same way as we can scan in into
+      a regular variable.
+- type: explanation
+  location:
+    snippet: ++i;
+  explanations:
+  - body: Loop counter is incremented before the beginning of the next iteration
+- type: explanation
+  location:
+    snippet: while(i < DIM) {
+    nth: 2
+  explanations:
+  - body: Last iteration of this loop happens with when i has value DIM - 1 - i.e., for the last element of the array. On
+      the next step, i will get value DIM (7 in this case) and since 7 < 7 is false (0), the loop will end. This the loop
+      will execute exactly once f
+- type: explanation
+  location:
+    snippet: printf("%d ", ar[i]);
+  explanations:
+  - body: This line prints the value of array element with index i. Since i will take different values at different iterations
+      of this loop running from 0 to 6, all values will be printed one by one
+- type: explanation
+  location:
+    snippet: |-
+      printf("
+      ");
+  explanations:
+  - body: This statement prints one single line

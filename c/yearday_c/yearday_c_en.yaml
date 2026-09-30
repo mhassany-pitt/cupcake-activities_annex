@@ -1,0 +1,108 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_yearday_c_en
+source: main.c
+title: 'IS12:: yearday.c (15.2)'
+description: 'Worked example: IS12:: yearday.c (15.2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:multi_dimensional_array
+  - unspecified:variable_initialization
+  - unspecified:do
+  - unspecified:and
+  - unspecified:for
+  - unspecified:if_else
+  - unspecified:static
+  - unspecified:array_declaration
+  - unspecified:dereference
+  - unspecified:reference
+  - unspecified:char
+  - unspecified:mod
+  - unspecified:equal
+  - unspecified:post_increment
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:or
+  - unspecified:pointer_declaration
+  - unspecified:main_function
+  - unspecified:not_equal
+  - unspecified:greater
+  - unspecified:void
+  - unspecified:sub_assignment
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: yearday.c (15.2)'
+elements:
+- type: explanation
+  location:
+    snippet: static char daytab[2][13] = {
+  explanations:
+  - body: Initializing a 2-dimensional array that gives days in leap and non-leap months.   The entire array is initialized,
+      row by row.
+- type: explanation
+  location:
+    snippet: '{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: '{0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},'
+  explanations:
+  - body: The entire array is initialized, row by row.
+- type: explanation
+  location:
+    snippet: void month_day(int year, int yday, int *pmonth, int *pday);
+  explanations:
+  - body: This function uses pointers.
+- type: explanation
+  location:
+    snippet: if(yday > 0) {
+  explanations:
+  - body: If day > 0, this processes the info.
+- type: explanation
+  location:
+    snippet: month_day(year, yday, &month, &mday);
+  explanations:
+  - body: This function will give proper day and month..
+- type: explanation
+  location:
+    snippet: |-
+      printf("Good Bye!
+      ");
+  explanations:
+  - body: 'The do-while runs once, then checks: if yday > 0 it loops back.'
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: When condition fails, loop and program ends.
+- type: explanation
+  location:
+    snippet: leap = ((year%4 == 0) && year%100 != 0) || year%400 == 0;
+  explanations:
+  - body: Leapyears are checked for.  Years divisible by (mod) 4 or 100 are leap years.
+- type: explanation
+  location:
+    snippet: for(i = 1; yearday > daytab[leap][i]; i++)
+  explanations:
+  - body: Depending upon leap year value, different values in daytab are used.
+- type: explanation
+  location:
+    snippet: '*pmonth = i;'
+  explanations:
+  - body: This function uses pointers.

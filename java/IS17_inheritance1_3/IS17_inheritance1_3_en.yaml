@@ -1,0 +1,112 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance1_3
+source: TestInheritance.java
+title: IS17_inheritance1_3
+description: 'Worked example: IS17_inheritance1_3'
+authors:
+- first: Stephen
+  last: Plumby
+  email: stephen.plumby@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance1_3'
+elements:
+- type: explanation
+  location:
+    snippet: class Person{
+  explanations:
+  - body: defines a new class of type Person
+- type: explanation
+  location:
+    snippet: private String name;
+  explanations:
+  - body: declares a private instance field of type string
+- type: explanation
+  location:
+    snippet: public void setName(String n) {
+  explanations:
+  - body: new method which takes a parameter of type string. being a method of type "void" it will not return a value.
+- type: explanation
+  location:
+    snippet: name = n;
+  explanations:
+  - body: assigns the value of parameter n to the instance field "name"
+- type: explanation
+  location:
+    snippet: public String getName(){
+  explanations:
+  - body: new method of type string
+- type: explanation
+  location:
+    snippet: return name;
+  explanations:
+  - body: returns value of name
+- type: explanation
+  location:
+    snippet: class Student extends Person{
+  explanations:
+  - body: new subclass of person called student
+- type: explanation
+  location:
+    snippet: private String stuNum;
+  explanations:
+  - body: declares a private instance field of type string
+- type: explanation
+  location:
+    snippet: public void setStuNum(String sn)   {
+  explanations:
+  - body: new method which takes a parameter of type string. as with the previous "void" method, a value will not be returned.
+- type: explanation
+  location:
+    snippet: stuNum = sn;
+  explanations:
+  - body: assigns the parameter sn to the instance field stuNum
+- type: explanation
+  location:
+    snippet: public String getStuNum()   {
+  explanations:
+  - body: new method of type string
+- type: explanation
+  location:
+    snippet: return stuNum;
+  explanations:
+  - body: returns value of stuNum
+- type: explanation
+  location:
+    snippet: public class TestInheritance{
+  explanations:
+  - body: new tester class
+- type: explanation
+  location:
+    snippet: Student stu = new Student();
+  explanations:
+  - body: creates an object of type student
+- type: explanation
+  location:
+    snippet: stu.setName("Sharon Hsiao");
+  explanations:
+  - body: passes the string to the method setName for the stu object
+- type: explanation
+  location:
+    snippet: stu.setStuNum("12345");
+  explanations:
+  - body: passes the string to the method setStuNum for the stu object
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Name: " + stu.getName());'
+  explanations:
+  - body: prints the return value for the getName method after the portion within quotes
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Number: " + stu.getStuNum());'
+  explanations:
+  - body: prints the return value for the getStuNum method after the portion within quotes

@@ -1,0 +1,22 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_LeftJoin25_1
+source: query.sql
+title: Left Join 1
+description: 'Worked example: Left Join 1'
+authors:
+- first: Rully
+  last: Hendrawan
+  email: rully.hendrawan@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: 'Worked example: Left Join 1'
+elements: []

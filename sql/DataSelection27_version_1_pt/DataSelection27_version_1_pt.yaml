@@ -1,0 +1,30 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection27_version_1_pt
+source: query.sql
+title: CheckingNullValues_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: WHERE amount IS NULL;
+  explanations:
+  - body: O predicado IS NULL e' utilizado para comparar valores nulos. Se o valor comparado e' nulo, a condicao retorna o
+      resultado VERDADEIRO e vice-versa. NULL e' apenas uma palavra-chave para indicar um valor desconhecido. Mesmo que a
+      comparacao 'amount = null' fosse correta, as regras seriam diferentes do que esperamos. Uma comparacao como essa seria
+      'Valor Conhecido = Valor Desconhecido', o que e' impossivel de julgar se e' VERDADEIRO ou FALSO.

@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_combobox_test
+source: ComboBoxTest.java
+title: ISD::ComboBoxTest.java
+description: 'Worked example: ISD::ComboBoxTest.java'
+authors:
+- first: Natalya
+  last: Goreva
+  email: natalya.goreva@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::ComboBoxTest.java'
+elements:
+- type: explanation
+  location:
+    snippet: Container c = getContentPane();
+  explanations:
+  - body: Create a Container object
+- type: explanation
+  location:
+    snippet: images = new JComboBox( names );
+  explanations:
+  - body: Initialize JComboBox with an array of Strings.
+- type: explanation
+  location:
+    snippet: images.setMaximumRowCount( 3 );
+  explanations:
+  - body: "Set the number of rows to be displayed at a time.\r\nScrollbar automatically provided."
+- type: explanation
+  location:
+    snippet: icons[ images.getSelectedIndex() ] );
+  explanations:
+  - body: Use method getSelectedIndex to determine which Icon to use. Returns the index of the currently selected item
+- type: explanation
+  location:
+    snippet: c.add( images );
+  explanations:
+  - body: attach component to Container c.
+- type: explanation
+  location:
+    snippet: c.add( label );
+  explanations:
+  - body: Create a Container object

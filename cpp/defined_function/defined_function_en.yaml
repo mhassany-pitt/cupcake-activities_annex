@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_defined_function
+source: main.cpp
+title: defined function
+description: 'Worked example: defined function'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: defined function'
+elements:
+- type: explanation
+  location:
+    snippet: for ( x = 1; x <= 10; x++ )
+  explanations:
+  - body: loop 10 times and calculate and output square of x each time.
+- type: explanation
+  location:
+    snippet: printf( "%d  ", square( x ) );
+  explanations:
+  - body: Call to square function.
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: returns square of y as an int.
+- type: explanation
+  location:
+    snippet: int square( int y )
+  explanations:
+  - body: Function prototype indicates function will be defined later in the program.
+- type: explanation
+  location:
+    snippet: return y * y;
+  explanations:
+  - body: returns square of y as an int.

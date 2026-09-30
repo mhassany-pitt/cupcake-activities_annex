@@ -1,0 +1,34 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableDrop1
+source: query.sql
+title: Table Drop
+description: Table Drop
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SimpleSubQuery
+  - expert:DeleteTableClause
+  - expert:DeleteTableStatement
+  - sql_ontology:DeleteTableStatement
+  - sql_ontology:DeleteTableClause
+  - sql_ontology:SimpleSubquery
+runtime:
+  language: sql
+  version: '2016'
+statement: Table Drop
+elements:
+- type: explanation
+  location:
+    snippet: DROP TABLE Students;
+  explanations:
+  - body: Table named  'Students' is deleted. The schema information and the tuples are removed. With proper permission, you
+      can drop one of your own tables and drop a table owned by another user.

@@ -1,0 +1,44 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataInsertion3_version_1_pt
+source: query.sql
+title: InsertingData(3)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: INSERT INTO account
+  explanations:
+  - body: Esse exemplo mostra a insercao de um credito de R$200 na poupanca de todos os clientes com emprestimo na agencia
+      Perryridge. Em vez de especificar dados por usuario, esta consulta utiliza dados lidos de outra tabela. <br/> A tabela
+      'account' e' definida com as colunas 'account_number', 'branch_name' (agencia) e 'balance' (saldo). Os dados sao armazenados
+      nessa ordem.
+- type: explanation
+  location:
+    snippet: SELECT loan_no, branch_name, 200
+  explanations:
+  - body: Antes de executar o comando de insercao, este 'SELECT' e' executado para selecionar os dados que serao armazenados
+      na tabela 'account'. A partir da tabela 'loan' (emprestimo), as colunas 'loan_no' e 'branch_name' sao selecionadas e,
+      para a coluna 'balance' da tabela 'account', a constante 200 e' definida. Assim, todas as contas selecionadas vao ter
+      o saldo de R$200.
+- type: explanation
+  location:
+    snippet: WHERE branch_name = 'Perryridge';
+  explanations:
+  - body: Essa condicao seleciona apenas as tuplas da agencia 'Perryridge'. O tipo de dados da coluna 'branch_name' e' caractere
+      e, por isso, o valor comparado deve estar entre aspas.

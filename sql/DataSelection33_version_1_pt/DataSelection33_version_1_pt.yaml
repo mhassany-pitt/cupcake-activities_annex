@@ -1,0 +1,63 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection33_version_1_pt
+source: query.sql
+title: DerivedRelations_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT branch_name, avg_balance
+  explanations:
+  - body: Nesse exemplo, uma subconsulta derivada e' usada na clausula FROM. Os nomes das colunas retornadas pela consulta
+      principal nao e' mais da tabela original 'account'. Agora os nomes sao apelidos vindos da subconsulta derivada.
+- type: explanation
+  location:
+    snippet: FROM
+  explanations:
+  - body: O SQL permite que uma subconsulta seja utilizada na clausula FROM, chamada de tabela derivada.
+- type: explanation
+  location:
+    snippet: (SELECT branch_name, AVG(balance)
+  explanations:
+  - body: Essa subconsulta seleciona o nome e a media de saldo das contas das agencias.
+- type: explanation
+  location:
+    snippet: FROM account
+  explanations:
+  - body: Observe que nao e' necessario usar a clausula HAVING, visto que a tabela temporaria <i>branch_avg</i> e' calculada
+      na clausula FROM e os atributos da tabela temporaria <i>branch_avg</i> podem ser utilizados diretamente na clausula
+      WHERE.
+- type: explanation
+  location:
+    snippet: GROUP BY branch_name)
+  explanations:
+  - body: Essa clausula GROUP BY e' usada na tabela derivada.
+- type: explanation
+  location:
+    snippet: AS branch_avg(branch_name, avg_balance))
+  explanations:
+  - body: A subconsulta derivada e suas duas colunas sao renomeadas usando uma tupla. Portanto, a subconsulta e' chamada de
+      'branch_avg', a primeira coluna de 'branch_name' e a segunda coluna de 'avg_balance'.
+- type: explanation
+  location:
+    snippet: WHERE avg_balance > 1200;
+  explanations:
+  - body: Para limitar o valor da coluna 'avg_balance', a clausula WHERE e' utilizada. Nao e' necessario utilizar a clausula
+      HAVING, visto que a subconsulta derivada gera uma tabela temporaria e o valor testado, avg_balance, pode ser lido diretamente
+      dessa tabela.

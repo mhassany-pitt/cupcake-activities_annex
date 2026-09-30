@@ -1,0 +1,58 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_TableCreation3_version_2_pt
+source: query.sql
+title: PrimaryKeyandUniqueKey_pt_v2
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: CREATE TABLE Enrolled
+  explanations:
+  - body: Tabela para armazenar as matriculas dos alunos. Os alunos podem se matricular apenas uma unica vez em cada disciplina.
+- type: explanation
+  location:
+    snippet: (eid CHAR(20) NOT NULL,
+  explanations:
+  - body: Essa coluna armazena um identificador para a matricula e e' definida como chave primaria. Por isso, esse valor deve
+      ser unico entre as linhas da tabela.
+- type: explanation
+  location:
+    snippet: sid CHAR(20),
+  explanations:
+  - body: Essa coluna armazena o identificador para o aluno e faz parte de uma chave candidata, definida pela clausula UNIQUE.
+- type: explanation
+  location:
+    snippet: cid CHAR(20),
+  explanations:
+  - body: Essa coluna armazena o identificador do curso, que tambem faz parte de uma chave candidata, definida pela clausula
+      UNIQUE.
+- type: explanation
+  location:
+    snippet: PRIMARY KEY (eid),
+  explanations:
+  - body: Chave primaria da tabela. Se existir mais de uma linha com o mesmo valor, um erro de integridade e' lancado.
+- type: explanation
+  location:
+    snippet: UNIQUE (sid, cid));
+  explanations:
+  - body: A palavra-chave UNIQUE e' utilizada para definir um valor unico para cada linha, alem da chave primaria. Valores
+      unicos que podem ser chaves primarias sao chamados de chaves candidatas. Nesse exemplo, o par 'cid' e 'sid' deve ser
+      unico. Um aluno cujo 'sid' e' 1324 pode se matricular na disciplina 'Gerenciamento de Banco de Dados' uma unica vez.
+      No entanto, o aluno pode se matricular em outras disciplinas com diferentes 'cids'. Tambem e' possivel definir uma UNIQUE
+      key como uma restricao.

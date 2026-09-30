@@ -1,0 +1,53 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection17
+source: query.sql
+title: String Operation
+description: String Operation
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:StringType
+  - expert:RightWhitespaceTrim
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:GreaterThanOrEqualToComparison
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:LikePredicate
+  - expert:SingleAttributeSelection
+  - expert:SingleQuotationCharacter
+  - expert:PercentCharacter
+  - expert:SingleTableSelection
+  - sql_ontology:PercentCharacter
+  - sql_ontology:StringType
+  - sql_ontology:GreaterThanOrEqualComparison
+  - sql_ontology:LikePredicate
+  - sql_ontology:SetOperation
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:WhereClause
+runtime:
+  language: sql
+  version: '2016'
+statement: String Operation
+elements:
+- type: explanation
+  location:
+    snippet: WHERE customer_street LIKE '%Main%';
+  explanations:
+  - body: 'SQL includes a substring-matching operator for comparisons on character strings. The operator "like" uses patterns
+      that are described using two special characters: <ul><li>percent(%): The % character matches any substring.<li>underscore(_):
+      the _ character matches any character.</ul><br>The percent sign (%) wildcard character matches any sequence of zero
+      or more character. Wherever the ''Main'' charater is located in the customer street data, it turns out to be true. Any
+      of the following data  would match the pattern. <br>Pittsburgh Main Street, Chrismain Blvd, Main Government Bulding,
+      Aid first Main.'

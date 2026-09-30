@@ -1,0 +1,139 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig06_16_c_en
+source: main.cpp
+title: fig06_16.c
+description: 'Worked example: fig06_16.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig06_16.c'
+elements:
+- type: explanation
+  location:
+    snippet: int frequency[ 10 ] = { 0 };
+  explanations:
+  - body: initialize array frequency.
+- type: explanation
+  location:
+    snippet: void mean( const int answer[] )
+  explanations:
+  - body: calculate average of all response values.
+- type: explanation
+  location:
+    snippet: int j;
+  explanations:
+  - body: counter for totaling array elements.
+- type: explanation
+  location:
+    snippet: int total = 0;
+  explanations:
+  - body: variable to hold sum of array elements.
+- type: explanation
+  location:
+    snippet: void median( int answer[] )
+  explanations:
+  - body: sort array and determine median element's value.
+- type: explanation
+  location:
+    snippet: SIZE / 2, SIZE, answer[ SIZE / 2 ] );
+  explanations:
+  - body: Once the array is sorted, the median will be the value of the middle element.
+- type: explanation
+  location:
+    snippet: void mode( int freq[], const int answer[] )
+  explanations:
+  - body: determine most frequent response.
+- type: explanation
+  location:
+    snippet: int rating;
+  explanations:
+  - body: counter for accessing elements 1-9 of array freq.
+- type: explanation
+  location:
+    snippet: int j;
+    nth: 2
+  explanations:
+  - body: counter for summarizing elements 0-98 of array answer.
+- type: explanation
+  location:
+    snippet: int h;
+  explanations:
+  - body: counter for diplaying histograms of elements in array freq.
+- type: explanation
+  location:
+    snippet: int largest = 0;
+  explanations:
+  - body: represents largest frequency.
+- type: explanation
+  location:
+    snippet: int modeValue = 0;
+  explanations:
+  - body: represents most frequent response.
+- type: explanation
+  location:
+    snippet: freq[ rating ] = 0;
+  explanations:
+  - body: initialize frequencies to 0.
+- type: explanation
+  location:
+    snippet: ++freq[ answer[ j ] ];
+  explanations:
+  - body: summarize frequencies.
+- type: explanation
+  location:
+    snippet: if ( freq[ rating ] > largest ) {
+  explanations:
+  - body: keep track of mode value and largest frequency value.
+- type: explanation
+  location:
+    snippet: void bubbleSort( int a[] )
+  explanations:
+  - body: function that sorts an array with bubble sort algorithm.
+- type: explanation
+  location:
+    snippet: int pass;
+  explanations:
+  - body: pass counter.
+- type: explanation
+  location:
+    snippet: int j;
+    nth: 3
+  explanations:
+  - body: comparison counter.
+- type: explanation
+  location:
+    snippet: int hold;
+  explanations:
+  - body: temporary location used to swap elements.
+- type: explanation
+  location:
+    snippet: for ( pass = 1; pass < SIZE; pass++ ) {
+  explanations:
+  - body: loop to control number of passes.
+- type: explanation
+  location:
+    snippet: for ( j = 0; j < SIZE - 1; j++ ) {
+  explanations:
+  - body: loop to control number of comparisons per pass.
+- type: explanation
+  location:
+    snippet: if ( a[ j ] > a[ j + 1 ] ) {
+  explanations:
+  - body: swap elements if out of order.
+- type: explanation
+  location:
+    snippet: if ( j % 20 == 0 ) {
+  explanations:
+  - body: begin new line every 20 values.

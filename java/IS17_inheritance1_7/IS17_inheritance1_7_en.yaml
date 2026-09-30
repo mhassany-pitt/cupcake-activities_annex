@@ -1,0 +1,170 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance1_7
+source: TestInheritance.java
+title: IS17_inheritance1_7
+description: 'Worked example: IS17_inheritance1_7'
+authors:
+- first: John
+  last: Moan
+  email: john.moan@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance1_7'
+elements:
+- type: explanation
+  location:
+    snippet: class Person{
+  explanations:
+  - body: defines the class Person
+- type: explanation
+  location:
+    snippet: private String name;
+  explanations:
+  - body: initializes the instance field String name
+- type: explanation
+  location:
+    snippet: public void setName(String n) {
+  explanations:
+  - body: "A method declared (setName) with the parameter of String n.\r\n\r\nThis type of method known as a \"setter\""
+- type: explanation
+  location:
+    snippet: name = n;
+  explanations:
+  - body: variable name is assigned to String n
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of method body
+- type: explanation
+  location:
+    snippet: public String getName(){
+  explanations:
+  - body: "A method getName with no parameters\r\n\r\nThis type of method is known as a \"getter\""
+- type: explanation
+  location:
+    snippet: return name;
+  explanations:
+  - body: returns the variable name
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of method body
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end of class
+- type: explanation
+  location:
+    snippet: class Student extends Person{
+  explanations:
+  - body: A class Student that extends class Person, and inherits all of its methods.
+- type: explanation
+  location:
+    snippet: private String stuNum;
+  explanations:
+  - body: An instance field is declared for String stuNum.
+- type: explanation
+  location:
+    snippet: public void setStuNum(String sn)   {
+  explanations:
+  - body: "A method (setStuNum) for setting the student's number with the parameter of String sn\r\n\r\nKnown as a \"setter\""
+- type: explanation
+  location:
+    snippet: stuNum = sn;
+  explanations:
+  - body: stuNum is assigned to sn
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: end of method body
+- type: explanation
+  location:
+    snippet: public String getStuNum()   {
+  explanations:
+  - body: "A method (getStuNum) for getting the student's number\r\n\r\nknown as a \"getter\""
+- type: explanation
+  location:
+    snippet: return stuNum;
+  explanations:
+  - body: returns stuNum.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: end of method body
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: end of class
+- type: explanation
+  location:
+    snippet: public class TestInheritance{
+  explanations:
+  - body: A class to test the methods of class Student and class Person
+- type: explanation
+  location:
+    snippet: public static void main(String[] args)   {
+  explanations:
+  - body: Main method statement of the driver class
+- type: explanation
+  location:
+    snippet: Student stu = new Student();
+  explanations:
+  - body: a new student object (stu) is created
+- type: explanation
+  location:
+    snippet: stu.setName("Sharon Hsiao");
+  explanations:
+  - body: the student's setName method is used to assign the String "Sharon Hsiao" to the stu object
+- type: explanation
+  location:
+    snippet: stu.setStuNum("12345");
+  explanations:
+  - body: the student's setStuNum method is used to assign the integer "12345" to the stu object.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Name: " + stu.getName());'
+  explanations:
+  - body: A statement to output information (name) to the console
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Number: " + stu.getStuNum());'
+  explanations:
+  - body: A statement to output information (student's  number) to the console
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: end of main methoc
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: end of class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: '***NOTE :  My annotations received no comments, I did my best to refine them further.'

@@ -1,0 +1,35 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataInsertion2_version_1_pt
+source: query.sql
+title: InsertingData(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: INSERT INTO Students(sid, name, login, age, gpa)
+  explanations:
+  - body: A clausula 'INTO' e' obrigatoria no comando 'INSERT' e serve para especificar a tabela e as colunas em que a nova
+      tupla sera inserida. A ordem de insercao dos dados deve corresponder a ordem especificada nessa clausula. Se o nome
+      das colunas for omitido, os dados sao inseridos na ordem em que as colunas foram definidas na criacao da tabela.
+- type: explanation
+  location:
+    snippet: VALUES('53688', 'Smith', 'smith@ee', 18, 3.2);
+  explanations:
+  - body: A palavra-chave 'VALUES' e' necessaria para definir os dados que serao inseridos. Os valores para 'sid', 'name'
+      e 'login', que sao do tipo caractere, deve ser cercados por aspas.

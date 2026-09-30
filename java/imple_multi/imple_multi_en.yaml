@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_imple_multi
+source: MultiInterfaces.java
+title: DEPRECATED_MultiInterfaces
+description: 'Worked example: DEPRECATED_MultiInterfaces'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_MultiInterfaces'
+elements:
+- type: explanation
+  location:
+    snippet: public interface Listener {
+  explanations:
+  - body: declare the interface Listener.
+- type: explanation
+  location:
+    snippet: public interface Runnable {
+  explanations:
+  - body: declare the interface Runnable.
+- type: explanation
+  location:
+    snippet: public class MultiInterfaces implements Listener, Runnable {
+  explanations:
+  - body: A class can extend only one other class, while it can implement numbers of interfaces.

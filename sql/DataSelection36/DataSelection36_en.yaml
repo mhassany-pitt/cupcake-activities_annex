@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection36
+source: query.sql
+title: Grouping and aggregating (1)
+description: Grouping and aggregating (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:EqualComparison
+  - expert:ReferentialAction
+  - expert:EquiWhereJoin
+  - expert:AndLogicalOperator
+  - expert:FixedLengthCharacterString
+  - expert:TableAlias
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:Insertion
+  - expert:SelectStatement
+  - expert:ColumnAddition
+  - expert:WhereClause
+  - expert:SingleAttributeGrouping
+  - expert:CountRowFunction
+  - expert:MultipleAttributeSelection
+  - expert:MultipleTableSelection
+  - expert:NegativeSetMembership
+  - expert:CountFunction
+  - expert:AsClause
+  - expert:DotCharacter
+  - sql_ontology:MultipleTableSelection
+  - sql_ontology:EqualComparison
+  - sql_ontology:DotCharacter
+  - sql_ontology:TableAlias
+  - sql_ontology:GroupByClause
+  - sql_ontology:SelectStatement
+  - sql_ontology:AndLogicalOperator
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:FromClause
+  - sql_ontology:CountRowFunction
+  - sql_ontology:EquiWhereJoin
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_concept:ReferentialAction
+  - sql_concept:Insertion
+  - sql_concept:ColumnAddition
+  - sql_concept:NegativeSetMembership
+runtime:
+  language: sql
+  version: '2016'
+statement: Grouping and aggregating (1)
+elements:
+- type: explanation
+  location:
+    snippet: FROM boats B, reserves R
+  explanations:
+  - body: '''boats'' and ''reserves'' tables are renamed as B and R, respectively.'
+- type: explanation
+  location:
+    snippet: WHERE R.bid = B.bid AND b.color = red
+  explanations:
+  - body: This condition tests two parts. Firstly, it tests whether the boats have been reserved by match the boat's bid with
+      the bid in the 'reserves'. Secondly, the boat' color is limited to red.
+- type: explanation
+  location:
+    snippet: GROUP BY B.bid;
+  explanations:
+  - body: The COUNT function is working with this GROUP BY clause. In order to calculated the number of rows, the results
+      are group by the bid. And then, the COUNT function is performed.

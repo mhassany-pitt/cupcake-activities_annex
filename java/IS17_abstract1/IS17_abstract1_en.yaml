@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_abstract1
+source: Main.java
+title: IS17_abstract1
+description: 'Worked example: IS17_abstract1'
+authors:
+- first: Sergey
+  last: Sosnovsky
+  email: sergey.sosnovsky@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_abstract1'
+elements:
+- type: explanation
+  location:
+    snippet: public  void  aFunction()  {
+  explanations:
+  - body: yuiyuiyuiy
+- type: explanation
+  location:
+    snippet: System.out.println(  "Hi IS17"  );
+  explanations:
+  - body: uiyuiyi

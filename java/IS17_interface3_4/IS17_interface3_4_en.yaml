@@ -1,0 +1,191 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface3_4
+source: Main.java
+title: IS17_interface3_4
+description: 'Worked example: IS17_interface3_4'
+authors:
+- first: Aslam
+  last: Mogri
+  email: aslam.mogri@rmu.edu
+  affiliation: Robert Morris University
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface3_4'
+elements:
+- type: explanation
+  location:
+    snippet: interface Fruit {
+  explanations:
+  - body: creates a new interface Fruit
+- type: explanation
+  location:
+    snippet: public boolean hasAPeel();
+  explanations:
+  - body: creates a new public method boolean hasAPeel
+- type: explanation
+  location:
+    snippet: interface Vegetable {
+  explanations:
+  - body: creates a new interface Vegetable
+- type: explanation
+  location:
+    snippet: public boolean isARoot();
+  explanations:
+  - body: creates a new public method boolean isARoot
+- type: explanation
+  location:
+    snippet: class FandVUtility {
+  explanations:
+  - body: creates a new class FandVUtility
+- type: explanation
+  location:
+    snippet: if (fruitIn.hasAPeel())
+  explanations:
+  - body: "Uses an if statement to check the condition\r\nin this case to see if the fruit has a peel"
+- type: explanation
+  location:
+    snippet: return "This has a peel";
+  explanations:
+  - body: 'if the condition is true return: This has a Peel'
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: if the condition is false
+- type: explanation
+  location:
+    snippet: return "This does not have a peel";
+  explanations:
+  - body: 'Return: this does not have a peel'
+- type: explanation
+  location:
+    snippet: if (vegetableIn.isARoot())
+  explanations:
+  - body: "Uses an if statement to check the condition\r\nin this case to see if the vegetable is a root"
+- type: explanation
+  location:
+    snippet: return "This is a root";
+  explanations:
+  - body: 'if the condition is true return: This is a root'
+- type: explanation
+  location:
+    snippet: else
+    nth: 2
+  explanations:
+  - body: if the condition is false
+- type: explanation
+  location:
+    snippet: return "This is not a root";
+  explanations:
+  - body: 'Return: this is not a root'
+- type: explanation
+  location:
+    snippet: if (tomatoIn.hasAPeel() && tomatoIn.isARoot())
+  explanations:
+  - body: "Uses an if statement to check a condition\r\nin this case there are two conditions that have to be met\r\nIf the\
+      \ object has a peel and has a root"
+- type: explanation
+  location:
+    snippet: return "This both has a peel and is a root";
+  explanations:
+  - body: "If this condition is true then\r\nThis both has a peel and is a root\r\nis returned"
+- type: explanation
+  location:
+    snippet: else if (tomatoIn.hasAPeel() || tomatoIn.isARoot())
+  explanations:
+  - body: "Uses an if statement to check a condition\r\nin this case there are two conditions and either one can be met\r\n\
+      If the object has a peel or if the object has a root"
+- type: explanation
+  location:
+    snippet: return "This either has a peel or is a root";
+  explanations:
+  - body: "If any of the conditions are true then\r\nThis either has a peel or is a root\r\nis returned"
+- type: explanation
+  location:
+    snippet: else
+    nth: 3
+  explanations:
+  - body: if both the above if statements are false
+- type: explanation
+  location:
+    snippet: return "This neither has a peel or is a root";
+  explanations:
+  - body: 'Return: This neither has a peel or is a root'
+- type: explanation
+  location:
+    snippet: class Tomato implements Fruit, Vegetable {
+  explanations:
+  - body: creates a new class tomato that implements the Fruit and Vegetable interfaces
+- type: explanation
+  location:
+    snippet: boolean peel = false;
+  explanations:
+  - body: sets the boolean peel to false
+- type: explanation
+  location:
+    snippet: boolean root = false;
+  explanations:
+  - body: sets the boolean root to false
+- type: explanation
+  location:
+    snippet: public Tomato() {}
+  explanations:
+  - body: creates a new object tomato
+- type: explanation
+  location:
+    snippet: public boolean hasAPeel(){
+  explanations:
+  - body: creates a new methood hasAPeel thats a boolean
+- type: explanation
+  location:
+    snippet: return peel;
+  explanations:
+  - body: returns peel (true or false)
+- type: explanation
+  location:
+    snippet: public boolean isARoot() {
+  explanations:
+  - body: creates a new methood isARoot thats a boolean
+- type: explanation
+  location:
+    snippet: return root;
+  explanations:
+  - body: returns root (true or false)
+- type: explanation
+  location:
+    snippet: Tomato tomato = new Tomato();
+  explanations:
+  - body: creates a new object tomato
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.isThisARoot(tomato));
+  explanations:
+  - body: Checks to see if a tomato has a root and prints out true or false
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.doesThisHaveAPeel(tomato));
+  explanations:
+  - body: Checks to see if a tomato has a peel and prints out true or false
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.doesThisHaveAPeelOrIsThisRoot(tomato));
+  explanations:
+  - body: Checks to see if a tomato has a peel or is a root and prints out if either condition is true
+- type: explanation
+  location:
+    snippet: Fruit tomatoFruit = new Tomato();
+  explanations:
+  - body: creats a new object tomatoFruit
+- type: explanation
+  location:
+    snippet: System.out.println(FandVUtility.doesThisHaveAPeel(tomatoFruit));
+  explanations:
+  - body: checks to see of the tomatioFruit has a peel and prints out if its true or false

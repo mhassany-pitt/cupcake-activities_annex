@@ -1,0 +1,85 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_expressions_print_memphis
+source: HelloWorld.java
+title: Expressions within print (Memphis)
+description: |-
+  Modifies our previous change making program to use Scanner.
+  This is a way for the program to get user input as the program is running,
+  instead of having to change values directly in the code.
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:DivideExpression
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ImportStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ModulusExpression
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: |-
+  Modifies our previous change making program to use Scanner.
+  This is a way for the program to get user input as the program is running,
+  instead of having to change values directly in the code.
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.Scanner;
+  explanations:
+  - body: To use Scanner, this import statement must be included before the "public class"
+- type: explanation
+  location:
+    snippet: public static void main(String[] args) {
+  explanations:
+  - body: This is a main method.  Program execution always starts from the main method.
+- type: explanation
+  location:
+    snippet: Scanner input = new Scanner(System.in);
+  explanations:
+  - body: Create a Scanner object named input.  You can name this object anything you want, but you have to be consistent
+      when using it later in the program.
+- type: explanation
+  location:
+    snippet: int cents = input.nextInt();
+  explanations:
+  - body: This line pauses the program, allows the user to enter some int input, and stores that input value into the variable
+      cents
+- type: explanation
+  location:
+    snippet: System.out.println(cents%25/10 + " dime(s)");
+  explanations:
+  - body: cents%25 is the amount left over after taking out the quarters
+- type: explanation
+  location:
+    snippet: System.out.println(cents%25%10/5 + " nickel(s)");
+  explanations:
+  - body: cents%25%10 is the amount left over after taking out the quarters and dimes
+- type: explanation
+  location:
+    snippet: System.out.println(cents%25%10%5/1 + " penny/pennies");
+  explanations:
+  - body: cents%25%10%5 is the amount left over after taking out the quarters, dimes, and nickels

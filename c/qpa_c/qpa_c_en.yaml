@@ -1,0 +1,87 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_qpa_c_en
+source: main.c
+title: 'IS12:: qpa.c (117.1)'
+description: 'Worked example: IS12:: qpa.c (117.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:less
+  - unspecified:define
+  - unspecified:reference
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:float
+  - unspecified:if_else
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: qpa.c (117.1)'
+elements:
+- type: explanation
+  location:
+    snippet: '#define MINQPA 2.5'
+  explanations:
+  - body: Using symbolic constants to define MINQPA and MINISQPA is a good programming style and allows for easy changeability
+      of the program.
+- type: explanation
+  location:
+    snippet: scanf("%f", &qpa1);
+  explanations:
+  - body: We read a floating point value into a floating point variable qpa1 using %f specification
+- type: explanation
+  location:
+    snippet: scanf("%f", &qpa2);
+  explanations:
+  - body: We read a floating point value into a floating point variable qpa2 using %f specification
+- type: explanation
+  location:
+    snippet: if (qpa1 < MINQPA)
+  explanations:
+  - body: The first condition to check - entered general QPA is matched against the admission threshold
+- type: explanation
+  location:
+    snippet: |-
+      printf("Your general QPA is too low for BSIS
+      ");
+  explanations:
+  - body: First of the three possible outcomes - you can't be admitted due to low general QPA
+- type: explanation
+  location:
+    snippet: else if (qpa2 < MINISQPA)
+  explanations:
+  - body: Even if you general QPA is over the threshold, it is not yet clear whether you can be admitted - it depends on your
+      IS QPA. So, we need another conditional statement in else part of the first if. This is a standard else-if multiple
+      selection construct. To
+- type: explanation
+  location:
+    snippet: |-
+      printf("Your Information Science QPA is too low for BSIS
+      ");
+  explanations:
+  - body: Second of the three possible outcomes - you can't be admitted due to low IS QPA
+- type: explanation
+  location:
+    snippet: else /* here qpa1 >= MINQPA and qpa2 >= MINISQPA */
+  explanations:
+  - body: This is else part of the embedded if, but we use the same indentation as for original if to stress that it is not
+      just one if inside another - it is an else-if construct
+- type: explanation
+  location:
+    snippet: |-
+      printf("You are admitted to BSIS program!
+      ");
+  explanations:
+  - body: Third of the three possible outcomes - you canbe admitted!

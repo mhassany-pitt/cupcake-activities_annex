@@ -1,0 +1,95 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_rate2_c_en
+source: main.c
+title: 'IS12:: rate2.c (5.3)'
+description: 'Worked example: IS12:: rate2.c (5.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:scanf
+  - unspecified:less
+  - unspecified:define
+  - unspecified:void
+  - unspecified:div
+  - unspecified:reference
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:add
+  - unspecified:mul
+  - unspecified:main_function
+  - unspecified:float
+  - unspecified:if_else
+  - unspecified:printf
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: rate2.c (5.3)'
+elements:
+- type: explanation
+  location:
+    snippet: scanf("%f %f", &rate1, &rate2);
+  explanations:
+  - body: This scanf statement gets two floating point numbers separated by a blank from the user, processes then using %f
+      specifications and places them into variables rate1 and rate2.
+- type: explanation
+  location:
+    snippet: scanf("%f",&capital);
+  explanations:
+  - body: We read a floating point value into a floating point variable capital using %f specification
+- type: explanation
+  location:
+    snippet: /* calculate the rate */
+  explanations:
+  - body: The goal of the conititional statement below is to decide which of the two rates has to be used in our case to calculate
+      interest. The correct value will be assigned to the variable interest_rate
+- type: explanation
+  location:
+    snippet: if (capital < THRESHOLD)
+  explanations:
+  - body: If capital is less than THRESHOLD, the value of capital < THRESHOLD expression will be 1 and "then" part of if will
+      be executed.
+- type: explanation
+  location:
+    snippet: interest_rate = rate1;
+  explanations:
+  - body: This is the "then" part of if - in this part interest_rate will be assigned to rate1 (lower of the two)
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: If the condition is false, i.e., the capital is greater or equal to the THRESHOLD, the value of capital < THRESHOLD
+      expression will be 0 and "else" part of if will be executed.
+- type: explanation
+  location:
+    snippet: interest_rate = rate2;
+  explanations:
+  - body: This is the "else" part of if - in this part interest_rate will be assigned to rate2 (higher of the two)
+- type: explanation
+  location:
+    snippet: |-
+      printf("The rate for $%.2f is %.2f%%
+      ", capital, interest_rate);
+  explanations:
+  - body: Here we print the exact rate to be used in further calculations.
+- type: explanation
+  location:
+    snippet: annual_interest = capital * interest_rate / 100;
+  explanations:
+  - body: This line calculates the value of annual interest
+- type: explanation
+  location:
+    snippet: |-
+      printf("Interest %6.2f; New capital %9.2f
+      ", annual_interest, capital + annual_interest);
+  explanations:
+  - body: This line prints the final result of the program - the annual interest and the new capital

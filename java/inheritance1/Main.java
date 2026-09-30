@@ -1,0 +1,3 @@
+class MountainBike extends Bicycle {
+      ...
+}

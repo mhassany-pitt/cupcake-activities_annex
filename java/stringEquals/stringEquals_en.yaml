@@ -1,0 +1,54 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_stringEquals
+source: Main.java
+title: String Equals
+description: 'Worked example: String Equals'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SimpleVariable
+  - expert:java.lang.System.out.println
+  - expert:BooleanDataType
+  - expert:StringDataType
+  - expert:SimpleAssignmentExpression
+  - expert:StringLiteral
+  - expert:ObjectMethodInvocation
+  - expert:StringVariable
+  - expert:java.lang.String.equals
+  - expert:StringInitializationStatement
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: String Equals'
+elements:
+- type: explanation
+  location:
+    snippet: isEqual = str1.equals( str2 );
+  explanations:
+  - body: "the method 'equals()' tests whether two strings are equal to each other. Here, both str1 and str2 \r\nare equal\
+      \ to 'Hello World', so isEqual is 'true'"
+- type: explanation
+  location:
+    snippet: System.out.println(isEqual);
+  explanations:
+  - body: prints 'true'
+- type: explanation
+  location:
+    snippet: isEqual= str1.equals( str3 );
+  explanations:
+  - body: Again, str1 and str3 are equal to 'Hello World', so isEqual is 'true'
+- type: explanation
+  location:
+    snippet: System.out.println(isEqual);
+    nth: 2
+  explanations:
+  - body: prints 'true'

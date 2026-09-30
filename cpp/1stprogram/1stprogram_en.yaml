@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_1stprogram
+source: main.cpp
+title: 1stprogram
+description: 'Worked example: 1stprogram'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: 1stprogram'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: '#include directive tells C to load a particular file'
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: indicate that program ended successfully.return statement ends the function.

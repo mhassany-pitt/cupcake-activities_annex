@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_grid_layout
+source: GridLayoutDemo.java
+title: ISD::GridLayoutDemo.java
+description: 'Worked example: ISD::GridLayoutDemo.java'
+authors:
+- first: Jeffrey
+  last: Gentile
+  email: jeffrey.gentile@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::GridLayoutDemo.java'
+elements:
+- type: explanation
+  location:
+    snippet: grid1 = new GridLayout( 2, 3, 5, 5 );
+  explanations:
+  - body: Create two GridLayouts, a 2 by 3 and a 3 by 2 (rows, columns).
+- type: explanation
+  location:
+    snippet: c.add( b[ i ] );
+  explanations:
+  - body: Add buttons to layout.  Added from left to right in order.
+- type: explanation
+  location:
+    snippet: if ( toggle )
+  explanations:
+  - body: Toggle layouts and update content pane with validate.
+- type: explanation
+  location:
+    snippet: c.validate();
+  explanations:
+  - body: Re-layouts a container for which the layout has changed

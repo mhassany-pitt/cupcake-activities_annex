@@ -1,0 +1,65 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_1_3
+source: MainClass.java
+title: Multiple Variables
+description: Multiple Variables
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LongDataType
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Multiple Variables
+elements:
+- type: explanation
+  location:
+    snippet: long a = 999999999L, b = 100000000L;
+  explanations:
+  - body: "Multiple variables can be declared and initialized in a single statement using comma\r\nas separator. \r\nType\
+      \ \"long\" can be specify by adding \"L\" at the \r\nend of the number. This is necessary because \r\nJava interprets\
+      \ a number as an int by default."
+- type: explanation
+  location:
+    snippet: int c = 0, d = 0;
+  explanations:
+  - body: Multiple int declaration. Note that the type "int" is only written once.
+- type: explanation
+  location:
+    snippet: System.out.println(a);
+  explanations:
+  - body: Output 999999999
+- type: explanation
+  location:
+    snippet: System.out.println(b);
+  explanations:
+  - body: Output 100000000
+- type: explanation
+  location:
+    snippet: System.out.println(c);
+  explanations:
+  - body: Output 0
+- type: explanation
+  location:
+    snippet: System.out.println(d);
+  explanations:
+  - body: Output 0

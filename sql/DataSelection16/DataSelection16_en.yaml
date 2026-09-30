@@ -1,0 +1,47 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection16
+source: query.sql
+title: Multiple Table Selection (2)
+description: Multiple Table Selection (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:EquiWhereJoin
+  - expert:AsClause
+  - expert:TableAlias
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:QualifiedAttributeName
+  - expert:UnionOperation
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:CommaCharacter
+  - expert:MultipleAttributeSelection
+  - expert:CountingRows
+  - expert:MultipleTableSelection
+  - sql_ontology:MultipleTableSelection
+  - sql_ontology:TableAlias
+  - sql_ontology:QualifiedAttributeName
+  - sql_ontology:EquiWhereJoin
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:WhereClause
+runtime:
+  language: sql
+  version: '2016'
+statement: Multiple Table Selection (2)
+elements:
+- type: explanation
+  location:
+    snippet: FROM borrower AS T, loan AS S
+  explanations:
+  - body: Table aliases are defined in the FROM clause via the use of the AS clause. If the table name is too long, it is
+      convenient to shorter alias name. If a query refers to another user's table, the table name can also have alias.

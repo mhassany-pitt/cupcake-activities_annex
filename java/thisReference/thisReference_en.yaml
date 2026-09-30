@@ -1,0 +1,84 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_thisReference
+source: Counter.java
+title: This Reference
+description: 'Worked example: This Reference'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SubtractExpression
+  - expert:AddExpression
+  - expert:ThisReference
+  - expert:ReturnStatement
+  - expert:ConstructorDefinition
+  - expert:SimpleAssignmentExpression
+  - expert:SimpleVariable
+  - expert:InstanceField
+  - expert:InstanceFieldInvocation
+  - expert:IntDataType
+  - expert:PrivateFieldSpecifier
+  - expert:PublicConstructorSpecifier
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: This Reference'
+elements:
+- type: explanation
+  location:
+    snippet: public class Counter
+  explanations:
+  - body: "/**\r\n   This example demonstrates the this reference.\r\n*/"
+- type: explanation
+  location:
+    snippet: public Counter(int value)
+  explanations:
+  - body: "/**\r\n      Constructs a counter with a given value\r\n   */"
+- type: explanation
+  location:
+    snippet: this.value = value;
+  explanations:
+  - body: "this. resolves the conflict between an instance variable and a local variable with the \r\nsame name"
+- type: explanation
+  location:
+    snippet: this(0);
+  explanations:
+  - body: Invokes the Counter(int value) constructor with value = 0
+- type: explanation
+  location:
+    snippet: public void click()
+  explanations:
+  - body: "/**\r\n      Advances the value of this counter by 1.\r\n   */"
+- type: explanation
+  location:
+    snippet: this.value = this.value + 1;
+  explanations:
+  - body: Using this makes it clear that the instance variable is updated
+- type: explanation
+  location:
+    snippet: public int getPrevious()
+  explanations:
+  - body: "/**\r\n      Gets the previous value of this counter.\r\n      @return the previous value\r\n   */"
+- type: explanation
+  location:
+    snippet: return getValue() - 1;
+  explanations:
+  - body: "When you call a method without an object, it is invoked on the this reference, i.e \r\nthis.getValue()."
+- type: explanation
+  location:
+    snippet: public int getValue()
+  explanations:
+  - body: "/**\r\n      Gets the current value of this counter.\r\n      @return the current value\r\n   */"
+- type: explanation
+  location:
+    snippet: return value;
+  explanations:
+  - body: Or, if you prefer, return this.value;

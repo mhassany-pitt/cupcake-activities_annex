@@ -1,0 +1,102 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Bank
+source: Bank.java
+title: Bank
+description: 'Worked example: Bank'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ForEachStatement
+  - expert:java.util.ArrayList.add
+  - expert:ObjectMethodInvocation
+  - expert:java.util.ArrayList.get
+  - expert:PostIncrementExpression
+  - expert:ForStatement
+  - expert:java.util.ArrayList.size
+  - expert:PrivateFieldSpecifier
+  - expert:GenericObjectCreationStatement
+  - expert:LessExpression
+  - expert:GreaterEqualExpression
+  - expert:PublicConstructorSpecifier
+  - expert:GreaterExpression
+  - expert:AddExpression
+  - expert:IfStatement
+  - expert:ReturnStatement
+  - expert:ImportStatement
+  - expert:ConstructorDefinition
+  - expert:SimpleAssignmentExpression
+  - expert:InstanceField
+  - expert:DoubleDataType
+  - expert:SimpleVariable
+  - expert:IntDataType
+  - expert:EqualExpression
+  - expert:java.util.ArrayList
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Bank'
+elements:
+- type: explanation
+  location:
+    snippet: public class Bank
+  explanations:
+  - body: "/**\r\n   This bank contains a collection of bank accounts.\r\n*/"
+- type: explanation
+  location:
+    snippet: public Bank()
+  explanations:
+  - body: "/**\r\n      Constructs a bank with no bank accounts.\r\n   */"
+- type: explanation
+  location:
+    snippet: public void addAccount(BankAccount a)
+  explanations:
+  - body: "/**\r\n      Adds an account to this bank.\r\n      @param a the account to add\r\n   */"
+- type: explanation
+  location:
+    snippet: public double getTotalBalance()
+  explanations:
+  - body: "/**\r\n      Gets the sum of the balances of all accounts in this bank.\r\n      @return the sum of the balances\r\
+      \n   */"
+- type: explanation
+  location:
+    snippet: public int countBalancesAtLeast(double atLeast)
+  explanations:
+  - body: "/**\r\n      Counts the number of bank accounts whose balance is at\r\n      least a given value.\r\n      @param\
+      \ atLeast the balance required to count an account\r\n      @return the number of accounts having least the given balance\r\
+      \n   */"
+- type: explanation
+  location:
+    snippet: if (a.getBalance() >= atLeast) matches++;
+  explanations:
+  - body: Found a match
+- type: explanation
+  location:
+    snippet: public BankAccount find(int accountNumber)
+  explanations:
+  - body: "/**\r\n      Finds a bank account with a given number.\r\n      @param accountNumber the number to find\r\n   \
+      \   @return the account with the given number, or null if there\r\n      is no such account\r\n   */"
+- type: explanation
+  location:
+    snippet: return a;
+  explanations:
+  - body: Found a match
+- type: explanation
+  location:
+    snippet: return null;
+  explanations:
+  - body: No match in the entire array list
+- type: explanation
+  location:
+    snippet: public BankAccount getMaximum()
+  explanations:
+  - body: "/**\r\n      Gets the bank account with the largest balance.\r\n      @return the account with the largest balance,\
+      \ or null if the\r\n      bank has no accounts\r\n   */"

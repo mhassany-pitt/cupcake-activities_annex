@@ -1,0 +1,62 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection13
+source: query.sql
+title: Multiple Comparisons (2)
+description: Multiple Comparisons (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:EqualComparison
+  - expert:ReferentialAction
+  - expert:EquiWhereJoin
+  - expert:StringConstant
+  - expert:AndLogicalOperator
+  - expert:FixedLengthCharacterString
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:CommaCharacter
+  - expert:MultipleAttributeSelection
+  - expert:CountingRows
+  - expert:MultipleTableSelection
+  - expert:SingleQuotationCharacter
+  - sql_ontology:MultipleTableSelection
+  - sql_ontology:EqualComparison
+  - sql_ontology:StringConstant
+  - sql_ontology:AndLogicalOperator
+  - sql_ontology:EquiWhereJoin
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:WhereClause
+runtime:
+  language: sql
+  version: '2016'
+statement: Multiple Comparisons (2)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT customer_no, borrower.loan_no, amount
+  explanations:
+  - body: This query specify column 'loan_no' should be read from 'borrower' table. The reason why this column name is specified
+      along with the table name is that both 'borrower' and 'loan' table have the column. If the table name is not specified,
+      the column is read from the table where the column belongs to exclusively.
+- type: explanation
+  location:
+    snippet: FROM borrower, loan
+  explanations:
+  - body: Data is read from these two tables.
+- type: explanation
+  location:
+    snippet: WHERE borrower.loan_no = loan.loan_no AND branch_name = 'Perryridge';
+  explanations:
+  - body: In order to loan amount attached to each customer, it tests match betwee two values in two tables. After then, loans
+      from Perryridge branch are retrieved. The data met these two condition should be retrieved because of the AND logic.

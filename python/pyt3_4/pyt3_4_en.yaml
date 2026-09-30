@@ -1,0 +1,28 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt3_4_en
+source: main.py
+title: Single Line If...Else Statement
+description: 'Worked example: Single Line If...Else Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Single Line If...Else Statement'
+elements:
+- type: explanation
+  location:
+    snippet: print 'True' if a == 5 else 'False'
+  explanations:
+  - body: If a is equal to 5 then print 'True', else print 'False'. This entire logic can be written in one line if...ese
+      statement.

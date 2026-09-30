@@ -1,0 +1,171 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_inheritance1_4
+source: TestInheritance.java
+title: IS17_inheritance1_4
+description: 'Worked example: IS17_inheritance1_4'
+authors:
+- first: Eric
+  last: Riemer
+  email: eric.riemer@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_inheritance1_4'
+elements:
+- type: explanation
+  location:
+    snippet: class Person{
+  explanations:
+  - body: Create a new class of the type Person
+- type: explanation
+  location:
+    snippet: private String name;
+  explanations:
+  - body: define a private instance field of type String labeled 'name'
+- type: explanation
+  location:
+    snippet: public void setName(String n) {
+  explanations:
+  - body: the public method setName receives a string 'n'
+- type: explanation
+  location:
+    snippet: name = n;
+  explanations:
+  - body: set the string name to the value of the string n
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of method setName
+- type: explanation
+  location:
+    snippet: public String getName(){
+  explanations:
+  - body: publicly callable method 'getName' that returns a string
+- type: explanation
+  location:
+    snippet: return name;
+  explanations:
+  - body: when called it returns the value stored in 'name'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of method getName
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end of class Person
+- type: explanation
+  location:
+    snippet: class Student extends Person{
+  explanations:
+  - body: Create a new class of the type Student that is a subclass of the class Person (meaning that it inherits the methods
+      of the class person
+- type: explanation
+  location:
+    snippet: private String stuNum;
+  explanations:
+  - body: define a private instance field of type String labeled 'stuNum'
+- type: explanation
+  location:
+    snippet: public void setStuNum(String sn)   {
+  explanations:
+  - body: the public method setStuNum receives a string 'sn'
+- type: explanation
+  location:
+    snippet: stuNum = sn;
+  explanations:
+  - body: set the string stuNum to the value of the string sn
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: end of method setStuNum
+- type: explanation
+  location:
+    snippet: public String getStuNum()   {
+  explanations:
+  - body: publicly callable method 'getStuNum' that returns a string
+- type: explanation
+  location:
+    snippet: return stuNum;
+  explanations:
+  - body: when called it returns the value stored in 'stuNum'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: end of method getStunum
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: end of class Student
+- type: explanation
+  location:
+    snippet: public class TestInheritance{
+  explanations:
+  - body: Create a new class of the type TestInheritance
+- type: explanation
+  location:
+    snippet: public static void main(String[] args)   {
+  explanations:
+  - body: initializes the main method (making this a class that can be run)
+- type: explanation
+  location:
+    snippet: Student stu = new Student();
+  explanations:
+  - body: create an instance of the class Student 'stu'
+- type: explanation
+  location:
+    snippet: stu.setName("Sharon Hsiao");
+  explanations:
+  - body: call the setName method to set the name of the student 'stu' to the string "Sharon Hsiao"
+- type: explanation
+  location:
+    snippet: stu.setStuNum("12345");
+  explanations:
+  - body: call the set StuNum method to set the student number of the student 'stu' to the string "12345"
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Name: " + stu.getName());'
+  explanations:
+  - body: 'print (followed by a new line) the text "Student Name: " followed by the value that the getName method returns'
+- type: explanation
+  location:
+    snippet: 'System.out.println("Student Number: " + stu.getStuNum());'
+  explanations:
+  - body: 'print (followed by a new line) the text "Student Number: " followed by the value that the getStuNum method returns'
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 7
+  explanations:
+  - body: end of main method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 8
+  explanations:
+  - body: end of class TestInheritance
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 9
+  explanations:
+  - body: error on } it is extra and should not be there

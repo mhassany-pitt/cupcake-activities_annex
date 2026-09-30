@@ -1,0 +1,84 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_7_7
+source: MainClass.java
+title: Multidimensional Array Iteration
+description: Multidimensional Array Iteration
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:AddAssignmentExpression
+  - expert:AddExpression
+  - expert:ArrayCreationStatement
+  - expert:ArrayElement
+  - expert:ArrayVariable
+  - expert:ClassDefinition
+  - expert:ForEachStatement
+  - expert:FormalMethodParameter
+  - expert:ForStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:LessExpression
+  - expert:MethodDefinition
+  - expert:MultiplyExpression
+  - expert:NestedStatement
+  - expert:PostIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Multidimensional Array Iteration
+elements:
+- type: explanation
+  location:
+    snippet: int[][] nums = new int[3][5];
+  explanations:
+  - body: "A multidimensional array of int is created (2 dimensions: 3 rows and 5 columns). nums[0] is \r\nthe first row.\
+      \ nums[0][0] is the first \r\nelement of the first \r\nrow."
+- type: explanation
+  location:
+    snippet: for (int i = 0; i < 3; i++)
+  explanations:
+  - body: 'This for has only one statement inside: another for. No braces {} are necessary.'
+- type: explanation
+  location:
+    snippet: for (int j = 0; j < 5; j++)
+  explanations:
+  - body: This for has only one statement inside. No braces {} are necessary.
+- type: explanation
+  location:
+    snippet: nums[i][j] = (i + 1) * (j + 1);
+  explanations:
+  - body: The array is filled with values row by row.
+- type: explanation
+  location:
+    snippet: 'for (int x[] : nums) {'
+  explanations:
+  - body: "Another way to iterate inside the array. Now using for-each, each round take a complete row \r\nof the array \"\
+      nums\" and references it \r\nas the array \"x\"."
+- type: explanation
+  location:
+    snippet: 'for (int y : x) {'
+  explanations:
+  - body: Each round takes a value of the array "x" in the int variable "y".
+- type: explanation
+  location:
+    snippet: sum += y;
+  explanations:
+  - body: The value of 'y' is added to the value of 'sum' and then the new value is stored in the sum.

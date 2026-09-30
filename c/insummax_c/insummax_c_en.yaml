@@ -1,0 +1,122 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_insummax_c_en
+source: main.c
+title: 'IS12:: insummax.c (111.1)'
+description: 'Worked example: IS12:: insummax.c (111.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:pre_increment
+  - unspecified:return
+  - unspecified:for
+  - unspecified:array_declaration
+  - unspecified:reference
+  - unspecified:add_assignment
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:if
+  - unspecified:main_function
+  - unspecified:less
+  - unspecified:define
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: insummax.c (111.1)'
+elements:
+- type: explanation
+  location:
+    snippet: int readarray(int ar[], int n);
+  explanations:
+  - body: This is the prototype of function readarray
+- type: explanation
+  location:
+    snippet: int sumarray(int ar[], int n);
+  explanations:
+  - body: This is the prototype of function sumarray
+- type: explanation
+  location:
+    snippet: int maxelement(int ar[], int n);
+  explanations:
+  - body: This is the prototype of function maxelement
+- type: explanation
+  location:
+    snippet: readarray(testarray, N);
+  explanations:
+  - body: Here we call function readarray that will read N numbers from the user and place them into the array passed as the
+      first parameter. Since it is passed by value, we will see changes,
+- type: explanation
+  location:
+    snippet: |-
+      printf("Sum = %d, max = %d
+      ", sumarray(testarray, N), testarray[maxelement(testarray, N)]);
+  explanations:
+  - body: During the execution of printf, functions sumarray and maxelement will be called.
+- type: explanation
+  location:
+    snippet: int readarray(int ar[], int n_of_elements) {
+  explanations:
+  - body: This function takes an array and an integer as parameters and returns an integer. Note that the integer array ar
+      is passed by reference. Our changes of the array will be visible by the calling function.
+- type: explanation
+  location:
+    snippet: for (i = 0; i < n_of_elements; ++i) {
+  explanations:
+  - body: This loop will run exactly n_of_elements times
+- type: explanation
+  location:
+    snippet: printf("%d> ", i);
+  explanations:
+  - body: Promt to enter i-th element of the array
+- type: explanation
+  location:
+    snippet: scanf("%d", &ar[i]);
+  explanations:
+  - body: The entered number is read and placed into the array element with index i.
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: As any integer function, readarray should return some integer value. Readarray unconditionally returns 0, but this
+      value is not used by the calling function in this example.
+- type: explanation
+  location:
+    snippet: sum += ar[i];
+  explanations:
+  - body: The sum of the array elements is accumulated in local variable sum
+- type: explanation
+  location:
+    snippet: return sum;
+  explanations:
+  - body: By calling return we pass the value of sum to the calling funcion as the result of the function call of sumarray
+- type: explanation
+  location:
+    snippet: int i, maxind = 0;
+  explanations:
+  - body: maxind is used to store the position of the running maximum element in the array. We initialize it to 0.
+- type: explanation
+  location:
+    snippet: for (i = 1; i < n; ++i)
+  explanations:
+  - body: We check every element of the array starting from the second one (ar[1]) againts the stored maximum
+- type: explanation
+  location:
+    snippet: if (ar[maxind] < ar[i]) maxind = i;
+  explanations:
+  - body: If the stored maximum (element ar[maxind]) is less than the current element, the we have to change the maximum to
+      the current element.

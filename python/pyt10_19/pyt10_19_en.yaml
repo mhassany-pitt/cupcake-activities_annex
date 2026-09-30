@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_19_en
+source: main.py
+title: References Basics
+description: 'Worked example: References Basics'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Call
+  - parser:Str
+  - parser:arg
+  - parser:Assign
+  - parser:FunctionDef
+  - unspecified:arg
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:FunctionDef
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: References Basics'
+elements:
+- type: explanation
+  location:
+    snippet: 'def modify(number):'
+  explanations:
+  - body: defining a function called 'modify' which takes in an integer argument 'number'
+- type: explanation
+  location:
+    snippet: number = 10
+  explanations:
+  - body: Assigning the value '10' to the variable 'number'. Note that th variabe 'number' is the local variable and its scope
+      is only confined to this function. What we do here is modify the value of the variable 'number' instead of the using
+      the one that is passed as the argument
+- type: explanation
+  location:
+    snippet: print("Number in modify function is:", number)
+  explanations:
+  - body: Printing out the number in the modify function
+- type: explanation
+  location:
+    snippet: 'def main():'
+  explanations:
+  - body: Defining the main function
+- type: explanation
+  location:
+    snippet: number = 5
+  explanations:
+  - body: defining the variable 'number'. This is not same as the number variable defined above. Again this variable's scope
+      is only confined to this function and hence it is an example of a local variable.
+- type: explanation
+  location:
+    snippet: modify(number)
+  explanations:
+  - body: now we cll the modify function within the main function and passing the value of number as '5'.
+- type: explanation
+  location:
+    snippet: print("In main function, number is still:", number)
+  explanations:
+  - body: In the main function the value of variable 'number' is still '5'
+- type: explanation
+  location:
+    snippet: main()
+  explanations:
+  - body: calling the main function

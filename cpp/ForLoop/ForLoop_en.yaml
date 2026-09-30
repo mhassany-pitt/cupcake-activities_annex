@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_ForLoop
+source: main.cpp
+title: ForLoop
+description: 'Worked example: ForLoop'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: ForLoop'
+elements:
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: function main begins program execution.
+- type: explanation
+  location:
+    snippet: for ( count = 1; count <= 10; count++ )
+  explanations:
+  - body: for loop begins by setting counter to 1 and repeats while counter <= 10. Each time the end of the loop is reached,
+      counter is incremented by 1.

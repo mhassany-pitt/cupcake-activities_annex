@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_rand_function
+source: main.cpp
+title: rand function
+description: 'Worked example: rand function'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: rand function'
+elements:
+- type: explanation
+  location:
+    snippet: for ( i = 1; i <= 20; i++ ) {
+  explanations:
+  - body: loop 20 times.
+- type: explanation
+  location:
+    snippet: printf( "%10d", 1 + ( rand() % 6 ) );
+  explanations:
+  - body: Generates a random number between 1 and 6.
+- type: explanation
+  location:
+    snippet: if ( i % 5 == 0 )
+  explanations:
+  - body: if counter is divisible by 5, begin new line of output.

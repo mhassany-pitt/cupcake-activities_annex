@@ -1,0 +1,70 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_better_kiosk_c_en
+source: main.c
+title: 'IS12:: better_kiosk.c (3.2)'
+description: 'Worked example: IS12:: better_kiosk.c (3.2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:define
+  - unspecified:void
+  - unspecified:reference
+  - unspecified:variable_declaration
+  - unspecified:sub
+  - unspecified:include
+  - unspecified:mul
+  - unspecified:simple_assignment
+  - unspecified:main_function
+  - unspecified:float
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: better_kiosk.c (3.2)'
+elements:
+- type: explanation
+  location:
+    snippet: float dollars_for_mark = 0.55; /* exchange rate */
+  explanations:
+  - body: This is an example of a variable declaration with initialization.
+- type: explanation
+  location:
+    snippet: int commission = 3; /* commission in dollars */
+  explanations:
+  - body: This is another example of a variable declaration with initialization. We have defined an integer variable comission
+      with an initial value 3.
+- type: explanation
+  location:
+    snippet: int marks; float dollars;
+  explanations:
+  - body: It is possible to define several variables of different type in one line, but it is an example of a bad style that
+      decreases the program readability. Note that variables marks and dollars has not been iniialized. Their values are not
+      defined at that point
+- type: explanation
+  location:
+    snippet: 'printf("Marks to exchange?: ");'
+  explanations:
+  - body: |-
+      This is a prompt string for the input. Note that there is no '
+      ' - the cursor will not go to the next line and the variable input will happen in this line.
+- type: explanation
+  location:
+    snippet: scanf("%d",&marks);
+  explanations:
+  - body: This scanf command reads an integer value from the standard input and places it into variable marks.
+- type: explanation
+  location:
+    snippet: dollars = marks * dollars_for_mark - commission;
+  explanations:
+  - body: Blanks that separate operation sign (like = or *) from operands make the expression more redable

@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt3_3_en
+source: main.py
+title: Nested If Statements
+description: 'Worked example: Nested If Statements'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Nested If Statements'
+elements:
+- type: explanation
+  location:
+    snippet: 'if a == 5:'
+  explanations:
+  - body: 'First condition: to check if a is equal to 5'
+- type: explanation
+  location:
+    snippet: 'if b == 2:'
+  explanations:
+  - body: 'Second Condition: to check if b is equal to 2'
+- type: explanation
+  location:
+    snippet: print True
+  explanations:
+  - body: If both the conditions are true, then print 'True'
+- type: explanation
+  location:
+    snippet: print False
+  explanations:
+  - body: Print False if the inner condition is False
+- type: explanation
+  location:
+    snippet: print False
+    nth: 2
+  explanations:
+  - body: Print False if the outer condition is False

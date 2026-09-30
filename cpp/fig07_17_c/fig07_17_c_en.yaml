@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig07_17_c_en
+source: main.cpp
+title: fig07_17.c
+description: 'Worked example: fig07_17.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig07_17.c'
+elements:
+- type: explanation
+  location:
+    snippet: int array[ 20 ];
+  explanations:
+  - body: create array of 20 int elements.
+- type: explanation
+  location:
+    snippet: int *ptr = array;
+  explanations:
+  - body: create pointer to array.

@@ -1,0 +1,75 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt2_6_en
+source: main.py
+title: Arithmetic Operators
+description: 'Worked example: Arithmetic Operators'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Arithmetic Operators'
+elements:
+- type: explanation
+  location:
+    snippet: a = 5
+  explanations:
+  - body: Assigning the integer '5' to the variable 'a'
+- type: explanation
+  location:
+    snippet: b = 3
+  explanations:
+  - body: Assigning the integer '3' to the variable 'b'
+- type: explanation
+  location:
+    snippet: print(a + b)
+  explanations:
+  - body: This is the addition operator. It arithmetically adds the two integers and prints out the value. In this case it
+      will print out the value '8' (5+3=8)
+- type: explanation
+  location:
+    snippet: print(a - b)
+  explanations:
+  - body: This is the subtraction operator. It arithmetically subtracts the two integers and prints out the value. In this
+      case it will print out the value '2' (5-3=2)
+- type: explanation
+  location:
+    snippet: print(a * b)
+  explanations:
+  - body: This is the multiplication operator. It arithmetically multiplies the two integers and prints out the value. In
+      this case it will print out the value '15' (5*3=15)
+- type: explanation
+  location:
+    snippet: print(a / b)
+  explanations:
+  - body: This is the division operator. It arithmetically divides the two integers and prints out the value. In this case
+      it will print out the value '1.667' (5/3=1.667)
+- type: explanation
+  location:
+    snippet: print(a ** b)
+  explanations:
+  - body: This is the exponent operator. It arithmetically exponents the two integers and prints out the value. In this case
+      it will print out the value '125' (5 to the power 3 = 125)
+- type: explanation
+  location:
+    snippet: print(a % b)
+  explanations:
+  - body: This is the modulus operator. It arithmetically takes modulus of a variable with the other and prints out the value.
+      In this case it will print out the value '2' (5 modulus 3 = 2)
+- type: explanation
+  location:
+    snippet: print(a//b)
+  explanations:
+  - body: This is the floor division operator. It arithmetically floor divides the two integers and prints out the value.
+      Floor division is actually dividing without taking into consideration the remainder. In this case it will print out
+      the value '1' (5 floor divided by 3 = 1)

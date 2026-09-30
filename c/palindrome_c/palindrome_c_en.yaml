@@ -1,0 +1,135 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_palindrome_c_en
+source: main.c
+title: 'IS12:: palindrome.c (111.3)'
+description: 'Worked example: IS12:: palindrome.c (111.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:pre_decrement
+  - unspecified:pre_increment
+  - unspecified:return
+  - unspecified:and
+  - unspecified:for
+  - unspecified:if_else
+  - unspecified:while
+  - unspecified:array_declaration
+  - unspecified:char
+  - unspecified:equal
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:greater_equal
+  - unspecified:main_function
+  - unspecified:not_equal
+  - unspecified:less
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:printf
+  - unspecified:sub
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: palindrome.c (111.3)'
+elements:
+- type: explanation
+  location:
+    snippet: int palindrome(char[]);
+  explanations:
+  - body: This is the prototype of function palindrome. This function takes a character array and returns an integer value.
+- type: explanation
+  location:
+    snippet: int strlen (char[]);
+  explanations:
+  - body: This is the prototype of function strlen. This function takes a character array and returns an integer value.
+- type: explanation
+  location:
+    snippet: char p[] = "ABBA";
+  explanations:
+  - body: "Character array p is initialized with string \"ABBA\". C will allocate five elements for this array - one more\
+      \ than the number of letters since all strings have an invisible '\0' at the end."
+- type: explanation
+  location:
+    snippet: if(palindrome(p))
+  explanations:
+  - body: Function palindrome is written to return 1 if the string passed to it as a parameter is a palindrome and return
+      0 otherwise. So, we just need to check what it returns and print a diagnosis.
+- type: explanation
+  location:
+    snippet: int palindrome(char s[]) {
+  explanations:
+  - body: "The function palindrome takes one parameter that is an array of characters and returns an integer value. There\
+      \ is no need to pass the length of the array since '\0' indicates the end of the meaningful values in the array."
+- type: explanation
+  location:
+    snippet: int bottom, top;
+  explanations:
+  - body: These variables are used as positioners in working with the array. bottom will go from bottom (0) up and top will
+      go from top (should be calculated) down.
+- type: explanation
+  location:
+    snippet: top = strlen(s) - 1;
+  explanations:
+  - body: "We should set top to the index of the last element of the string. To do that, we call strlen that will return the\
+      \ \"length\" of the string - i.e., number of elements before '\0'."
+- type: explanation
+  location:
+    snippet: while(bottom < top && s[bottom] == s[top]) {
+  explanations:
+  - body: This loop will work while bottom is still under the top and while current bottom and top symbols of the array are
+      the same.
+- type: explanation
+  location:
+    snippet: ++bottom;
+  explanations:
+  - body: If both conditions are true, we increment bottom
+- type: explanation
+  location:
+    snippet: --top;
+  explanations:
+  - body: If both conditions are true, we decrement top
+- type: explanation
+  location:
+    snippet: if(bottom >= top)
+  explanations:
+  - body: When the loop is over, we land at this statement. Here we have to check which of the loop condition became false
+      (i.e., returned 0)
+- type: explanation
+  location:
+    snippet: return 1;
+  explanations:
+  - body: If we breaked out of the loop because bottom ven over the top - bottom >= top - then all pairwise comparison succeeded
+      and the string is a palindrom - return 1
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: Otherwise we only could breaked out of the loop s[bottom] != s[top] - then he string is not a palindrom - return
+      0
+- type: explanation
+  location:
+    snippet: int strlen (char s[]) {
+  explanations:
+  - body: "This function takes a properly terminated string as a parameter returns its length simply by counting symbols until\
+      \ '\0'."
+- type: explanation
+  location:
+    snippet: "for (i = 0; s[i] != '\0'; ++i)"
+  explanations:
+  - body: "This loop walks over the array until it encounters '\0'."
+- type: explanation
+  location:
+    snippet: return i;
+  explanations:
+  - body: When we break out of the loop the value of i will be exactly the length of the string - so we return it.

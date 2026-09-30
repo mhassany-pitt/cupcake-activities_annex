@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_7_4
+source: MainClass.java
+title: For-Each with ArrayList
+description: For-Each with ArrayList
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:AddExpression
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:DoubleDataType
+  - expert:ForEachStatement
+  - expert:FormalMethodParameter
+  - expert:ImportStatement
+  - expert:java.lang.System.out.println
+  - expert:java.util.ArrayList
+  - expert:java.util.ArrayList.add
+  - expert:MethodDefinition
+  - expert:ObjectCreationStatement
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: For-Each with ArrayList
+elements:
+- type: explanation
+  location:
+    snippet: ArrayList<Double> list = new ArrayList()<Double>;
+  explanations:
+  - body: This line creates a list of Double objects.
+- type: explanation
+  location:
+    snippet: 'for(double itr : list)'
+  explanations:
+  - body: "For-each is very useful with collections and lists of objects. In this case, the double variable \r\n\"itr\" takes\
+      \ one by one the values stored in the ArrayList \"list\". \r\nAlso, note that the for loop only has one line (sum =\
+      \ \r\nsum + itr;) thus is not necessary to put it between \r\nbraces {}."
+- type: explanation
+  location:
+    snippet: System.out.println(sum);
+  explanations:
+  - body: This line of code is outside the for loop.

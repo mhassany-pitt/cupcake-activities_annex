@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt8_1_en
+source: main.py
+title: Tuple Basics
+description: 'Worked example: Tuple Basics'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Tuple Basics'
+elements:
+- type: explanation
+  location:
+    snippet: tuple1 = ('physics', 'chemistry', 1997, 2000)
+  explanations:
+  - body: Defining a tuple with 4 elements
+- type: explanation
+  location:
+    snippet: tuple2 = (1, 2, 3, 4, 5)
+  explanations:
+  - body: Defining a tuple with 5 elements
+- type: explanation
+  location:
+    snippet: tuple3 = ("a", "b", "c")
+  explanations:
+  - body: Defining a tuple with 3 elements

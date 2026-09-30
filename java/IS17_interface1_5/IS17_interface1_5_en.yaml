@@ -1,0 +1,132 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_interface1_5
+source: TryOut.java
+title: IS17_interface1_5
+description: 'Worked example: IS17_interface1_5'
+authors:
+- first: Darby
+  last: Hoffman
+  email: darby.hoffman@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_interface1_5'
+elements:
+- type: explanation
+  location:
+    snippet: interface Act {
+  explanations:
+  - body: // method signature of the only method for the interface Act
+- type: explanation
+  location:
+    snippet: void act();
+  explanations:
+  - body: // end Act interface
+- type: explanation
+  location:
+    snippet: class Actor1 implements Act {
+  explanations:
+  - body: // implementation of the interface's method act()
+- type: explanation
+  location:
+    snippet: public void act() {
+  explanations:
+  - body: // Print Actor1's string.
+- type: explanation
+  location:
+    snippet: System.out.println("To be, or not to be");
+  explanations:
+  - body: // end Actor1's implementation of act()
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: // end Actor1 class
+- type: explanation
+  location:
+    snippet: class Actor2 implements Act {
+  explanations:
+  - body: // implementation of the interface's method act()
+- type: explanation
+  location:
+    snippet: public void act() {
+    nth: 2
+  explanations:
+  - body: // Print Actor2's string.
+- type: explanation
+  location:
+    snippet: System.out.println("Wherefore art thou Romeo?");
+  explanations:
+  - body: // end Actor2's implementation of act()
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: // end Actor2 class
+- type: explanation
+  location:
+    snippet: public class TryOut {
+  explanations:
+  - body: // main method
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: // Create a new Actor1 object, hamlet.
+- type: explanation
+  location:
+    snippet: Actor1 hamlet = new Actor1();
+  explanations:
+  - body: // Create a new Actor2 object, juliet.
+- type: explanation
+  location:
+    snippet: Actor2 juliet = new Actor2();
+  explanations:
+  - body: // Pass hamlet into the tryout method call.
+- type: explanation
+  location:
+    snippet: tryout(hamlet);
+  explanations:
+  - body: // Pass juliet into the tryout method call.
+- type: explanation
+  location:
+    snippet: tryout(juliet);
+  explanations:
+  - body: // end main method
+- type: explanation
+  location:
+    snippet: private static void tryout(Act actor) {
+  explanations:
+  - body: // tryout passes the actor interface and then uses the proper implementation.
+- type: explanation
+  location:
+    snippet: actor.act();
+  explanations:
+  - body: // end tryout method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: // end Tryout class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: // unnecessary bracket
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: // unnecessary bracket

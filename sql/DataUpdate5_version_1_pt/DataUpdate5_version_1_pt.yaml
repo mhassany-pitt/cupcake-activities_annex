@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataUpdate5_version_1_pt
+source: query.sql
+title: Updatingwithsubquery_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SET credit_limit = credit_limit + 5000.00
+  explanations:
+  - body: Antes de executar o comando UPDATE, a subconsulta em parenteses e' executada para limitar as tuplas a serem atualizadas.
+      Apos isso, um credito de R$ 5000 e' adicionado ao limite atual.
+- type: explanation
+  location:
+    snippet: WHERE cust_num IN
+  explanations:
+  - body: A clausula WHERE seleciona um dos clientes na lista de resultados da subconsulta. Geralmente a operacao IN e' utilizada.
+      Ela verifica se cada tupla do resultado da subconsulta e' igual ao valor testado.
+- type: explanation
+  location:
+    snippet: (SELECT DISTINCT cust
+  explanations:
+  - body: Essa e' uma subconsulta de selecao (SELECT), uma consulta dentro de outra. Essa consulta retorna a lista de clientes
+      que fizeram compras maiores que 25000. A utilizacao de subconsultas e' interessante quando precisa-se selecionar um
+      conjunto de dados. A subconsulta permite selecionar tuplas a serem atualizadas baseadas em informacoes contidas em outras
+      tabelas.

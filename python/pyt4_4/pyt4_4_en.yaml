@@ -1,0 +1,37 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_4_en
+source: main.py
+title: Break Statement
+description: 'Worked example: Break Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Break Statement'
+elements:
+- type: explanation
+  location:
+    snippet: 'for letter in ''Python'':'
+  explanations:
+  - body: loops for each letter in the word 'Python'
+- type: explanation
+  location:
+    snippet: 'if letter == ''h'':'
+  explanations:
+  - body: Checks if the current letter is 'h'
+- type: explanation
+  location:
+    snippet: break
+  explanations:
+  - body: if yes, then the program breaks out of the loop

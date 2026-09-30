@@ -1,0 +1,89 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataDeletion2
+source: query.sql
+title: Deleting with Condition (1)
+description: Deleting with Condition (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ReferentialAction
+  - expert:StringType
+  - expert:SubQueryCheckingDuplicateTuples
+  - expert:SubstringExtraction
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:ToUpperCase
+  - expert:SelectStatement
+  - expert:BracketCharacter
+  - expert:InPredicate
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:KeyConstraint
+  - expert:SimpleSubquery
+  - expert:SingleAttributeSelection
+  - expert:SingleQuotationCharacter
+  - expert:DeleteFromClause
+  - expert:DeleteStatement
+  - expert:SingleTableSelection
+  - expert:EqualComparison
+  - sql_ontology:DeleteFromClause
+  - sql_ontology:EqualComparison
+  - sql_ontology:AttributeName
+  - sql_ontology:StringType
+  - sql_ontology:SelectStatement
+  - sql_ontology:SetOperation
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:SimpleSubquery
+  - sql_ontology:InPredicate
+  - sql_ontology:BracketCharacter
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:DeleteStatement
+  - sql_ontology:SingleQuotationCharacter
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_concept:SubstringExtraction
+  - sql_concept:ReferentialAction
+  - sql_concept:SubQueryCheckingDuplicateTuples
+  - sql_concept:ToUpperCase
+  - sql_concept:KeyConstraint
+runtime:
+  language: sql
+  version: '2016'
+statement: Deleting with Condition (1)
+elements:
+- type: explanation
+  location:
+    snippet: DELETE FROM account
+  explanations:
+  - body: The target table 'account' is specified.
+- type: explanation
+  location:
+    snippet: WHERE branch_name IN
+  explanations:
+  - body: IN is set membership test. It tests whether a data value matches on of a list of target values. The IN in this line
+      compares branch names with the subquery results that are branches in 'Brookly'.
+- type: explanation
+  location:
+    snippet: (SELECT branch_name
+  explanations:
+  - body: In this example, the subquery to find branch located in 'Brooklyn' is used and by comparing the list of results,
+      they choose the accounts opened in the branches.
+- type: explanation
+  location:
+    snippet: WHERE branch_city = 'Brooklyn');
+  explanations:
+  - body: WHERE clause is to choose certain rows of data by condition. 'WHERE' keyword is followed by the comparison and this
+      example is to choose the rows which is located in 'Brookly' as the branch city and delete the information. 'branch_city'
+      column has character domain type, so in order to compare the value, the test value should be character too. In addition,
+      the test value 'Brookly' is embraced with single quotation, because it is character.

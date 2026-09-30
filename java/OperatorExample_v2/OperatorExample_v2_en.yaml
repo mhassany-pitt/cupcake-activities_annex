@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_OperatorExample_v2
+source: Operator.java
+title: Operator
+description: Operator
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ModulusExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Operator
+elements:
+- type: explanation
+  location:
+    snippet: int a = 3 % 2;
+  explanations:
+  - body: '% is a remainder operator. Here, the variable "a" equals to the remainder after a division by 2. a = 1.'
+- type: explanation
+  location:
+    snippet: int b = 11 % 3;
+  explanations:
+  - body: Variable b equals to the remainder after division by 3. b = 2.
+- type: explanation
+  location:
+    snippet: int c = 7 % -3;
+  explanations:
+  - body: Variable c equals to the remainder after the division by -3. c = 1.

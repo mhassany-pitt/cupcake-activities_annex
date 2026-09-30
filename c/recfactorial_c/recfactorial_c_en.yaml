@@ -1,0 +1,101 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_recfactorial_c_en
+source: main.c
+title: 'IS12:: recfactorial.c (24.1)'
+description: 'Worked example: IS12:: recfactorial.c (24.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:greater_equal
+  - unspecified:void
+  - unspecified:reference
+  - unspecified:if
+  - unspecified:sub
+  - unspecified:function_declaration
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:return
+  - unspecified:mul
+  - unspecified:equal
+  - unspecified:main_function
+  - unspecified:if_else
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: recfactorial.c (24.1)'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: We need this include file to be able to use scanf and printf function
+- type: explanation
+  location:
+    snippet: int factorial(int);
+  explanations:
+  - body: The prototype for the factorial function declared below.
+- type: explanation
+  location:
+    snippet: 'printf("Enter an integer (non-negative): ");'
+  explanations:
+  - body: "This is a prompt, so it has no \n at the end. Note that we tell the user that the input should be non-negative."
+- type: explanation
+  location:
+    snippet: scanf("%d", &i);
+  explanations:
+  - body: Scanf will read symbols from the standard input, consider them as an integer value and place this value into variable
+      i.
+- type: explanation
+  location:
+    snippet: if(i >= 0)
+  explanations:
+  - body: We need to make sure that the entered value is really non-negative. The factorial of negative numbers is not defined.
+- type: explanation
+  location:
+    snippet: |-
+      printf("%d! = %d
+      ", i, factorial(i));
+  explanations:
+  - body: The job of calculating the factorial is delegated to finction <i>factorial</i>. Now printing the value of vactorial
+      is easy - we simply call this function with the proper parameter.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: End of of the main program. As you see, it is very small.
+- type: explanation
+  location:
+    snippet: int factorial(int n) {
+  explanations:
+  - body: This function calculates and returns the factorial for the integer number given as its parameter. Note that it has
+      no local variables.
+- type: explanation
+  location:
+    snippet: if(n == 0)
+  explanations:
+  - body: This condition let us choose between a base case and a recursive case.
+- type: explanation
+  location:
+    snippet: return 1;
+  explanations:
+  - body: This is the base case that solves the problem in one step with no recursive calls. Indeed, factorial(0) is 1 by
+      definition. We do not need any recursive calls and simplt return 1.
+- type: explanation
+  location:
+    snippet: return (n * factorial(n-1));
+  explanations:
+  - body: This is the recursive step. To calculate the factorial for parameters greater than 0 we use the recursive definition
+      of the factorial. As a part of the calculation we call factorial(n-1). So, factorial function is calling itself. Note
+      that the complexity

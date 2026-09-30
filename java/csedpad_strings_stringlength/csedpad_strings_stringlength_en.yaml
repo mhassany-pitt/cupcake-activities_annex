@@ -1,0 +1,64 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_strings_stringlength
+source: StringLength.java
+title: (Strings) String length - CSEdPad
+description: Given a string,  this program finds out the length of a string.
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:StringVariable
+  - webex:java.lang.String.length
+  - webex:StringLiteral
+  - webex:StringInitializationStatement
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:java.lang.String.length
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringInitializationStatement
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Given a string,  this program finds out the length of a string.
+elements:
+- type: explanation
+  location:
+    snippet: String string1 = "The University of Memphis";
+  explanations:
+  - body: declare a variable full_name of string data type. It is assigned a value of The University of Memphis.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Length of string1 is: " + string1.length());'
+  explanations:
+  - body: finding out the length of the string using length() method and printing the result.

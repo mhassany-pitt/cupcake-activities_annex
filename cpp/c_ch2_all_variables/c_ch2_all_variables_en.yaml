@@ -1,0 +1,107 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_c_ch2_all_variables
+source: main.cpp
+title: All Variables Together
+description: 'Worked example: All Variables Together'
+authors:
+- first: Natalya
+  last: Goreva
+  email: natalya.goreva@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: All Variables Together'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <iostream>'
+  explanations:
+  - body: Include the library for working with streaming data to and from the user
+- type: explanation
+  location:
+    snippet: using namespace std;
+  explanations:
+  - body: Add a reference to standard namespace that includes variables, types, constants, and functions
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: Declare the main function of the project
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Open the function body
+- type: explanation
+  location:
+    snippet: double basePayRate   = 18.25,
+  explanations:
+  - body: Base pay rate
+- type: explanation
+  location:
+    snippet: overtimePayRate = 27.38,
+  explanations:
+  - body: Overtime pay rate
+- type: explanation
+  location:
+    snippet: regularHours   = 40.0,
+  explanations:
+  - body: Regular hours worked
+- type: explanation
+  location:
+    snippet: overtimeHours   = 10,
+  explanations:
+  - body: Overtime hours worked
+- type: explanation
+  location:
+    snippet: regularWages,
+  explanations:
+  - body: Computed regular wages
+- type: explanation
+  location:
+    snippet: overtimeWages,
+  explanations:
+  - body: Computed overtime wages
+- type: explanation
+  location:
+    snippet: totalWages;
+  explanations:
+  - body: Computed total wages
+- type: explanation
+  location:
+    snippet: regularWages = basePayRate * regularHours;
+  explanations:
+  - body: Calculate regular wages
+- type: explanation
+  location:
+    snippet: overtimeWages = overtimePayRate * overtimeHours;
+  explanations:
+  - body: Calculate overtime wages
+- type: explanation
+  location:
+    snippet: totalWages = regularWages + overtimeWages;
+  explanations:
+  - body: Calculate total wages
+- type: explanation
+  location:
+    snippet: cout << "Wages for this week are $" << totalWages << endl;
+  explanations:
+  - body: Display total wages
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: Function returns the value 0 as a dummy value
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Close the function body

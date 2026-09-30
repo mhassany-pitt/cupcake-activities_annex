@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_incdec_oper
+source: main.cpp
+title: IncDec_Oper
+description: 'Worked example: IncDec_Oper'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: IncDec_Oper'
+elements:
+- type: explanation
+  location:
+    snippet: printf( "%d\n",  num );
+  explanations:
+  - body: c is printed, then incremented.
+- type: explanation
+  location:
+    snippet: printf( "%d\n\n",num );
+  explanations:
+  - body: c is printed, then incremented.
+- type: explanation
+  location:
+    snippet: printf( "%d\n", num );
+  explanations:
+  - body: c is printed, then incremented.
+- type: explanation
+  location:
+    snippet: printf( "%d\n", num );
+    nth: 2
+  explanations:
+  - body: c is printed, then incremented.

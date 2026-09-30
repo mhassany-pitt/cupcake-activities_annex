@@ -1,0 +1,73 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_strcomp_c_en
+source: main.c
+title: 'IS12:: strcomp.c (14.2)'
+description: 'Worked example: IS12:: strcomp.c (14.2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:multi_dimensional_array
+  - unspecified:pre_increment
+  - unspecified:return
+  - unspecified:and
+  - unspecified:for
+  - unspecified:if_else
+  - unspecified:array_declaration
+  - unspecified:dereference
+  - unspecified:char
+  - unspecified:equal
+  - unspecified:post_increment
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:if
+  - unspecified:pointer_declaration
+  - unspecified:main_function
+  - unspecified:not_equal
+  - unspecified:less
+  - unspecified:greater
+  - unspecified:define
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:printf
+  - unspecified:sub
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: strcomp.c (14.2)'
+elements:
+- type: explanation
+  location:
+    snippet: 'Example 14.2: string comparison with pointers'
+  explanations:
+  - body: Comments not done.
+- type: explanation
+  location:
+    snippet: '#define MAXLEN 100'
+  explanations:
+  - body: 'Define the maximum length to be 100.  This is used to limit the length of strings being compared.  As usual, by
+      putting it in a #define statement, many lines of code (where MAXLEN is used) can be changed at one time.'
+- type: explanation
+  location:
+    snippet: int getline(char *s, int lim)
+  explanations:
+  - body: Getline function is defined here.  It takes a pointer and an integer (maximum line length) as its parameters and
+      gives back a line length
+- type: explanation
+  location:
+    snippet: |-
+      for (i = 0; i < lim-1 &&(c=getchar())!= EOF && c != '
+      '; ++i)
+  explanations:
+  - body: This For loop will continue as long as it has not reached the maximum length of a string allowed and there are no
+      more characters and it isn't the end of a line.

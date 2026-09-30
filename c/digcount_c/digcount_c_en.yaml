@@ -1,0 +1,93 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_digcount_c_en
+source: main.c
+title: 'IS12:: digcount.c (10.1)'
+description: 'Worked example: IS12:: digcount.c (10.1)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:pre_increment
+  - unspecified:and
+  - unspecified:for
+  - unspecified:if_else
+  - unspecified:while
+  - unspecified:array_declaration
+  - unspecified:equal
+  - unspecified:less_equal
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:greater_equal
+  - unspecified:or
+  - unspecified:main_function
+  - unspecified:not_equal
+  - unspecified:less
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:printf
+  - unspecified:sub
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: digcount.c (10.1)'
+elements:
+- type: explanation
+  location:
+    snippet: int ndigit[10];
+  explanations:
+  - body: This array will be used as a set of digit counters. ndigit[0] will count the number of '0', ndigit[1] will count
+      the number of '1' etc.
+- type: explanation
+  location:
+    snippet: nwhite = nother = 0;
+  explanations:
+  - body: The counters of blanks and other letters are initialized.
+- type: explanation
+  location:
+    snippet: for(i = 0; i < 10; ++i) ndigit[i] = 0;
+  explanations:
+  - body: Since the array is a set of couunters, we need to initialize all of them too.
+- type: explanation
+  location:
+    snippet: while ((c = getchar()) != EOF)
+  explanations:
+  - body: The condition of this loop will be true (i.e., evaluated to 1) when getchar is able to read a real character from
+      standard input. If there are no more characters, getchar() will return EOF and the condition (EOF != EOF) will become
+      false (i.e., evaluated
+- type: explanation
+  location:
+    snippet: if (c >= '0' && c <= '9')
+  explanations:
+  - body: This condition will be true (i.e., evaluated to 1) if c stores one of the digits that have codes from '0' to '9'
+- type: explanation
+  location:
+    snippet: ++ndigit[c - '0'];
+  explanations:
+  - body: c - '0' will convert a digit code into the corresponding number, i.e., '0' to 0, '1' to 1, .... '9' to 9. It defines
+      in which element of the array will will count the current digit.
+- type: explanation
+  location:
+    snippet: |-
+      else if (c == ' ' || c == '
+      ' || c == '    ')
+  explanations:
+  - body: This condition is true (i.e., evaluated to 1) if c stores one of the ""blank"" symbol codes - blank, tabulation
+      or newline.
+- type: explanation
+  location:
+    snippet: ++nother;
+  explanations:
+  - body: If the character read is nor a digit neither a blank, we count it as ""other"".
+- type: explanation
+  location:
+    snippet: for(i = 0; i < 10; ++i)
+  explanations:
+  - body: This loop will run through every element of ndigit and print it.

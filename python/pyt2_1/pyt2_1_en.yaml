@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt2_1_en
+source: main.py
+title: Arithmatic Operations
+description: 'Worked example: Arithmatic Operations'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Sub
+  - parser:Int
+  - parser:Pow
+  - parser:Add
+  - parser:FloorDiv
+  - parser:Call
+  - parser:Div
+  - parser:Assign
+  - parser:Mult
+  - parser:Mod
+  - unspecified:Sub
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:Div
+  - unspecified:FloorDiv
+  - unspecified:Add
+  - unspecified:Mult
+  - unspecified:Mod
+  - unspecified:Pow
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Arithmatic Operations'
+elements:
+- type: explanation
+  location:
+    snippet: print (a + b)
+  explanations:
+  - body: Adding a and b
+- type: explanation
+  location:
+    snippet: print (a - b)
+  explanations:
+  - body: Subtracting a and b
+- type: explanation
+  location:
+    snippet: print (a * b)
+  explanations:
+  - body: Multiplying a and b
+- type: explanation
+  location:
+    snippet: print (a / b)
+  explanations:
+  - body: Dividing a and b
+- type: explanation
+  location:
+    snippet: print (a ** b)
+  explanations:
+  - body: Performing a exponent b
+- type: explanation
+  location:
+    snippet: print (a % b)
+  explanations:
+  - body: a modulus b operation
+- type: explanation
+  location:
+    snippet: print (a//b)
+  explanations:
+  - body: Floor dividing a and b

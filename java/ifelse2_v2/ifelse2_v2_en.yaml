@@ -1,0 +1,59 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_ifelse2_v2
+source: ifelse2.java
+title: If Else
+description: If Else
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:EqualExpression
+  - expert:FormalMethodParameter
+  - expert:IfElseStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ModulusExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: If Else
+elements:
+- type: explanation
+  location:
+    snippet: if (n % 2 == 0)
+  explanations:
+  - body: "if n is an even integer (the remainder of n divide by 2 is equal to 0), the \r\nstatement is true. the following\
+      \ code block will be executed."
+- type: explanation
+  location:
+    snippet: '{       System.out.println("the number is Even.");     }'
+  explanations:
+  - body: It prints out "the number is Even."
+- type: explanation
+  location:
+    snippet: else
+  explanations:
+  - body: "if the statement (the remainder of n divided by 2 is equal to 0) is false, \r\nthe following code block after \"\
+      else\" will be executed."
+- type: explanation
+  location:
+    snippet: '{       System.out.println("the number is Odd.");      }'
+  explanations:
+  - body: It prints out "the number is Odd."

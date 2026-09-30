@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_fig07_16_c_en
+source: main.cpp
+title: fig07_16.c
+description: 'Worked example: fig07_16.c'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: fig07_16.c'
+elements:
+- type: explanation
+  location:
+    snippet: float array[ 20 ];
+  explanations:
+  - body: floats take up 4 bytes in memory, so 20 floats take up 80 bytes.
+- type: explanation
+  location:
+    snippet: return sizeof( ptr );
+  explanations:
+  - body: return size of ptr.

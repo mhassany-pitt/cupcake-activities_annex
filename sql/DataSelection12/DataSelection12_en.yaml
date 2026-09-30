@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection12
+source: query.sql
+title: Arithmetic Expression
+description: Arithmetic Expression
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:SelectStatement
+  - expert:CommaCharacter
+  - expert:MultipleAttributeSelection
+  - expert:CountingNoInColumn
+  - expert:MultiplicationExpression
+  - expert:NullValueIgnorance
+  - expert:SingleTableSelection
+  - sql_ontology:CountFunction
+  - sql_ontology:MultiplicationExpression
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:MultipleAttributeSelection
+  - sql_concept:NullValueIgnorance
+runtime:
+  language: sql
+  version: '2016'
+statement: Arithmetic Expression
+elements:
+- type: explanation
+  location:
+    snippet: SELECT loan_number, branch_name, amount * 100
+  explanations:
+  - body: By directly doing arithmetic calculation such *, +, -, / to value of column, it is possible to recalculate the value.
+      But the value stored in the database is not changed and the returned values are changed.

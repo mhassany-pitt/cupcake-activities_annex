@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_6_12
+source: MainClass.java
+title: Nested For Loop
+description: Nested For Loop
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:ForStatement
+  - expert:java.lang.System.out.println
+  - expert:LessEqualExpression
+  - expert:LongDataType
+  - expert:MethodDefinition
+  - expert:NestedStatement
+  - expert:PostIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Nested For Loop
+elements:
+- type: explanation
+  location:
+    snippet: for (long i = 1L; i <= limit; i++) {
+  explanations:
+  - body: This for loop will iterate 20 times computing the factorial values of the 20 first integers.
+- type: explanation
+  location:
+    snippet: factorial = 1L;
+  explanations:
+  - body: '"Factorial" is defined as long type (note the "L") because factorial numbers easily reach high values.'
+- type: explanation
+  location:
+    snippet: for (long factor = 2; factor <= i; factor++) {
+  explanations:
+  - body: This nested for loop compute the factorial of "i".
+- type: explanation
+  location:
+    snippet: factorial *= factor;
+  explanations:
+  - body: "The *= operator assign the same value multiplying by another value. This line can be written as:\r\nfactorial =\
+      \ factorial*factor;"

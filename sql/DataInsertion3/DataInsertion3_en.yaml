@@ -1,0 +1,79 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataInsertion3
+source: query.sql
+title: Inserting Data (3)
+description: Inserting Data (3)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ReferentialAction
+  - expert:StringType
+  - expert:SimpleSubQuery
+  - expert:SubQueryCheckingDuplicateTuples
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:Insertion
+  - expert:SelectStatement
+  - expert:InsertIntoClause
+  - expert:WhereClause
+  - expert:InsertStatement
+  - expert:SetOperation
+  - expert:CommaCharacter
+  - expert:MultipleAttributeSelection
+  - expert:SingleQuotationCharacter
+  - expert:Deletion
+  - expert:SingleTableSelection
+  - expert:EqualComparison
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:InsertIntoClause
+  - sql_ontology:SubQuery
+  - sql_ontology:EqualComparison
+  - sql_ontology:AttributeName
+  - sql_ontology:StringType
+  - sql_ontology:SelectStatement
+  - sql_ontology:SetOperation
+  - sql_ontology:CommaCharacter
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:SingleQuotationCharacter
+  - sql_ontology:InsertStatement
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_concept:Deletion
+  - sql_concept:ReferentialAction
+  - sql_concept:SubQueryCheckingDuplicateTuples
+runtime:
+  language: sql
+  version: '2016'
+statement: Inserting Data (3)
+elements:
+- type: explanation
+  location:
+    snippet: INSERT INTO account
+  explanations:
+  - body: This examples is to create a $200 saving account for all loan customers of the Perryridge branch. Rather than specifying
+      data by user, this sql is to insert data read from another table. <BR> 'account' table is defined as 'account_number',
+      'branch_name', and 'balance'. By this order, the data is stored.
+- type: explanation
+  location:
+    snippet: SELECT loan_no, branch_name, 200
+  explanations:
+  - body: Before executing insertion, this 'SELECT' is executed to choose the data to be stored in 'account' table. From 'loan'
+      table, instances in loan_no and branch_name columns are selected and for the last 'balance' column in 'account' table,
+      constance 200 is defined. Hence, all selected account has the same $200 balance.
+- type: explanation
+  location:
+    snippet: WHERE branch_name = 'Perryridge';
+  explanations:
+  - body: This condition is to limit the retrieved data to 'Perryridge' branch. The domain type of 'branch_name' is character,
+      so the compared value is specified by single quotation mark.

@@ -1,0 +1,83 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_interfaceClassConversion
+source: Coin.java
+title: Converting between Class and Interface Types
+description: 'Worked example: Converting between Class and Interface Types'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:java.lang.System.out.println
+  - expert:ReturnStatement
+  - expert:ConstructorCall
+  - expert:SimpleAssignmentExpression
+  - expert:ConstructorDefinition
+  - expert:MethodImplementation
+  - expert:SimpleVariable
+  - expert:DoubleDataType
+  - expert:ObjectCreationStatement
+  - expert:ExplicitTypeCasting
+  - expert:ObjectMethodInvocation
+  - expert:StringDataType
+  - expert:PolymorphicObjectCreationStatement
+  - expert:StringLiteral
+  - expert:ImplementsSpecification
+  - expert:PrivateFieldSpecifier
+  - expert:StringVariable
+  - expert:InstanceField
+  - expert:AbstractMethodDefinition
+  - expert:InterfaceBasedPolymorphism
+  - expert:PublicConstructorSpecifier
+  - expert:InterfaceClassConversion
+  - expert:PublicInterfaceSpecifier
+  - expert:AddExpression
+  - expert:InterfaceDefinition
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Converting between Class and Interface Types'
+elements:
+- type: explanation
+  location:
+    snippet: public interface Measurable{
+  explanations:
+  - body: "/**   Describes any class whose objects can \r\nbe measured.\r\n*/"
+- type: explanation
+  location:
+    snippet: double getMeasure();
+  explanations:
+  - body: "/**      Computes the measure of the object.\r\n      @return the measure\r\n   */"
+- type: explanation
+  location:
+    snippet: public class Coin implements Measurable{
+  explanations:
+  - body: "/**   A coin with a monetary value.\r\n*/"
+- type: explanation
+  location:
+    snippet: public Coin(double aValue, String aName){
+  explanations:
+  - body: "/**      Constructs a coin.\r\n      @param aValue the monetary value of \r\nthe coin\r\n      @param aName the\
+      \ name of the coin\r\n   */"
+- type: explanation
+  location:
+    snippet: public String getName(){
+  explanations:
+  - body: "/**      Gets the coin name.\r\n      @return the name\r\n   */"
+- type: explanation
+  location:
+    snippet: Measurable meas = new Coin(0.1,"dime");
+  explanations:
+  - body: "A class type can be converted to interface type, \r\nprovided the class implements the interface."
+- type: explanation
+  location:
+    snippet: Coin coin =  (Coin) meas.getMeasure();
+  explanations:
+  - body: "explicit casting is required to convert from an \r\ninterface type to a class type."

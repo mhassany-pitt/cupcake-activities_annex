@@ -1,0 +1,73 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataUpdate2
+source: query.sql
+title: Updating Data (3)
+description: Updating Data (3)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AdditionExpression
+  - expert:SQLBasicConcept
+  - expert:ReferentialAction
+  - expert:FixedLengthCharacterString
+  - expert:SubtractionExpression
+  - expert:TableAlias
+  - expert:UnionOperation
+  - expert:SingleAttributeGrouping
+  - expert:UpdateClause
+  - expert:UpdateStatement
+  - expert:WhereClause
+  - expert:SetClause
+  - expert:CombinationWithAll
+  - expert:SetOperation
+  - expert:LessThanComparison
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - expert:DotCharacter
+  - expert:EqualComparison
+  - sql_ontology:EqualComparison
+  - sql_ontology:DotCharacter
+  - sql_ontology:UpdateClause
+  - sql_ontology:TableAlias
+  - sql_ontology:GroupByClause
+  - sql_ontology:UpdateStatement
+  - sql_ontology:UnionOperation
+  - sql_ontology:SetOperation
+  - sql_ontology:LessThanComparison
+  - sql_ontology:NumericType
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:SubtractionExpression
+  - sql_ontology:AdditionExpression
+  - sql_ontology:WhereClause
+  - sql_ontology:SetClause
+  - sql_concept:ReferentialAction
+runtime:
+  language: sql
+  version: '2016'
+statement: Updating Data (3)
+elements:
+- type: explanation
+  location:
+    snippet: UPDATE Students S
+  explanations:
+  - body: The UPDATE statement modifies the values of one or more columns in selected rows of table.
+- type: explanation
+  location:
+    snippet: SET S.age = S.age+1 AND S.gpa = S.gpa-1
+  explanations:
+  - body: The SET clause specifies a list of assignments and each assignment defines the value to be updated.
+- type: explanation
+  location:
+    snippet: WHERE S.sid = 5368;
+  explanations:
+  - body: A single row or multiple rows can be updated up to whether condition is defined in the SQL statement or not.

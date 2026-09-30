@@ -1,0 +1,28 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_memphis_scanner_input
+source: Main.java
+title: Scanner input
+description: Test
+authors:
+- first: Daniel
+  last: Guerra
+  email: daniel.guerra@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ReturnStatement
+runtime:
+  language: java
+  version: '17'
+statement: Test
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.Scanner;
+  explanations:
+  - body: Test

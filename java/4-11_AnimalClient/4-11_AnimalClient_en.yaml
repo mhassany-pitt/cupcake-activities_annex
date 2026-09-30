@@ -1,0 +1,61 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_4-11_AnimalClient
+source: AnimalClient.java
+title: 4-11_AnimalClient
+description: 'Worked example: 4-11_AnimalClient'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:SimpleAssignmentExpression
+  - parser:ObjectCreationStatement
+  - parser:ConstructorCall
+  - parser:ActualMethodParameter
+  - parser:StringLiteral
+  - parser:StringDataType
+  - parser:TRUE
+  - parser:java.lang.System.out.println
+  - parser:ObjectMethodInvocation
+  - parser:FALSE
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:False
+  - java_ontology:FormalMethodParameter
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:True
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: 4-11_AnimalClient'
+elements:
+- type: explanation
+  location:
+    snippet: Animal bertha = new Animal("bantha", true, 4);
+  explanations:
+  - body: Create a new Animal object (note this syntax is very similar to the Scanner objects we've created before!)

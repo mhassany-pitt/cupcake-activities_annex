@@ -1,0 +1,29 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection16_version_1_pt
+source: query.sql
+title: MultipleTableSelection(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: FROM borrower AS T, loan AS S
+  explanations:
+  - body: Os apelidos das tabelas sao definidos na clausula FROM usando a palavra-chave 'AS' (opcional). Se o nome da tabela
+      e' muito grande, torna-se conveniente a utilizacao de um apelido mais curto. Se uma consulta se refere a uma tabela
+      de outro usuario, a tabela tambem pode ter um apelido.

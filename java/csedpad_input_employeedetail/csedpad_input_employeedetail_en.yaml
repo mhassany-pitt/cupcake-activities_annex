@@ -1,0 +1,109 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_input_employeedetail
+source: EmployeeDetail.java
+title: (Input) Employee Detail - CSEdPad
+description: This program takes user inputs where there are different input types, as it collects details of the employee.
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:ImportStatement
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:StringVariable
+  - webex:DoubleDataType
+  - webex:ObjectCreationStatement
+  - webex:IntDataType
+  - webex:BooleanDataType
+  - webex:ConstructorCall
+  - webex:StringLiteral
+  - webex:ObjectMethodInvocation
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:BooleanDataType
+  - java_ontology:ClassDefinition
+  - java_ontology:ConstructorCall
+  - java_ontology:DoubleDataType
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ImportStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ObjectCreationStatement
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: This program takes user inputs where there are different input types, as it collects details of the employee.
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.Scanner;
+  explanations:
+  - body: import Scanner java library to get the user inputs
+- type: explanation
+  location:
+    snippet: Scanner empDetails = new Scanner(System.in);
+  explanations:
+  - body: Create new object "empDetails" of Scanner
+- type: explanation
+  location:
+    snippet: System.out.println("Enter Name, Position, Age and Salary");
+  explanations:
+  - body: Prompt user for inputs
+- type: explanation
+  location:
+    snippet: String name = empDetails.nextLine();
+  explanations:
+  - body: get user input for name
+- type: explanation
+  location:
+    snippet: String position = empDetails.nextLine();
+  explanations:
+  - body: get user input for position
+- type: explanation
+  location:
+    snippet: int age = empDetails.nextInt();
+  explanations:
+  - body: get user input for age
+- type: explanation
+  location:
+    snippet: double salary = empDetails.nextDouble();
+  explanations:
+  - body: get user input for salary
+- type: explanation
+  location:
+    snippet: System.out.println("Are you permanent employee? (True or False)");
+  explanations:
+  - body: Prompt user for their contract and ask to enter either "True" or "False"
+- type: explanation
+  location:
+    snippet: boolean bn = empDetails.nextBoolean();
+  explanations:
+  - body: get user input for bn

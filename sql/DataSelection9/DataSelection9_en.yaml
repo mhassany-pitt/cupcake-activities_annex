@@ -1,0 +1,54 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection9
+source: query.sql
+title: Comparison Condition (3)
+description: Comparison Condition (3)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:RightWhitespaceTrim
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:MultipleAttributeSelection
+  - expert:CountingNoInColumn
+  - expert:MultipleTableSelection
+  - expert:NotEqualComparison
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - sql_ontology:MultipleTableSelection
+  - sql_ontology:NotEqualComparison
+  - sql_ontology:SetOperation
+  - sql_ontology:NumericType
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:WhereClause
+  - sql_ontology:CountFunction
+runtime:
+  language: sql
+  version: '2016'
+statement: Comparison Condition (3)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT City, Mgr
+  explanations:
+  - body: This query is to list cities and the name of managers in 'Offices' tables.
+- type: explanation
+  location:
+    snippet: WHERE Mgr <> 108;
+  explanations:
+  - body: The results should exclude the values corresponding to the manager 108. <> expression is to test inequality. That
+      is to say, this condition is to find manager whose number is <b>NOT</b> 108

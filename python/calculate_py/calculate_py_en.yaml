@@ -1,0 +1,75 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_calculate_py_en
+source: main.py
+title: Simple Calculations
+description: 'Worked example: Simple Calculations'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Float
+  - parser:Add
+  - parser:FloorDiv
+  - parser:Call
+  - parser:Str
+  - parser:Div
+  - parser:Mult
+  - parser:Mod
+  - unspecified:Call
+  - unspecified:Float
+  - unspecified:Int
+  - unspecified:Div
+  - unspecified:FloorDiv
+  - unspecified:Add
+  - unspecified:Mult
+  - unspecified:Mod
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Simple Calculations'
+elements:
+- type: explanation
+  location:
+    snippet: '# Simple Calculations Example'
+  explanations:
+  - body: This is a comment. It is ignored by the interpreter
+- type: explanation
+  location:
+    snippet: print("1234 + 4321 = ", 1234 + 4321)
+  explanations:
+  - body: This print function has two parameters. One is a string and one is an addition expression (1234+4321). The string
+      is printed as is, the expression is evaluated to 5555 and printed. What you will see printed is 1234 + 4321 =  5555
+- type: explanation
+  location:
+    snippet: print("2 * 3.1415 = ", 2 * 3.1415)
+  explanations:
+  - body: This print function has two parameters. One is a string and one is a multiplication expression (2 * 3.1415). The
+      string is printed as is, the expression is evaluated  and printed. What you will see printed is 2 * 3.1415 =   6.2830
+- type: explanation
+  location:
+    snippet: print("5 / 2 = ", 5 / 2)
+  explanations:
+  - body: Single slash in a regular division. The result of evaluating a regular division is always a floating point value,
+      even if it operates with integers. In this case the result is 2.5. What will be printed is 5 / 2 =  2.5
+- type: explanation
+  location:
+    snippet: print("5 // 2 = ", 5 // 2)
+  explanations:
+  - body: Double slash in an integer division that only can work with two integers. The result of evaluating an integer division
+      is always integer. It ignores the remainder. In this case the result is 2. What will be printed is 5 // 2 =  2
+- type: explanation
+  location:
+    snippet: print("5 % 2 = ", 5 % 2)
+  explanations:
+  - body: Percent sign indicates the remainder operation that only can work with two integers. The result of evaluating a
+      remainder is also integer. In this case the result is 1. What will be printed is 5 % 2 =  1

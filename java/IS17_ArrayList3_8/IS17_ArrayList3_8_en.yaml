@@ -1,0 +1,101 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList3_8
+source: ArrayList3.java
+title: IS17_ArrayList3_8
+description: 'Worked example: IS17_ArrayList3_8'
+authors:
+- first: Angela
+  last: Zack
+  email: angela.zack@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList3_8'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: import ArrayList class from the java libraries.
+- type: explanation
+  location:
+    snippet: public class ArrayList3 {
+  explanations:
+  - body: Declares public class ArrayList3
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: Declares main method
+- type: explanation
+  location:
+    snippet: ArrayList<String> names = new ArrayList<String>();
+  explanations:
+  - body: Creates new object of type ArrayList called names.
+- type: explanation
+  location:
+    snippet: names.add( new String( "Bob" ) );
+  explanations:
+  - body: adds a new element to names with the value Bob
+- type: explanation
+  location:
+    snippet: names.add( new String( "Carol" ) );
+  explanations:
+  - body: adds a new element to names with the value Carol
+- type: explanation
+  location:
+    snippet: names.add( 1, new String( "Ted" ) );
+  explanations:
+  - body: adds a new element to names with the value of Ted at index 1.
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+  explanations:
+  - body: prints out the size of names - 3 - with a line return
+- type: explanation
+  location:
+    snippet: String theName = (String) names.get( 2 );
+  explanations:
+  - body: Creates a new string variable theName and sets the value with the third element using a String cast.  The value
+      is now - Carol
+- type: explanation
+  location:
+    snippet: 'System.out.println("the name of this element is: " + theName);'
+  explanations:
+  - body: 'Prints out -  the name of this element is: Carol  - with a line return'
+- type: explanation
+  location:
+    snippet: names.clear( );
+  explanations:
+  - body: Removes all the elements in names
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+    nth: 2
+  explanations:
+  - body: prints out - 0 - with a line return
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: ends the main method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: ends the class ArrayList3
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: Extra bracket.

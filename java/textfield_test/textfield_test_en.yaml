@@ -1,0 +1,97 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_textfield_test
+source: TextFieldTest.java
+title: ISD::TextFieldTest.java
+description: 'Worked example: ISD::TextFieldTest.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::TextFieldTest.java'
+elements:
+- type: explanation
+  location:
+    snippet: Container c = getContentPane();
+  explanations:
+  - body: Create a Container object.
+- type: explanation
+  location:
+    snippet: text1 = new JTextField( 10 );
+  explanations:
+  - body: Create new JTextField objects
+- type: explanation
+  location:
+    snippet: c.add( text1 );
+  explanations:
+  - body: attach component to Container c.
+- type: explanation
+  location:
+    snippet: text2 = new JTextField( "Enter text here" );
+  explanations:
+  - body: Create new JTextField objects
+- type: explanation
+  location:
+    snippet: c.add( text2 );
+  explanations:
+  - body: attach component to Container c.
+- type: explanation
+  location:
+    snippet: text3 = new JTextField( "Uneditable text field", 20 );
+  explanations:
+  - body: Create new JTextField objects
+- type: explanation
+  location:
+    snippet: text3.setEditable( false );
+  explanations:
+  - body: This text field cannot be modified (has a gray background).  It can still generate events.
+- type: explanation
+  location:
+    snippet: password = new JPasswordField( "Hidden text" );
+  explanations:
+  - body: JPasswordField initialized with text, which appears as asterisks.
+- type: explanation
+  location:
+    snippet: TextFieldHandler handler = new TextFieldHandler();
+  explanations:
+  - body: Register event handlers.  Good practice to use an inner class as an event handler.
+- type: explanation
+  location:
+    snippet: if ( e.getSource() == text1 )
+  explanations:
+  - body: getSource returns a Component reference to component that generated event
+- type: explanation
+  location:
+    snippet: 's = "text1: " + e.getActionCommand();'
+  explanations:
+  - body: Use getActionCommand to get the text in the text field that had the event.
+- type: explanation
+  location:
+    snippet: 's = "text2: " + e.getActionCommand();'
+  explanations:
+  - body: getActionCommand Returns text in JTextField that generated event
+- type: explanation
+  location:
+    snippet: JPasswordField pwd =
+  explanations:
+  - body: e.getSource() returns a Component reference, which is cast to a JPasswordField
+- type: explanation
+  location:
+    snippet: (JPasswordField) e.getSource();
+  explanations:
+  - body: e.getSource() returns a Component reference, which is cast to a JPasswordField
+- type: explanation
+  location:
+    snippet: new String( pwd.getPassword() );
+  explanations:
+  - body: getPassword() returns password as an array of type char, new String() transforms it into type String

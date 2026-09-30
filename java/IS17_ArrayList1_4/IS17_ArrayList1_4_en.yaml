@@ -1,0 +1,174 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList1_4
+source: ArrayList1.java
+title: IS17_ArrayList1_4
+description: 'Worked example: IS17_ArrayList1_4'
+authors:
+- first: Eric
+  last: Riemer
+  email: eric.riemer@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList1_4'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: import the ArayList class so that Array List can be used in this class
+- type: explanation
+  location:
+    snippet: class USport { String school; String name;
+  explanations:
+  - body: Create a new class USport, instantiate a string named school and a string names name
+- type: explanation
+  location:
+    snippet: public USport (String s, String n) { school = s;  name = n; }
+  explanations:
+  - body: new public method USport, accepts 2 strings as input (s and n). sets th value of the string school to s and name
+      to n
+- type: explanation
+  location:
+    snippet: public String toString() { return school + ":" + name; }
+  explanations:
+  - body: new method toString that will return a string when called returns the value of the string school followed by ":"
+      followed by the value of the string name
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of class USport
+- type: explanation
+  location:
+    snippet: public class ArrayList1 {
+  explanations:
+  - body: Create a new class ArrayList1
+- type: explanation
+  location:
+    snippet: public static void main(String a[]) {
+  explanations:
+  - body: new main method
+- type: explanation
+  location:
+    snippet: ArrayList<USport> v = new ArrayList<USport>();
+  explanations:
+  - body: initialize a new ArrayList 'v'
+- type: explanation
+  location:
+    snippet: v.add( new USport("LSU", "Tigers")  );
+  explanations:
+  - body: adds an entry to ArrayList 'v' of type USport conaining the strings LSU and Tigers
+- type: explanation
+  location:
+    snippet: v.add( new USport("Georgia", "Bulldogs") );
+  explanations:
+  - body: adds an entry to ArrayList 'v' of type USport conaining the strings Georgia and Bulldogs
+- type: explanation
+  location:
+    snippet: v.add( new USport("UPitt", "Panthers")  );
+  explanations:
+  - body: adds an entry to ArrayList 'v' of type USport conaining the strings UPitt and Panthers
+- type: explanation
+  location:
+    snippet: System.out.println( v );
+  explanations:
+  - body: print the contents of ArrayList 'v' with new lines after
+- type: explanation
+  location:
+    snippet: for( int i = v.size() - 1; i >= 0; i--) {
+  explanations:
+  - body: initialize a for loop wherein the integer 'i' is set equal to the size of the index of ArrayList 'v' less one, and
+      will run for as long as 'i' if greater than or equal to 0. after each loop the integer 'i' id decreased by 1.
+- type: explanation
+  location:
+    snippet: USport us = v.get( i );
+  explanations:
+  - body: for the USport us return the value stored in the index of the ArrayList that 'i' is equal to (in each run of the
+      loop)
+- type: explanation
+  location:
+    snippet: System.out.print( us.school + " " );
+  explanations:
+  - body: print the value of the 'school' entry in the ArrayList index of us followed by a space.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of for loop. Expected output is UPitt Georgia LSU
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: print a new blank line to the console
+- type: explanation
+  location:
+    snippet: 'for(USport us: v )'
+  explanations:
+  - body: generalized for loop that will transverse the ArrayList from the start of the index until it reaches the end
+- type: explanation
+  location:
+    snippet: System.out.print( us.school + " " );
+    nth: 2
+  explanations:
+  - body: print the value of the 'school' entry in the ArrayList index of us followed by a space.
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 2
+  explanations:
+  - body: print a new blank line to the console
+- type: explanation
+  location:
+    snippet: while ( v.size() > 0 ) {
+  explanations:
+  - body: new while loop where as long as the size of ArrayList 'v' is larger than 0 transverse the loop
+- type: explanation
+  location:
+    snippet: USport us = v.remove( 0 );
+  explanations:
+  - body: remove the first entry of the index of ArrayList 'v'
+- type: explanation
+  location:
+    snippet: System.out.print( us.name + " ");
+  explanations:
+  - body: print the value of the 'name' entry in the ArrayList index of us followed by a space.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end of while loop. expected output "Bulldogs Panthers "
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 3
+  explanations:
+  - body: print a new blank line to the console
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: end of main method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: end of class ArrayList1
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: error on } it is extra remove it

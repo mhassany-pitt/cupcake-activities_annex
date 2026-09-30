@@ -1,0 +1,46 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection18_version_1_pt
+source: query.sql
+title: AlphabeticOrder_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT DISTINCT customer_name
+  explanations:
+  - body: A palavra-chave DISTINCT elimina tuplas repetidas. Nesse exemplo, os clientes com emprestimo serao mostrados em
+      ordem alfabetica sem repeticao.
+- type: explanation
+  location:
+    snippet: FROM borrower AS T, loan AS S
+  explanations:
+  - body: Os apelidos das tabelas sao definidos para ambas as tabelas, 'borrower' e 'loan'. O apelido pode ser utilizado quando
+      o nome da tabela for muito grande ou por conveniencia do programador.
+- type: explanation
+  location:
+    snippet: WHERE T.loan_no = S.loan_no
+  explanations:
+  - body: Condicao para realizar a correspondencia do numero do emprestimo (loan_no) nas duas tabelas.
+- type: explanation
+  location:
+    snippet: ORDER BY customer_name;
+  explanations:
+  - body: Pode-se definir a coluna a ser ordenada utilizando a clausula 'ORDER BY'. Para ordenar de forma decrescente, utilize
+      a palavra-chave DESC e para ordenar de forma ascendente utilize a palavra-chave ASC. Essas palavras podem ser colocadas
+      apos o nome da coluna. Por padrao, a ordenacao acontece de forma ascendente.

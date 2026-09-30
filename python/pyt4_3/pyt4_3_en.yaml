@@ -1,0 +1,44 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_3_en
+source: main.py
+title: Nested Loops
+description: 'Worked example: Nested Loops'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Add
+  - parser:Lt
+  - parser:While
+  - parser:Call
+  - parser:Assign
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:Lt
+  - unspecified:Add
+  - unspecified:While
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Nested Loops'
+elements:
+- type: explanation
+  location:
+    snippet: 'while i < 2:'
+  explanations:
+  - body: Loops from i=0 to i=1 (Outer Loop)
+- type: explanation
+  location:
+    snippet: 'while j < 2:'
+  explanations:
+  - body: Loops from j=0 to j=1 (Inner Loop)

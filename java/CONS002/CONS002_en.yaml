@@ -1,0 +1,53 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_CONS002
+source: Constant2.java
+title: Constants_Memphis_02
+description: Example of constant (final) in java.
+authors:
+- first: Hasan
+  last: Mashrique
+  email: hasan.mashrique@memphis.edu
+  affiliation: University of Memphis
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:Constant
+  - java_ontology:ConstantInitializationStatement
+  - java_ontology:DoubleDataType
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.Math.pow
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiplyExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Example of constant (final) in java.
+elements:
+- type: explanation
+  location:
+    snippet: final double PI = 3.1416;
+  explanations:
+  - body: Declaring local final variable which stays fixed everytime and gives error if changed.
+- type: explanation
+  location:
+    snippet: double Area_of_Circle = PI * Math.pow(radius, 2);
+  explanations:
+  - body: Defining formula of circle area.
+- type: explanation
+  location:
+    snippet: System.out.println(Area_of_Circle);
+  explanations:
+  - body: Prints area of a circle.

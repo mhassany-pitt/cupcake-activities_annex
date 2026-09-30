@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt8_1_en
+source: main.py
+title: Finding character in a string
+description: 'Worked example: Finding character in a string'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Finding character in a string'
+elements:
+- type: explanation
+  location:
+    snippet: 'def index_string (test_string, symbol_string):'
+  explanations:
+  - body: Defining a function 'index_string' and passing the arguments 'test_string' which is the input string and 'symbol_string'
+      which is the character to be found in the 'test_string'
+- type: explanation
+  location:
+    snippet: 'for i in range (len (test_string)):'
+  explanations:
+  - body: For loop iterates through each element(character) of the string
+- type: explanation
+  location:
+    snippet: 'if test_string [i] == symbol_string:'
+  explanations:
+  - body: It checks the condition whether the current character matches the symbol_string
+- type: explanation
+  location:
+    snippet: return i
+  explanations:
+  - body: If yes, then it returns the index of that element in the string.
+- type: explanation
+  location:
+    snippet: return -1
+  explanations:
+  - body: If the element is not found, then it returns -1.

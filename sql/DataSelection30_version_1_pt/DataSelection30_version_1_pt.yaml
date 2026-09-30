@@ -1,0 +1,35 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection30_version_1_pt
+source: query.sql
+title: ComparingSubqueryResults(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: WHERE assets > SOME
+  explanations:
+  - body: O teste utilizando SOME e' usado em conjunto com um dos seis operadores SQL de comparacao (=, <>, <, <=, >, >=)
+      para comparar o valor de teste com os resultados da subconsulta. Se alguma das comparacoes individuais leva a um resultado
+      VERDADEIRO, o teste SOME retorna um valor VERDADEIRO. Os operadores SOME e ANY sao equivalentes. Nesse exemplo, o ativos
+      de cada agencia e' comparado com todos os ativos das agencias do 'Brooklyn'.
+- type: explanation
+  location:
+    snippet: (SELECT assets
+  explanations:
+  - body: Esta consulta retorna os ativos das agencias do 'Brooklyn'.

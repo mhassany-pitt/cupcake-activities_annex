@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection9_version_1_pt
+source: query.sql
+title: ComparisonCondition(3)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT City, Mgr
+  explanations:
+  - body: Essa consulta lista as cidades e os nomes dos gerentes dos escritorios armazenados na tabela 'Offices'.
+- type: explanation
+  location:
+    snippet: WHERE Mgr <> 108;
+  explanations:
+  - body: Os resultados excluem as tuplas referentes ao gerente 108. A expressao <> e' utilizada para testar desigualdade.
+      Esta condicao filtra os gerentes cujo numero <b>NAO</b> e' 108.

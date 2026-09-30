@@ -1,0 +1,132 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_variable_print_println_annoexp
+source: VariablePrintPrintln.java
+title: VariablePrintPrintln
+description: 'Worked example: VariablePrintPrintln'
+authors:
+- first: Yun
+  last: Huang
+  email: yun.huang@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: VariablePrintPrintln'
+elements:
+- type: explanation
+  location:
+    snippet: int width = 10;
+  explanations:
+  - body: Declares a variable named 'width' and initializes it with integer 10.
+- type: explanation
+  location:
+    snippet: System.out.print(width);
+  explanations:
+  - body: |-
+      So far, the console output is as follows (note that there is a space before 10):
+      width: 10
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: The cursor moves to the start of the next new line.
+- type: explanation
+  location:
+    snippet: width = 20;
+  explanations:
+  - body: Changes width to 20
+- type: explanation
+  location:
+    snippet: 'System.out.print("width: ");'
+  explanations:
+  - body: |-
+      So far, the console output is as follows:
+      width: 10
+      width:
+- type: explanation
+  location:
+    snippet: System.out.println(width);
+  explanations:
+  - body: |-
+      So far, the console output is as follows (note that it prints a new line directly after 20):
+      width: 10
+      width: 20
+- type: explanation
+  location:
+    snippet: width = height + 10;
+  explanations:
+  - body: The right hand side of an assignment can be an expression. Now width is set to 20+10=30.
+- type: explanation
+  location:
+    snippet: 'System.out.print("width: ");'
+    nth: 2
+  explanations:
+  - body: |-
+      So far, the console output is as follows:width: 10
+      width: 20
+      width:
+- type: explanation
+  location:
+    snippet: System.out.println(width);
+    nth: 2
+  explanations:
+  - body: |-
+      So far, the console output is as follows:width: 10
+      width: 20
+      width: 30
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 2
+  explanations:
+  - body: The cursor moves to the start of the next new line.
+- type: explanation
+  location:
+    snippet: width = width + 10;
+  explanations:
+  - body: The same variable can occur on both sides of an assignment. In this case, the left side width represents the older
+      value of width (30), and the right side width represents the final value of width (40)
+- type: explanation
+  location:
+    snippet: 'System.out.print("width: ");'
+    nth: 3
+  explanations:
+  - body: |-
+      So far, the console output is as follows:width: 10
+      width: 20
+      width: 30
+
+      width:
+- type: explanation
+  location:
+    snippet: System.out.println(width);
+    nth: 3
+  explanations:
+  - body: |-
+      So far, the console output is as follows:width: 10
+      width: 20
+      width: 30
+
+      width: 40

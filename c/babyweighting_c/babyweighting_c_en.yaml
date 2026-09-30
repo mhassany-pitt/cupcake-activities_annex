@@ -1,0 +1,144 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_babyweighting_c_en
+source: main.c
+title: 'IS12:: babyweighting.c (9.4)'
+description: 'Worked example: IS12:: babyweighting.c (9.4)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:pre_increment
+  - unspecified:for
+  - unspecified:if_else
+  - unspecified:array_declaration
+  - unspecified:reference
+  - unspecified:add_assignment
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:greater_equal
+  - unspecified:if
+  - unspecified:main_function
+  - unspecified:float
+  - unspecified:less
+  - unspecified:greater
+  - unspecified:define
+  - unspecified:div
+  - unspecified:void
+  - unspecified:sub
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: babyweighting.c (9.4)'
+elements:
+- type: explanation
+  location:
+    snippet: '#define NBABIES 7 /* dimension of the array */'
+  explanations:
+  - body: This constant defines how many newborn babies the program will process in one run.
+- type: explanation
+  location:
+    snippet: float weight[NBABIES]; /* elements from ar[0] to ar[DIM-1]; */
+  explanations:
+  - body: The array weight will have NBABIES elements (here 7). This is exactly as many as we need to store data about all
+      babies entered in one run. This is an array of float numbers since we need good precision for representing the weight.
+- type: explanation
+  location:
+    snippet: int i;
+  explanations:
+  - body: The variable i is used as a service variable - I will be the loop counter for two for loops in the program
+- type: explanation
+  location:
+    snippet: float sum = 0, max = 0, average, diff;
+  explanations:
+  - body: The variable sum will store the total weight of all babies, it has to be initialized to zero. The variable max will
+      store the weight of the heaviest baby. It is also initialized to zero. That will insure that re-assigned in the loop
+      below since any baby i
+- type: explanation
+  location:
+    snippet: for (i = 0; i < NBABIES; ++i) {
+  explanations:
+  - body: This for loop will be executed NBABIES times with i running from 0 to NBABIES-1
+- type: explanation
+  location:
+    snippet: 'printf("Weight of baby %d: ", i);'
+  explanations:
+  - body: It's a prompt to enter the weight of i-th baby
+- type: explanation
+  location:
+    snippet: scanf("%f", &weight[i]);
+  explanations:
+  - body: The weight of i-th baby entered by the user will be stored in weight[i]
+- type: explanation
+  location:
+    snippet: sum += weight[i];
+  explanations:
+  - body: The weight of just entered baby stored in weight[i] is added to the total sum
+- type: explanation
+  location:
+    snippet: if(weight[i] > max) max = weight[i];
+  explanations:
+  - body: The weight of just entered baby stored in weight[i] is compared agains the max weight. If it is greater than the
+      current max, it max will be reassigned to  weight[i].
+- type: explanation
+  location:
+    snippet: average = sum / NBABIES;
+  explanations:
+  - body: Here we compute the average weight. Since we know that exactlt NBABIES babies will be processed, we do not need
+      to count them.
+- type: explanation
+  location:
+    snippet: for (i = 0; i < NBABIES; ++i) {
+    nth: 2
+  explanations:
+  - body: This for loop will be executed NBABIES times with i running from 0 to NBABIES-1. This is a reporting loop. The weight
+      of each baby stored in the array will be printed and compared with the average.
+- type: explanation
+  location:
+    snippet: diff = weight[i] - average;
+  explanations:
+  - body: This is the difference between the weight of the i-th baby and the average weight
+- type: explanation
+  location:
+    snippet: if(diff >= 0)
+  explanations:
+  - body: If the difference is positive (the baby is heavier than average), the condition is true (1) and the weight will
+      be reported in then part. Otherwise, the baby is lighter and the weight is reported in else part.
+- type: explanation
+  location:
+    snippet: |-
+      printf("(%.2f heavier than the average)
+      ", diff);
+  explanations:
+  - body: Here we report babies that are heavier than average
+- type: explanation
+  location:
+    snippet: |-
+      printf("(%.2f lighter than the average)
+      ", -diff);
+  explanations:
+  - body: Here we report babies that are lighter than average. Not that we need to print -diff, not just diff since the value
+      of diff is negative.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: End of for loop
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: End of main function

@@ -1,0 +1,83 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_MathFunction_v2
+source: MathFunction.java
+title: Math Functions
+description: Math Functions
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:java.lang.Math.ceil
+  - expert:ActualMethodParameter
+  - expert:java.lang.Math.round
+  - expert:ClassDefinition
+  - expert:DoubleDataType
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.Math.pow
+  - expert:java.lang.Math.sqrt
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Math Functions
+elements:
+- type: explanation
+  location:
+    snippet: int i = Math.abs(-9);
+  explanations:
+  - body: "The Math class in the java.lang package provides methods and \r\nconstants for doing more advanced mathematical\
+      \ computation. \r\nThe methods in the Math class are all static, so you call them \r\ndirectly from the class. To use\
+      \ these objects from another class, \r\nyou prefix the class name. abs() method returns the absolute \r\nvalue of its\
+      \ input argument. Here, i = 9."
+- type: explanation
+  location:
+    snippet: double j = Math.ceil(4.00001) ;
+  explanations:
+  - body: "ceil() method returns the smallest integer that is greater than or \r\nequal to its input argument. The ceiling\
+      \ of every integer is equal to \r\nthe integer itself. Here, j = 5.0."
+- type: explanation
+  location:
+    snippet: j = Math.ceil(-4.00001) ;
+  explanations:
+  - body: j = -4.0.
+- type: explanation
+  location:
+    snippet: double squareroot = Math.sqrt( 900.0 );
+  explanations:
+  - body: "The sqrt() method returns the correctly rounded positive square root \r\nof a double value. Here, squareroot =\
+      \ 30.0."
+- type: explanation
+  location:
+    snippet: double pow = Math.pow(3,2);
+  explanations:
+  - body: "The pow() method contains two input parameters. They are \r\nrespectively the base and the exponent values. pow\
+      \ = 9.0."
+- type: explanation
+  location:
+    snippet: double round = Math.round(19.90);
+  explanations:
+  - body: "The round() method returns the closest integer to the input \r\nargument. Here, the value of round is equal to\
+      \ 20 ."
+- type: explanation
+  location:
+    snippet: round = Math.round(19.50);
+  explanations:
+  - body: The value of round is equal to 20 .
+- type: explanation
+  location:
+    snippet: round = Math.round(19.45);
+  explanations:
+  - body: The value of round is equal to 19 .

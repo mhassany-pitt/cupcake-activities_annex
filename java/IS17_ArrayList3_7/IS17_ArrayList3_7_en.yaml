@@ -1,0 +1,100 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList3_7
+source: ArrayList3.java
+title: IS17_ArrayList3_7
+description: 'Worked example: IS17_ArrayList3_7'
+authors:
+- first: Kieth
+  last: Yackovich
+  email: kieth.yackovich@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList3_7'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: imports the ArrayList package from Java.Util
+- type: explanation
+  location:
+    snippet: public class ArrayList3 {
+  explanations:
+  - body: creates a class ArrayList3
+- type: explanation
+  location:
+    snippet: public static void main(String args[]) {
+  explanations:
+  - body: creates a main method
+- type: explanation
+  location:
+    snippet: ArrayList<String> names = new ArrayList<String>();
+  explanations:
+  - body: creates a new arraylist object
+- type: explanation
+  location:
+    snippet: names.add( new String( "Bob" ) );
+  explanations:
+  - body: adds the string BoB to the array list
+- type: explanation
+  location:
+    snippet: names.add( new String( "Carol" ) );
+  explanations:
+  - body: adds the string Carol to the array list
+- type: explanation
+  location:
+    snippet: names.add( 1, new String( "Ted" ) );
+  explanations:
+  - body: adds the string BoB to the array list in the 1 position
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+  explanations:
+  - body: prints out the length of the arraylist
+- type: explanation
+  location:
+    snippet: String theName = (String) names.get( 2 );
+  explanations:
+  - body: Creates a new string object and initializes it with the value of the 2 spot in the array list
+- type: explanation
+  location:
+    snippet: 'System.out.println("the name of this element is: " + theName);'
+  explanations:
+  - body: 'Prints out the name of this element is: Carol'
+- type: explanation
+  location:
+    snippet: names.clear( );
+  explanations:
+  - body: clears the array list
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+    nth: 2
+  explanations:
+  - body: prints out the size of the array list after the clear
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: ends the method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: ends the class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: ends the program

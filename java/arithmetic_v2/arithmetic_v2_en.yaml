@@ -1,0 +1,101 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_arithmetic_v2
+source: Main.java
+title: arithmetic operations
+description: Arithmetic Operations
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:AddExpression
+  - expert:ClassDefinition
+  - expert:DivideExpression
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:ModulusExpression
+  - expert:MultiplyExpression
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:SubtractExpression
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Arithmetic Operations
+elements:
+- type: explanation
+  location:
+    snippet: int result = 1 + 2;
+  explanations:
+  - body: The variable result is initialized with integer 3
+- type: explanation
+  location:
+    snippet: System.out.println(result);
+  explanations:
+  - body: Prints 3.
+- type: explanation
+  location:
+    snippet: result = result - 1;
+  explanations:
+  - body: You can use the same variable in both sides of the assignment. In this case, the new value of the variable will
+      depend on its previous value.Here the new value of variable 'result' will be its old value subtracted by 1. Its old
+      value was 3, hence its new value is 2.
+- type: explanation
+  location:
+    snippet: System.out.println(result);
+    nth: 2
+  explanations:
+  - body: Prints 2.
+- type: explanation
+  location:
+    snippet: result = result * 2;
+  explanations:
+  - body: The new value of variable 'result' is the old value of 'result' multiplied by 2. So, it is 2 by 2. So, it is equal
+      to 4.
+- type: explanation
+  location:
+    snippet: System.out.println(result);
+    nth: 3
+  explanations:
+  - body: Prints 4.
+- type: explanation
+  location:
+    snippet: result = result / 2;
+  explanations:
+  - body: The variable 'result' is assigned to value 2, since 4/2 = 2.
+- type: explanation
+  location:
+    snippet: System.out.println(result);
+    nth: 4
+  explanations:
+  - body: Prints 2.
+- type: explanation
+  location:
+    snippet: result = result + 8;
+  explanations:
+  - body: result = 2 + 8 = 10
+- type: explanation
+  location:
+    snippet: result = result % 3;
+  explanations:
+  - body: Mod operator ('%') finds the division remainder. Here we try to find the remainder of the old value of 'result',
+      when it is divided by 3. Its old value is equal to 10. When we divide 10 by 3, the remainder is 1. This will be the
+      result of '10 % 3'. Hence, the new value of variable 'result' is equal to 1.
+- type: explanation
+  location:
+    snippet: System.out.println(result);
+    nth: 5
+  explanations:
+  - body: Prints 1.

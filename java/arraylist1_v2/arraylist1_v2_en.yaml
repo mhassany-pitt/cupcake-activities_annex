@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_arraylist1_v2
+source: arraylist1.java
+title: Create ArrayList
+description: Create ArrayList
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:FormalMethodParameter
+  - expert:GenericObjectCreationStatement
+  - expert:MethodDefinition
+  - expert:ObjectCreationStatement
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Create ArrayList
+elements:
+- type: explanation
+  location:
+    snippet: ArrayList<Integer> intlist = new ArrayList<Integer>();
+  explanations:
+  - body: It creates a list of Integer objects.
+- type: explanation
+  location:
+    snippet: ArrayList<Number> numlist = new ArrayList<Number>();
+  explanations:
+  - body: numlist is created to hold Number objects.

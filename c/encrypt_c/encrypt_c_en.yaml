@@ -1,0 +1,95 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_encrypt_c_en
+source: main.c
+title: 'IS12:: encrypt.c (117.3)'
+description: 'Worked example: IS12:: encrypt.c (117.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:greater_equal
+  - unspecified:define
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:sub
+  - unspecified:include
+  - unspecified:if_else
+  - unspecified:add
+  - unspecified:mod
+  - unspecified:main_function
+  - unspecified:and
+  - unspecified:less_equal
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: encrypt.c (117.3)'
+elements:
+- type: explanation
+  location:
+    snippet: '#define NLCHARS (''z''-''a''+1) /* 26 */'
+  explanations:
+  - body: This demonstrates that a defined constant could be really an expression. This expression is written to count how
+      many lower case letters are in ASCII
+- type: explanation
+  location:
+    snippet: '#define NUCHARS (''Z''-''A''+1) /* 26 */'
+  explanations:
+  - body: This demonstrates that a defined constant could be really an expression. This expression is written to count how
+      many upper case letters are in ASCII
+- type: explanation
+  location:
+    snippet: int ch, charnum;
+  explanations:
+  - body: Variable ch will be used to read characters from the standard input. It is defined as int since it should be able
+      to get the EOF value that is not char
+- type: explanation
+  location:
+    snippet: while((ch = getchar()) != EOF)
+  explanations:
+  - body: When the condition of this while loop is executed, a new character is read from the standard input and assigned
+      to ch. If it is EOF, the loop is over
+- type: explanation
+  location:
+    snippet: if(ch >= 'a' && ch <= 'z') {
+  explanations:
+  - body: This comound condition checkes whether ch is a lower case letter
+- type: explanation
+  location:
+    snippet: charnum = ch - 'a'; /* a => 0, b => 1... z => 25  */
+  explanations:
+  - body: Here we convert the character code into the number among lower case letters. 'a' will be converted to 0, 'b' will
+      be converted to 1 etc.
+- type: explanation
+  location:
+    snippet: '} else if (ch >= ''A'' && ch <= ''Z'') {'
+  explanations:
+  - body: This comound condition checkes whether ch is an upper case letter
+- type: explanation
+  location:
+    snippet: charnum = ch - 'A'; /* A => 0, B => 1... Z => 25 */
+  explanations:
+  - body: Here we convert the character code into the number among lower case letters. 'A' will be converted to 0, 'A' will
+      be converted to 1 etc.
+- type: explanation
+  location:
+    snippet: putchar('A' + (charnum + SHIFT) % NUCHARS);
+  explanations:
+  - body: (charnum + SHIFT) % NLCHARS takes care about cyclic shift of a each number from 1 to 26 and adding it to 'A' converts
+      it back to a valid upper case letter code
+- type: explanation
+  location:
+    snippet: putchar(ch);
+  explanations:
+  - body: If it is not one of the letters, we simply pass the character through.

@@ -1,0 +1,78 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList3_3
+source: ArrayList3.java
+title: IS17_ArrayList3_3
+description: 'Worked example: IS17_ArrayList3_3'
+authors:
+- first: Andrzej
+  last: Dubiel
+  email: andrzej.dubiel@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList3_3'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: Import ArrayList class from java libraries
+- type: explanation
+  location:
+    snippet: public class ArrayList3 {
+  explanations:
+  - body: This class contains array list
+- type: explanation
+  location:
+    snippet: ArrayList<String> names = new ArrayList<String>();
+  explanations:
+  - body: Creates an array list "names"
+- type: explanation
+  location:
+    snippet: names.add( new String( "Bob" ) );
+  explanations:
+  - body: Adds new name on the list
+- type: explanation
+  location:
+    snippet: names.add( new String( "Carol" ) );
+  explanations:
+  - body: Adds new name on the list
+- type: explanation
+  location:
+    snippet: names.add( 1, new String( "Ted" ) );
+  explanations:
+  - body: Adds new name on the list Also, puts it in a first place
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+  explanations:
+  - body: Displays the number of names in this list
+- type: explanation
+  location:
+    snippet: String theName = (String) names.get( 2 );
+  explanations:
+  - body: Creates a string variable theName and put that the variable with the second element of the names ArrayList.
+- type: explanation
+  location:
+    snippet: 'System.out.println("the name of this element is: " + theName);'
+  explanations:
+  - body: Prints out text information as a concetration of "the name of this element is:" and content of string theName
+- type: explanation
+  location:
+    snippet: names.clear( );
+  explanations:
+  - body: Removes all of the names from this list
+- type: explanation
+  location:
+    snippet: System.out.println( names.size( ) );
+    nth: 2
+  explanations:
+  - body: Displays the number of names in this list, which should be empty after calling method clear.

@@ -1,0 +1,90 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_24_en
+source: main.py
+title: Exceptions 3
+description: 'Worked example: Exceptions 3'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Sub
+  - parser:Int
+  - parser:TryExcept
+  - parser:ExceptHandler
+  - parser:While
+  - parser:Continue
+  - parser:Call
+  - parser:Str
+  - parser:Eq
+  - parser:Assign
+  - unspecified:ExceptHandler
+  - unspecified:Sub
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Eq
+  - unspecified:Int
+  - unspecified:Continue
+  - unspecified:While
+  - unspecified:Str
+  - unspecified:TryExcept
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Exceptions 3'
+elements:
+- type: explanation
+  location:
+    snippet: loop = 1
+  explanations:
+  - body: Assigning value '1' to the variable 'loop'
+- type: explanation
+  location:
+    snippet: 'while loop == 1:'
+  explanations:
+  - body: While loop will iterate till the condition 'loop = 1' is true
+- type: explanation
+  location:
+    snippet: 'try:'
+  explanations:
+  - body: try block tries to get input values from the user
+- type: explanation
+  location:
+    snippet: print(int(a) - int(b))
+  explanations:
+  - body: if the input are numbers, then the print block will print out the difference between the 2 numbers
+- type: explanation
+  location:
+    snippet: 'except NameError:'
+  explanations:
+  - body: If the input values are string values, the print function will nt be able to print the difference and hence this
+      will raise an exception
+- type: explanation
+  location:
+    snippet: 'try:'
+    nth: 2
+  explanations:
+  - body: This try block tries to get another input from user to see if user wants to repeat the experiment
+- type: explanation
+  location:
+    snippet: loop = input('Press 1 to try again > ')
+  explanations:
+  - body: If the user enters '1', it will repeat the experiment.
+- type: explanation
+  location:
+    snippet: 'except NameError:'
+    nth: 2
+  explanations:
+  - body: Else it will raise a NameError exception
+- type: explanation
+  location:
+    snippet: loop = 0
+  explanations:
+  - body: And then the loop variable is assigned the value '0'. This will stop the while loop from iterating

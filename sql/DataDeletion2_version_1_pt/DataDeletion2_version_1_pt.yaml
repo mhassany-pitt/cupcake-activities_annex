@@ -1,0 +1,46 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataDeletion2_version_1_pt
+source: query.sql
+title: DeletingwithCondition(1)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: DELETE FROM account
+  explanations:
+  - body: A tabela alvo 'account' e' especificada.
+- type: explanation
+  location:
+    snippet: WHERE branch_name IN
+  explanations:
+  - body: A palavra-chave IN e' utilizada para uma operacao de conjuntos. Testa se um dado esta contido em uma lista de valores.
+      Neste exemplo, compara os nomes das agencias com os resultados da subconsulta.
+- type: explanation
+  location:
+    snippet: (SELECT branch_name
+  explanations:
+  - body: Nesse exemplo, a subconsulta procura por agencias localizadas no 'Brooklyn' para apagar as contas que foram abertas
+      nas agencias retornadas.
+- type: explanation
+  location:
+    snippet: WHERE branch_city = 'Brooklyn');
+  explanations:
+  - body: A clausula WHERE seleciona as linhas baseado em uma condicao. A palavra-chave 'keyword' e' seguida por uma comparacao.
+      Neste exemplo, seleciona-se as tuplas de agencias que estao localizadas no 'Brooklyn'. A coluna 'branch_city' e' do
+      tipo caractere e, por isso, o valor utilizado na comparacao deve estar entre aspas.

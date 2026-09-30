@@ -1,0 +1,78 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt4_6_en
+source: main.py
+title: Sentinel Loop Control
+description: 'Worked example: Sentinel Loop Control'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Sentinel Loop Control'
+elements:
+- type: explanation
+  location:
+    snippet: print("Enter temperature observations, -300 to stop")
+  explanations:
+  - body: This is a simple instruction given to the operator of this code
+- type: explanation
+  location:
+    snippet: count = 0
+  explanations:
+  - body: Count is initialised to '0'
+- type: explanation
+  location:
+    snippet: sum = 0.0
+  explanations:
+  - body: Sum is also initialised to '0'
+- type: explanation
+  location:
+    snippet: 'temp = float(input("First temperature: "))'
+  explanations:
+  - body: This takes in the first temperature reading as input from the user and stores it in the variable 'temp'
+- type: explanation
+  location:
+    snippet: 'while temp > -300.0:'
+  explanations:
+  - body: Initializing the while loop and setting in the condition to continue iterating till the temperature is more than
+      -300.0
+- type: explanation
+  location:
+    snippet: sum += temp
+  explanations:
+  - body: updating the sum value in each iteration (adding the old value to the newly entered value)
+- type: explanation
+  location:
+    snippet: count += 1
+  explanations:
+  - body: Incrementing the count value
+- type: explanation
+  location:
+    snippet: 'temp = float(input("Next temperature: "))'
+  explanations:
+  - body: this statement asks for the next temperature reading. This will continue until the loop condition is false
+- type: explanation
+  location:
+    snippet: 'if count > 0:'
+  explanations:
+  - body: If the total number of temperatures entered by the user is more than '0'...
+- type: explanation
+  location:
+    snippet: print("Average temperature =", sum / count)
+  explanations:
+  - body: then print the average temperature of all the readings
+- type: explanation
+  location:
+    snippet: print("No valid data entered")
+  explanations:
+  - body: else, give an error warning to the user

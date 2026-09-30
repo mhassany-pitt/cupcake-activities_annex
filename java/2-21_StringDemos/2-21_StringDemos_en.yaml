@@ -1,0 +1,78 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_2-21_StringDemos
+source: StringDemos.java
+title: 2-21_StringDemos
+description: 'Worked example: 2-21_StringDemos'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:StringInitializationStatement
+  - parser:StringVariable
+  - parser:StringDataType
+  - parser:SimpleAssignmentExpression
+  - parser:StringLiteral
+  - parser:java.lang.System.out.println
+  - parser:ActualMethodParameter
+  - parser:java.lang.String.charAt
+  - parser:ObjectMethodInvocation
+  - parser:java.lang.String.length
+  - parser:java.lang.String.substring
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:java.lang.String.charAt
+  - java_ontology:java.lang.String.length
+  - java_ontology:java.lang.String.substring
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringInitializationStatement
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: 2-21_StringDemos'
+elements:
+- type: explanation
+  location:
+    snippet: String sentence = "sloths are soooo nice";
+  explanations:
+  - body: Create a String variable
+- type: explanation
+  location:
+    snippet: System.out.println(sentence.charAt(3));
+  explanations:
+  - body: Fourth character
+- type: explanation
+  location:
+    snippet: System.out.println(sentence.charAt(0));
+  explanations:
+  - body: First character
+- type: explanation
+  location:
+    snippet: System.out.println(sentence.charAt(6));
+  explanations:
+  - body: Seventh character

@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_welcome_lines
+source: WelcomeLines.java
+title: ISD::WelcomeLines.java
+description: 'Worked example: ISD::WelcomeLines.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::WelcomeLines.java'
+elements:
+- type: explanation
+  location:
+    snippet: g.drawLine( 15, 10, 210, 10 );
+  explanations:
+  - body: Draw horizontal lines with drawLine (endpoints have same y coordinate)
+- type: explanation
+  location:
+    snippet: g.drawLine( 15, 30, 210, 30 );
+  explanations:
+  - body: "Method drawLine(x1, y1, x2, y2 ), Draws a line from (x1, y1) to (x2, y2)\r\n, (0, 0) is upper left"

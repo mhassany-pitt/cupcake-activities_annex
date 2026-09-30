@@ -1,0 +1,67 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt3_6_en
+source: main.py
+title: IF...ELSE Statement
+description: 'Worked example: IF...ELSE Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Lt
+  - parser:Call
+  - parser:Str
+  - parser:Assign
+  - parser:If
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:Lt
+  - unspecified:If
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: IF...ELSE Statement'
+elements:
+- type: explanation
+  location:
+    snippet: '# This is a simple IF...ELSE statement example'
+  explanations:
+  - body: This is a comment line which simply explains the function of the code below
+- type: explanation
+  location:
+    snippet: number = 5
+  explanations:
+  - body: This is a simple variable assignment statement. Here, integer '5' is assigned to the variable 'number'
+- type: explanation
+  location:
+    snippet: 'if number < 0:'
+  explanations:
+  - body: This statement checks if the value of 'number' is less than 0. If this condition is true, it will go inside the
+      'if' statement.
+- type: explanation
+  location:
+    snippet: print(number , 'is a negative integer')
+  explanations:
+  - body: |-
+      If the condition of the above statement was true, it would execute this statement. But since the condition is not true (number is not less than 0), it will skip the IF statement.
+      Note: In this statement a comma (,) is used to combine an integer variable with the string while printing.
+- type: explanation
+  location:
+    snippet: 'else:'
+  explanations:
+  - body: Since it skiped the IF statement, it will by default execute the ELSE statement.
+- type: explanation
+  location:
+    snippet: print(number , 'is a positive integer')
+  explanations:
+  - body: In this statement a comma (,) is used to merge an integer variable with the string while printing.

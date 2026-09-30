@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_copystring
+source: main.cpp
+title: CopyString
+description: 'Worked example: CopyString'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: CopyString'
+elements:
+- type: explanation
+  location:
+    snippet: void copy1( char *, const char * );
+  explanations:
+  - body: copy s2 to s1 using array notation.
+- type: explanation
+  location:
+    snippet: void copy2( char *, const char * );
+  explanations:
+  - body: copy s2 to s1 using pointer notation.
+- type: explanation
+  location:
+    snippet: void copy1( char *s1, const char *s2 )
+  explanations:
+  - body: copy s2 to s1 using array notation.
+- type: explanation
+  location:
+    snippet: for ( i = 0; ( s1[ i ] = s2[ i ] ) != '\0'; i++ )
+  explanations:
+  - body: Condition of for loop actually performs an action.
+- type: explanation
+  location:
+    snippet: void copy2( char *s1, const char *s2 )
+  explanations:
+  - body: copy s2 to s1 using pointer notation.
+- type: explanation
+  location:
+    snippet: for ( ; ( *s1 = *s2 ) != '\0'; s1++, s2++ )
+  explanations:
+  - body: Condition of for loop actually performs an action.

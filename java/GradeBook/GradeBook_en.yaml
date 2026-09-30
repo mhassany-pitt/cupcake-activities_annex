@@ -1,0 +1,75 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_GradeBook
+source: GradeBook.java
+title: Grade Book
+description: 'Worked example: Grade Book'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:IfElseStatement
+  - expert:PostIncrementExpression
+  - expert:AddExpression
+  - expert:IfStatement
+  - expert:PrivateFieldSpecifier
+  - expert:ImportStatement
+  - expert:ConstructorDefinition
+  - expert:InstanceField
+  - expert:PublicConstructorSpecifier
+  - expert:DoubleDataType
+  - expert:IntDataType
+  - expert:EqualExpression
+  - expert:java.util.ArrayList
+  - expert:ReturnStatement
+  - expert:ForEachStatement
+  - expert:java.util.ArrayList.add
+  - expert:SimpleAssignmentExpression
+  - expert:java.util.ArrayList.get
+  - expert:SimpleVariable
+  - expert:ForStatement
+  - expert:java.util.ArrayList.size
+  - expert:SubtractExpression
+  - expert:GenericObjectCreationStatement
+  - expert:LessExpression
+  - expert:IfElseIfStatement
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Grade Book'
+elements:
+- type: explanation
+  location:
+    snippet: public GradeBook()
+  explanations:
+  - body: "/**\r\n      Constructs a gradebook with no scores.\r\n   */"
+- type: explanation
+  location:
+    snippet: public void addScore(double score)
+  explanations:
+  - body: "/**\r\n      Adds a score to this gradebook.\r\n      @param score the score to add\r\n   */"
+- type: explanation
+  location:
+    snippet: public double sum()
+  explanations:
+  - body: "/**\r\n      Computes the sum of the scores in this \r\ngradebook.\r\n      @return the sum of the scores\r\n \
+      \  */"
+- type: explanation
+  location:
+    snippet: public double minimum()
+  explanations:
+  - body: "/**\r\n      Gets the minimum score in this gradebook.\r\n      @return the minimum score, or 0 if there are no\
+      \ \r\nscores.\r\n   */"
+- type: explanation
+  location:
+    snippet: public double finalScore()
+  explanations:
+  - body: "/**\r\n      Gets the final score for this gradebook.\r\n      @return the sum of the scores, with the lowest \r\
+      \nscore dropped if \r\n      there are at least two scores, or 0 if there are no \r\nscores.\r\n   */"

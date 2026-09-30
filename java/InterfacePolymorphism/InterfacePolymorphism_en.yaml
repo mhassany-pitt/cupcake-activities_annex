@@ -1,0 +1,106 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_InterfacePolymorphism
+source: BankAccount.java
+title: Interface Polymorphism
+description: 'Worked example: Interface Polymorphism'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:InstanceField
+  - expert:InterfaceBasedPolymorphism
+  - expert:PublicConstructorSpecifier
+  - expert:AbstractMethodDefinition
+  - expert:InterfaceDefinition
+  - expert:PublicInterfaceSpecifier
+  - expert:java.lang.System.out.println
+  - expert:AddExpression
+  - expert:ReturnStatement
+  - expert:MethodImplementation
+  - expert:SimpleAssignmentExpression
+  - expert:ConstructorCall
+  - expert:ObjectCreationStatement
+  - expert:SimpleVariable
+  - expert:ConstructorDefinition
+  - expert:ObjectMethodInvocation
+  - expert:DoubleDataType
+  - expert:ObjectVariable
+  - expert:StringDataType
+  - expert:PolymorphicObjectCreationStatement
+  - expert:StringLiteral
+  - expert:ImplementsSpecification
+  - expert:PrivateFieldSpecifier
+  - expert:StringVariable
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Interface Polymorphism'
+elements:
+- type: explanation
+  location:
+    snippet: public interface Measurable{
+  explanations:
+  - body: "/**   Describes any class whose objects can be measured.\r\n*/"
+- type: explanation
+  location:
+    snippet: double getMeasure();
+  explanations:
+  - body: "/**      Computes the measure of the object.      @return the \r\nmeasure\r\n   */"
+- type: explanation
+  location:
+    snippet: public class BankAccount implements Measurable {
+  explanations:
+  - body: /**   A bank account has a balance */
+- type: explanation
+  location:
+    snippet: public BankAccount(double initialBalance){
+  explanations:
+  - body: "/**      Constructs a bank account with a given balance.\r\n      @param initialBalance the initial balance\r\n\
+      \   */"
+- type: explanation
+  location:
+    snippet: public class Coin implements Measurable
+  explanations:
+  - body: /**   A coin with a monetary value.*/
+- type: explanation
+  location:
+    snippet: public Coin(double aValue, String aName)
+  explanations:
+  - body: "/**      Constructs a coin.      @param aValue the monetary \r\nvalue of \r\nthe coin\r\n      @param aName the\
+      \ name of the coin\r\n   */"
+- type: explanation
+  location:
+    snippet: Measurable meas;
+  explanations:
+  - body: "It is possible to define a variable of type interface. Here, any \r\nobject that implements \r\nthe Measurable\
+      \ interface can be assigned to \r\n'meas'."
+- type: explanation
+  location:
+    snippet: meas = new BankAccount(2000);
+  explanations:
+  - body: "Variable 'meas' is initialized with an instance of BankAccount with \r\n2000 balance."
+- type: explanation
+  location:
+    snippet: System.out.println( meas.getMeasure());
+  explanations:
+  - body: calls getMeasure() in BankAccount, thus prints '2010'.
+- type: explanation
+  location:
+    snippet: meas = new Coin(0.1,"dime");
+  explanations:
+  - body: "Variable 'meas' is initialized with an instance of Coin with 0.1 \r\nvalue. Again, since Coin \r\nimplements the\
+      \ Measurable interface, it can \r\nbe directly assigned to 'meas' that has the \r\ntype 'Measurable'."
+- type: explanation
+  location:
+    snippet: System.out.println( meas.getMeasure());
+    nth: 2
+  explanations:
+  - body: calls getMeasure() in Coin, thus prints '0.6'

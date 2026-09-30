@@ -1,0 +1,53 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection7
+source: query.sql
+title: Comparison Condition (1)
+description: Comparison Condition (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AllAttributeSelection
+  - expert:RightWhitespaceTrim
+  - expert:Assertion
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:SelectStatement
+  - expert:GreaterThanComparison
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:IntegrityConstraint
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - sql_ontology:Assertion
+  - sql_ontology:SetOperation
+  - sql_ontology:NumericType
+  - sql_ontology:WhereClause
+  - sql_ontology:AllAttributeSelection
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:IntegrityConstraint
+  - sql_ontology:GreaterThanComparison
+runtime:
+  language: sql
+  version: '2016'
+statement: Comparison Condition (1)
+elements:
+- type: explanation
+  location:
+    snippet: SELECT *
+  explanations:
+  - body: This query is to find all columns in 'Students' table.
+- type: explanation
+  location:
+    snippet: WHERE gpa > 3.2;
+  explanations:
+  - body: WHERE condition narrows down the results into students whose gpa is higher than 3.2

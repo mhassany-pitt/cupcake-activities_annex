@@ -1,0 +1,62 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_7_en
+source: main.py
+title: While Loop Statement
+description: 'Worked example: While Loop Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Int
+  - parser:Lt
+  - parser:While
+  - parser:Call
+  - parser:Str
+  - parser:Add
+  - parser:Assign
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Int
+  - unspecified:Lt
+  - unspecified:Add
+  - unspecified:While
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: While Loop Statement'
+elements:
+- type: explanation
+  location:
+    snippet: a = 0
+  explanations:
+  - body: A variable used inside a While Loop condition has to be defined by assigning it a base value. A base value is from
+      where the While Loop will start iterating. In this case variable 'a' is assigned the integer '0'. Hence this While Loop
+      will start from a = 0.
+- type: explanation
+  location:
+    snippet: 'while (a < 5):'
+  explanations:
+  - body: As mentioned above, this loop will start from a =0 and will iterate till 'a' is less than 5 (a = 4)
+- type: explanation
+  location:
+    snippet: print ("Current Number is:", a)
+  explanations:
+  - body: |-
+      In each iteration, it will print the current number. For example, in the first iteration, it will print out the following:
+      'Current Number is: 0'
+- type: explanation
+  location:
+    snippet: a = a + 1
+  explanations:
+  - body: This is a very important step in a while loop. The variable that is iterated upon, should always be incremented.
+      If the variable is not incremented, the value of 'a' will be same forever and the while loop condition will never be
+      met and hence it will go into an infinite loop (keep looping forever).

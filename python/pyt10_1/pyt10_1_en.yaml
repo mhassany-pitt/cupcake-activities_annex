@@ -1,0 +1,86 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_1_en
+source: main.py
+title: IF...ELSE Statement 2
+description: 'Worked example: IF...ELSE Statement 2'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Sub
+  - parser:Int
+  - parser:Float
+  - parser:Add
+  - parser:Call
+  - parser:LtE
+  - parser:Assign
+  - parser:Mult
+  - parser:If
+  - unspecified:Sub
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Float
+  - unspecified:Int
+  - unspecified:Add
+  - unspecified:Mult
+  - unspecified:If
+  - unspecified:LtE
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: IF...ELSE Statement 2'
+elements:
+- type: explanation
+  location:
+    snippet: totalHours = 45
+  explanations:
+  - body: In this statement, integer '45' is assigned to the variable 'totalHours'. This variable represents the number of
+      hours an employee has worked in a given week.
+- type: explanation
+  location:
+    snippet: hourlyWage = 20
+  explanations:
+  - body: Here, integer '20' is assigned to the variable 'hourlyWage'. This is to take in the Hourly Wages of an employee
+      as input
+- type: explanation
+  location:
+    snippet: 'if totalHours <= 40:'
+  explanations:
+  - body: This statement checks if the value of 'totalHours' is less than or equal to 40. In other words, it checks if the
+      employee has worked for 40 hours or less?
+- type: explanation
+  location:
+    snippet: totalWages = hourlyWage*totalHours
+  explanations:
+  - body: If employee has worked for 40 hours or less, total wages would be a product of wages-per-hour and number of hours
+      worked in that week
+- type: explanation
+  location:
+    snippet: 'else:'
+  explanations:
+  - body: If the employee has worked for more than 40 hours in that week then this 'else' statement will be executed
+- type: explanation
+  location:
+    snippet: overtime = totalHours - 40
+  explanations:
+  - body: First it needs to check how many hours above the standard 40 hours has employee worked. This is because the employee
+      will be paid the normal hourly wages upto 40 hours and 1.5 times the hourly wages for hours above 40 hours. The number
+      of hours worked above 40 hours will be stored in the variable 'overtime'
+- type: explanation
+  location:
+    snippet: totalWages = hourlyWage*40 + (1.5*hourlyWage)*overtime
+  explanations:
+  - body: The total wages is calculated by adding the wages for upto 40 hours and the wages for overtime hours
+- type: explanation
+  location:
+    snippet: print(totalWages)
+  explanations:
+  - body: This statement simply prints the total wages of an employee as output

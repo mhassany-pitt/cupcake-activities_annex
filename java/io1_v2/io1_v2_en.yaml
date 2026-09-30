@@ -1,0 +1,63 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_io1_v2
+source: IOTest1.java
+title: Standard Input
+description: 'Worked example: Standard Input'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Standard Input'
+elements:
+- type: explanation
+  location:
+    snippet: import java.io.*;
+  explanations:
+  - body: import all the classes from java.io package
+- type: explanation
+  location:
+    snippet: public static void main(String[] args) throws IOException{
+  explanations:
+  - body: If an I/O error occurs, it throws an  IOException.
+- type: explanation
+  location:
+    snippet: InputStreamReader input = new InputStreamReader(System.in);
+  explanations:
+  - body: create an InputStreamReader object called input. Wrap up the standard input within the InputStreamReader as an argument.
+      InputStreamReader reads bytes and decodes them into Unicode characters.
+- type: explanation
+  location:
+    snippet: BufferedReader br = new BufferedReader(input);
+  explanations:
+  - body: create an BufferReader object called br. It reads character.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Enter text : ");'
+  explanations:
+  - body: 'this line prints "Enter text: "'
+- type: explanation
+  location:
+    snippet: String str = br.readLine();
+  explanations:
+  - body: declare a string str as the line of text from object br.
+- type: explanation
+  location:
+    snippet: 'System.out.println("You entered String : ");'
+  explanations:
+  - body: 'this line prints "You entered String: "'
+- type: explanation
+  location:
+    snippet: System.out.println(str);
+  explanations:
+  - body: this line prints whatever you enter from the standard input.

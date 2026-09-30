@@ -1,0 +1,58 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_MethodDemo
+source: MethodDemo.java
+title: Method Demo
+description: 'Worked example: Method Demo'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SimpleAssignmentExpression
+  - expert:IntDataType
+  - expert:StringDataType
+  - expert:java.lang.String.length
+  - expert:StringInitializationStatement
+  - expert:java.lang.String.replace
+  - expert:StringLiteral
+  - expert:java.lang.System.out.print
+  - expert:StringVariable
+  - expert:java.lang.System.out.println
+  - expert:ObjectMethodInvocation
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Method Demo'
+elements:
+- type: explanation
+  location:
+    snippet: public class MethodDemo
+  explanations:
+  - body: This example demonstrates method calls.
+- type: explanation
+  location:
+    snippet: System.out.println(greeting);
+  explanations:
+  - body: greeting is the argument in this call to the println method
+- type: explanation
+  location:
+    snippet: int numberOfCharacters = greeting.length();
+  explanations:
+  - body: The length method returns a value
+- type: explanation
+  location:
+    snippet: System.out.println(greeting.length());
+  explanations:
+  - body: "You can use the return value of one method as an argument of another \r\nmethod"
+- type: explanation
+  location:
+    snippet: river = river.replace("issipp", "our");
+  explanations:
+  - body: The replace method has two arguments

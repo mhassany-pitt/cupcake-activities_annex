@@ -1,0 +1,31 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_LeftJoin25_1_version_1
+source: query.sql
+title: LeftJoin1_version_1
+description: 'Worked example: LeftJoin1_version_1'
+authors:
+- first: Rully
+  last: Hendrawan
+  email: rully.hendrawan@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: 'Worked example: LeftJoin1_version_1'
+elements:
+- type: explanation
+  location:
+    snippet: |-
+      FROM Customers
+      LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+  explanations:
+  - body: The LEFT JOIN keyword returns all records from the left table (Customers), even if there are no matches in the right
+      table (Orders). This returns the list of all customers' orders. However, in contrast to INNER JOIN, which will not show
+      customers without orders, LEFT JOIN will show those customers and NULL in their orders-related columns.

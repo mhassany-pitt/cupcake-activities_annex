@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection15
+source: query.sql
+title: Range Test (2)
+description: Range Test (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:BetweenPredicate
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:CountingNoInColumn
+  - expert:MultipleAttributeSelection
+  - expert:NotLogicOperation
+  - expert:SingleQuotationCharacter
+  - expert:DateTimeType
+  - expert:SingleTableSelection
+  - sql_ontology:DateTimeType
+  - sql_ontology:BetweenPredicate
+  - sql_ontology:SetOperation
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:MultipleAttributeSelection
+  - sql_ontology:WhereClause
+  - sql_ontology:CountFunction
+  - sql_concept:NotLogicOperation
+runtime:
+  language: sql
+  version: '2016'
+statement: Range Test (2)
+elements:
+- type: explanation
+  location:
+    snippet: WHERE date BETWEEN '01-OCT-06' AND '31-DEC-06';
+  explanations:
+  - body: Range test can be applied to date domain type, as well. This is equivalent to  (date >= '01-OCT-06') AND (date <=
+      '31-DEC-06')

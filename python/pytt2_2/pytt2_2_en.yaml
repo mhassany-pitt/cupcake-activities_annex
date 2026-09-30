@@ -1,0 +1,56 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pytt2_2_en
+source: main.py
+title: Variable Type Conversion
+description: 'Worked example: Variable Type Conversion'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Variable Type Conversion'
+elements:
+- type: explanation
+  location:
+    snippet: i = 20
+  explanations:
+  - body: This statement assigns the integer '20' to the variable 'i'
+- type: explanation
+  location:
+    snippet: j = 20.5
+  explanations:
+  - body: This statement assigns the floating point value '20.5' to the variable 'j'
+- type: explanation
+  location:
+    snippet: print(int(j))
+  explanations:
+  - body: This statement explicitly converts the float value of variable 'j' into an integer. Since it is now an integer,
+      it will print out '20'. This conversion is dynamic and the original value of variable 'j' is not updated
+- type: explanation
+  location:
+    snippet: print(str(i))
+  explanations:
+  - body: This statement explicitly converts the integer value of variable 'i' into a string. It will print out the string
+      "20"
+- type: explanation
+  location:
+    snippet: print(hex(i))
+  explanations:
+  - body: This statement will convert the value of 'i' into its equivalent hexadecimal value. The resultant output will be
+      '0x14'
+- type: explanation
+  location:
+    snippet: print(oct(i))
+  explanations:
+  - body: This statement will convert the value of 'i' into its equivalent octadecimal value. The resultant output will be
+      '0o24'

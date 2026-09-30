@@ -1,0 +1,96 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_modulus_memphis
+source: HelloWorld.java
+title: Modulus (Memphis)
+description: |-
+  Demonstrates usage of the % operator.  % means "remainder when you divide by"
+  For example:
+  49 % 6 = 1
+  49 % 7 = 0
+  8 % 2 = 0
+  2 % 8 = 2
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:IntDataType
+  - parser:SimpleAssignmentExpression
+  - parser:java.lang.System.out.println
+  - parser:ActualMethodParameter
+  - parser:DivideExpression
+  - parser:StringAddition
+  - parser:StringDataType
+  - parser:StringLiteral
+  - parser:ModulusExpression
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:DivideExpression
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:ModulusExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: |-
+  Demonstrates usage of the % operator.  % means "remainder when you divide by"
+  For example:
+  49 % 6 = 1
+  49 % 7 = 0
+  8 % 2 = 0
+  2 % 8 = 2
+elements:
+- type: explanation
+  location:
+    snippet: public static void main(String[] args) {
+  explanations:
+  - body: This is a main method.  Program execution always starts from the main method.
+- type: explanation
+  location:
+    snippet: int cents = 93;
+  explanations:
+  - body: Declare an int variable named cents, and assign it a value of 93
+- type: explanation
+  location:
+    snippet: System.out.println(cents/25 + " quarter(s)");
+  explanations:
+  - body: Figure out how many quarters, dimes, nickels, and pennies will add up to that amount of cents
+- type: explanation
+  location:
+    snippet: System.out.println(cents%25/10 + " dime(s)");
+  explanations:
+  - body: cents%25 is the amount left over after taking out the quarters
+- type: explanation
+  location:
+    snippet: System.out.println(cents%25%10/5 + " nickel(s)");
+  explanations:
+  - body: cents%25%10 is the amount left over after taking out the quarters and dimes
+- type: explanation
+  location:
+    snippet: System.out.println(cents%25%10%5/1 + " penny/pennies");
+  explanations:
+  - body: cents%25%10%5 is the amount left over after taking out the quarters, dimes, and nickels

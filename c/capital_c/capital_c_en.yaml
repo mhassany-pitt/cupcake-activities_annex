@@ -1,0 +1,92 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_capital_c_en
+source: main.c
+title: 'IS12:: capital.c (3.3)'
+description: 'Worked example: IS12:: capital.c (3.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:scanf
+  - unspecified:int
+  - unspecified:void
+  - unspecified:div
+  - unspecified:reference
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:add
+  - unspecified:mul
+  - unspecified:main_function
+  - unspecified:float
+  - unspecified:printf
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: capital.c (3.3)'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: This is a preprocessor command. System header file stdio.h will be   inserted there during compilationWe include
+      stdio.h header file because it contains function prototypes for printf and scanf
+- type: explanation
+  location:
+    snippet: float interest_rate; /* interest rate in percents */
+  explanations:
+  - body: Since interest rate is usually not integer, we use float. The use of double is not necessary since interest rate
+      usually has no more that 4 digits (like 6.751)
+- type: explanation
+  location:
+    snippet: int capital; /* starting capital in dollars */
+  explanations:
+  - body: We make an assumption that the starting capital is some amount in full dollars with no cents.
+- type: explanation
+  location:
+    snippet: float annual_interest; /* annual interest in dollars */
+  explanations:
+  - body: Annual interest will have dollars and cents (like 103.16), so we need to use a float. For billionaires the use of
+      double could be a better decision
+- type: explanation
+  location:
+    snippet: 'printf("Capital ($$) and interest rate (%%xx.xx): ");'
+  explanations:
+  - body: |-
+      This is a prompt. Note that we do not pring '
+      ' symbol since we want the coursor to stay on the same line
+- type: explanation
+  location:
+    snippet: scanf("%d %f",&capital, &interest_rate);
+  explanations:
+  - body: We can read two numbers from the user in one scanf call. We use %d for capital since it is an integer and %f for
+      interest rate since it is a float. Note the ampersend signs preceding the variable names. Without them the function
+      scanf will not be able to
+- type: explanation
+  location:
+    snippet: annual_interest = capital * interest_rate / 100;
+  explanations:
+  - body: Annual interest is calculated using simple formula. Note that we use blanks around every sign to make the program
+      more readable
+- type: explanation
+  location:
+    snippet: |-
+      printf("Interest %6.2f; Total %9.2f
+      ", annual_interest, capital + annual_interest);
+  explanations:
+  - body: This line will pring the interest abd the new capital as floats. 6 position in total (including 2 after the point)
+      will be allocated for the annual interest value. 9 position in total (including 2 after the point) will be allocated
+      for the value of the ne
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: This bracket closes the main function. Note that it is aligned vertically with the word main

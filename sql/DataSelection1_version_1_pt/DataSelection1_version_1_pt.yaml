@@ -1,0 +1,35 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection1_version_1_pt
+source: query.sql
+title: SelectingOneAttribute_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT sid
+  explanations:
+  - body: No comando SELECT, as clausulas SELECT e FROM sao obrigatorias. A clausula SELECT especifica a(s) coluna(s) da tabela
+      a ser(em) retornada(s). Os nomes das colunas sao separados por virgula. Nesse exemplo, somente a coluna 'sid' e' selecionada,
+      por isso, nao e' necessario utilizar a virgula.
+- type: explanation
+  location:
+    snippet: FROM Student;
+  explanations:
+  - body: A clausula FROM lista as tabelas que contem as tuplas a serem recuperadas pela consulta. Os dados podem ser recuperados
+      a partir de uma ou varias tabelas.

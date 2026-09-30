@@ -1,0 +1,29 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection24_version_1_pt
+source: query.sql
+title: AggregateFunctions(4)
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT COUNT(DISTINCT customer_name)
+  explanations:
+  - body: A palavra-chave DISTINCT e' utilizada para eliminar resultados duplicados, neste caso, retorna os valores unicos
+      da coluna 'customer_name'. Apos eliminar os valores duplicados, a funcao de agregacao COUNT() calcula a quantidade total
+      de valores retornados.

@@ -1,0 +1,96 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_sumarfunc_c_en
+source: main.c
+title: 'IS12:: sumarfunc.c (10.2)'
+description: 'Worked example: IS12:: sumarfunc.c (10.2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:scanf
+  - unspecified:less
+  - unspecified:int
+  - unspecified:array_declaration
+  - unspecified:pre_increment
+  - unspecified:reference
+  - unspecified:define
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:return
+  - unspecified:main_function
+  - unspecified:for
+  - unspecified:add_assignment
+  - unspecified:printf
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: sumarfunc.c (10.2)'
+elements:
+- type: explanation
+  location:
+    snippet: '#define N 7 /* dimension of the array */'
+  explanations:
+  - body: It is a common wat to define dimensions of all arrays used in the program as symbolic constants
+- type: explanation
+  location:
+    snippet: int testarray[N]; /* global array */
+  explanations:
+  - body: The array testarray is defined outside of any funcion. It means that it is a global array. It is accessible from
+      any function in this program (here - from both main() amd summarray()
+- type: explanation
+  location:
+    snippet: int sumarray(); /* function prototype */
+  explanations:
+  - body: This is a function prototype. It tells that funcion summarray() has no parameters and returns an integer value.
+- type: explanation
+  location:
+    snippet: void main() {
+  explanations:
+  - body: The execution of any program starts with function main
+- type: explanation
+  location:
+    snippet: for (i = 0; i < N; ++i) {
+  explanations:
+  - body: This for loop reads N integer values from the standard input and places them into the global arrat testarray.
+- type: explanation
+  location:
+    snippet: |-
+      printf("Sum of array elements = %d
+      ", sumarray());
+  explanations:
+  - body: The call is sumarray() function is simply an expression. This expression has an integer value. However, to calculate
+      this value the function sumarray() is called. The value returned by the return operator of sumarray() will be the value
+      of the expression.
+- type: explanation
+  location:
+    snippet: int sumarray() {
+  explanations:
+  - body: This is the header of sumarray()
+- type: explanation
+  location:
+    snippet: int i, sum = 0;
+  explanations:
+  - body: Variables i and sum are local variables in sumarray(). They are not accessible from main()
+- type: explanation
+  location:
+    snippet: for (i = 0; i < N; ++i)
+  explanations:
+  - body: This loop simply summs up all elements of the array into the variable sum
+- type: explanation
+  location:
+    snippet: return sum;
+  explanations:
+  - body: Return operator ends the function. The value of the expression in this operator is called the returned value. It
+      will be passed to the calling function.

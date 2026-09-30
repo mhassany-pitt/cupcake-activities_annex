@@ -1,0 +1,38 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_11_en
+source: main.py
+title: Output Formatting
+description: 'Worked example: Output Formatting'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Mod
+  - parser:Call
+  - parser:Str
+  - parser:Tuple
+  - unspecified:Mod
+  - unspecified:Tuple
+  - unspecified:Call
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Output Formatting'
+elements:
+- type: explanation
+  location:
+    snippet: print("User's Full Name is {} {}.".format("John", "Adams"))
+  explanations:
+  - body: This statement formats the output. The .format functions says that we are formatting the string so it will look
+      for '{}' signs in the string. Then we have a tuple at the end which contans two string values - 'John' and 'Adams' which
+      we are passing to it. So in the first '{}' sign, the string 'John' will be passed and in the second '{}' sign, the string
+      'Adams' will be passed. The output you will see on running this code is "User's Full Name is John Adams."

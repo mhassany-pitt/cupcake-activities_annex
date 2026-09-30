@@ -1,0 +1,27 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_CreateString
+source: Main.java
+title: DEPRECATED_Creating String
+description: 'Worked example: DEPRECATED_Creating String'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Creating String'
+elements:
+- type: explanation
+  location:
+    snippet: String greeting = "Hello world!";
+  explanations:
+  - body: A series of characters in your code that is enclosed in double quotes.

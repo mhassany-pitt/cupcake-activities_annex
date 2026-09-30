@@ -1,0 +1,117 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_exchange_kiosk_c_en
+source: main.c
+title: 'IS12:: exchange_kiosk.c (3.11)'
+description: 'Worked example: IS12:: exchange_kiosk.c (3.11)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:sub
+  - unspecified:include
+  - unspecified:mul
+  - unspecified:main_function
+  - unspecified:float
+  - unspecified:printf
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: exchange_kiosk.c (3.11)'
+elements:
+- type: explanation
+  location:
+    snippet: '/*    Example: Exchange kiosk'
+  explanations:
+  - body: 'This comment is known as header comment. It provides details about the program: author, goal, version, content,
+      etc.'
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: We need this line since we are using printf
+- type: explanation
+  location:
+    snippet: float dollars_for_mark; /* exchange rate */
+  explanations:
+  - body: Floating point variable dollars_for_mark is declared. Comment helps to understand what will be stored in this variable.
+- type: explanation
+  location:
+    snippet: int commission; /* comission in dollars */
+  explanations:
+  - body: Integer variable commission is declared. Comment helps to understand what will be stored in this variable.
+- type: explanation
+  location:
+    snippet: float marks; /* marks given */
+  explanations:
+  - body: Floating point variable marks is declared. Comment helps to understand what will be stored in this variable.
+- type: explanation
+  location:
+    snippet: float dollars; /* dollars returned */
+  explanations:
+  - body: Floating point variable dollars is declared. Comment helps to understand what will be stored in this variable.
+- type: explanation
+  location:
+    snippet: /* get data */
+  explanations:
+  - body: Comments at the beginning of a program logical part helps tp understand what's going on.
+- type: explanation
+  location:
+    snippet: dollars_for_mark = 0.666;
+  explanations:
+  - body: 'This is a simple assignment statement. Variable of type float receives a floating point value 0.666. Yet, there
+      is a conversion here: by default all floating point constants are of type double. So, C will convert 0.666 from double
+      to float without the los'
+- type: explanation
+  location:
+    snippet: commission = 3;
+  explanations:
+  - body: This is a simple assignment statement. Integer variable receives an integer value.
+- type: explanation
+  location:
+    snippet: marks = 100;
+  explanations:
+  - body: Floating point variable received integer value. C will do the conversion from int to float, but no information is
+      lost in this case.
+- type: explanation
+  location:
+    snippet: /* calculate USD */
+  explanations:
+  - body: Comments at the beginning of a program logical part helps tp understand what's going on.
+- type: explanation
+  location:
+    snippet: dollars = marks * dollars_for_mark - commission;
+  explanations:
+  - body: This line calculates the amount of dollars received using the exchange formula. Multiplication is executed first
+      due to its higher priority. Blanks that separate operation sign (like = or *) from operands make the expression more
+      redable
+- type: explanation
+  location:
+    snippet: /* print results */
+  explanations:
+  - body: Comments at the beginning of a program logical part helps tp understand what's going on.
+- type: explanation
+  location:
+    snippet: |-
+      printf("For %6.2f marks you will get %6.2f dollars!
+      ",
+  explanations:
+  - body: This line prints results. All numbers are printed in 6.2 format - it prints exactly 2 digits after decimal point
+      - representing cents and German pfennings
+- type: explanation
+  location:
+    snippet: marks, dollars);
+  explanations:
+  - body: printf statements are often be split in several lines - but make sure not to break line inside the formatting string
+      between double quotes.

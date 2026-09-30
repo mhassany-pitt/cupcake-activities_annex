@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_line_count_c_en
+source: main.c
+title: 'IS12:: line_count.c (6.4)'
+description: 'Worked example: IS12:: line_count.c (6.4)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:int
+  - unspecified:void
+  - unspecified:pre_increment
+  - unspecified:printf
+  - unspecified:if
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:equal
+  - unspecified:main_function
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: line_count.c (6.4)'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: The stdio.h header file is required if we use getchar() and putchar() functions. EOF constant is also defined there.
+- type: explanation
+  location:
+    snippet: int c, nl;
+  explanations:
+  - body: Variable c is defined as integer since EOF value that it can get is not one of 256 values that a char variable can
+      get. Variable nl is a counter of lines.
+- type: explanation
+  location:
+    snippet: nl = 0;
+  explanations:
+  - body: As any counter variable, nl should be initialized to zero before the counting loop. This is a part of the counting
+      pattern.
+- type: explanation
+  location:
+    snippet: while((c = getchar()) != EOF)
+  explanations:
+  - body: This is a sentinel-controlled loop. Current symbol (or EOF) returned by getchar() is assigned to variable C. If
+      the assigned value is not EOF (End of File), we will proceed to the loop body.
+- type: explanation
+  location:
+    snippet: |-
+      if(c == '
+      ')
+  explanations:
+  - body: "The idea of line counting is simple. Each line ends with \n symbol. So, by counting \n symbols, we will count the\
+      \ number of lines. This condition is true if c is a newline symbol"
+- type: explanation
+  location:
+    snippet: ++nl;
+  explanations:
+  - body: "If c is a newline symbol \n we will increment the new line counter nl. Thus we will count all newline synbols"
+- type: explanation
+  location:
+    snippet: |-
+      printf("%d
+      ", nl);
+  explanations:
+  - body: This is the first statement after the loop. It simply prints the number of lines counted.

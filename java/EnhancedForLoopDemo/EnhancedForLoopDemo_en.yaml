@@ -1,0 +1,44 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_EnhancedForLoopDemo
+source: EnhancedForLoopDemo.java
+title: Enhanced For Loop Demo
+description: 'Worked example: Enhanced For Loop Demo'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ForStatement
+  - expert:StringAddition
+  - expert:IntDataType
+  - expert:StringDataType
+  - expert:AddExpression
+  - expert:java.lang.System.out.println
+  - expert:StringLiteral
+  - expert:ArrayCreationStatement
+  - expert:LessExpression
+  - expert:ArrayDataType
+  - expert:ArrayElement
+  - expert:MultiplyExpression
+  - expert:ArrayLength
+  - expert:PostIncrementExpression
+  - expert:ArrayVariable
+  - expert:ForEachStatement
+  - expert:SimpleAssignmentExpression
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Enhanced For Loop Demo'
+elements:
+- type: explanation
+  location:
+    snippet: 'for (int element : values)'
+  explanations:
+  - body: In this loop, we don't need the index value. The enhanced for loop simplifies the code.

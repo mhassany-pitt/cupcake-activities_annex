@@ -1,0 +1,65 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_3-19_ArrayDemos
+source: ArrayDemos.java
+title: 3-19_ArrayDemos
+description: 'Worked example: 3-19_ArrayDemos'
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:ArrayCreationStatement
+  - parser:ArrayVariable
+  - parser:ArrayDataType
+  - parser:IntDataType
+  - parser:SimpleAssignmentExpression
+  - parser:ArrayElement
+  - parser:ForStatement
+  - parser:LessExpression
+  - parser:ArrayLength
+  - parser:PostIncrementExpression
+  - parser:java.lang.System.out.println
+  - parser:ActualMethodParameter
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ForStatement
+  - java_ontology:ArrayDataType
+  - java_ontology:VoidDataType
+  - java_ontology:LessExpression
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:FormalMethodParameter
+  - java_ontology:ArrayElement
+  - java_ontology:PostIncrementExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:ClassDefinition
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:ArrayCreationStatement
+  - java_ontology:ArrayLength
+  - java_ontology:IntDataType
+  - java_ontology:ArrayVariable
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: 3-19_ArrayDemos'
+elements:
+- type: explanation
+  location:
+    snippet: int[] y = new int[10];
+  explanations:
+  - body: Array declaration and instantiation, combined into one line.

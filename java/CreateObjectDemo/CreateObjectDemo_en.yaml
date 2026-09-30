@@ -1,0 +1,46 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_CreateObjectDemo
+source: CreateObjectDemo.java
+title: DEPRECATED_CreateObjectDemo
+description: 'Worked example: DEPRECATED_CreateObjectDemo'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_CreateObjectDemo'
+elements:
+- type: explanation
+  location:
+    snippet: Point originOne = new Point(23, 94);
+  explanations:
+  - body: The code before the equal sign are all variable declarations that associate a variable name with an object type.
+      The new keyword is a Java operator that creates the object. The new operator is followed by a call to a constructor,
+      which initializes the new object.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Width of rectOne: " + rectOne.width);'
+  explanations:
+  - body: The code in the CreateObjectDemo class is outside the code for the Rectangle class. So to refer to the origin, width,
+      and height fields within the Rectangle object named rectOne, the CreateObjectDemo class must use the names rectOne.origin,
+      rectOne.width, and rectOne.height, respectively.
+- type: explanation
+  location:
+    snippet: 'System.out.println("Area of rectOne: " + rectOne.getArea());'
+  explanations:
+  - body: It invokes rectOne's getArea() method and displays the results.
+- type: explanation
+  location:
+    snippet: rectTwo.move(40, 72);
+  explanations:
+  - body: It moves rectTwo because the move() method assigns new values to the object's origin.x and origin.y.

@@ -1,0 +1,94 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_power_c_en
+source: main.c
+title: 'IS12:: power.c (10.3)'
+description: 'Worked example: IS12:: power.c (10.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:less
+  - unspecified:int
+  - unspecified:void
+  - unspecified:pre_increment
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:return
+  - unspecified:mul
+  - unspecified:main_function
+  - unspecified:for
+  - unspecified:printf
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: power.c (10.3)'
+elements:
+- type: explanation
+  location:
+    snippet: int power(int, int); /* function prototype */
+  explanations:
+  - body: This is a prototype fof the function power. It tells that power has two integer parameters and returns an integer
+- type: explanation
+  location:
+    snippet: for(i = 0; i < 8; ++i) {
+  explanations:
+  - body: This loop will execute 9 times with i running from 0 to 8. For each i we will print the value of 2 power i and -3
+      power i
+- type: explanation
+  location:
+    snippet: x = power(2, i);
+  explanations:
+  - body: To calculate the expression power(2, i), the function power will be called. The constant 2 will be passed in and
+      assigned to the first formal parameter (base) and the current value of i, to the second parameter (n)
+- type: explanation
+  location:
+    snippet: y = power (-3, i);
+  explanations:
+  - body: To calculate the expression power(3, i), the function power will be called. The constant 3 will be passed in and
+      assigned to the first formal parameter (base) and the current value of i, to the second parameter (n)
+- type: explanation
+  location:
+    snippet: |-
+      printf("%2d %5d %7d
+      ", i, x, y);
+  explanations:
+  - body: This line will print for each i the value of i itself and values of 2 power i and -3 power i calculated by the function
+      power
+- type: explanation
+  location:
+    snippet: int power(int base, int n) {
+  explanations:
+  - body: This is the header of the function. Two integer formal parameters are defined here. The first is base and the second
+      is n. Inside the function, base and n works as any other local variables. You can use and change their values.
+- type: explanation
+  location:
+    snippet: int i, p;
+  explanations:
+  - body: These are local variables of the function power(). They are not accessible from main(). After the function call
+      is completed, their values will be lost
+- type: explanation
+  location:
+    snippet: for(i = 0; i < n; ++i)
+  explanations:
+  - body: The goal of this loop is to base on itself exactly n times. p serves as a working variable for that
+- type: explanation
+  location:
+    snippet: p = p * base;
+  explanations:
+  - body: This statement can also be written as p *= base;
+- type: explanation
+  location:
+    snippet: return p;
+  explanations:
+  - body: The value of the expression in return operator (here it is p) is calculated and returned to the calling program.
+      It will be the value of the funcion call expression.

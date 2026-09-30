@@ -1,0 +1,95 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_recursion_recursiveispalindrome
+source: RecursiveIsPalindrome.java
+title: (Recursion) Recursive is palindrome - CSEdPad
+description: This program checks a string is palindrome or not (first half of the string is the same as the second half).
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:ReturnStatement
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:LessEqualExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:StringVariable
+  - webex:java.lang.String.substring
+  - webex:java.lang.String.length
+  - webex:False
+  - webex:BooleanDataType
+  - webex:NotEqualExpression
+  - webex:StringLiteral
+  - webex:True
+  - webex:java.lang.String.charAt
+  - webex:ObjectMethodInvocation
+  - webex:SubtractExpression
+  - webex:IfElseStatement
+  - webex:StringInitializationStatement
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:BooleanDataType
+  - java_ontology:ClassDefinition
+  - java_ontology:False
+  - java_ontology:FormalMethodParameter
+  - java_ontology:IfElseStatement
+  - java_ontology:java.lang.String.charAt
+  - java_ontology:java.lang.String.length
+  - java_ontology:java.lang.String.substring
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessEqualExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:NotEqualExpression
+  - java_ontology:ObjectMethodInvocation
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:ReturnStatement
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringInitializationStatement
+  - java_ontology:StringLiteral
+  - java_ontology:StringVariable
+  - java_ontology:SubtractExpression
+  - java_ontology:True
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: This program checks a string is palindrome or not (first half of the string is the same as the second half).
+elements:
+- type: explanation
+  location:
+    snippet: public boolean isPalindrome(String str) {
+  explanations:
+  - body: Definition of the recursive method, which receives a String as an input
+- type: explanation
+  location:
+    snippet: return true;
+  explanations:
+  - body: Base case when this method knows to return true (either it is an empty String or only one character).
+- type: explanation
+  location:
+    snippet: if (str.charAt(0) != str.charAt(str.length() - 1)){
+  explanations:
+  - body: Base case when this method knows to return false because the first and last characters do not match.
+- type: explanation
+  location:
+    snippet: return isPalindrome(str.substring(1, str.length() - 1));
+  explanations:
+  - body: The first and last characters are equal so check if the shorter string--a simpler version of this problem--is a
+      palindrome.

@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_6_5
+source: Main.java
+title: Infinite For
+description: Infinite For
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Infinite For
+elements:
+- type: explanation
+  location:
+    snippet: for (;;) {
+  explanations:
+  - body: In this for loop, all clauses are omitted. Any clause inside a for can be omitted.
+- type: explanation
+  location:
+    snippet: break;
+  explanations:
+  - body: this break will cause the for to stop. Without this statement, the loop will continue "forever"

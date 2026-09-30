@@ -1,0 +1,50 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_ConstructorDemo
+source: ConstructorDemo.java
+title: Constructor Demo
+description: 'Worked example: Constructor Demo'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:java.lang.System.out.println
+  - expert:ConstructorCall
+  - expert:ObjectCreationStatement
+  - expert:ImportStatement
+  - expert:java.lang.System.out.print
+  - expert:SimpleAssignmentExpression
+  - expert:StringDataType
+  - expert:StringLiteral
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Constructor Demo'
+elements:
+- type: explanation
+  location:
+    snippet: public class ConstructorDemo
+  explanations:
+  - body: This example demonstrates constructors.
+- type: explanation
+  location:
+    snippet: System.out.println(new Rectangle(5, 10, 20, 30));
+  explanations:
+  - body: Constructs and prints a rectangle
+- type: explanation
+  location:
+    snippet: Rectangle box = new Rectangle(5, 10, 20, 30);
+  explanations:
+  - body: Constructs a rectangle and saves it in a variable
+- type: explanation
+  location:
+    snippet: box = new Rectangle();
+  explanations:
+  - body: The constructor with no arguments

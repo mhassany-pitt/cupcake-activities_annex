@@ -1,0 +1,72 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_c_ch2_string_variables
+source: main.cpp
+title: String Variables
+description: 'Worked example: String Variables'
+authors:
+- first: Natalya
+  last: Goreva
+  email: natalya.goreva@iup.edu
+  affiliation: Indiana University of Pennsylvania
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: String Variables'
+elements:
+- type: explanation
+  location:
+    snippet: '#include <iostream>'
+  explanations:
+  - body: This namespace is required for streaming data to and from the user
+- type: explanation
+  location:
+    snippet: '#include <string>'
+  explanations:
+  - body: This namespace is required for the string class.
+- type: explanation
+  location:
+    snippet: using namespace std;
+  explanations:
+  - body: Add a reference to standard namespace that includes variables, types, constants, and functions
+- type: explanation
+  location:
+    snippet: int main()
+  explanations:
+  - body: Declare the main function
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: Open the body of the function
+- type: explanation
+  location:
+    snippet: string movieTitle;
+  explanations:
+  - body: Declare the variable movieTitle of the string type that will store the name of the movie
+- type: explanation
+  location:
+    snippet: movieTitle = "Wheels of Fury";
+  explanations:
+  - body: Assign a string value to the variable
+- type: explanation
+  location:
+    snippet: cout << "My favorite movie is " << movieTitle << endl;
+  explanations:
+  - body: Output the text that the user's favorite movie title is the title that was saved earlier in the string variable
+- type: explanation
+  location:
+    snippet: return 0;
+  explanations:
+  - body: main() is a function, so it should return a value. We make it 0, or in this case a dummy value
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Close the body of the function

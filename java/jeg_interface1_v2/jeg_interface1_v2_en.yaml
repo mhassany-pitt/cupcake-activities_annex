@@ -1,0 +1,76 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_jeg_interface1_v2
+source: JavaInterfaceExample.java
+title: Interface
+description: Interface
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AbstractMethodDefinition
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:FormalMethodParameter
+  - expert:ImplementsSpecification
+  - expert:InterfaceDefinition
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:MethodImplementation
+  - expert:ObjectCreationStatement
+  - expert:ObjectMethodInvocation
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Interface
+elements:
+- type: explanation
+  location:
+    snippet: interface SimpleInterface{
+  explanations:
+  - body: declare an interface
+- type: explanation
+  location:
+    snippet: public void sayHello();
+  explanations:
+  - body: sayHello() method is declared as public.
+- type: explanation
+  location:
+    snippet: public class JavaInterfaceExample implements SimpleInterface{
+  explanations:
+  - body: "Use the keyword \"implements\" to implement an \r\ninterface."
+- type: explanation
+  location:
+    snippet: JavaInterfaceExample javaInterfaceExample = new JavaInterfaceExample();
+  explanations:
+  - body: create an object of the class
+- type: explanation
+  location:
+    snippet: javaInterfaceExample.sayHello();
+  explanations:
+  - body: "invoke sayHello() method which is declared in \r\nSimpleInterface interface.the output is \"Hello \r\nIS17!\""
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of the main() method
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of the JavaInterfaceExample  class

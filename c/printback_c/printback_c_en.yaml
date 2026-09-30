@@ -1,0 +1,126 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_printback_c_en
+source: main.c
+title: 'IS12:: printback.c (15.3)'
+description: 'Worked example: IS12:: printback.c (15.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:pre_decrement
+  - unspecified:pre_increment
+  - unspecified:return
+  - unspecified:and
+  - unspecified:for
+  - unspecified:while
+  - unspecified:static
+  - unspecified:array_declaration
+  - unspecified:char
+  - unspecified:explicit_type_cast
+  - unspecified:equal
+  - unspecified:simple_assignment
+  - unspecified:int
+  - unspecified:if
+  - unspecified:add
+  - unspecified:pointer_declaration
+  - unspecified:main_function
+  - unspecified:not_equal
+  - unspecified:less
+  - unspecified:greater
+  - unspecified:define
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:function_declaration
+  - unspecified:printf
+  - unspecified:sub
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: printback.c (15.3)'
+elements:
+- type: explanation
+  location:
+    snippet: static char *lineptr[MAXLINES];
+  explanations:
+  - body: This is an array of pointers to characters. Each element of this array will hold a pointed to string of text. This
+      array is deifined outside of functions and will be accessible to all functions.
+- type: explanation
+  location:
+    snippet: nlines = readlines();
+  explanations:
+  - body: The function readlines() will read lines from the user, allocate space for them, and attach pointers to these lines
+      to the elements of lineptr. It will return the number of lines read.
+- type: explanation
+  location:
+    snippet: printbackwards(nlines);
+  explanations:
+  - body: This function simply prints lines that we have read from last to first. Parameter nlines tells us where to start.
+- type: explanation
+  location:
+    snippet: int readlines()
+  explanations:
+  - body: The function readlines does not need parameters since it will read information from the user, allocate it in new
+      memory, and store the pointers in the global array lineptr[]
+- type: explanation
+  location:
+    snippet: int len, nlines;
+  explanations:
+  - body: Variable nlines will count the number of lines read.
+- type: explanation
+  location:
+    snippet: char *p, line [MAXLEN];
+  explanations:
+  - body: Buffer line will be used to store temporary the line read from the standard input.
+- type: explanation
+  location:
+    snippet: while((len = getline(line, MAXLEN)) > 0) {
+  explanations:
+  - body: During the evaluation of the loop condition, a line will be read from the standard input and saved in the buffer
+      line.
+- type: explanation
+  location:
+    snippet: p = (char *) malloc(len+1);
+  explanations:
+  - body: We request exactly as much space from free memory (heap) as we need to store the line just read. The allocated chunk
+      of memory will be attached to poiter p.
+- type: explanation
+  location:
+    snippet: copy(p, line);
+  explanations:
+  - body: We now copy the line just read to just permanent storage.
+- type: explanation
+  location:
+    snippet: lineptr[nlines] = p;
+  explanations:
+  - body: Pointe to the line is assigned to the current element of the global array of pointers lineptr
+- type: explanation
+  location:
+    snippet: return nlines;
+  explanations:
+  - body: Total number of lines read is returned.
+- type: explanation
+  location:
+    snippet: void printbackwards(int n)
+  explanations:
+  - body: The function printbackwards needs only one parameter since it will print strings stpored under the pointers from
+      the global array lineptr[]
+- type: explanation
+  location:
+    snippet: while(n > 0) {
+  explanations:
+  - body: This loop will go through the array lineptr from n-1 to 0
+- type: explanation
+  location:
+    snippet: printf("%s", lineptr[n-1]);
+  explanations:
+  - body: In each iteraction we simply print the current line stored in lineptr

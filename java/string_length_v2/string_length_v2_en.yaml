@@ -1,0 +1,51 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_string_length_v2
+source: StringLength.java
+title: String Length
+description: String Length
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.String.length
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringInitializationStatement
+  - expert:StringLiteral
+  - expert:StringVariable
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: String Length
+elements:
+- type: explanation
+  location:
+    snippet: String s = "This is course IS17!";
+  explanations:
+  - body: A string variable s is initialized with a string literal (This is course IS17!).
+- type: explanation
+  location:
+    snippet: int length = s.length();
+  explanations:
+  - body: The method length() returns the number of characters in the input string. Here the variable length is initialized
+      with 20.
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: Closing bracket for the main method. It's a good idea to keep annotation of the closing brackets.

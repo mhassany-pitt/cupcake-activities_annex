@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_show_color2
+source: ShowColors2.java
+title: ISD::ShowColors2.java
+description: 'Worked example: ISD::ShowColors2.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::ShowColors2.java'
+elements:
+- type: explanation
+  location:
+    snippet: c = getContentPane();
+  explanations:
+  - body: Create a Container object.
+- type: explanation
+  location:
+    snippet: JColorChooser.showDialog( ShowColors2.this,
+  explanations:
+  - body: Use static method showDialog to select a color.
+- type: explanation
+  location:
+    snippet: c.setBackground( color );
+  explanations:
+  - body: Container method setBackground takes a Color object.
+- type: explanation
+  location:
+    snippet: c.repaint();
+  explanations:
+  - body: Call repaint to update the screen.

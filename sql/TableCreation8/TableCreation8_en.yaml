@@ -1,0 +1,87 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_TableCreation8
+source: query.sql
+title: Assertion Creation (2)
+description: Assertion Creation (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:SingleTableSelection
+  - expert:AdditionExpression
+  - expert:SQLBasicConcept
+  - expert:AggregateOperation
+  - expert:NumericType
+  - expert:Float
+  - expert:Assertion
+  - expert:TableAlias
+  - expert:TableAlteration
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:BracketCharacter
+  - expert:LessThanComparison
+  - expert:CountFunction
+  - expert:SingleAttributeSelection
+  - expert:DatabaseManagement
+  - sql_ontology:Assertion
+  - sql_ontology:TableAlias
+  - sql_ontology:AlterTableStatement
+  - sql_ontology:LessThanComparison
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:BracketCharacter
+  - sql_ontology:Float
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:AdditionExpression
+  - sql_ontology:SelectClause
+  - sql_ontology:CountDistinctFunction
+  - sql_concept:AggregateOperation
+runtime:
+  language: sql
+  version: '2016'
+statement: Assertion Creation (2)
+elements:
+- type: explanation
+  location:
+    snippet: CREATE ASSERTION smallClub
+  explanations:
+  - body: The previous example ('Assertion Creation (1)') checks the values within itself and it is inappropriate. This example
+      explains ASSERTION as the right solution; not associated with either table. An ASSERTION is a database constraint that
+      restricts the contents of the database as a whole. Like a CHECK constraint, an assertion is specified as a search condition.
+      But the difference of ASSERTION with CHECK constraint is that the search condition in an assertion can restrict the
+      contents of multiple tables and the data relationships among them. For that reaon, an ASSERTION is specified as part
+      of the overall database definition, via CREATE ASSERTION statement.
+- type: explanation
+  location:
+    snippet: CHECK
+  explanations:
+  - body: '''CHECK'' keyword is mandantory for creating assertion.'
+- type: explanation
+  location:
+    snippet: ((SELECT COUNT(S.sid)
+  explanations:
+  - body: In this example,  both sailor and boats are target tables to be compared as a search condition. This returns the
+      number of sailors.
+- type: explanation
+  location:
+    snippet: FROM sailor S) +
+  explanations:
+  - body: Two query results are summed up.
+- type: explanation
+  location:
+    snippet: (SELECT COUNT(B.sid)
+  explanations:
+  - body: This query counts the number of boats.
+- type: explanation
+  location:
+    snippet: < 100));
+  explanations:
+  - body: The summed result of two queries is compared with 100 and checks if the value is less than 100.

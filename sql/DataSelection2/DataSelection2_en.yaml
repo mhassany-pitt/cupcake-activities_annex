@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection2
+source: query.sql
+title: Selecting Multiple Attributes
+description: Selecting Multiple Attributes
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:RightWhitespaceTrim
+  - expert:MultipleAttributeSelection
+  - expert:SingleTableSelection
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:MultipleAttributeSelection
+runtime:
+  language: sql
+  version: '2016'
+statement: Selecting Multiple Attributes
+elements:
+- type: explanation
+  location:
+    snippet: SELECT name, login
+  explanations:
+  - body: The columns are usually specified by a SELECT list, a list of select items separated by commas. In Student table,
+      'name' and 'login' attributes in 'Students' table are selected.

@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_3_4
+source: Main.java
+title: Free Flow Switch
+description: Free Flow Switch
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:CaseClause
+  - expert:ClassDefinition
+  - expert:DefaultClause
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:SwitchStatement
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Free Flow Switch
+elements:
+- type: explanation
+  location:
+    snippet: 'case 0:'
+  explanations:
+  - body: This condition is not met, since i=1. The execution jumps to the next case
+- type: explanation
+  location:
+    snippet: 'case 1:'
+  explanations:
+  - body: This condition is met.
+- type: explanation
+  location:
+    snippet: System.out.println("i is 1");
+  explanations:
+  - body: print "i is 1"
+- type: explanation
+  location:
+    snippet: 'case 2:'
+  explanations:
+  - body: "Since no \"break\" statement is used in the previous block \"case 1:\", the \"case 2:\" condition is considered\
+      \ part of the previous and executed anyway. Same thing happens with the next cases and \r\ndefault block."
+- type: explanation
+  location:
+    snippet: System.out.println("i is 2");
+  explanations:
+  - body: This is also executed. Print "i is 2"
+- type: explanation
+  location:
+    snippet: System.out.println("Free flowing switch example!");
+  explanations:
+  - body: This is also executed.

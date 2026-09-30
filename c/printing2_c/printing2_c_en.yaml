@@ -1,0 +1,56 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_printing2_c_en
+source: main.c
+title: 'IS12:: printing2.c (2.2)'
+description: 'Worked example: IS12:: printing2.c (2.2)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:printf
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:void
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: printing2.c (2.2)'
+elements:
+- type: explanation
+  location:
+    snippet: |-
+      printf("Integer: %5d
+      ", 10);
+  explanations:
+  - body: 'Printed: "Integer:    10" and cursor moves to the new line. There are four blanks between : and 10. One explicitely
+      shown in printf string, three are "unfilled" positions from printing 10 with %5d specification.'
+- type: explanation
+  location:
+    snippet: |-
+      printf("Float: %4.2f
+      ", 3.1415);
+  explanations:
+  - body: 'Printed: "Float:  3.14" and cursor moves to the new line. Only two digits from 3.1415 are printed after decimal
+      point since %4.2f specification allocate 4 total placed for printing this real number'
+- type: explanation
+  location:
+    snippet: |-
+      printf("Character: %c
+      ", 'A');
+  explanations:
+  - body: 'Printed: Character:  A" and cursor moves to the new line.'
+- type: explanation
+  location:
+    snippet: |-
+      printf("Mix: %08d %8.5f %c
+      ", 99, 0.001, '@');
+  explanations:
+  - body: This line demonstrates that different print format specifications can be mixed in one printf statement

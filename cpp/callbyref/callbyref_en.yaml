@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_callbyref
+source: main.cpp
+title: CallbyReference
+description: 'Worked example: CallbyReference'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: CallbyReference'
+elements:
+- type: explanation
+  location:
+    snippet: void cubeByReference( int * );
+  explanations:
+  - body: Function prototype takes a pointer argument.
+- type: explanation
+  location:
+    snippet: cubeByReference( &number );
+  explanations:
+  - body: Function cubeByReference is passed an address, which can be the value of a pointer variable.
+- type: explanation
+  location:
+    snippet: void cubeByReference( int *nPtr )
+  explanations:
+  - body: Function prototype takes a pointer argument.
+- type: explanation
+  location:
+    snippet: '*nPtr = *nPtr * *nPtr * *nPtr;  /* cube number in main */'
+  explanations:
+  - body: In this program, *nPtr is number, so this statement modifies the value of number itself.

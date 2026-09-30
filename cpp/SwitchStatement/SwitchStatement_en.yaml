@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_SwitchStatement
+source: main.cpp
+title: SwitchStatement
+description: 'Worked example: SwitchStatement'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: cpp
+  version: '17'
+statement: 'Worked example: SwitchStatement'
+elements:
+- type: explanation
+  location:
+    snippet: 'case 1:'
+  explanations:
+  - body: ignore spaces in input
+- type: explanation
+  location:
+    snippet: break;
+  explanations:
+  - body: break statement makes program skip to end of switch.
+- type: explanation
+  location:
+    snippet: 'case 2:'
+  explanations:
+  - body: ignore spaces in input
+- type: explanation
+  location:
+    snippet: break;
+    nth: 2
+  explanations:
+  - body: break statement makes program skip to end of switch.
+- type: explanation
+  location:
+    snippet: 'case 3:'
+  explanations:
+  - body: ignore spaces in input

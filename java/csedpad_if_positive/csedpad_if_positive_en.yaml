@@ -1,0 +1,62 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_if_positive
+source: Positive.java
+title: (If) Positive - CSEdPad
+description: Given a number, this program reports if the number is a positive number
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - webex:IfStatement
+  - webex:GreaterExpression
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:VoidDataType
+  - webex:IntDataType
+  - webex:StringLiteral
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:GreaterExpression
+  - java_ontology:IfStatement
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Given a number, this program reports if the number is a positive number
+elements:
+- type: explanation
+  location:
+    snippet: if ( givenNumber > 0){
+  explanations:
+  - body: Evaluates if variable givenNumber is greater than 0 or not. If true, executes the respective lines of code
+- type: explanation
+  location:
+    snippet: System.out.println("The given number is positive.");
+  explanations:
+  - body: givenNumber=56 is greater than 0 is evaluated as true. So, it prints that the given number is positive.

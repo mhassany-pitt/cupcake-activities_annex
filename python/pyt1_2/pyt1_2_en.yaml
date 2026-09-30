@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt1_2_en
+source: main.py
+title: Different Ways to Print
+description: 'Worked example: Different Ways to Print'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:Call
+  - parser:Str
+  - unspecified:Call
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Different Ways to Print'
+elements:
+- type: explanation
+  location:
+    snippet: print ('Hello World!')
+  explanations:
+  - body: One way to print a string is to enclose the string inside single quotation marks
+- type: explanation
+  location:
+    snippet: print ("Hello World!")
+  explanations:
+  - body: Another way to print out a string is to enclose the string inside double quotation marks
+- type: explanation
+  location:
+    snippet: print ('''Hello World!''')
+  explanations:
+  - body: One more way to printing out strings is to put it between Three-Single Quotes. This is used to print out large strings
+      that typically exceeds more than one line
+- type: explanation
+  location:
+    snippet: print ("""Hello World!""")
+  explanations:
+  - body: Strings can also be printed with Three-Double Quotes. Similar to the previous example, this is also used to print
+      out large strings that typically exceeds more than one line

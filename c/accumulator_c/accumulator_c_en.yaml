@@ -1,0 +1,85 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_accumulator_c_en
+source: main.c
+title: 'IS12:: accumulator.c (4.7)'
+description: 'Worked example: IS12:: accumulator.c (4.7)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:variable_initialization
+  - unspecified:int
+  - unspecified:void
+  - unspecified:printf
+  - unspecified:reference
+  - unspecified:include
+  - unspecified:variable_declaration
+  - unspecified:main_function
+  - unspecified:add_assignment
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: accumulator.c (4.7)'
+elements:
+- type: explanation
+  location:
+    snippet: int sum = 0, nextnumber;
+  explanations:
+  - body: The integer variable sum declared in this line will accumulate the sum of the values entered by the user. It is
+      initialized to zero.
+- type: explanation
+  location:
+    snippet: 'printf("Number: ");'
+  explanations:
+  - body: This is a prompt
+- type: explanation
+  location:
+    snippet: scanf("%d", &nextnumber); /* read first number */
+  explanations:
+  - body: This line reads an integer from the user and places it into nextnumber. We need to pre-read the first number in
+      a sequence since a meaninful value of nextnumber is required *before* the checking the loop condition
+- type: explanation
+  location:
+    snippet: while (nextnumber != 0) {
+  explanations:
+  - body: This is a loop condition of a sentinel loop. The loop will end when the value of nextnumber will become equal to
+      0 - that is the sentinel value in this example
+- type: explanation
+  location:
+    snippet: sum += nextnumber;
+  explanations:
+  - body: Adding nextnumber to the current value of sum. Same as sum = sum + nextnumber;
+- type: explanation
+  location:
+    snippet: 'printf("Number: ");'
+    nth: 2
+  explanations:
+  - body: This is a prompt
+- type: explanation
+  location:
+    snippet: scanf("%d", &nextnumber);
+  explanations:
+  - body: This line reads an integer from the user and places it into nextnumber. This prepares us to the next iteration of
+      the loop where this value will be added to the sum (unless it is the sentinel value).
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: This bracket ends the loop body
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: The final value of the sum is printed.

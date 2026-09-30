@@ -1,0 +1,55 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataUpdate4
+source: query.sql
+title: Updating with condition
+description: Updating with condition
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ToUpperCase
+  - expert:SingleAttributeGrouping
+  - expert:BracketCharacter
+  - expert:UpdateClause
+  - expert:InPredicate
+  - expert:UpdateStatement
+  - expert:WhereClause
+  - expert:SetClause
+  - expert:CommaCharacter
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - sql_ontology:UpdateClause
+  - sql_ontology:GroupByClause
+  - sql_ontology:UpdateStatement
+  - sql_ontology:CommaCharacter
+  - sql_ontology:NumericType
+  - sql_ontology:InPredicate
+  - sql_ontology:BracketCharacter
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:WhereClause
+  - sql_ontology:SetClause
+  - sql_concept:ToUpperCase
+runtime:
+  language: sql
+  version: '2016'
+statement: Updating with condition
+elements:
+- type: explanation
+  location:
+    snippet: UPDATE Customers
+  explanations:
+  - body: This example shows that not only one, more than one condition can be defined in one SQL.
+- type: explanation
+  location:
+    snippet: WHERE cust_rep IN (105, 106, 107);
+  explanations:
+  - body: IN is the set membership test. It tests whether a data value matches one of a list of target values. In this example,
+      if cust_rep is one of 105,106, or 107, the condition turns out TRUE.

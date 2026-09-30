@@ -1,0 +1,53 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataDeletion1
+source: query.sql
+title: Deleting Data
+description: Deleting Data
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:StringType
+  - expert:AttributeName
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:KeyConstraint
+  - expert:SingleQuotationCharacter
+  - expert:DeleteFromClause
+  - expert:SingleTableSelection
+  - expert:DeleteStatement
+  - expert:EqualComparison
+  - sql_ontology:DeleteFromClause
+  - sql_ontology:EqualComparison
+  - sql_ontology:AttributeName
+  - sql_ontology:StringType
+  - sql_ontology:SetOperation
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:DeleteStatement
+  - sql_ontology:SingleQuotationCharacter
+  - sql_ontology:WhereClause
+  - sql_concept:KeyConstraint
+runtime:
+  language: sql
+  version: '2016'
+statement: Deleting Data
+elements:
+- type: explanation
+  location:
+    snippet: DELETE
+  explanations:
+  - body: DELETE statement is to delete one or more <B>ROWS</b> of data. The keyword 'DELETE' to define the kind of SQL statement
+      and 'from' to specify the target table are mantantory information.
+- type: explanation
+  location:
+    snippet: FROM Students;
+  explanations:
+  - body: It is to delete all rows from 'Students' table

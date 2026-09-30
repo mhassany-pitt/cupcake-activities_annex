@@ -1,0 +1,63 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_boolean_operators_v2
+source: boolean_operators.java
+title: Boolean Operators
+description: Boolean Operators
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:AndExpression
+  - expert:BooleanDataType
+  - expert:ClassDefinition
+  - expert:False
+  - expert:FormalMethodParameter
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:NotExpression
+  - expert:OrExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:True
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Boolean Operators
+elements:
+- type: explanation
+  location:
+    snippet: boolean A = true;
+  explanations:
+  - body: Declares a boolean variable A and initializes it with value true.
+- type: explanation
+  location:
+    snippet: System.out.println("A||B = "+(A||B));
+  explanations:
+  - body: '|| is the logical operator, conditional OR. If either A or B are true, the result of || is true. The print out
+      is A||B = true.'
+- type: explanation
+  location:
+    snippet: System.out.println("A&&B = "+(A&&B));
+  explanations:
+  - body: '&& is another logical operator, conditional AND. The result of && will be true if both A and B are true. The print
+      out is A&&B = false.'
+- type: explanation
+  location:
+    snippet: System.out.println("!A = "+(!A));
+  explanations:
+  - body: '! is a "not" logical operator. It only takes a single parameter. If the parameter value (conditional) is false,
+      it evaluates to true. It evaluates to false if the conditional is true. The print out is !A = false.'

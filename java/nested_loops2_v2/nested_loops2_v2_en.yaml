@@ -1,0 +1,74 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_nested_loops2_v2
+source: nested_loops2.java
+title: Nested Loops2
+description: Nested Loops2
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:ForStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.print
+  - expert:java.lang.System.out.println
+  - expert:LessEqualExpression
+  - expert:MethodDefinition
+  - expert:MultiplyExpression
+  - expert:NestedStatement
+  - expert:PostIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Nested Loops2
+elements:
+- type: explanation
+  location:
+    snippet: for ( int rowNumber = 1;  rowNumber <= 10;  rowNumber++ ) {
+  explanations:
+  - body: the outer for loop starts with rowNumber equals to 1. It increases 1 for each iteration and terminates when it reaches
+      10.
+- type: explanation
+  location:
+    snippet: for ( int N = 1;  N <= 10;  N++ ) {
+  explanations:
+  - body: the inner for loop starts with N equals to 1. 1. It increases 1 for each iteration and terminates when it reaches
+      10.
+- type: explanation
+  location:
+    snippet: System.out.print( N * rowNumber + " ");
+  explanations:
+  - body: "it prints out the result of the multiplication consecutively and adding a space character. As the loop goes, the\
+      \ printed line will have a series of 10 numbers \r\ncorresponding to the multiplication of each 'j' from 1 to 10 to\
+      \ the current value of i."
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of the inner for loop.
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: this line prints a blank line to separate the series of numbers
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of the outer for loop. The first line of the print out is '1 2 3 4 5 6 7 8 9 10', the second line is '2 4 6
+      8 10 12 14 16 18 20', and so on and so forth.

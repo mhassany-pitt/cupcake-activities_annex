@@ -1,0 +1,60 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_variables2_v2
+source: variables2.java
+title: variable initialization
+description: Variable Initialization
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AddExpression
+  - expert:ClassDefinition
+  - expert:DoubleDataType
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:MethodDefinition
+  - expert:MultiplyExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringInitializationStatement
+  - expert:StringLiteral
+  - expert:StringVariable
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Variable Initialization
+elements:
+- type: explanation
+  location:
+    snippet: int i = 2;
+  explanations:
+  - body: "Variable initialization is used to declare a variable and immediately assign \r\nan initial value to it. This statement\
+      \ declares an integer variable named 'i' \r\nand assign it with integer 2."
+- type: explanation
+  location:
+    snippet: String sentence = "I am a teacher.";
+  explanations:
+  - body: "String variables are initialized with string literals. Here variable 'sentence' is \r\ninitialized with 'I am a\
+      \ teacher.'."
+- type: explanation
+  location:
+    snippet: int a = 2, b = 3;
+  explanations:
+  - body: Several variables of the same type can be initialized in one statement.
+- type: explanation
+  location:
+    snippet: int i =  2 * 3 + 5;
+  explanations:
+  - body: "You can initialize a variable with the result of an expression. Here, the \r\ninteger variable 'i' is initialized\
+      \ with value 11."

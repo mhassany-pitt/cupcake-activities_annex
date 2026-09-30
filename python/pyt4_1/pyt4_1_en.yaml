@@ -1,0 +1,32 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_1_en
+source: main.py
+title: While Loop Statement
+description: 'Worked example: While Loop Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: While Loop Statement'
+elements:
+- type: explanation
+  location:
+    snippet: 'while (a < 5):'
+  explanations:
+  - body: Initial value of the variable 'a' is 0. This statement loops till a is less than 5 (till a is equal to 4)
+- type: explanation
+  location:
+    snippet: a = a + 1
+  explanations:
+  - body: Increment the value of a. This is important step in while loops to avoid infinite looping.

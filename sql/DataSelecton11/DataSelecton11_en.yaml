@@ -1,0 +1,58 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelecton11
+source: query.sql
+title: Multiple Comparisons (1)
+description: Multiple Comparisons (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ReferentialAction
+  - expert:StringType
+  - expert:FixedLengthCharacterString
+  - expert:AndLogicalOperator
+  - expert:Assertion
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:AttributeName
+  - expert:GreaterThanComparison
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:SetOperation
+  - expert:LeftWhitespaceTrim
+  - expert:SingleAttributeSelection
+  - expert:NumericType
+  - expert:SingleTableSelection
+  - expert:EqualComparison
+  - sql_ontology:EqualComparison
+  - sql_ontology:Assertion
+  - sql_ontology:StringType
+  - sql_ontology:AndLogicalOperator
+  - sql_ontology:SetOperation
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:NumericType
+  - sql_ontology:WhereClause
+  - sql_ontology:FixedLengthCharacterString
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:GreaterThanComparison
+  - sql_concept:ReferentialAction
+  - sql_concept:LeftWhitespaceTrim
+runtime:
+  language: sql
+  version: '2016'
+statement: Multiple Comparisons (1)
+elements:
+- type: explanation
+  location:
+    snippet: WHERE branch_name = Perryridge AND amount > 1200;
+  explanations:
+  - body: More than one comparison results in conditions can be combined using logical connectives AND, OR and NOT. This condition
+      is to test both if the branch name is Perryridge <b>AND</b> if the amount is greater than 1200.

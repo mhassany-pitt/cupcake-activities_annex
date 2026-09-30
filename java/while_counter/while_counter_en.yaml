@@ -1,0 +1,54 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_while_counter
+source: WhileCounter.java
+title: DEPRECATED_WhileCounter
+description: 'Worked example: DEPRECATED_WhileCounter'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_WhileCounter'
+elements:
+- type: explanation
+  location:
+    snippet: int counter = 1;
+  explanations:
+  - body: declare and initialize control variable
+- type: explanation
+  location:
+    snippet: while ( counter <= 10 )
+  explanations:
+  - body: loop-continuation condition
+- type: explanation
+  location:
+    snippet: ++counter;
+  explanations:
+  - body: increment control variable by 1
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end while
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end main
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end class WhileCounter

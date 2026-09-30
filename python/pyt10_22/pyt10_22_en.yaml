@@ -1,0 +1,84 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_22_en
+source: main.py
+title: Reading from a text file
+description: 'Worked example: Reading from a text file'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:For
+  - parser:Int
+  - parser:Attribute
+  - parser:List
+  - parser:Call
+  - parser:Str
+  - parser:Assign
+  - unspecified:For
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:List
+  - unspecified:Int
+  - unspecified:Attribute
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Reading from a text file'
+elements:
+- type: explanation
+  location:
+    snippet: f = open("test.txt","r")
+  explanations:
+  - body: opens file with name of 'test.txt'
+- type: explanation
+  location:
+    snippet: print(f.read(1))
+  explanations:
+  - body: This statement reads specific number of characters from the mentioned file. Here '1' is passed as a parameter value
+      into the read method. This means that it will read only one character from the mentioned file.
+- type: explanation
+  location:
+    snippet: print(f.read())
+  explanations:
+  - body: As above, it will read the number of characters specified. Here, nothing is mentioned within the parenthesis, hence
+      it will read all the characters from the mentioned file
+- type: explanation
+  location:
+    snippet: print(f.readline(2))
+  explanations:
+  - body: This is the statement which will read the number of lines from a given file. Here 2 is passed as a parameter to
+      the 'readline' method hence it will read 2 lines from the mentioned text file
+- type: explanation
+  location:
+    snippet: myList = []
+  explanations:
+  - body: Creating an empty list named 'myList'
+- type: explanation
+  location:
+    snippet: 'for line in f:'
+  explanations:
+  - body: for loop iterates for each line in f (the mentioned text file)
+- type: explanation
+  location:
+    snippet: myList.append(line)
+  explanations:
+  - body: and then it appends that line into the 'myList' as an element
+- type: explanation
+  location:
+    snippet: print(myList)
+  explanations:
+  - body: this statement simply prints out the entire list
+- type: explanation
+  location:
+    snippet: f.close()
+  explanations:
+  - body: This statement closes the connection to the file

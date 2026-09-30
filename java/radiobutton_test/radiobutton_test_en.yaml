@@ -1,0 +1,77 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_radiobutton_test
+source: RadioButtonTest.java
+title: ISD::RadioButtonTest.java
+description: 'Worked example: ISD::RadioButtonTest.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::RadioButtonTest.java'
+elements:
+- type: explanation
+  location:
+    snippet: Container c = getContentPane();
+  explanations:
+  - body: Create a Container object
+- type: explanation
+  location:
+    snippet: c.add( t );
+  explanations:
+  - body: attach component to Container c.
+- type: explanation
+  location:
+    snippet: plain = new JRadioButton( "Plain", true );
+  explanations:
+  - body: Create radio buttons and initialize radio buttons.  Only one is initially selected.
+- type: explanation
+  location:
+    snippet: c.add( plain );
+  explanations:
+  - body: attach component to Container c.
+- type: explanation
+  location:
+    snippet: RadioButtonHandler handler = new RadioButtonHandler();
+  explanations:
+  - body: Register event handlers.
+- type: explanation
+  location:
+    snippet: plain.addItemListener( handler );
+  explanations:
+  - body: Register handlers with with addItemListener
+- type: explanation
+  location:
+    snippet: radioGroup = new ButtonGroup();
+  explanations:
+  - body: Create a ButtonGroup.  Only one radio button in the group may be selected at a time.
+- type: explanation
+  location:
+    snippet: radioGroup.add( plain );
+  explanations:
+  - body: Method add adds radio buttons to the ButtonGroup
+- type: explanation
+  location:
+    snippet: private class RadioButtonHandler implements ItemListener {
+  explanations:
+  - body: use the inner class as an event handler
+- type: explanation
+  location:
+    snippet: if ( e.getSource() == plain )
+  explanations:
+  - body: getSource returns a Component reference to component that generated event
+- type: explanation
+  location:
+    snippet: t.repaint();
+  explanations:
+  - body: Call repaint to update the screen.

@@ -1,0 +1,132 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_arraymin_c_en
+source: main.c
+title: 'IS12:: arraymin.c (9.3)'
+description: 'Worked example: IS12:: arraymin.c (9.3)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:less
+  - unspecified:int
+  - unspecified:array_declaration
+  - unspecified:pre_increment
+  - unspecified:greater
+  - unspecified:reference
+  - unspecified:define
+  - unspecified:include
+  - unspecified:if
+  - unspecified:void
+  - unspecified:variable_declaration
+  - unspecified:simple_assignment
+  - unspecified:main_function
+  - unspecified:for
+  - unspecified:printf
+  - unspecified:scanf
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: arraymin.c (9.3)'
+elements:
+- type: explanation
+  location:
+    snippet: '/* Example: finding minimal value in an array elements'
+  explanations:
+  - body: Comments of the purpose and author of the program should be included in a program.
+- type: explanation
+  location:
+    snippet: '#include <stdio.h>'
+  explanations:
+  - body: This is a preprocessor command. System header file stdio.h will be inserted there during compilation.  We include
+      stdio.h header file because it contains function   prototypes for printf and scanf.
+- type: explanation
+  location:
+    snippet: '#define N 7 /* dimension of the array */'
+  explanations:
+  - body: The define statement sets up a symbolic constant value for size of the array that is used consistently throughout
+      the program.  For example, wherever N is used, the value 7 will replace it.   Very useful if the value of N needs to
+      be changed.
+- type: explanation
+  location:
+    snippet: main(){
+  explanations:
+  - body: This is the start of main function definition. Every program should have function main
+- type: explanation
+  location:
+    snippet: int ar[N]; /* elements from ar[0] to ar[N-1]; */
+  explanations:
+  - body: An array of 7 integer values is defined.  Because array positions begin from 0, elements of this array have indexes
+      from 0 to 6.
+- type: explanation
+  location:
+    snippet: int i, min;
+  explanations:
+  - body: i and min are both declared as integers.  They are integers because min will be storage for the minimum value in
+      the array and i is a counter variable.  A counter variable keeps track of loop iterations.
+- type: explanation
+  location:
+    snippet: for (i = 0; i < N; ++i) {
+  explanations:
+  - body: This loop will execute exactly N times which in this case is 7.  There are 3 parts in the loop header.  The first
+      part initializes the counter variable i to 0.  The second part, i < N;, is the loop conditional. The third is increment
+      ++i.
+- type: explanation
+  location:
+    snippet: printf("%d> ", i);
+  explanations:
+  - body: printf is a standard output function, that in this case takes the value i (the current iteration number) and outputs
+      it.  The % symbol is used to show where the value is to be printed and d is formatting for integers, which i is.
+- type: explanation
+  location:
+    snippet: scanf("%d", &ar[i]);
+  explanations:
+  - body: scanf is a standard input function, that in this case takes a value from standard input and stores it into an array
+      element with index i (the memory location 0 to N-1).
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: End bracket of the for loop.  If a loop contains more than one statement to be executed, denoted by a semi-colon,
+      then brackets are needed to keep all relevant statements together.
+- type: explanation
+  location:
+    snippet: min = ar[0];
+  explanations:
+  - body: The integer variable min is initialized to value of the first element of the array (index 0).
+- type: explanation
+  location:
+    snippet: for (i = 1; i < N; ++i)
+  explanations:
+  - body: This loop will execute exactly N times which in this case is 7.  There are 3 parts in the loop header.  The first
+      part initializes the counter variable i to 0.  The second part, i < N;, is the loop conditional. The third is increment
+      ++i.
+- type: explanation
+  location:
+    snippet: if (min > ar[i]) min = ar[i];
+  explanations:
+  - body: If the value of the condition in the parenthesis is not zero (in C it mean true), then the following statement is
+      executed.  I.e., if the current value of min is greater than the the array lement with index i, then min gets the value
+      of that element.
+- type: explanation
+  location:
+    snippet: |-
+      printf("%d
+      ", min);
+  explanations:
+  - body: printf is a standard output function that in this case takes the value min and outputs it.  The % symbol is used
+      to show where the value is to be printed and d is formatting for integers, which min is. The symbol sets the output
+      cursor to the next line
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: End bracket of main. Brackets are needed to keep all relevant statements together.

@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_border_layout
+source: BorderLayoutDemo.java
+title: ISD::BorderLayoutDemo.java
+description: 'Worked example: ISD::BorderLayoutDemo.java'
+authors:
+- first: Joshua
+  last: Dobosh
+  email: joshua.dobosh@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::BorderLayoutDemo.java'
+elements:
+- type: explanation
+  location:
+    snippet: layout = new BorderLayout( 5, 5 );
+  explanations:
+  - body: Set horizontal and vertical spacing in constructor.
+- type: explanation
+  location:
+    snippet: c.add( b[ 0 ], BorderLayout.NORTH );  // North position
+  explanations:
+  - body: add component into container c and specify the position, position can be BorderLayout.NORTH, SOUTH, EAST, WEST,
+      CENTER
+- type: explanation
+  location:
+    snippet: b[ i ].setVisible( false );
+  explanations:
+  - body: 'setVisible( boolean ) , false: Hide the button that generated the event.'
+- type: explanation
+  location:
+    snippet: layout.layoutContainer( getContentPane() );
+  explanations:
+  - body: Recalculates layout of content pane.

@@ -1,0 +1,43 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt4_10_en
+source: main.py
+title: Continue Statement
+description: 'Worked example: Continue Statement'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Continue Statement'
+elements:
+- type: explanation
+  location:
+    snippet: 'for letter in ''Python'':'
+  explanations:
+  - body: 'This for loop statement is read in the following way: iterate through each letter in the string ''Python'''
+- type: explanation
+  location:
+    snippet: 'if letter == ''h'':'
+  explanations:
+  - body: it checks if the current letter is 'h'
+- type: explanation
+  location:
+    snippet: continue
+  explanations:
+  - body: if the current letter is 'h', it will skip the current iteration of the loop and continue with the next iteration
+- type: explanation
+  location:
+    snippet: print('Current Letter :', letter)
+  explanations:
+  - body: This statement will print all the letters but the letter 'h' because it skipped the iteration where the current
+      letter was 'h'.

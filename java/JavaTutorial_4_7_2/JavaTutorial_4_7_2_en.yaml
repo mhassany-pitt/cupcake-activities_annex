@@ -1,0 +1,53 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_JavaTutorial_4_7_2
+source: MainClass.java
+title: For-Each 2
+description: For-Each 2
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ArrayInitializationStatement
+  - expert:ArrayInitializer
+  - expert:ArrayVariable
+  - expert:ClassDefinition
+  - expert:ForEachStatement
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.print
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:MultiplyExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:StringAddition
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: For-Each 2
+elements:
+- type: explanation
+  location:
+    snippet: 'for(int x : nums) {'
+  explanations:
+  - body: "Another form of the for loop called \"for each\". In this case, in each round of the for, the variable \"x\" takes\
+      \ \r\nthe next value in the array \"nums\"."
+- type: explanation
+  location:
+    snippet: x = x * 10;
+  explanations:
+  - body: Even when "x" is modified here, it would take the next value of "nums" in the next round. This line is pointless.

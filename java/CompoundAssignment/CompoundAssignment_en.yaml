@@ -1,0 +1,57 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_CompoundAssignment
+source: Main.java
+title: Combining Assignment and Arithmetic
+description: 'Worked example: Combining Assignment and Arithmetic'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:AddAssignmentExpression
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:SimpleAssignmentExpression
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Combining Assignment and Arithmetic'
+elements:
+- type: explanation
+  location:
+    snippet: int sum = 1;
+  explanations:
+  - body: The initial value of variable 'sum' is equal to 1.
+- type: explanation
+  location:
+    snippet: sum += 9;
+  explanations:
+  - body: This is a shortcut for 'sum = sum + 9'. So, the operator '+=' adds 9 to the current value of variable sum.
+- type: explanation
+  location:
+    snippet: System.out.println( sum );
+  explanations:
+  - body: Prints 10.
+- type: explanation
+  location:
+    snippet: sum = 1;
+  explanations:
+  - body: Variable 'sum' is equal to 1 again.
+- type: explanation
+  location:
+    snippet: sum *= 9;
+  explanations:
+  - body: This is a shortcut for 'sum = sum * 9'. So, the operator '*=' multiplies the value of variable 'sum' by 9.
+- type: explanation
+  location:
+    snippet: System.out.println( sum );
+    nth: 2
+  explanations:
+  - body: Prints 9.

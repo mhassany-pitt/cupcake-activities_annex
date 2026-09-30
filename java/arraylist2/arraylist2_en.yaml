@@ -1,0 +1,74 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_arraylist2
+source: Main.java
+title: DEPRECATED_ArrayList Demo
+description: 'Worked example: DEPRECATED_ArrayList Demo'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_ArrayList Demo'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: import ArrayList class from java libraries
+- type: explanation
+  location:
+    snippet: ArrayList AL = new ArrayList();
+  explanations:
+  - body: create an array list  AL.
+- type: explanation
+  location:
+    snippet: AL.add("C");
+  explanations:
+  - body: add elements to the array list.
+- type: explanation
+  location:
+    snippet: AL.add(1, "A2");
+  explanations:
+  - body: Insert A2 at index 1
+- type: explanation
+  location:
+    snippet: 'System.out.println("Size of AL: " + AL.size());'
+  explanations:
+  - body: 'Size of AL: 7'
+- type: explanation
+  location:
+    snippet: 'System.out.println("Contents of AL: " + AL);'
+  explanations:
+  - body: 'Contents of AL: [C, A2, A, E, B, D, F]'
+- type: explanation
+  location:
+    snippet: AL.remove("F");
+  explanations:
+  - body: Remove elements "F" from the array list
+- type: explanation
+  location:
+    snippet: AL.remove(2);
+  explanations:
+  - body: Removes the element at index 2
+- type: explanation
+  location:
+    snippet: 'System.out.println("Size of AL: " + AL.size());'
+    nth: 2
+  explanations:
+  - body: 'Size of AL: 5'
+- type: explanation
+  location:
+    snippet: 'System.out.println("Contents of AL: " + AL);'
+    nth: 2
+  explanations:
+  - body: 'Contents of AL: [C, A2, E, B, D]'

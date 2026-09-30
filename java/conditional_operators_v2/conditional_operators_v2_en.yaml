@@ -1,0 +1,49 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_conditional_operators_v2
+source: Main.java
+title: boolean operators
+description: boolean operators
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:AndExpression
+  - expert:ClassDefinition
+  - expert:EqualExpression
+  - expert:FormalMethodParameter
+  - expert:IfStatement
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:OrExpression
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:StringDataType
+  - expert:StringLiteral
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: boolean operators
+elements:
+- type: explanation
+  location:
+    snippet: if((value1 == 1) && (value2 == 2)) System.out.println("value1 is 1 AND value2 is 2");
+  explanations:
+  - body: "Operator && is the logic AND, and is used to combine conditions. It evaluates to true only if \r\nboth conditions\
+      \ are true.\r\nIf any or both conditions are false, the entire \r\n&&-condition is false."
+- type: explanation
+  location:
+    snippet: if((value1 == 1) || (value2 == 1)) System.out.println("value1 is 1 OR value2 is 1");
+  explanations:
+  - body: "Operator || is the logic OR and is used to combine conditions. It evaluates to true if any \r\nor both conditions\
+      \ are true.\r\nOnly if both conditions are false, the entire ||-\r\ncondition is false."

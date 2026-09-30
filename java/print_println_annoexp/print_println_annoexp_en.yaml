@@ -1,0 +1,69 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_print_println_annoexp
+source: PrintPrintln.java
+title: PrintPrintln
+description: 'Worked example: PrintPrintln'
+authors:
+- first: Yun
+  last: Huang
+  email: yun.huang@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:FormalMethodParameter
+  - java_ontology:java.lang.System.out.print
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: PrintPrintln'
+elements:
+- type: explanation
+  location:
+    snippet: '{'
+  explanations:
+  - body: int width = 10;
+- type: explanation
+  location:
+    snippet: System.out.println(width);
+  explanations:
+  - body: |-
+      The console currently prints out:
+      width:10
+- type: explanation
+  location:
+    snippet: width = 20;
+  explanations:
+  - body: Changes width to 20
+- type: explanation
+  location:
+    snippet: 'System.out.print("width: ");'
+  explanations:
+  - body: |-
+      Up till now, the console prints out:
+      width:10
+      width:
+- type: explanation
+  location:
+    snippet: System.out.println(width);
+    nth: 2
+  explanations:
+  - body: |-
+      Up till now, the console prints out:
+      width:10
+      width:20

@@ -1,0 +1,58 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection21
+source: query.sql
+title: Combining Query Results (3)
+description: Combining Query Results (3)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ExceptOperation
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:SelectStatement
+  - expert:BracketCharacter
+  - expert:SetDefaultReferentialAction
+  - expert:SingleAttributeSelection
+  - expert:SingleTableSelection
+  - sql_ontology:SelectStatement
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:BracketCharacter
+  - sql_ontology:ExceptOperation
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:SelectClause
+  - sql_concept:SetDefaultReferentialAction
+runtime:
+  language: sql
+  version: '2016'
+statement: Combining Query Results (3)
+elements:
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+  explanations:
+  - body: The first query is to find customers having account
+- type: explanation
+  location:
+    snippet: EXCEPT
+  explanations:
+  - body: The EXCEPT operation produces a single table containing the rows that appear in the first table but that do not
+      appear in another table. It is important that the two tables must contain the same number of columns and the domain
+      type of each column in both tables should be identical. <u>By default</u>, the EXCEPT operation eliminates duplicate
+      rows as part of its processing. If you want to retain duplicate rows, you can specify the ALL keyword following the
+      EXCEPT like 'EXCEPT ALL'
+- type: explanation
+  location:
+    snippet: (SELECT customer_name
+    nth: 2
+  explanations:
+  - body: This second query is to find customers having loan

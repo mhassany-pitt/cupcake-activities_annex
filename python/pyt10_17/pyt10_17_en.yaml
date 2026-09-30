@@ -1,0 +1,134 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_17_en
+source: main.py
+title: Class Definition - Bank Account
+description: 'Worked example: Class Definition - Bank Account'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:AugAssign
+  - parser:Gt
+  - parser:Return
+  - parser:Raise
+  - parser:Int
+  - parser:Attribute
+  - parser:Float
+  - parser:ClassDef
+  - parser:Sub
+  - parser:Add
+  - parser:Call
+  - parser:Str
+  - parser:arg
+  - parser:Assign
+  - parser:FunctionDef
+  - parser:If
+  - unspecified:Gt
+  - unspecified:arg
+  - unspecified:Sub
+  - unspecified:Call
+  - unspecified:Assign
+  - unspecified:Return
+  - unspecified:ClassDef
+  - unspecified:Float
+  - unspecified:FunctionDef
+  - unspecified:Int
+  - unspecified:Attribute
+  - unspecified:Raise
+  - unspecified:Add
+  - unspecified:AugAssign
+  - unspecified:If
+  - unspecified:Str
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Class Definition - Bank Account'
+elements:
+- type: explanation
+  location:
+    snippet: 'class Customer(object):'
+  explanations:
+  - body: Defining a class 'Customer'
+- type: explanation
+  location:
+    snippet: 'def __init__(self, name, balance=0.0):'
+  explanations:
+  - body: Setting up a constructor taking in 'name' and 'balance'. Here balance is set to '0.0' as its default value
+- type: explanation
+  location:
+    snippet: self.name = name
+  explanations:
+  - body: Defining a local variable 'name' and assigning the value of name that was passed in as the argument to the function
+- type: explanation
+  location:
+    snippet: self.balance = balance
+  explanations:
+  - body: Defining a local variable 'balance' and assigning the value of balance. Here balance will be assigned the value
+      '0.0' initially
+- type: explanation
+  location:
+    snippet: 'def withdraw(self, amount):'
+  explanations:
+  - body: Defining the function 'withdraw' which takes in the argument 'amount'
+- type: explanation
+  location:
+    snippet: 'if amount > self.balance:'
+  explanations:
+  - body: here we run a simple conditional statement to check if the amount to be withdrawn is more than the amount in the
+      bank
+- type: explanation
+  location:
+    snippet: raise RuntimeError('Amount greater than available balance.')
+  explanations:
+  - body: If yes, we will raise an exception with the custom message saying the amount you want to withdraw is greater than
+      the amount available in your bank account
+- type: explanation
+  location:
+    snippet: self.balance -= amount
+  explanations:
+  - body: if the amount to bewithdrawn is less than the amount available in bank, then we subtract the amount from his current
+      balance
+- type: explanation
+  location:
+    snippet: return self.name+' has '+ str(self.balance)
+  explanations:
+  - body: returning his updated balance
+- type: explanation
+  location:
+    snippet: 'def deposit(self, amount):'
+  explanations:
+  - body: another function called 'deposit' which takes in an additional argument called 'amount'
+- type: explanation
+  location:
+    snippet: self.balance += amount
+  explanations:
+  - body: Adding the amount deposited to the current balance
+- type: explanation
+  location:
+    snippet: return self.name+' has '+ str(self.balance)
+    nth: 2
+  explanations:
+  - body: returning his updated balance
+- type: explanation
+  location:
+    snippet: a = Customer('Tom')
+  explanations:
+  - body: Instantiating the class by passing 'Tom' as the name
+- type: explanation
+  location:
+    snippet: print(a.deposit(5000))
+  explanations:
+  - body: depositing the amount '5000' into Tom'sbank account. This will return '5000.0'
+- type: explanation
+  location:
+    snippet: print(a.withdraw(1000))
+  explanations:
+  - body: Withdrawing the amount '1000' from Tom's bank account. This will return '4000.0' as his updated balance

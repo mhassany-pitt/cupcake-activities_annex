@@ -1,0 +1,166 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_boolean_expressions_memphis
+source: BooleanDemos.java
+title: Boolean expressions (Memphis)
+description: Some basic demos of boolean expressions (1-31)
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - parser:ClassDefinition
+  - parser:PublicClassSpecifier
+  - parser:FormalMethodParameter
+  - parser:MethodDefinition
+  - parser:PublicMethodSpecifier
+  - parser:StaticMethodSpecifier
+  - parser:VoidDataType
+  - parser:java.lang.System.out.println
+  - parser:ActualMethodParameter
+  - parser:LessExpression
+  - parser:GreaterExpression
+  - parser:EqualExpression
+  - parser:NotEqualExpression
+  - parser:TRUE
+  - parser:AndExpression
+  - parser:FALSE
+  - parser:OrExpression
+  - parser:GreaterEqualExpression
+  - parser:LessEqualExpression
+  - parser:NotExpression
+  - parser:IntDataType
+  - parser:SimpleAssignmentExpression
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AndExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:EqualExpression
+  - java_ontology:False
+  - java_ontology:FormalMethodParameter
+  - java_ontology:GreaterEqualExpression
+  - java_ontology:GreaterExpression
+  - java_ontology:IntDataType
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:LessEqualExpression
+  - java_ontology:LessExpression
+  - java_ontology:MethodDefinition
+  - java_ontology:NotEqualExpression
+  - java_ontology:NotExpression
+  - java_ontology:OrExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:True
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Some basic demos of boolean expressions (1-31)
+elements:
+- type: explanation
+  location:
+    snippet: System.out.println(4 < 10);
+  explanations:
+  - body: 'true'
+- type: explanation
+  location:
+    snippet: System.out.println(4 > 10);
+  explanations:
+  - body: 'false'
+- type: explanation
+  location:
+    snippet: System.out.println(4 == 4);
+  explanations:
+  - body: 'true'
+- type: explanation
+  location:
+    snippet: System.out.println(4 == 11);
+  explanations:
+  - body: 'false'
+- type: explanation
+  location:
+    snippet: System.out.println(4 != 11);
+  explanations:
+  - body: 'true'
+- type: explanation
+  location:
+    snippet: System.out.println(0 != 0);
+  explanations:
+  - body: 'false'
+- type: explanation
+  location:
+    snippet: System.out.println(true && true);
+  explanations:
+  - body: 'true'
+- type: explanation
+  location:
+    snippet: System.out.println(true && false);
+  explanations:
+  - body: 'false'
+- type: explanation
+  location:
+    snippet: System.out.println(false && true);
+  explanations:
+  - body: 'false'
+- type: explanation
+  location:
+    snippet: System.out.println(false && false);
+  explanations:
+  - body: 'false'
+- type: explanation
+  location:
+    snippet: System.out.println(true || true);
+  explanations:
+  - body: 'true'
+- type: explanation
+  location:
+    snippet: System.out.println(true || false);
+  explanations:
+  - body: 'true'
+- type: explanation
+  location:
+    snippet: System.out.println(false || true);
+  explanations:
+  - body: 'true'
+- type: explanation
+  location:
+    snippet: System.out.println(false || false);
+  explanations:
+  - body: 'false'
+- type: explanation
+  location:
+    snippet: System.out.println(4 != 10 && 5 < 3);
+  explanations:
+  - body: true && false -> false
+- type: explanation
+  location:
+    snippet: System.out.println(4 != 10 || 5 < 3);
+  explanations:
+  - body: true || false -> true
+- type: explanation
+  location:
+    snippet: System.out.println(4 >= 4 || 0 != 2);
+  explanations:
+  - body: true || true -> true
+- type: explanation
+  location:
+    snippet: System.out.println(4 <= 3 && 6 == 6);
+  explanations:
+  - body: false && true -> false
+- type: explanation
+  location:
+    snippet: System.out.println(!(4 != 10) || 4 < 5 && 8 >= 4);
+  explanations:
+  - body: '!true || true && true -> false || true && true -> false || true -> true'
+- type: explanation
+  location:
+    snippet: System.out.println(x < 4);
+  explanations:
+  - body: false, since 4 is not less than 4

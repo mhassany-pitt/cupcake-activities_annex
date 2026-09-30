@@ -1,0 +1,34 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: pt
+id: we_DataSelection8_version_1_pt
+source: query.sql
+title: ComparisonCondition(2)_pt
+description: This is the portuguese version.
+authors:
+- first: Rafael
+  last: Araujo
+  email: rafael.araujo@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: sql
+  version: '2016'
+statement: This is the portuguese version.
+elements:
+- type: explanation
+  location:
+    snippet: SELECT City, Sales, Target
+  explanations:
+  - body: Essa consulta retorna as colunas 'City', 'Sales' e 'Target' da tabela 'Offices'.
+- type: explanation
+  location:
+    snippet: WHERE Sales < (.8 * Target);
+  explanations:
+  - body: Apenas as vendas menores que 80% do valor da meta (Target). Para processar essa condicao, o SQL cria uma coluna
+      temporaria contendo o valor da expressao (.8 * Target), sendo que 'Target' e' uma das colunas da tabela 'Offices', e
+      entao compara os valores dessa coluna temporaria com os valores da coluna 'Sales'.

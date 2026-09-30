@@ -1,0 +1,166 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_IS17_ArrayList1_7
+source: ArrayList1.java
+title: IS17_ArrayList1_7
+description: 'Worked example: IS17_ArrayList1_7'
+authors:
+- first: John
+  last: Moan
+  email: john.moan@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: IS17_ArrayList1_7'
+elements:
+- type: explanation
+  location:
+    snippet: import java.util.ArrayList;
+  explanations:
+  - body: An import Statement for the ArrayList class
+- type: explanation
+  location:
+    snippet: class USport { String school; String name;
+  explanations:
+  - body: A class (USport) with parameters String school and String name is declared
+- type: explanation
+  location:
+    snippet: public USport (String s, String n) { school = s;  name = n; }
+  explanations:
+  - body: "A constructor for USport with the parameters String s and String n is declared.\r\nschool is assigned to s.\r\n\
+      name is assigned to n."
+- type: explanation
+  location:
+    snippet: public String toString() { return school + ":" + name; }
+  explanations:
+  - body: "the toString method is overridden.\r\nthe variable school is returned along with name"
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of class
+- type: explanation
+  location:
+    snippet: public class ArrayList1 {
+  explanations:
+  - body: a class ArrayList1 is declared
+- type: explanation
+  location:
+    snippet: public static void main(String a[]) {
+  explanations:
+  - body: the main method of the class is defined
+- type: explanation
+  location:
+    snippet: ArrayList<USport> v = new ArrayList<USport>();
+  explanations:
+  - body: an new array list object (v) is created.
+- type: explanation
+  location:
+    snippet: v.add( new USport("LSU", "Tigers")  );
+  explanations:
+  - body: the strings "LSU", "Tigers" are added to arraylist object v
+- type: explanation
+  location:
+    snippet: v.add( new USport("Georgia", "Bulldogs") );
+  explanations:
+  - body: the strings "Georgia", "Bulldogs" are added to arraylist object v
+- type: explanation
+  location:
+    snippet: v.add( new USport("UPitt", "Panthers")  );
+  explanations:
+  - body: the strings "UPitt", "Panthers" are added to arraylist object v
+- type: explanation
+  location:
+    snippet: System.out.println( v );
+  explanations:
+  - body: the information of arraylist v is printed to the console.
+- type: explanation
+  location:
+    snippet: for( int i = v.size() - 1; i >= 0; i--) {
+  explanations:
+  - body: a for loop initializing int i to the size of v minus one, the condition being as long as i is greater than or equal
+      to 0, and a counter decrementing i by one each loop execution.
+- type: explanation
+  location:
+    snippet: USport us = v.get( i );
+  explanations:
+  - body: a new USport object is created assigning it to v.get(i) the value of i
+- type: explanation
+  location:
+    snippet: System.out.print( us.school + " " );
+  explanations:
+  - body: Outputs the information of us.school and a space to the console.
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of loop
+- type: explanation
+  location:
+    snippet: System.out.println();
+  explanations:
+  - body: a blank statement printing nothing to the console
+- type: explanation
+  location:
+    snippet: 'for(USport us: v )'
+  explanations:
+  - body: 'an enhanced for loop. this can be read as follows :     for each (us in v)'
+- type: explanation
+  location:
+    snippet: System.out.print( us.school + " " );
+    nth: 2
+  explanations:
+  - body: print to the console the method call of us.school and a space
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 2
+  explanations:
+  - body: a blank statement printing nothing to the console
+- type: explanation
+  location:
+    snippet: while ( v.size() > 0 ) {
+  explanations:
+  - body: While the size of v is greater than 0
+- type: explanation
+  location:
+    snippet: USport us = v.remove( 0 );
+  explanations:
+  - body: a variable us is assigned to the method of v.remove(0);  this removes the first element in the arraylist v.
+- type: explanation
+  location:
+    snippet: System.out.print( us.name + " ");
+  explanations:
+  - body: prints us.name and a space to the console
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end of while loop
+- type: explanation
+  location:
+    snippet: System.out.println();
+    nth: 3
+  explanations:
+  - body: a blank statement printing nothing to the console
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: end of class
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: '***NOTE: My annotations received no comments I did my best to refine on my own'

@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_boolean_declaration_v2
+source: boolean_declaration.java
+title: boolean declaration
+description: Boolean Declaration
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:BooleanDataType
+  - expert:ClassDefinition
+  - expert:False
+  - expert:FormalMethodParameter
+  - expert:MethodDefinition
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:StaticMethodSpecifier
+  - expert:True
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Boolean Declaration
+elements:
+- type: explanation
+  location:
+    snippet: boolean A = true;
+  explanations:
+  - body: Declares a boolean variable named A and assigns it the value of true.
+- type: explanation
+  location:
+    snippet: boolean B = false;
+  explanations:
+  - body: Declares a boolean variable named B and assigns it the value of false.

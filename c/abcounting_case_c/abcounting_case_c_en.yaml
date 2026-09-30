@@ -1,0 +1,74 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_abcounting_case_c_en
+source: main.c
+title: 'IS12:: abcounting_case.c (118.5)'
+description: 'Worked example: IS12:: abcounting_case.c (118.5)'
+authors:
+- first: Peter
+  last: Brusilovsky
+  email: peterb@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - unspecified:switch
+  - unspecified:variable_initialization
+  - unspecified:int
+  - unspecified:void
+  - unspecified:printf
+  - unspecified:variable_declaration
+  - unspecified:include
+  - unspecified:main_function
+  - unspecified:break
+  - unspecified:while
+  - unspecified:not_equal
+  - unspecified:post_increment
+  - unspecified:simple_assignment
+runtime:
+  language: c
+  version: '11'
+statement: 'Worked example: IS12:: abcounting_case.c (118.5)'
+elements:
+- type: explanation
+  location:
+    snippet: int ch;
+  explanations:
+  - body: Variable ch will be used to read characters from the standard input. It is defined as int since it should be able
+      to get the EOF value that is not char
+- type: explanation
+  location:
+    snippet: int a = 0, b = 0, c = 0;
+  explanations:
+  - body: 'Initializing the counters. We could also do it shorter: a = b = c = 0;'
+- type: explanation
+  location:
+    snippet: while ((ch = getchar()) != EOF)
+  explanations:
+  - body: When the condition of this while loop is evaluated, a new character is read from the standard input and assigned
+      to ch. If getchar() returns EOF, the loop is over
+- type: explanation
+  location:
+    snippet: switch (ch) {
+  explanations:
+  - body: The current value of ch (the character read) will be matched with the "cases" in the switch body
+- type: explanation
+  location:
+    snippet: a++; break;
+  explanations:
+  - body: We will end here if ch is either 'a' or 'A' and increment a. Break stetement gets us out of switch. Without break
+      we would contibue with b++ below.
+- type: explanation
+  location:
+    snippet: b++; break;
+  explanations:
+  - body: We will end here if ch is either 'b' or 'B' and increment b. Break stetement gets us out of switch. Without break
+      we would contibue with c++ below.
+- type: explanation
+  location:
+    snippet: c++; break;
+  explanations:
+  - body: We will end here if ch is either 'c' or 'C' and increment c. Break stetement gets us out of switch.

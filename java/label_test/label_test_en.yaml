@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_label_test
+source: LabelTest.java
+title: ISD::LabelTest.java
+description: 'Worked example: ISD::LabelTest.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::LabelTest.java'
+elements:
+- type: explanation
+  location:
+    snippet: Container c = getContentPane();
+  explanations:
+  - body: Create a Container object, to which we attach JLabel objects (subclass of JComponent).
+- type: explanation
+  location:
+    snippet: label1 = new JLabel( "Label with text" );
+  explanations:
+  - body: Initialize text in JLabel constructor.
+- type: explanation
+  location:
+    snippet: label1.setToolTipText( "This is label1" );
+  explanations:
+  - body: Set the tool tip text
+- type: explanation
+  location:
+    snippet: c.add( label1 );
+  explanations:
+  - body: attach component to Container c.
+- type: explanation
+  location:
+    snippet: Icon bug = new ImageIcon( "bug1.gif" );
+  explanations:
+  - body: Create a new ImageIcon (assumed to be in same directory as program).
+- type: explanation
+  location:
+    snippet: label2 = new JLabel( "Label with text and icon",
+  explanations:
+  - body: Set ImageIcon and alignment of text in JLabel constructor.

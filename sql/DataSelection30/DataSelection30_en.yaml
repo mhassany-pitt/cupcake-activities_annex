@@ -1,0 +1,69 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataSelection30
+source: query.sql
+title: Comparing Subquery Results (1)
+description: Comparing Subquery Results (1)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:EqualComparison
+  - expert:ReferentialAction
+  - expert:StringType
+  - expert:AnyPredicate
+  - expert:Assertion
+  - expert:SubstringExtraction
+  - expert:SelectClause
+  - expert:FromClause
+  - expert:GreaterThanComparison
+  - expert:BracketCharacter
+  - expert:VariableLengthCharaterString
+  - expert:SelectStatement
+  - expert:WhereClause
+  - expert:SimpleSubquery
+  - expert:SingleAttributeSelection
+  - expert:SingleQuotationCharacter
+  - expert:SingleTableSelection
+  - sql_ontology:EqualComparison
+  - sql_ontology:Assertion
+  - sql_ontology:GreaterThanComparison
+  - sql_ontology:StringType
+  - sql_ontology:SelectStatement
+  - sql_ontology:AnyPredicate
+  - sql_ontology:SingleAttributeSelection
+  - sql_ontology:SimpleSubquery
+  - sql_ontology:BracketCharacter
+  - sql_ontology:SingleTableSelection
+  - sql_ontology:FromClause
+  - sql_ontology:SingleQuotationCharacter
+  - sql_ontology:WhereClause
+  - sql_ontology:SelectClause
+  - sql_concept:VariableLengthCharaterString
+  - sql_concept:SubstringExtraction
+  - sql_concept:ReferentialAction
+runtime:
+  language: sql
+  version: '2016'
+statement: Comparing Subquery Results (1)
+elements:
+- type: explanation
+  location:
+    snippet: WHERE assets > SOME
+  explanations:
+  - body: The SOME test is used in conjunction with one of the six SQL comparison operators (=, <>, <, <=, >, >=) to compare
+      the test value with the results of subquery. If any of the individual comparisons yield a TRUE result, the SOME test
+      results a TRUE results. SOME and ANY are equivalent. In this example, asset of every branch is compared with every assets
+      of branch in 'Brooklyn'.
+- type: explanation
+  location:
+    snippet: (SELECT assets
+  explanations:
+  - body: This is to find assets of branch opened in 'Brooklyn'.

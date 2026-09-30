@@ -1,0 +1,60 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_DataInsertion2
+source: query.sql
+title: Inserting Data (2)
+description: Inserting Data (2)
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:StringType
+  - expert:SubQuery
+  - expert:SubQueryCheckingDuplicateTuples
+  - expert:AttributeName
+  - expert:Insertion
+  - expert:BracketCharacter
+  - expert:ValuesClause
+  - expert:InsertIntoClause
+  - expert:InsertStatement
+  - expert:CommaCharacter
+  - expert:SingleQuotationCharacter
+  - expert:Deletion
+  - expert:NumericType
+  - sql_ontology:InsertIntoClause
+  - sql_ontology:SubQuery
+  - sql_ontology:AttributeName
+  - sql_ontology:StringType
+  - sql_ontology:CommaCharacter
+  - sql_ontology:NumericType
+  - sql_ontology:BracketCharacter
+  - sql_ontology:ValuesClause
+  - sql_ontology:SingleQuotationCharacter
+  - sql_ontology:InsertStatement
+  - sql_concept:Deletion
+  - sql_concept:SubQueryCheckingDuplicateTuples
+runtime:
+  language: sql
+  version: '2016'
+statement: Inserting Data (2)
+elements:
+- type: explanation
+  location:
+    snippet: INSERT INTO Students(sid, name, login, age, gpa)
+  explanations:
+  - body: '''INTO'' clause which is mantantory in ''INSERT'' clause is to specify the table and columns to store data. The
+      order of inserted data should be matched with the order of each column specified in SQL statement. If the column names
+      are omitted, the data are inserted by the column order of table definition.'
+- type: explanation
+  location:
+    snippet: VALUES('53688', 'Smith', 'smith@ee', 18, 3.2);
+  explanations:
+  - body: '''VALUES'' keyword is necessary to define the inserted data. The value for sid, name, or login whose domain types
+      are character is surrounded by single quotation mark.'

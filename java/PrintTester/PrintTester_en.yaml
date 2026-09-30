@@ -1,0 +1,48 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_PrintTester
+source: PrintTester.java
+title: Print Tester
+description: 'Worked example: Print Tester'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:StringLiteral
+  - expert:AddExpression
+  - expert:java.lang.System.out.print
+  - expert:java.lang.System.out.println
+  - expert:StringDataType
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Print Tester'
+elements:
+- type: explanation
+  location:
+    snippet: System.out.println(3 + 4);
+  explanations:
+  - body: Prints 7.
+- type: explanation
+  location:
+    snippet: System.out.println("World!");
+  explanations:
+  - body: Prints "Hello" in one line and "World!" in the next line.
+- type: explanation
+  location:
+    snippet: System.out.print("00");
+  explanations:
+  - body: Prints 00 but doesn't start a new line.
+- type: explanation
+  location:
+    snippet: System.out.println(3 + 4);
+    nth: 2
+  explanations:
+  - body: Prints 7 and starts a new line.

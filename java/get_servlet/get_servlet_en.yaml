@@ -1,0 +1,52 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_get_servlet
+source: HTTPGetServlet.java
+title: ISD::HTTPGetServlet.java
+description: 'Worked example: ISD::HTTPGetServlet.java'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: ISD::HTTPGetServlet.java'
+elements:
+- type: explanation
+  location:
+    snippet: public class HTTPGetServlet extends HttpServlet {
+  explanations:
+  - body: inherit methods from HttpServlet.
+- type: explanation
+  location:
+    snippet: response.setContentType( "text/html" );  //contenttype
+  explanations:
+  - body: Specify content, text/html for HTML documents
+- type: explanation
+  location:
+    snippet: output = response.getWriter();           // get writer
+  explanations:
+  - body: Create PrintWriter object
+- type: explanation
+  location:
+    snippet: buf.append( "<HTML><HEAD><TITLE>\n" );
+  explanations:
+  - body: create HTML document
+- type: explanation
+  location:
+    snippet: output.println( buf.toString() );
+  explanations:
+  - body: println sends response to client
+- type: explanation
+  location:
+    snippet: output.close();    // close PrintWriter stream
+  explanations:
+  - body: close terminates output stream

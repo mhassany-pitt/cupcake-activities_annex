@@ -1,0 +1,68 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_mathclass_ex3
+source: MathExample3.java
+title: (Math class) Math example 3 - CSEdPad
+description: Demonstrate the understanding of Math class concepts by construct a program that calculate and print the surface
+  area and volume of a sphere.
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:ConstantInvocation
+  - webex:MethodDefinition
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:Constant
+  - webex:VoidDataType
+  - webex:java.lang.Math.pow
+  - webex:DoubleDataType
+  - webex:MultiplyExpression
+  - webex:StringLiteral
+  - webex:DivideExpression
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:ClassDefinition
+  - java_ontology:Constant
+  - java_ontology:ConstantInvocation
+  - java_ontology:DivideExpression
+  - java_ontology:DoubleDataType
+  - java_ontology:FormalMethodParameter
+  - java_ontology:java.lang.Math.pow
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiplyExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Demonstrate the understanding of Math class concepts by construct a program that calculate and print the surface
+  area and volume of a sphere.
+elements:
+- type: explanation
+  location:
+    snippet: System.out.printf("Volume = %.02f\n" , (4*Math.pow(radius,3)*Math.PI)/3);
+  explanations:
+  - body: Print Volume = the value of (4*radius^3*PI)/3
+- type: explanation
+  location:
+    snippet: System.out.printf("Surface area = %.02f\n" , (4*Math.PI*Math.pow(radius,2)));
+  explanations:
+  - body: Print Surface area = the value of 4*PI*radius^2

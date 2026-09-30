@@ -1,0 +1,33 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Rectangle
+source: Rectangle.java
+title: DEPRECATED_Rectangle
+description: 'Worked example: DEPRECATED_Rectangle'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Rectangle'
+elements:
+- type: explanation
+  location:
+    snippet: // four constructors
+  explanations:
+  - body: Each constructor lets you provide initial values for the rectangle's size and width, using both primitive and reference
+      types.
+- type: explanation
+  location:
+    snippet: return width * height;
+  explanations:
+  - body: This method returns the integer that the expression width*height evaluates to.

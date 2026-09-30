@@ -1,0 +1,100 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_OverridingObjectMethods
+source: Container.java
+title: Overriding Object Methods
+description: 'Worked example: Overriding Object Methods'
+authors:
+- first: Roya
+  last: Hosseini
+  email: roya.hosseini@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:InstanceField
+  - expert:OverridingToString
+  - expert:BooleanDataType
+  - expert:StringDataType
+  - expert:InstanceFieldInvocation
+  - expert:PolymorphicObjectCreationStatement
+  - expert:StringLiteral
+  - expert:IntDataType
+  - expert:ConstantInvocation
+  - expert:SuperclassConstructorCall
+  - expert:java.lang.Object
+  - expert:PublicConstructorSpecifier
+  - expert:ConstructorCall
+  - expert:SuperclassMethodCall
+  - expert:java.lang.String.equals
+  - expert:PublicFieldSpecifier
+  - expert:ConstructorDefinition
+  - expert:SuperReference
+  - expert:java.lang.System.out.println
+  - expert:EqualExpression
+  - expert:ThisReference
+  - expert:ReturnStatement
+  - expert:ExplicitTypeCasting
+  - expert:ObjectCreationStatement
+  - expert:SimpleAssignmentExpression
+  - expert:ExtendsSpecification
+  - expert:ObjectEquality
+  - expert:SimpleVariable
+  - expert:ObjectMethodInvocation
+  - expert:InheritanceBasedPolymorphism
+  - expert:OverridingEquals
+  - expert:StringAddition
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: Overriding Object Methods'
+elements:
+- type: explanation
+  location:
+    snippet: public boolean equals(Object anObject) {
+  explanations:
+  - body: "the equals() method is one of the common methods among all Objects in Java. \r\nHere, we \r\noverride it to test\
+      \ \r\nwhether two Container objects have equal \r\nstate (capacity)."
+- type: explanation
+  location:
+    snippet: public String toString() {
+  explanations:
+  - body: "the toString() method is one of the common methods among all Objects in Java. \r\nHere, we \r\noverride it to \r\
+      \nprint the state of the paperbox. The \r\nsuper.toString() \r\ncalls the implementation of the toString() \r\nmethod\
+      \ in \r\nthe Container. Container does not override \r\nthis \r\nmethod so the original toString() method in \r\nthe\
+      \ Object \r\nclass will be called."
+- type: explanation
+  location:
+    snippet: public boolean equals(Object anObject) {
+    nth: 2
+  explanations:
+  - body: a call to equals() in PaperBox will invoke  equals() in super class Container.
+- type: explanation
+  location:
+    snippet: Container c1 = new PaperBox(2);
+  explanations:
+  - body: creates an object of PaperBox with capacity of 2 gallons.
+- type: explanation
+  location:
+    snippet: Container c2 = new PaperBox(2);
+  explanations:
+  - body: creates another object of PaperBox with capacity of 2 gallons.
+- type: explanation
+  location:
+    snippet: System.out.println(c1.equals(c2));
+  explanations:
+  - body: "the equals() method in PaperBox class is called. Since both c1 and c2 have same \r\ncapacity, it returns 'true'\
+      \ and thus prints \r\n'true'."
+- type: explanation
+  location:
+    snippet: 'System.out.println("c1: "+c1.toString());'
+  explanations:
+  - body: "the toString() method in PaperBox is called. An example of the print is 'c1: \r\nPaperBox@5e8fce95[capacity=2]'"
+- type: explanation
+  location:
+    snippet: 'System.out.println("c2: "+c2.toString());'
+  explanations:
+  - body: 'An example of the print is ''c2: PaperBox@3343c8b3[capacity=2]'''

@@ -1,0 +1,42 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_pyt10_9_en
+source: main.py
+title: Simple Input
+description: 'Worked example: Simple Input'
+authors:
+- first: Hardik
+  last: Vasa
+  email: hardik.vasa@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: python
+  version: '3.10'
+statement: 'Worked example: Simple Input'
+elements:
+- type: explanation
+  location:
+    snippet: 'num1 = input(''Enter a number: '')'
+  explanations:
+  - body: This statement takes input from the user and then it stores it in the variable 'num1'
+- type: explanation
+  location:
+    snippet: 'num2 = input(''Enter another number: '')'
+  explanations:
+  - body: This statement takes another input from the user and then it stores it in the variable 'num2'
+- type: explanation
+  location:
+    snippet: sum = int(num1) + int(num2)
+  explanations:
+  - body: This statement first converts the input variables into integers and then adds the two integers
+- type: explanation
+  location:
+    snippet: print('Addition of the two numbers is ', sum)
+  explanations:
+  - body: This statement prints out the sum

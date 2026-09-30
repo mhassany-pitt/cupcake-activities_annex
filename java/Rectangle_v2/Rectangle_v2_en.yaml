@@ -1,0 +1,100 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Rectangle_v2
+source: Rectangle.java
+title: Rectangle
+description: Rectangle
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:ConstructorCall
+  - expert:ConstructorDefinition
+  - expert:FormalMethodParameter
+  - expert:InstanceField
+  - expert:IntDataType
+  - expert:MethodDefinition
+  - expert:MultiplyExpression
+  - expert:ObjectCreationStatement
+  - expert:PrivateFieldSpecifier
+  - expert:PublicClassSpecifier
+  - expert:PublicConstructorSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:ReturnStatement
+  - expert:SimpleAssignmentExpression
+  - expert:SimpleVariable
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Rectangle
+elements:
+- type: explanation
+  location:
+    snippet: private int width;
+  explanations:
+  - body: "width is an instance field of class Rectangle . It is declared as integer \r\nto store the width of Rectangle objects.It\
+      \ is declared as private to \r\nrestrict the direct access from outside the class."
+- type: explanation
+  location:
+    snippet: private int height;
+  explanations:
+  - body: "height is another instance field of class Rectangle . It is declared as \r\ninteger to store the height of Rectangle\
+      \ objects.It is declared as \r\nprivate to restrict the direct access from outside the class."
+- type: explanation
+  location:
+    snippet: // four constructors
+  explanations:
+  - body: "Each constructor lets you provide initial values for the rectangle's size \r\nand width, using both primitive and\
+      \ reference types."
+- type: explanation
+  location:
+    snippet: public Rectangle() {
+  explanations:
+  - body: This is the first constructor. It has no arguments in it.
+- type: explanation
+  location:
+    snippet: origin = new Point(0, 0);
+  explanations:
+  - body: "it invokes the no-argument constructor to create a new Point object \r\ncalled origin."
+- type: explanation
+  location:
+    snippet: public Rectangle(Point p) {
+  explanations:
+  - body: this constructor assigns the given point to the origin.
+- type: explanation
+  location:
+    snippet: public Rectangle(int w, int h) {
+  explanations:
+  - body: "this constructor assigns new point to the origin. Also, it sets the width \r\nand height of the point to the 'w'\
+      \ and 'h' respectively."
+- type: explanation
+  location:
+    snippet: public Rectangle(Point p, int w, int h) {
+  explanations:
+  - body: "this constructor assigns the given point to the origin. Also, it sets the \r\nwidth and height of the point to\
+      \ the 'w' and 'h' respectively."
+- type: explanation
+  location:
+    snippet: public void move(int x, int y) {
+  explanations:
+  - body: a method for moving the rectangle.
+- type: explanation
+  location:
+    snippet: public int getArea() {
+  explanations:
+  - body: a method for computing the area of the rectangle
+- type: explanation
+  location:
+    snippet: return width * height;
+  explanations:
+  - body: "This method returns the integer that the expression width*height \r\nevaluates to."

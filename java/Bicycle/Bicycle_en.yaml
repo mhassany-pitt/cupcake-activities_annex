@@ -1,0 +1,152 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_Bicycle
+source: Bicycle.java
+title: DEPRECATED_Bicycle
+description: 'Worked example: DEPRECATED_Bicycle'
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics: []
+runtime:
+  language: java
+  version: '17'
+statement: 'Worked example: DEPRECATED_Bicycle'
+elements:
+- type: explanation
+  location:
+    snippet: public class Bicycle {
+  explanations:
+  - body: "Class definition starts with the access specifier (usually - public), the reserved word \"class\" and name of the\
+      \ class. \r\nThe opening curly bracket is followed by the body of a class definition."
+- type: explanation
+  location:
+    snippet: private int cadence;
+  explanations:
+  - body: "instance field definition. Every object of the class Bicycle will have its own cadence.\r\nInstance fields should\
+      \ be declared private.  In this case the access to the object's data is granted only through the methods of the public\
+      \ interface. No unexpected modification of the object data is possible."
+- type: explanation
+  location:
+    snippet: private int gear;
+  explanations:
+  - body: "instance field definition. Every object of the class Bicycle will have its own gear.\r\nInstance fields should\
+      \ be declared private.  In this case the access to the object's data is granted only through the methods of the public\
+      \ interface. No unexpected modification of the object data is possible."
+- type: explanation
+  location:
+    snippet: private int speed;
+  explanations:
+  - body: "instance field definition. Every object of the class Bicycle will have its own speed.\r\nInstance fields should\
+      \ be declared private.  In this case the access to the object's data is granted only through the methods of the public\
+      \ interface. No unexpected modification of the object data is possible."
+- type: explanation
+  location:
+    snippet: public Bicycle(int startCadence, int startSpeed, int startGear) {
+  explanations:
+  - body: Constructor definition starts with the access specifier (public), name of the constructor (always the same as the
+      name of the class) and the list of parameters (to initialize the instance fields of newly created objects).
+- type: explanation
+  location:
+    snippet: gear = startGear;
+  explanations:
+  - body: instance field gear is initialized with a certain value
+- type: explanation
+  location:
+    snippet: cadence = startCadence;
+  explanations:
+  - body: instance field cadence is initialized with a certain value
+- type: explanation
+  location:
+    snippet: speed = startSpeed;
+  explanations:
+  - body: instance field speed is initialized with a certain value
+- type: explanation
+  location:
+    snippet: '}'
+  explanations:
+  - body: end of the constructor. Whenever a new object of class Bicycle is created using this constructor the sequence of
+      statements between the opening and the closing curly brackets is executed.
+- type: explanation
+  location:
+    snippet: public void setCadence(int newValue) {
+  explanations:
+  - body: "This method changes the current value of cadence to a newValue\r\nit is defined as public to provide access to\
+      \ this method from outside of the class.\r\nit is defined void, as it does not return any vale\r\nit has only one parameter\
+      \ - a new values for cadence"
+- type: explanation
+  location:
+    snippet: cadence = newValue;
+  explanations:
+  - body: instance field cadence is assigned with a new value
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 2
+  explanations:
+  - body: end of the method setCadence
+- type: explanation
+  location:
+    snippet: public void setGear(int newValue) {
+  explanations:
+  - body: "This method changes the current value of gear to a newValue\r\nit is defined as public to provide access to this\
+      \ method from outside of the class.\r\nit is defined void, as it does not return any vale\r\nit has only one parameter\
+      \ - a new values for gear"
+- type: explanation
+  location:
+    snippet: gear = newValue;
+  explanations:
+  - body: instance field gear is assigned with a new value
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 3
+  explanations:
+  - body: end of the method setGear
+- type: explanation
+  location:
+    snippet: public void applyBrake(int decrement) {
+  explanations:
+  - body: "This method implements braking.\r\nit is defined as public to provide access to this method from outside of the\
+      \ class.\r\nit is defined void, as it does not return any vale\r\nit has one parameter - a speed decrement"
+- type: explanation
+  location:
+    snippet: speed = speed - decrement;
+  explanations:
+  - body: the current value of speed is reduced (the brake is applied)
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 4
+  explanations:
+  - body: end of the method applyBrake
+- type: explanation
+  location:
+    snippet: public void speedUp(int increment) {
+  explanations:
+  - body: "This method implements speeding up.\r\nit is defined as public to provide access to this method from outside of\
+      \ the class.\r\nit is defined void, as it does not return any vale\r\nit has one parameter - a speed incremenet"
+- type: explanation
+  location:
+    snippet: speed = speed + increment;
+  explanations:
+  - body: the current value of speed is increased (the bicycle is speeding)
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 5
+  explanations:
+  - body: end of the method speedUp
+- type: explanation
+  location:
+    snippet: '}'
+    nth: 6
+  explanations:
+  - body: end of the class definition

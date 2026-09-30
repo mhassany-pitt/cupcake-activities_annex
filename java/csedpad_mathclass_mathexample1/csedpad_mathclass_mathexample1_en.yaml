@@ -1,0 +1,95 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_csedpad_mathclass_mathexample1
+source: MathExample1.java
+title: (MathClass) MathExample1 - CSEdPad
+description: Demonstrate the understanding of Math class concepts by constructing a program that finds the length of the hypotenuse
+  in of a right triangle by using the Pythagoras theorem then finds the angles of that triangle.
+authors:
+- first: Kamil
+  last: Akhuseyinoglu
+  email: kamil@pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - webex:ConstantInvocation
+  - webex:StringAddition
+  - webex:MethodDefinition
+  - webex:java.lang.System.out.println
+  - webex:SimpleAssignmentExpression
+  - webex:ClassDefinition
+  - webex:Constant
+  - webex:java.lang.Math.sqrt
+  - webex:VoidDataType
+  - webex:java.lang.Math.pow
+  - webex:DoubleDataType
+  - webex:MultiplyExpression
+  - webex:StringLiteral
+  - webex:DivideExpression
+  - webex:AddExpression
+  - webex:SubtractExpression
+  - webex:SimpleVariable
+  - webex:FormalMethodParameter
+  - webex:ActualMethodParameter
+  - webex:StringDataType
+  - webex:PublicClassSpecifier
+  - webex:PublicMethodSpecifier
+  - webex:StaticMethodSpecifier
+  - java_ontology:ActualMethodParameter
+  - java_ontology:AddExpression
+  - java_ontology:ClassDefinition
+  - java_ontology:Constant
+  - java_ontology:ConstantInvocation
+  - java_ontology:DivideExpression
+  - java_ontology:DoubleDataType
+  - java_ontology:FormalMethodParameter
+  - java_ontology:java.lang.Math.pow
+  - java_ontology:java.lang.Math.sqrt
+  - java_ontology:java.lang.System.out.println
+  - java_ontology:MethodDefinition
+  - java_ontology:MultiplyExpression
+  - java_ontology:PublicClassSpecifier
+  - java_ontology:PublicMethodSpecifier
+  - java_ontology:SimpleAssignmentExpression
+  - java_ontology:SimpleVariable
+  - java_ontology:StaticMethodSpecifier
+  - java_ontology:StringAddition
+  - java_ontology:StringDataType
+  - java_ontology:StringLiteral
+  - java_ontology:SubtractExpression
+  - java_ontology:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Demonstrate the understanding of Math class concepts by constructing a program that finds the length of the hypotenuse
+  in of a right triangle by using the Pythagoras theorem then finds the angles of that triangle.
+elements:
+- type: explanation
+  location:
+    snippet: c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+  explanations:
+  - body: Assign the result of sqr root of a^2 + b^2 to c
+- type: explanation
+  location:
+    snippet: double A = Math.acos((b * b + c * c - a * a) / (2 * b * c));
+  explanations:
+  - body: Initialize the variables A to the value of arc cosine((b * b + c * c - a * a) / (2 * b * c))
+- type: explanation
+  location:
+    snippet: A = (A * 180) / Math.PI;
+  explanations:
+  - body: Assign the variable A to the value of (A * 180) divided by PI
+- type: explanation
+  location:
+    snippet: double B = Math.acos((a * a + c * c - b * b) / (2 * a * c));
+  explanations:
+  - body: Initialize the variables B to the value of arc cosine((a * a + c * c - b * b) / (2 * a * c))
+- type: explanation
+  location:
+    snippet: B = (B * 180) / Math.PI;
+  explanations:
+  - body: Assign the variable B to the value of (B * 180) divided by PI

@@ -1,0 +1,78 @@
+$schema: https://adapt2.sis.pitt.edu/cupcake/schemas/worked-example/0.1.0
+license: MIT
+locale: en
+id: we_increment_v2
+source: Increment.java
+title: increment
+description: Increment
+authors:
+- first: PAWS
+  last: Lab
+  email: paws@sis.pitt.edu
+  affiliation: University of Pittsburgh
+pedagogy:
+  activity: worked-example
+  difficulty: novice
+  prereq_topics: []
+  topics:
+  - expert:ActualMethodParameter
+  - expert:ClassDefinition
+  - expert:FormalMethodParameter
+  - expert:IntDataType
+  - expert:java.lang.System.out.println
+  - expert:MethodDefinition
+  - expert:PostIncrementExpression
+  - expert:PreIncrementExpression
+  - expert:PublicClassSpecifier
+  - expert:PublicMethodSpecifier
+  - expert:SimpleAssignmentExpression
+  - expert:StaticMethodSpecifier
+  - expert:VoidDataType
+runtime:
+  language: java
+  version: '17'
+statement: Increment
+elements:
+- type: explanation
+  location:
+    snippet: int c = 5;
+  explanations:
+  - body: The initial value of variable 'c' is 5.
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+  explanations:
+  - body: Prints 5.
+- type: explanation
+  location:
+    snippet: System.out.println( c++ );
+  explanations:
+  - body: Prints 5, and then increments the value of variable 'c' by 1.
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+    nth: 2
+  explanations:
+  - body: Prints 6.
+- type: explanation
+  location:
+    snippet: c = 5;
+  explanations:
+  - body: Variable 'c' is equal to 5 again.
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+    nth: 3
+  explanations:
+  - body: Prints 5.
+- type: explanation
+  location:
+    snippet: System.out.println( ++c );
+  explanations:
+  - body: This line first increments the value of variable 'c' and then prints it, hence it'll print 6.
+- type: explanation
+  location:
+    snippet: System.out.println( c );
+    nth: 4
+  explanations:
+  - body: Prints 6  again.
